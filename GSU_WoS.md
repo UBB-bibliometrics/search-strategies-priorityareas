@@ -86,13 +86,14 @@ TS =
 
 #### General health terms, combined with LMCs
 
-`health` and `medical` covers health care, services, education, rights, workers, coverage, sexual/mental/occupational health. However, as "health" can be used in other fields (ecosystem health), specific terms are included in the first phrase, while "health" generally is combined with human terms. 
-`disease` covers a number of categories of disease (e.g. communicable disease), but these are occasionally duplicated anyway.
+For many health terms, some of the results may be about animals or plants; thus some of the search terms are combined with terms for humans. It is otherwise very difficult to remove all results, for example, some about fish or cattle health in LMCs may be included. Can this be considered ok?
+
+`health` and `medical` covers health care, services, education, rights, workers, coverage, sexual/mental/occupational health. However, as "health" can be used in other fields (ecosystem health), specific phrases are included in the first phrase, while "health" generally is combined with human terms. The same applies to `disease`, which covers a number of categories of disease (e.g. communicable disease). Phrases are included in the first part, while it is combined with human terms in the second part.
 `therapy` covers various types (art, music, medicinal)
 
-Specific diseases added from SDG3
+Specific diseases, health care occupations etc. added from SDG3
 
-List of countries includes all except high-income countries.
+Countries includes all except high-income countries.
 
 ```
 TS=
@@ -102,12 +103,14 @@ TS=
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
-    OR	"disease$" OR "infection$" OR "illness*" OR "mortality" OR "morbidity"
+    OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$" 
+    OR 	"waterborne disease$" OR "water borne disease$"
+    OR 	"infection$" OR "illness*" OR "premature mortality" OR "morbidity"
     OR	"trauma"  
     OR	"cancer$" OR "neoplasm$" 
-    OR "diabetes"
-    OR "chronic respiratory disease$" 
-    OR "cancer$" OR "*sarcoma" OR "sarcoma$" OR "*carcinoma" OR "carcinoma$" OR "*blastoma" OR "blastoma$" OR "myeloma$" OR "lymphoma$" OR "leukaemia" OR "leukemia" OR "mesothelioma$" OR "melanoma$"  
+    OR 	"diabetes"
+    OR 	"chronic respiratory disease$" 
+    OR 	"cancer$" OR "*sarcoma" OR "sarcoma$" OR "*carcinoma" OR "carcinoma$" OR "*blastoma" OR "blastoma$" OR "myeloma$" OR "lymphoma$" OR "leukaemia" OR "leukemia" OR "mesothelioma$" OR "melanoma$"  
     OR	"asthma" OR "chronic obstructive pulmonary disease$" OR "COPD" OR "chronic obstructive airway disease$" OR "chronic bronchitis" OR "emphysema" OR "pneumonia"
     OR	"diabetes"
     OR  "cardiovascular disease$" OR "heart disease" OR "heart attack$" OR "stroke"
@@ -137,7 +140,7 @@ TS=
     OR "polio*"
     OR "yellow fever"
 
-    OR	"vaccine$" OR "vaccinat*" OR "medicine$" OR "therapy" OR "therapies" 
+    OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies" 
 
     OR  "clinic$" OR "hospital$" OR "healthcare" OR "residential care"
     OR  "patient care"
@@ -157,7 +160,7 @@ TS=
     OR "Pediatrician$" OR "Physiatrist$" OR "physiotherapist$" OR "Pulmonologist$" OR "Radiologist$" OR "Rheumatologist$" OR "Urologist$"
 
     OR	"obstetric$" OR	"childbirth" OR	"childbear*" 
-    OR  "breastfeed*" OR	"birthweight"
+    OR  "breastfeed*" OR "birthweight"
     OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
     OR	"abortion*" OR "pregnan*"
     OR 	"reproductive health" OR "sexual health" 
@@ -177,6 +180,7 @@ TS=
     OR 	"intimate partner violence"
     OR	"tombak" 
     OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupation*" OR "traffic" OR "car" OR "road$"))
+    OR  "accidental poisoning$"
     OR	"alcoholism"
     OR	"binge drink*"
     OR	"addiction"
@@ -200,13 +204,13 @@ TS=
   OR
     (
       (   "health" 
+      OR  "disease$" OR "mortality"
       OR  "epidemic$" OR "pandemic$"
-      OR  "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$"
+      OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$" 
       OR  "depression"
       OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
-      OR  "toxicology" OR "aflatoxin" OR "accidental poisoning$" OR "mercury"
       OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$" 
-      OR  "arsenic" OR "asbestos" OR "benzene" OR "cadmium" OR "dioxin$" OR "mercury" OR "fluoride" OR "pesticide$"
+      OR  "arsenic" OR "mercury" OR "asbestos" OR "benzene" OR "cadmium" OR "dioxin$" OR "fluoride"
       OR  "lead poison*" OR "lead *toxicity" OR "lead mediated *toxicity" OR "lead induced *toxicity" OR "lead exposure" OR "lead carcinogen*" OR "blood lead"
       OR  "sanitation" OR "drinking water" OR "potable water"
       )
@@ -216,7 +220,7 @@ TS=
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
         OR "patient$" OR "hospital*" OR "health care" OR "healthcare"
-        OR "premature death$" OR "premature mortality"
+        OR "premature death$" OR "premature mortality" OR "covid"
       )
     )
   )
@@ -370,3 +374,6 @@ AND
   )
 )  
 ```
+
+Phytopathology
+Journal of fish diseases
