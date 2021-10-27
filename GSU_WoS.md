@@ -265,7 +265,7 @@ TS=
   OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
   OR "equality" OR "equity" OR "egalitar*" OR "disparit*"
   OR "representation" OR "discrimination" OR "criminali*" OR "marginali*" OR "otherness" OR "stereotypes"
-  OR "human rights" OR "justice"
+  OR "human rights" OR "justice" OR "injustice"
   OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"
   OR "poverty" OR "low income" OR "economic burden" OR "debt" OR "microfinance" OR "homeless*"
   OR "disadvantaged" OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
