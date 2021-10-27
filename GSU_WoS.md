@@ -435,7 +435,11 @@ TS=
 
 Same health terms used as in the above 2 sections. 
 
-How to include `migration`?
+How to include `migration`? At least 1300 of the extra 14000 results when adding it are definately not relevant. Many of these are from surgery, but there is also environmental migration of pollutants (pollutants, radon, PCBs, PM, mercury). Ideas:
+* "stent" ,  "surgical",  "intragastric", "metastasis"
+* "electrokinetic migration" OR "needle migration" OR "migration inhibitory factor" OR "aberrant migration" OR "device migration"
+* Remove journals with surgery or surgical?
+There are so many options, we may have to try and do it positively rather than negatively.
 
 ```
 TS=
@@ -575,3 +579,4 @@ TS=
   )
 )
 ```
+
