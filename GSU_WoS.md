@@ -257,6 +257,10 @@ TS=
 
 #### Health and inequality
 
+Inequality taken directly from Cristin, with minor adaptations. Health terms copied from the phrase above. 
+
+`LGBTQ` will also find LGBTQ+. `Racial` will find racial disparities etc.
+
 ```
 TS=
 (
@@ -270,12 +274,13 @@ TS=
   OR "poverty" OR "low income" OR "economic burden" OR "debt" OR "microfinance" OR "homeless*"
   OR "disadvantaged" OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
   OR "indigenous" OR "autochthonous" OR "sami" OR "sapmi"
-  OR "minority group$" OR "ethnicity" OR "ethnic minorit*"
+  OR "minority group$" OR "ethnicity" OR "ethnic"
   OR "racism" OR "racial" OR "apartheid" 
   OR "colonial" OR "colonialism"
   OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny" 
   OR "intersectional"
-  OR "ageism" OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
+  OR "ageism" 
+  OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
   )
   AND
   (
@@ -404,6 +409,15 @@ TS=
       )
     )
   )
+)
+```
+
+#### Extra standalone terms for health and inequality
+
+```
+TS=
+(	"femicide"
+	OR "intimate partner violence" OR "domestic violence"
 )
 ```
 
