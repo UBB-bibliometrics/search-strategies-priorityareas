@@ -57,7 +57,7 @@ TS =
     OR "cholera"
     OR "giardiasis" OR "giardia infection$"
     OR "typhoid"
-    OR "diarrheal disease$"
+    OR "diarrheal disease$" OR "diarrhoeal disease$"
 
     OR "neglected tropical disease$"
     OR "buruli ulcer"
@@ -100,7 +100,6 @@ TS=
   (
     ("health education" OR "health polic*" OR "health organization$" OR "health service$"
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
-    OR "reproductive health" OR "sexual health" OR "mental health"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
     OR	"disease$" OR "infection$" OR "illness*" OR "mortality" OR "morbidity"
@@ -109,9 +108,9 @@ TS=
     OR "diabetes"
     OR "chronic respiratory disease$" 
     OR "cancer$" OR "*sarcoma" OR "sarcoma$" OR "*carcinoma" OR "carcinoma$" OR "*blastoma" OR "blastoma$" OR "myeloma$" OR "lymphoma$" OR "leukaemia" OR "leukemia" OR "mesothelioma$" OR "melanoma$"  
-    OR	"asthma" OR "chronic obstructive pulmonary disease$" OR "COPD" OR "chronic obstructive airway disease$" OR "chronic bronchitis" OR "emphysema" OR	"pneumonia"
+    OR	"asthma" OR "chronic obstructive pulmonary disease$" OR "COPD" OR "chronic obstructive airway disease$" OR "chronic bronchitis" OR "emphysema" OR "pneumonia"
     OR	"diabetes"
-    OR  "cardiovascular disease$" OR "heart disease" OR "heart attack$" OR "stroke$"
+    OR  "cardiovascular disease$" OR "heart disease" OR "heart attack$" OR "stroke"
     OR	"dust exposure"
     OR	"diarrhea*"
     OR  "WASH facilities"
@@ -161,7 +160,7 @@ TS=
     OR  "breastfeed*" OR	"birthweight"
     OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
     OR	"abortion*" OR "pregnan*"
-
+    OR 	"reproductive health" OR "sexual health" 
     OR	"sex education" OR "family planning"
 
     OR	"disability" OR "disabled people*" OR "disabled child*"
@@ -172,8 +171,9 @@ TS=
     OR	"developmental disorder$"
     OR  "cognative decline"
     OR	"risk behavi*"
+    OR 	"mental health"
     OR	"suicid*" OR "self-harm"
-    OR  "depression" OR "anxiety"
+    OR 	"anxiety" OR "psychosis"
     OR 	"intimate partner violence"
     OR	"tombak" 
     OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupation*" OR "traffic" OR "car" OR "road$"))
@@ -202,6 +202,7 @@ TS=
       (   "health" 
       OR  "epidemic$" OR "pandemic$"
       OR  "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$"
+      OR  "depression"
       OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
       OR  "toxicology" OR "aflatoxin" OR "accidental poisoning$" OR "mercury"
       OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$" 
@@ -211,7 +212,7 @@ TS=
       )
     AND
       ( "humans" OR "humanity" OR "human" OR "people" OR "person$"
-        OR "children" OR "child" OR "infant$" OR "babies"
+        OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
         OR "patient$" OR "hospital*" OR "health care" OR "healthcare"
