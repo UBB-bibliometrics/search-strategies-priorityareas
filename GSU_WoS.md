@@ -225,7 +225,8 @@ TS=
     )
   )
 AND
-  ("afghanistan"	OR
+  ("global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*" OR
+  "afghanistan"	OR
   "angola" 	OR
   "antigua" 	OR
   "bahrain" 	OR
@@ -377,3 +378,178 @@ AND
 
 Phytopathology
 Journal of fish diseases
+
+## Global health and inequality
+
+#### Health equity
+
+```
+TS=
+(	"health equity" OR "right to health*" OR "health rights" 
+	OR "health coverage" OR "health governance"
+	OR 
+	  (("access" OR "barrier$") NEAR/5 ("health care" OR "healthcare" OR "health services"))
+	  )
+)
+```
+
+#### Health and inequality
+
+```
+TS=
+(
+  ("globalisation" OR "globalization"
+  OR "development assistance" OR "development aid"
+  OR "equality" OR "equity" OR "egalitar*" OR "disparit*"
+  OR "representation" OR "discrimination" OR "criminali*" OR "marginali*" OR "otherness" OR "stereotypes"
+  OR "human rights" OR "justice"
+  OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"
+  OR "poverty" OR "economic burden" OR "debt" OR "microfinance" OR "homeless*"
+  OR "disadvantaged people" OR "disadvantaged person$" OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
+  OR "indigenous" OR "autochthonous" OR "sami" OR "sapmi"
+  OR "minority group$" OR "ethnicity" OR "ethnic minorit*"
+  OR "racism" OR "racial" OR "apartheid" 
+  OR "colonial" OR "colonialism"
+  OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny" 
+  OR "intersectional"
+  OR "ageism" OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
+  )
+  AND
+  (
+    ("health education" OR "health polic*" OR "health organization$" OR "health service$"
+    OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
+    OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
+
+    OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$" 
+    OR 	"waterborne disease$" OR "water borne disease$"
+    OR 	"infection$" OR "illness*" OR "premature mortality" OR "morbidity"
+    OR	"trauma"  
+    OR	"cancer$" OR "neoplasm$" 
+    OR 	"diabetes"
+    OR 	"chronic respiratory disease$" 
+    OR 	"cancer$" OR "*sarcoma" OR "sarcoma$" OR "*carcinoma" OR "carcinoma$" OR "*blastoma" OR "blastoma$" OR "myeloma$" OR "lymphoma$" OR "leukaemia" OR "leukemia" OR "mesothelioma$" OR "melanoma$"  
+    OR	"asthma" OR "chronic obstructive pulmonary disease$" OR "COPD" OR "chronic obstructive airway disease$" OR "chronic bronchitis" OR "emphysema" OR "pneumonia"
+    OR	"diabetes"
+    OR  "cardiovascular disease$" OR "heart disease" OR "heart attack$" OR "stroke"
+    OR	"dust exposure"
+    OR	"diarrhea*"
+    OR  "WASH facilities"
+    
+    OR "sexually transmitted disease$" OR "sexually transmitted infection$"
+    OR "syphilis"
+    
+    OR "coronavirus"
+    OR "covid"
+    OR "hepatitis"
+    OR "acquired immune deficiency syndrome" OR "acquired immuno-deficiency syndrome"  OR "acquired immunodeficiency syndrome" OR "Human Immunodeficiency Virus" OR "HIV"
+    OR "tuberculosis"
+    OR "malaria"
+    OR "cholera"
+    OR "meningitis"
+    OR "influenza"
+    OR "rubella"
+    OR "diphtheria"
+    OR "japanese encephalitis"
+    OR "measles"
+    OR "mumps"
+    OR "tetanus"
+    OR "pertussis"
+    OR "polio*"
+    OR "yellow fever"
+
+    OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies" 
+
+    OR  "clinic$" OR "hospital$" OR "healthcare" OR "residential care"
+    OR  "patient care"
+    OR	"dentist$" OR "dental"
+    OR	"surgery" OR "surgeon$"
+    OR  "therapist$" OR "counselling"
+    OR	"psycholog*" OR	"psychiat*"
+    OR	"orthopedic$"
+    OR  "health worker$" OR "health professional$" OR "health practitioner$"
+    OR "nurse$" OR "doctor$" OR "physician$" OR "surgeon$" OR "midwife*" OR "midwives" OR "gynecologist$"
+    OR "Anesthetist$" OR "Audiologist$" OR "Doula$" OR "Emergency Medical Dispatcher$" OR "Health Educator$"
+    OR "Health Facility Administrator$" OR "Infection Control Practitioner$" 
+    OR "Nutritionist$" OR "Optometrist$" OR "Pharmacist$" OR "Allergist$" OR "Anesthesiologist$"
+    OR "Cardiologist$" OR "Dermatologist$" OR "Endocrinologist$" OR "Gastroenterologist$" 
+    OR "General Practitioner$" OR "Geriatrician$" OR "Hospitalist$" OR "Nephrologist$" OR "Neurologist$"
+    OR "Oncologist$" OR "Ophthalmologist$" OR "Otolaryngologist$" OR "Pathologist$" 
+    OR "Pediatrician$" OR "Physiatrist$" OR "physiotherapist$" OR "Pulmonologist$" OR "Radiologist$" OR "Rheumatologist$" OR "Urologist$"
+
+    OR	"obstetric$" OR	"childbirth" OR	"childbear*" 
+    OR  "breastfeed*" OR "birthweight"
+    OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
+    OR	"abortion*" OR "pregnan*"
+    OR 	"reproductive health" OR "sexual health" 
+    OR	"sex education" OR "family planning"
+
+    OR	"disability" OR "disabled people*" OR "disabled child*"
+
+    OR	"konzo" OR "marasmus" OR "kwashiorkor"
+
+    OR	"child development"
+    OR	"developmental disorder$"
+    OR  "cognative decline"
+    OR	"risk behavi*"
+    OR 	"mental health"
+    OR	"suicid*" OR "self-harm"
+    OR 	"anxiety" OR "psychosis"
+    OR 	"intimate partner violence"
+    OR	"tombak" 
+    OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupation*" OR "traffic" OR "car" OR "road$"))
+    OR  "accidental poisoning$"
+    OR	"alcoholism"
+    OR	"binge drink*"
+    OR	"addiction"
+    OR
+      (
+        ("drug$" OR "narcotic$" OR "narcotic$" OR "substance"
+        OR "alcohol"
+        OR "amphetamine$" OR "methamphetamine$"
+        OR "cocaine"
+        OR "inhalant$"
+        OR "marijuana" OR "cannabis"
+        OR "opioid$" OR "opiate$" OR "heroin" OR "morphine"
+        OR "phencyclidine" OR "LSD" OR "psilocybin" OR "dimethyltriptamine"
+        OR "khat"
+        OR "tobacco" OR "secondhand smok*" OR "second hand smok*" OR "involuntary smoking" OR "passive smoking"
+        )
+        NEAR/3
+            ("abuse" OR "misuse" OR "harmful use*" OR "use disorder$" OR "dependence" OR "addict*" OR "overdose$")    
+      )
+    )
+  OR
+    (
+      (   "health" 
+      OR  "disease$" OR "mortality"
+      OR  "epidemic$" OR "pandemic$"
+      OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$" 
+      OR  "depression"
+      OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
+      OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$" 
+      OR  "arsenic" OR "mercury" OR "asbestos" OR "benzene" OR "cadmium" OR "dioxin$" OR "fluoride"
+      OR  "lead poison*" OR "lead *toxicity" OR "lead mediated *toxicity" OR "lead induced *toxicity" OR "lead exposure" OR "lead carcinogen*" OR "blood lead"
+      OR  "sanitation" OR "drinking water" OR "potable water"
+      )
+    AND
+      ( "humans" OR "humanity" OR "human" OR "people" OR "person$"
+        OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
+        OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
+        OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
+        OR "patient$" OR "hospital*" OR "health care" OR "healthcare"
+        OR "premature death$" OR "premature mortality" OR "covid"
+      )
+    )
+  )
+)
+```
+
+#### Right to food and water
+
+```
+TS=
+(	"right to food" OR "right to water" OR "smallhold*"
+	OR "food security" OR "water security"
+	OR "access to food" OR "access to water"
+)
+```
