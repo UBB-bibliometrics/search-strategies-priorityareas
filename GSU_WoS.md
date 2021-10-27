@@ -388,7 +388,9 @@ TS=
 (	"health equity" OR "right to health*" OR "health rights" 
 	OR "health coverage" OR "health governance"
 	OR 
-	  (("access" OR "barrier$") NEAR/5 ("health care" OR "healthcare" OR "health services"))
+	  (
+	    ("access" OR "barrier$")
+	    NEAR/5 ("health care" OR "healthcare" OR "health services")
 	  )
 )
 ```
