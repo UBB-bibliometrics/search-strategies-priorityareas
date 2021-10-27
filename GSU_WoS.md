@@ -2,6 +2,15 @@
 
 ## Global health
 
+#### Global health
+
+```
+TS=
+("global health" OR "international health" OR "global mental health"
+)
+
+```
+
 #### Climate change/disasters and health
 
 The double `NOT` statement removes papers talking about ecological health provided that they do not also mention human health.
@@ -20,7 +29,7 @@ TS=
       NOT 
       ("human health" OR "public health" OR "mental health" OR "healthcare" OR "health care" OR "medical" OR "wellbeing" OR "well-being")
     )
- )
+)
 
 ```
 
@@ -90,13 +99,13 @@ TS=
 (
   (
     ("health education" OR "health polic*" OR "health organization$" OR "health service$"
-    OR "health equity" OR "right to health*" OR "health coverage"
+    OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "reproductive health" OR "sexual health" OR "mental health"
-    OR "medical" OR	"wellbeing" OR "well-being"
+    OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
-    OR	"disease$" OR "infection$" OR "illness*" OR	"mortality" OR "morbidity"
+    OR	"disease$" OR "infection$" OR "illness*" OR "mortality" OR "morbidity"
     OR	"trauma"  
-    OR	"cancer" OR "neoplasm$" 
+    OR	"cancer$" OR "neoplasm$" 
     OR "diabetes"
     OR "chronic respiratory disease$" 
     OR "cancer$" OR "*sarcoma" OR "sarcoma$" OR "*carcinoma" OR "carcinoma$" OR "*blastoma" OR "blastoma$" OR "myeloma$" OR "lymphoma$" OR "leukaemia" OR "leukemia" OR "mesothelioma$" OR "melanoma$"  
@@ -165,7 +174,7 @@ TS=
     OR	"risk behavi*"
     OR	"suicid*" OR "self-harm"
     OR  "depression" OR "anxiety"
-
+    OR 	"intimate partner violence"
     OR	"tombak" 
     OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupation*" OR "traffic" OR "car" OR "road$"))
     OR	"alcoholism"
@@ -193,8 +202,7 @@ TS=
       (   "health" 
       OR  "epidemic$" OR "pandemic$"
       OR  "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$"
-      OR  "nutrition*" OR "malnutrition" OR "malnourish*"
-      OR	"vitamin$" OR	"micronutrient$"
+      OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
       OR  "toxicology" OR "aflatoxin" OR "accidental poisoning$" OR "mercury"
       OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$" 
       OR  "arsenic" OR "asbestos" OR "benzene" OR "cadmium" OR "dioxin$" OR "mercury" OR "fluoride" OR "pesticide$"
@@ -206,7 +214,7 @@ TS=
         OR "children" OR "child" OR "infant$" OR "babies"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
-        OR "patient$" OR "hospital$" OR "health care" OR "healthcare"
+        OR "patient$" OR "hospital*" OR "health care" OR "healthcare"
         OR "premature death$" OR "premature mortality"
       )
     )
