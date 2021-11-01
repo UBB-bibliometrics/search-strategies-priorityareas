@@ -476,24 +476,69 @@ TS=
 
 Same health terms used as in the above 2 sections. 
 
-How to include `migration`? At least 1300 of the extra 14000 results when adding it are definately not relevant. Many of these are from surgery, but there is also environmental migration of pollutants (pollutants, radon, PCBs, PM, mercury). Ideas:
-* "stent" ,  "surgical",  "intragastric", "metastasis"
-* "electrokinetic migration" OR "needle migration" OR "migration inhibitory factor" OR "aberrant migration" OR "device migration"
-* Remove journals with surgery or surgical?
-There are so many options, we may have to try and do it positively rather than negatively.
+How to include `migration`? MANY results when adding it are definately not relevant. Many of these are from surgery, but there is also environmental migration of pollutants (pollutants, radon, PCBs, PM, mercury). Two alternatives - positive inclusion or negative exclusion. I have chosen exclusion of certain phrases (set 2), plus inclusion of certain Web of Science categories (set 3). 
+An alternative would be to exclude Web of Science categories, but I found this to be difficult as there as so many. A starting list includes:
+`WC = ("surgery" OR "oncology" OR "neurosciences" OR "clinical neurology" OR "Biochemistry & Molecular Biology" OR "cell biology" OR "Genetics Heredity" OR "orthopedics" OR "Radiology Nuclear Medicine Medical Imaging" OR "Gastroenterology Hepatology" OR "Urology Nephrology" OR "Endocrinology Metabolism" OR "fisheries" OR "marine freshwater biology" OR "ecology" OR "veterinary sciences" OR "entomology" OR "Biodiversity Conservation" OR "toxicology" OR "limnology" OR "water resources" OR "Food Science Technology" OR "chemistry analytical" OR "chemistry multidisciplinary" OR "chemistry physical" OR "chemistry medicinal" OR "chemistry applied" OR "Spectroscopy" OR "optics" OR "engineering electrical electronic" OR "engineering chemical" OR "Biotechnology Applied Microbiology" OR "engineering biomedical" OR "materials science biomaterials" OR "nanoscience nanotechnology" OR "Medical Laboratory Technology")`
+
+**COMBINE: (Set 1 OR Set 2 OR Set 3) AND Set 4**
+
+### Set 1
 
 ```
 TS=
-(
-  ("migrant$" OR "immigrant$" OR "immigration" OR "emmigration"
+  ("migrant$" OR "immigrant$" OR "immigration" OR "emigration"
+  OR "human migration" OR "migration background" OR "migration intention$" OR "worker migration"
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
   OR "asylum seeker$" OR "people seeking asylum" 
   OR "cultural integration" OR "language barrier$" OR "multicultural"
   )
-  AND
+```
+
+### Set 2
+
+```
+TS = 	"migration"
+NOT
   (
-    ("health education" OR "health polic*" OR "health organization$" OR "health service$"
+  TS = 	("surgical*" OR "surgery" OR "surgeries" OR "arthroplasty" OR "implant*" OR "stent$" OR "shunt" OR "catheter" OR "*prosthesis" OR "intragastric" OR "aberrant migration" OR "device migration" OR "valve migration"
+  	OR "foreign bodies" OR "foreign body" OR "needle" OR "bone migration" OR "stone migration" OR "perforation" OR "obstruction" OR "silicone"
+  	OR "cell" OR "cells" OR "cancer migration" OR "tumor migration" OR "carcinoma" OR "neoplasm$" OR "metastasis" OR "apoptosis" OR "transcription" OR "expression" OR "receptor" OR "clot migration" OR "neuron* migration" "monocyte$" OR "macrophage$" OR "leukocyte$" OR "chondrocyte$" OR "neutrophil$" OR "inhibitory factor" OR "anteriorly" OR "posteriorly" OR "transmembrane" OR "biomarker"
+  	OR "pain migration" OR "periodontitis" OR "hip migration"
+	OR "animal migration$" OR "migratory bird$" OR "biofilm migration" OR "seed migration" OR "larva* migration" OR "deer" OR "bats"
+	OR "population genetics"
+	OR "contaminant migration" OR "lead migration" OR "pb migration"
+  	OR "electrokinetic migration"
+  	)
+  )
+```
+
+### Set 3
+
+The categories "Medicine general internal" OR "tropical medicine" OR "infectious diseases" contain some irrelevant, but I think combined with the above terms there should not be too much noise...
+
+```
+TS = 	"migration"
+AND
+  WC = 	("Public Environmental Occupational Health" OR "Health policy services" OR "Health Care Sciences Services" OR "Medical ethics"
+  	OR "Medicine general internal" OR "tropical medicine" OR "infectious diseases"
+	OR "Environmental sciences"
+	OR "Regional urban planning" OR "Economics" OR "Development studies" OR "urban studies" OR "geography" OR "demography" OR "area studies"
+	OR "Family Studies" OR "Social Work"
+	OR "psychiatry" OR "Psychology Social" OR "psychology multidisciplinary"
+	OR "Social Sciences Interdisciplinary" OR "social sciences biomedical" OR "Sociology"
+	OR "Multidisciplinary Sciences"
+	)
+```
+
+### Set 4
+
+Removed some of the environmental pollutant terms from the medical terms, since these can combine with migration in ways that are nothing to do with human migration. 
+
+```
+TS=
+(
+    "health education" OR "health polic*" OR "health organization$" OR "health service$"
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
@@ -536,7 +581,7 @@ TS=
 
     OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies" 
 
-    OR  "clinic$" OR "hospital$" OR "healthcare" OR "residential care"
+    OR  "clinic$" OR "hospital$" OR "healthcare" OR "health care" OR "residential care"
     OR  "patient care"
     OR	"dentist$" OR "dental"
     OR	"surgery" OR "surgeon$"
@@ -594,30 +639,26 @@ TS=
         NEAR/3
             ("abuse" OR "misuse" OR "harmful use*" OR "use disorder$" OR "dependence" OR "addict*" OR "overdose$")    
       )
-    )
-  OR
-    (
-      (   "health" 
-      OR  "disease$" OR "mortality"
-      OR  "epidemic$" OR "pandemic$"
-      OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$" 
-      OR  "depression"
-      OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
-      OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$" 
-      OR  "arsenic" OR "mercury" OR "asbestos" OR "benzene" OR "cadmium" OR "dioxin$" OR "fluoride"
-      OR  "lead poison*" OR "lead *toxicity" OR "lead mediated *toxicity" OR "lead induced *toxicity" OR "lead exposure" OR "lead carcinogen*" OR "blood lead"
-      OR  "sanitation" OR "drinking water" OR "potable water"
-      )
-    AND
-      ( "humans" OR "humanity" OR "human" OR "people" OR "person$"
+    OR
+      (
+        (   "health" 
+        OR  "disease$" OR "mortality"
+        OR  "epidemic$" OR "pandemic$"
+      	OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$" 
+      	OR  "depression"
+     	OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
+      	OR  "lead poison*" OR "lead *toxicity" OR "lead mediated *toxicity" OR "lead induced *toxicity" OR "lead exposure" OR "lead carcinogen*" OR "blood lead"
+      	OR  "sanitation" OR "drinking water" OR "potable water"
+      	)
+      AND
+      	("humans" OR "humanity" OR "human" OR "people" OR "person$"
         OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
         OR "patient$" OR "hospital*" OR "health care" OR "healthcare"
         OR "premature death$" OR "premature mortality" OR "covid"
+        )
       )
-    )
-  )
 )
 ```
 
