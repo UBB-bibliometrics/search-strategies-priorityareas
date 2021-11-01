@@ -34,22 +34,28 @@ TS=
   (
     ("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$") 
     AND 
-    (("health") AND ("children" OR "child" OR "human$" OR "equity" OR "justice" OR "patient$" OR "victim$"))
-   )
+    (	"health" 
+    	AND 
+	("children" OR "child" OR "youth" OR "adolescent$" OR "women" OR "girls" OR "men" OR "boys" OR "the elderly" OR "human$" 
+	OR "equity" OR "justice" 
+	OR "patient$" OR "victim$" OR "survivor$"
+	)
+    )
+  )
 ) 
 ``` 
 
 ```
-TS = 	("climate change" OR "global warming" OR "sustainable development" OR "disaster" OR "flood*" OR "drought" OR "tsunami") 
+TS = 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$") 
 AND 
-WC = 	("Public Environmental Occupational Health" OR "medicine general internal" OR "health care sciences services" OR "health policy services" OR "psychiatry" OR "nursing" OR "emergency medicine" OR "pediatrics" OR "social sciences biomedical" OR "psychology clinical" OR "psychology multidisciplinary" OR "social work" OR "obstetrics gynecology"))
+WC = 	("Public Environmental Occupational Health" OR "medicine general internal" OR "health care sciences services" OR "health policy services" OR "psychiatry" OR "nursing" OR "emergency medicine" OR "pediatrics" OR "social sciences biomedical" OR "psychology clinical" OR "psychology multidisciplinary" OR "social work" OR "obstetrics gynecology")
 ```
 
 The double NOT removes those talking about animal health which do not also talk about human health.
 
 ```
 (
-   TS= 	("climate change" OR "global warming" OR "sustainable development" OR "disaster" OR "flood*" OR "drought" OR "tsunami")
+   TS= 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
    AND 
    TI= 	("health")
 )
