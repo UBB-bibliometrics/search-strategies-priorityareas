@@ -290,7 +290,7 @@ The phrase below only searches in the arts and humanities and social sciences ci
   OR "migrant$" OR "migration"
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
-  OR "asylum seeker$" OR "people seeking asylum"
+  OR "asylum seek*" OR "people seeking asylum"
   OR "border regime"
   OR "cultural integration" OR "multicultural" OR "acculturat*"
   )
@@ -314,7 +314,7 @@ In phrase 2 the ESCI is included - here migration is NOT included - alhtough the
       )
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
-  OR "asylum seeker$" OR "people seeking asylum"
+  OR "asylum seek*" OR "people seeking asylum"
   OR "border regime"
   OR "cultural integration" OR "multicultural" OR "acculturat*" OR "intercultural"
   )
@@ -530,15 +530,10 @@ An alternative would be to exclude Web of Science categories, but I found this t
 TS=
   ("migrant$" OR "immigrant$" OR "immigration" OR "emigration"
   OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "labor migration"
-  OR  ("migration"
-      AND   ("asylum" OR "trafficking" OR "displacement"
-            OR "rural" OR "urban"
-            OR "minorities"
-            )
-      )
+  OR  ("migration" AND ("asylum"))
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
-  OR "asylum seeker$" OR "people seeking asylum"
+  OR "asylum seek*" OR "people seeking asylum"
   OR "cultural integration" OR "language barrier$" OR "multicultural"
   )
 ```
