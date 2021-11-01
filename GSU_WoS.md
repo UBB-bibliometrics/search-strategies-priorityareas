@@ -480,7 +480,7 @@ How to include `migration`? MANY results when adding it are definately not relev
 An alternative would be to exclude Web of Science categories, but I found this to be difficult as there as so many. A starting list includes:
 `WC = ("surgery" OR "oncology" OR "neurosciences" OR "clinical neurology" OR "Biochemistry & Molecular Biology" OR "cell biology" OR "Genetics Heredity" OR "orthopedics" OR "Radiology Nuclear Medicine Medical Imaging" OR "Gastroenterology Hepatology" OR "Urology Nephrology" OR "Endocrinology Metabolism" OR "fisheries" OR "marine freshwater biology" OR "ecology" OR "veterinary sciences" OR "entomology" OR "Biodiversity Conservation" OR "toxicology" OR "limnology" OR "water resources" OR "Food Science Technology" OR "chemistry analytical" OR "chemistry multidisciplinary" OR "chemistry physical" OR "chemistry medicinal" OR "chemistry applied" OR "Spectroscopy" OR "optics" OR "engineering electrical electronic" OR "engineering chemical" OR "Biotechnology Applied Microbiology" OR "engineering biomedical" OR "materials science biomaterials" OR "nanoscience nanotechnology" OR "Medical Laboratory Technology")`
 
-**COMBINE: (Set 1 OR Set 2 OR Set 3) AND Set 4**
+**COMBINE: (Set 1 OR (Set 2 AND Set 3)) AND Set 4**
 
 ### Set 1
 
@@ -538,7 +538,8 @@ Removed some of the environmental pollutant terms from the medical terms, since 
 ```
 TS=
 (
-    "health education" OR "health polic*" OR "health organization$" OR "health service$"
+    "migrant health" OR "refugee health" OR "immigrant health"
+    OR "health behavior$" OR "health education" OR "health polic*" OR "health organization$" OR "health service$"
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
@@ -581,8 +582,7 @@ TS=
 
     OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies" 
 
-    OR  "clinic$" OR "hospital$" OR "healthcare" OR "health care" OR "residential care"
-    OR  "patient care"
+    OR  "clinic$" OR "hospital$" OR "healthcare" OR "health care" OR "residential care" OR  "patient care"
     OR	"dentist$" OR "dental"
     OR	"surgery" OR "surgeon$"
     OR  "therapist$" OR "counselling"
@@ -647,7 +647,6 @@ TS=
       	OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$" 
       	OR  "depression"
      	OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
-      	OR  "lead poison*" OR "lead *toxicity" OR "lead mediated *toxicity" OR "lead induced *toxicity" OR "lead exposure" OR "lead carcinogen*" OR "blood lead"
       	OR  "sanitation" OR "drinking water" OR "potable water"
       	)
       AND
