@@ -4,7 +4,7 @@
 
 #### Global health
 
-```
+``` Ceylon =
 TS=
 ("global health" OR "international health" OR "global mental health"
 )
@@ -15,7 +15,7 @@ TS=
 
 This is tricky as many papers talk about ecological/plant/animal health.
 
-```
+``` Ceylon =
 TS=
 (
   (
@@ -45,7 +45,7 @@ TS=
 )
 ```
 
-```
+``` Ceylon =
 TS = 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
 AND
 WC = 	("Public Environmental Occupational Health" OR "medicine general internal" OR "health care sciences services" OR "health policy services" OR "psychiatry" OR "nursing" OR "emergency medicine" OR "pediatrics" OR "social sciences biomedical" OR "psychology clinical" OR "psychology multidisciplinary" OR "social work" OR "obstetrics gynecology")
@@ -53,7 +53,7 @@ WC = 	("Public Environmental Occupational Health" OR "medicine general internal"
 
 The double NOT removes those talking about animal health which do not also talk about human health.
 
-```
+``` Ceylon =
 (
    TS= 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
    AND
@@ -80,7 +80,7 @@ Not combined with any countries. Adapted from SDG3 search.
 
 HIV, polio, malaria, TB, waterborne diseases and maternal/infant mortality are included as they are major in LMCs, even though they can also occur elsewhere.
 
-```
+``` Ceylon =
 TS =
 (
     "maternal mortality" OR "child mortality" OR "infant mortality"
@@ -136,7 +136,7 @@ Specific diseases, health care occupations etc. added from SDG3
 
 Countries includes all except high-income countries.
 
-```
+``` Ceylon =
 TS=
 (
   (
@@ -277,8 +277,27 @@ AND
 )  
 ```
 
-Phytopathology
-Journal of fish diseases
+## Inequality
+
+
+## Migration
+
+The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/ecological/physical uses of "migration".
+
+``` Ceylon=
+(TS=
+  (  "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
+  OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
+  OR "returnee$"
+  OR "asylum seeker$" OR "people seeking asylum"
+  OR "border regime"
+  OR "cultural integration" OR "multicultural" OR "acculturat*"
+  )
+)
+AND
+(EDN==("WOS.SSCI" OR "WOS.AHCI"))
+```
+
 
 ## Global health and inequality
 
@@ -665,24 +684,4 @@ TS=
         )
       )
 )
-```
-
-## Inequality
-
-## Migration
-
-The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/ecological/physical uses of "migration".
-
-``` Ceylon=
-(TS=
-  (  "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
-  OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
-  OR "returnee$"
-  OR "asylum seeker$" OR "people seeking asylum"
-  OR "border regime"
-  OR "cultural integration" OR "multicultural" OR "acculturat*"
-  )
-)
-AND
-(EDN==("WOS.SSCI" OR "WOS.AHCI"))
 ```
