@@ -286,7 +286,8 @@ The phrase below only searches in the arts and humanities and social sciences ci
 
 ``` Ceylon=
 (TS=
-  (  "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
+  ("immigrant$" OR "immigration" OR "emigration"
+  OR "migrant$" OR "migration"
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
   OR "asylum seeker$" OR "people seeking asylum"
@@ -298,6 +299,29 @@ AND
 (EDN==("WOS.SSCI" OR "WOS.AHCI"))
 ```
 
+In phrase 2 the ESCI is included - here migration is NOT included - alhtough the majority of results from there seem to be from social sciences/humanities, some emerging geology/biology/medical journals may seep in.
+
+``` Ceylon=
+(TS=
+  ("immigrant$" OR "immigration" OR "emigration"
+  OR "migrant$" OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "labor migration"
+  OR  ("migration"
+      AND   ("asylum" OR "trafficking" OR "displacement"
+            OR "rural" OR "urban"
+            OR "law" OR "politic*" OR "biopolitics" OR "citizen*"
+            OR "minority" OR "minorities"
+            )
+      )
+  OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
+  OR "returnee$"
+  OR "asylum seeker$" OR "people seeking asylum"
+  OR "border regime"
+  OR "cultural integration" OR "multicultural" OR "acculturat*" OR "intercultural"
+  )
+)
+AND
+(EDN==("WOS.ESCI"))
+```
 
 ## Global health and inequality
 
