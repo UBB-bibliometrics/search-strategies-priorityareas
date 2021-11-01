@@ -312,10 +312,9 @@ The phrase below only searches in the arts and humanities and social sciences ci
 (TS=
   ("globalisation" OR "globalization"
   OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
-  OR "equality" OR "inequalitie" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
+  OR "equality" OR "inequalit*" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
   OR "representation" OR "discrimination" OR "criminali*" OR "marginali*"
-  OR "justice" OR "injustice"
-  OR "welfare system" OR "welfare state" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"
+  OR "justice" OR "injustice" OR "oppressi*"
   OR "low income" OR "economic burden" OR "debt" OR "neoliberal"
   OR "disadvantaged"
   OR "indigenous"
@@ -328,15 +327,57 @@ AND
 (EDN==("WOS.SSCI" OR "WOS.AHCI"))
 ```
 
+#### Certain groups
+
+Note that some groups are not included here, because they are included in their entirety in the phrases above. The groups included below are only included when combined with certain terms.
+
 ``` Ceylon=
 (TS=
   (
+    ("women" OR "girls" OR "boys" OR "gender" OR "child" OR "children"
+    OR "elderly" OR "disabilit*" OR "disabled"
+    OR "islam" OR "muslim$" OR "christian$" OR "jewish" OR "hindu*" OR "sikh" OR "buddhis*"
+    )
+    NEAR/15
+      ("freedom$"
+      OR "security"
+      OR "legislat*" OR "governance" OR "democracy"
+      OR "power" OR "empower*"
+      OR "quota$"
+      OR "traditional law$" OR "sharia"
+      OR "inclusion" OR "inclusive" OR "language polic*"
+      OR "climate change" OR "environmental change$"
+      )
   )
 )
 AND
-(EDN==("WOS.SSCI" OR "WOS.AHCI"))
+(EDN==("WOS.SSCI" OR "WOS.AHCI" OR "WOS.ESCI"))
 ```
 
+This phrase is the same as above, but only including terms that won't cause confusion when run against the science and medicine indices. Some additional terms are added that, while they could not be run alone against all indicies, can together with the groups. Hindu is taken out as also refers to a region in climate science ("hindu kush").
+
+``` Ceylon=
+TS=
+(
+  ("women" OR "girls" OR "boys" OR "gender" OR "child" OR "children"
+  OR "elderly" OR "disabilit*" OR "disabled"
+  OR "indigenous"
+  OR "islam" OR "muslim$" OR "christian$" OR "jewish" OR "sikh" OR "buddhis*"
+  )
+  NEAR/15
+    ("empower*" OR "democracy"
+    OR "traditional law$" OR "sharia"
+    OR "climate change" OR "environmental change$"
+    OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
+    OR "representation" OR "discrimination" OR "criminali*" OR "marginali*"
+    OR "justice" OR "injustice" OR "oppressi*"
+    OR "low income" OR "economic burden" OR "debt" OR "neoliberal"
+    OR "disadvantaged"
+    OR "minorities"
+    OR "colonial"
+    )
+)
+```
 
 ## Migration
 
