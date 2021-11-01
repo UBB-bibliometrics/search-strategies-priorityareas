@@ -662,6 +662,7 @@ TS=
   	OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   	OR "returnee$"
   	OR "asylum seeker$" OR "people seeking asylum" 
+	OR "cultural integration" OR "language barrier$" OR "multicultural"
         )
       )
 )
