@@ -288,7 +288,7 @@ TS=
   ("development assistance" OR "development aid"
   OR "otherness" OR "othering" OR "stereotypes"
   OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
-  OR (("rights") NEAR/5 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
+  OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
   OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
   OR "social justice" OR "social sustainability" OR "social mobility"
   OR "climate justice" OR "environmental justice"
@@ -298,8 +298,9 @@ TS=
   OR ("caste" NOT "bee$")
   OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$" OR "the vulnerable"
   OR "autochthonous" OR "sami" OR "sapmi"
-  OR (("knowledge") NEAR/5 ("indigenous" OR "traditional" OR "local" OR "community based"))
+  OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
   OR "minority group$" OR "minority language$" OR "minority stress"
+  OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived"))
   OR "racism" OR "racial" OR "apartheid"
   OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
   OR "riot" OR "riots" OR "uprising$" OR "insurrection$" OR "political protest$" OR "political conflict$"
@@ -317,7 +318,7 @@ The phrase below only searches in the arts and humanities and social sciences ci
   ("globalisation" OR "globalization"
   OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
   OR "equality" OR "inequalit*" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
-  OR "representation" OR "discrimination" OR "criminali*" OR "marginali*"
+  OR "criminali*" OR "marginali*"
   OR "justice" OR "injustice" OR "oppressi*"
   OR "low income" OR "economic burden" OR "debt" OR "neoliberal"
   OR "disadvantaged"
