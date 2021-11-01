@@ -283,14 +283,18 @@ AND
 TS=
   ("development assistance" OR "development aid"
   OR "otherness" OR "othering" OR "stereotypes"
-  OR "human rights"
+  OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
+  OR (("rights") NEAR/5 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
   OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
   OR "social justice" OR "social sustainability" OR "social mobility"
+  OR "climate justice" OR "environmental justice"
   OR "poverty" OR "microfinance" OR "microcredit" OR "homeless"
+  OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
   OR "slaves" OR "slave" OR "slavery"
   OR ("caste" NOT "bee$")
   OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$" OR "the vulnerable"
   OR "autochthonous" OR "sami" OR "sapmi"
+  OR (("knowledge") NEAR/5 ("indigenous" OR "traditional" OR "local" OR "community based"))
   OR "minority group$" OR "minority language$" OR "minority stress"
   OR "racism" OR "racial" OR "apartheid"
   OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
@@ -307,17 +311,26 @@ The phrase below only searches in the arts and humanities and social sciences ci
 ``` Ceylon=
 (TS=
   ("globalisation" OR "globalization"
-  OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
+  OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
   OR "equality" OR "inequalitie" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
   OR "representation" OR "discrimination" OR "criminali*" OR "marginali*"
   OR "justice" OR "injustice"
   OR "welfare system" OR "welfare state" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"
-  OR "low income" OR "economic burden" OR "debt"
+  OR "low income" OR "economic burden" OR "debt" OR "neoliberal"
   OR "disadvantaged"
   OR "indigenous"
   OR "minorities"
   OR "ethnicity" OR "ethnic"
   OR "colonial"
+  )
+)
+AND
+(EDN==("WOS.SSCI" OR "WOS.AHCI"))
+```
+
+``` Ceylon=
+(TS=
+  (
   )
 )
 AND
