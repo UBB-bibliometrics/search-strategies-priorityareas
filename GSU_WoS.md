@@ -279,6 +279,10 @@ AND
 
 ## Inequality
 
+#### General terms
+
+1) Unlimited and 2) Limited by index
+
 ``` Ceylon=
 TS=
   ("development assistance" OR "development aid"
@@ -328,6 +332,8 @@ AND
 ```
 
 #### Certain groups
+
+1) Limited by index and 2) Unlimited.  
 
 Note that some groups are not included here, because they are included in their entirety in the phrases above. The groups included below are only included when combined with certain terms.
 
