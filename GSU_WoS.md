@@ -279,6 +279,51 @@ AND
 
 ## Inequality
 
+``` Ceylon=
+TS=
+  ("development assistance" OR "development aid"
+  OR "otherness" OR "othering" OR "stereotypes"
+  OR "human rights"
+  OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
+  OR "social justice" OR "social sustainability" OR "social mobility"
+  OR "poverty" OR "microfinance" OR "microcredit" OR "homeless"
+  OR "slaves" OR "slave" OR "slavery"
+  OR ("caste" NOT "bee$")
+  OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$" OR "the vulnerable"
+  OR "autochthonous" OR "sami" OR "sapmi"
+  OR "minority group$" OR "minority language$" OR "minority stress"
+  OR "racism" OR "racial" OR "apartheid"
+  OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
+  OR "riot" OR "riots" OR "uprising$" OR "insurrection$" OR "political protest$" OR "political conflict$"
+  OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny"
+  OR "intersectional"
+  OR "ageism"
+  OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
+)
+```
+
+The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/physical uses of more generic terms.
+
+``` Ceylon=
+(TS=
+  ("globalisation" OR "globalization"
+  OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
+  OR "equality" OR "inequalitie" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
+  OR "representation" OR "discrimination" OR "criminali*" OR "marginali*"
+  OR "justice" OR "injustice"
+  OR "welfare system" OR "welfare state" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"
+  OR "low income" OR "economic burden" OR "debt"
+  OR "disadvantaged"
+  OR "indigenous"
+  OR "minorities"
+  OR "ethnicity" OR "ethnic"
+  OR "colonial"
+  )
+)
+AND
+(EDN==("WOS.SSCI" OR "WOS.AHCI"))
+```
+
 
 ## Migration
 
@@ -341,7 +386,7 @@ TS=
 
 #### Health and inequality
 
-Inequality taken directly from Cristin, with minor adaptations. Health terms copied from the phrase above.
+Inequality taken directly from Cristin, with minor adaptations. Health terms copied from the global health query.
 
 `LGBTQ` will also find LGBTQ+. `Racial` will find racial disparities etc.
 
