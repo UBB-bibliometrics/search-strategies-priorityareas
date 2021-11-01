@@ -19,35 +19,35 @@ This is tricky as many papers talk about ecological/plant/animal health.
 TS=
 (
   (
-    ("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$") 
-    AND 
-    ("wellbeing" OR "well-being" 
+    ("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
+    AND
+    ("wellbeing" OR "well-being"
     OR "medical" OR "healthcare" OR "health care" OR "health sector" OR "hospital$" OR "intensive care" OR "essential medic*"
-    OR "human health" OR "public health" OR "health promotion" 
-    OR "mental health" OR "psychosocial health" 
-    OR "workplace health" OR "occupational health" 
-    OR "global health" OR "social determinants of health" OR "health equity" OR "equity and health" OR "health for all" 
+    OR "human health" OR "public health" OR "health promotion"
+    OR "mental health" OR "psychosocial health"
+    OR "workplace health" OR "occupational health"
+    OR "global health" OR "social determinants of health" OR "health equity" OR "equity and health" OR "health for all"
     OR "child health"
     )
   )
   OR
   (
-    ("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$") 
-    AND 
-    (	"health" 
-    	AND 
-	("children" OR "child" OR "youth" OR "adolescent$" OR "women" OR "girls" OR "men" OR "boys" OR "the elderly" OR "human$" 
-	OR "equity" OR "justice" 
+    ("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
+    AND
+    (	"health"
+    	AND
+	("children" OR "child" OR "youth" OR "adolescent$" OR "women" OR "girls" OR "men" OR "boys" OR "the elderly" OR "human$"
+	OR "equity" OR "justice"
 	OR "patient$" OR "victim$" OR "survivor$"
 	)
     )
   )
-) 
-``` 
+)
+```
 
 ```
-TS = 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$") 
-AND 
+TS = 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
+AND
 WC = 	("Public Environmental Occupational Health" OR "medicine general internal" OR "health care sciences services" OR "health policy services" OR "psychiatry" OR "nursing" OR "emergency medicine" OR "pediatrics" OR "social sciences biomedical" OR "psychology clinical" OR "psychology multidisciplinary" OR "social work" OR "obstetrics gynecology")
 ```
 
@@ -56,27 +56,27 @@ The double NOT removes those talking about animal health which do not also talk 
 ```
 (
    TS= 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
-   AND 
+   AND
    TI= 	("health")
 )
-NOT 
+NOT
 (  
-   TS= 	("land health" OR "soil health" OR "grassland health" OR "forest health" OR "woodland health" OR "plant health" OR "vegetation health" OR "ocean health" OR "ecosystem health" OR "animal health" OR "livestock health" OR "fish health") 
-   NOT 
-   TS= 	("wellbeing" OR "well-being" 
+   TS= 	("land health" OR "soil health" OR "grassland health" OR "forest health" OR "woodland health" OR "plant health" OR "vegetation health" OR "ocean health" OR "ecosystem health" OR "animal health" OR "livestock health" OR "fish health")
+   NOT
+   TS= 	("wellbeing" OR "well-being"
     	OR "medical" OR "healthcare" OR "health care" OR "health sector" OR "hospital$" OR "intensive care" OR "essential medic*"
-    	OR "human health" OR "public health" OR "health promotion" 
-    	OR "mental health" OR "psychosocial health" 
-    	OR "workplace health" OR "occupational health" 
-    	OR "global health" OR "social determinants of health" OR "health equity" OR "equity and health" OR "health for all" 
+    	OR "human health" OR "public health" OR "health promotion"
+    	OR "mental health" OR "psychosocial health"
+    	OR "workplace health" OR "occupational health"
+    	OR "global health" OR "social determinants of health" OR "health equity" OR "equity and health" OR "health for all"
     	OR "child health"
 	)
 )
 ```
- 
+
 #### Diseases/health issues prevalent in LMCs and neglected tropical diseases
 
-Not combined with any countries. Adapted from SDG3 search. 
+Not combined with any countries. Adapted from SDG3 search.
 
 HIV, polio, malaria, TB, waterborne diseases and maternal/infant mortality are included as they are major in LMCs, even though they can also occur elsewhere.
 
@@ -144,13 +144,13 @@ TS=
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
-    OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$" 
+    OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$"
     OR 	"waterborne disease$" OR "water borne disease$"
     OR 	"infection$" OR "illness*" OR "premature mortality" OR "morbidity"
     OR	"trauma"  
-    OR	"cancer$" OR "neoplasm$" 
+    OR	"cancer$" OR "neoplasm$"
     OR 	"diabetes"
-    OR 	"chronic respiratory disease$" 
+    OR 	"chronic respiratory disease$"
     OR 	"cancer$" OR "*sarcoma" OR "sarcoma$" OR "*carcinoma" OR "carcinoma$" OR "*blastoma" OR "blastoma$" OR "myeloma$" OR "lymphoma$" OR "leukaemia" OR "leukemia" OR "mesothelioma$" OR "melanoma$"  
     OR	"asthma" OR "chronic obstructive pulmonary disease$" OR "COPD" OR "chronic obstructive airway disease$" OR "chronic bronchitis" OR "emphysema" OR "pneumonia"
     OR	"diabetes"
@@ -158,10 +158,10 @@ TS=
     OR	"dust exposure"
     OR	"diarrhea*"
     OR  "WASH facilities"
-    
+
     OR "sexually transmitted disease$" OR "sexually transmitted infection$"
     OR "syphilis"
-    
+
     OR "coronavirus"
     OR "covid"
     OR "hepatitis"
@@ -181,7 +181,7 @@ TS=
     OR "polio*"
     OR "yellow fever"
 
-    OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies" 
+    OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies"
 
     OR  "clinic$" OR "hospital$" OR "healthcare" OR "residential care"
     OR  "patient care"
@@ -193,18 +193,18 @@ TS=
     OR  "health worker$" OR "health professional$" OR "health practitioner$"
     OR "nurse$" OR "doctor$" OR "physician$" OR "surgeon$" OR "midwife*" OR "midwives" OR "gynecologist$"
     OR "Anesthetist$" OR "Audiologist$" OR "Doula$" OR "Emergency Medical Dispatcher$" OR "Health Educator$"
-    OR "Health Facility Administrator$" OR "Infection Control Practitioner$" 
+    OR "Health Facility Administrator$" OR "Infection Control Practitioner$"
     OR "Nutritionist$" OR "Optometrist$" OR "Pharmacist$" OR "Allergist$" OR "Anesthesiologist$"
-    OR "Cardiologist$" OR "Dermatologist$" OR "Endocrinologist$" OR "Gastroenterologist$" 
+    OR "Cardiologist$" OR "Dermatologist$" OR "Endocrinologist$" OR "Gastroenterologist$"
     OR "General Practitioner$" OR "Geriatrician$" OR "Hospitalist$" OR "Nephrologist$" OR "Neurologist$"
-    OR "Oncologist$" OR "Ophthalmologist$" OR "Otolaryngologist$" OR "Pathologist$" 
+    OR "Oncologist$" OR "Ophthalmologist$" OR "Otolaryngologist$" OR "Pathologist$"
     OR "Pediatrician$" OR "Physiatrist$" OR "physiotherapist$" OR "Pulmonologist$" OR "Radiologist$" OR "Rheumatologist$" OR "Urologist$"
 
-    OR	"obstetric$" OR	"childbirth" OR	"childbear*" 
+    OR	"obstetric$" OR	"childbirth" OR	"childbear*"
     OR  "breastfeed*" OR "birthweight"
     OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
     OR	"abortion*" OR "pregnan*"
-    OR 	"reproductive health" OR "sexual health" 
+    OR 	"reproductive health" OR "sexual health"
     OR	"sex education" OR "family planning"
 
     OR	"disability" OR "disabled people*" OR "disabled child*"
@@ -219,7 +219,7 @@ TS=
     OR	"suicid*" OR "self-harm"
     OR 	"anxiety" OR "psychosis"
     OR 	"intimate partner violence"
-    OR	"tombak" 
+    OR	"tombak"
     OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupation*" OR "traffic" OR "car" OR "road$"))
     OR  "accidental poisoning$"
     OR	"alcoholism"
@@ -244,13 +244,13 @@ TS=
     )
   OR
     (
-      (   "health" 
+      (   "health"
       OR  "disease$" OR "mortality"
       OR  "epidemic$" OR "pandemic$"
-      OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$" 
+      OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$"
       OR  "depression"
       OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
-      OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$" 
+      OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$"
       OR  "arsenic" OR "mercury" OR "asbestos" OR "benzene" OR "cadmium" OR "dioxin$" OR "fluoride"
       OR  "lead poison*" OR "lead *toxicity" OR "lead mediated *toxicity" OR "lead induced *toxicity" OR "lead exposure" OR "lead carcinogen*" OR "blood lead"
       OR  "sanitation" OR "drinking water" OR "potable water"
@@ -267,12 +267,12 @@ TS=
   )
 AND
   ("global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
-  
+
   OR "afghanistan" OR "angola" OR "antigua" OR "bahrain" OR "bangladesh" OR "barbados" OR "belize" OR "benin" OR "bermuda" OR "bhutan" OR "burkina faso" OR "burundi" OR "cabo verde" OR "cambodia" OR "chad" OR "marianas" OR "comoros" OR "congo" OR "cuba" OR "djibouti" OR "dominica" OR "eritrea" OR "ethiopia" OR "micronesia" OR "fiji" OR "french polynesia" OR "gambia" OR "grenada" OR "guadeloupe" OR "guyana" OR "haiti" OR "jamaica" OR "kiribati" OR "laos" OR "lesotho" OR "liberia" OR "madagascar" OR "malawi" OR "maldives" OR "mali" OR "marshall islands" OR "martinique" OR "mauritania" OR "mauritius" OR "montserrat" OR "mozambique" OR "myanmar" OR "nauru" OR "nepal" OR "new caledonia" OR "niger" OR "niue" OR "papua new guinea" OR "rwanda" OR "saint lucia" OR "grenadines" OR "la reunion" OR "samoa" OR "sao tome" OR "senegal" OR "sierra leone" OR "solomon islands" OR "somalia" OR "sudan" OR "suriname" OR "tanzania" OR "timor leste" OR "togo" OR "tonga" OR "tuvalu" OR "uganda" OR "vanuatu" OR "yemen" OR "zambia"
-	
+
   OR "africa" OR "nigeria" OR "egypt" OR "kenya" OR "algeria" OR "morocco" OR "ghana" OR "ivory coast" OR "cameroon" OR "zimbabwe" OR "tunisia" OR "libya" OR "botswana" OR "gabon" OR "equatorial guinea" OR "eswatini" OR "cape verde" OR "western sahara" OR "mayotte"
-  
-  OR "albania" OR "argentina" OR "armenia" OR "azerbaijan" OR "belarus" OR "bolivia" OR "bosnia" OR "brazil" OR "bulgaria" OR "china" OR "colombia" OR "costa rica" OR "ecuador" OR "el salvador" OR "guatemala" OR "honduras" OR "india" OR "indonesia" OR "iran" OR "iraq" OR "jordan" OR "kazakhstan" OR "kosovo" OR "kyrgyz" OR "lebanon" OR "malaysia" OR "mexico" OR "micronesia" OR "moldova" OR "mongolia" OR "montenegro" OR "nicaragua" OR "macedonia" OR "pakistan" OR "paraguay" OR "phillipines" OR "peru" OR "romania" OR "russia" OR "serbia" OR "sri lanka" OR "syria" OR "tajikistan" OR "thailand" OR "turkey" OR "turkmenistan" OR "ukraine" OR "venezuela" OR "vietnam" OR "west bank" OR "gaza"	
+
+  OR "albania" OR "argentina" OR "armenia" OR "azerbaijan" OR "belarus" OR "bolivia" OR "bosnia" OR "brazil" OR "bulgaria" OR "china" OR "colombia" OR "costa rica" OR "ecuador" OR "el salvador" OR "guatemala" OR "honduras" OR "india" OR "indonesia" OR "iran" OR "iraq" OR "jordan" OR "kazakhstan" OR "kosovo" OR "kyrgyz" OR "lebanon" OR "malaysia" OR "mexico" OR "micronesia" OR "moldova" OR "mongolia" OR "montenegro" OR "nicaragua" OR "macedonia" OR "pakistan" OR "paraguay" OR "phillipines" OR "peru" OR "romania" OR "russia" OR "serbia" OR "sri lanka" OR "syria" OR "tajikistan" OR "thailand" OR "turkey" OR "turkmenistan" OR "ukraine" OR "venezuela" OR "vietnam" OR "west bank" OR "gaza"
   )
 )  
 ```
@@ -286,9 +286,9 @@ Journal of fish diseases
 
 ```
 TS=
-(	"health equity" OR "right to health*" OR "health rights" 
+(	"health equity" OR "right to health*" OR "health rights"
 	OR "health coverage" OR "health governance"
-	OR 
+	OR
 	  (
 	    ("access" OR "barrier$")
 	    NEAR/5 ("health care" OR "healthcare" OR "health services")
@@ -298,7 +298,7 @@ TS=
 
 #### Health and inequality
 
-Inequality taken directly from Cristin, with minor adaptations. Health terms copied from the phrase above. 
+Inequality taken directly from Cristin, with minor adaptations. Health terms copied from the phrase above.
 
 `LGBTQ` will also find LGBTQ+. `Racial` will find racial disparities etc.
 
@@ -316,11 +316,11 @@ TS=
   OR "disadvantaged" OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
   OR "indigenous" OR "autochthonous" OR "sami" OR "sapmi"
   OR "minority group$" OR "ethnicity" OR "ethnic"
-  OR "racism" OR "racial" OR "apartheid" 
+  OR "racism" OR "racial" OR "apartheid"
   OR "colonial" OR "colonialism"
-  OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny" 
+  OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny"
   OR "intersectional"
-  OR "ageism" 
+  OR "ageism"
   OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
   )
   AND
@@ -329,13 +329,13 @@ TS=
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
-    OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$" 
+    OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$"
     OR 	"waterborne disease$" OR "water borne disease$"
     OR 	"infection$" OR "illness*" OR "premature mortality" OR "morbidity"
     OR	"trauma"  
-    OR	"cancer$" OR "neoplasm$" 
+    OR	"cancer$" OR "neoplasm$"
     OR 	"diabetes"
-    OR 	"chronic respiratory disease$" 
+    OR 	"chronic respiratory disease$"
     OR 	"cancer$" OR "*sarcoma" OR "sarcoma$" OR "*carcinoma" OR "carcinoma$" OR "*blastoma" OR "blastoma$" OR "myeloma$" OR "lymphoma$" OR "leukaemia" OR "leukemia" OR "mesothelioma$" OR "melanoma$"  
     OR	"asthma" OR "chronic obstructive pulmonary disease$" OR "COPD" OR "chronic obstructive airway disease$" OR "chronic bronchitis" OR "emphysema" OR "pneumonia"
     OR	"diabetes"
@@ -343,10 +343,10 @@ TS=
     OR	"dust exposure"
     OR	"diarrhea*"
     OR  "WASH facilities"
-    
+
     OR "sexually transmitted disease$" OR "sexually transmitted infection$"
     OR "syphilis"
-    
+
     OR "coronavirus"
     OR "covid"
     OR "hepatitis"
@@ -366,7 +366,7 @@ TS=
     OR "polio*"
     OR "yellow fever"
 
-    OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies" 
+    OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies"
 
     OR  "clinic$" OR "hospital$" OR "healthcare" OR "residential care"
     OR  "patient care"
@@ -378,18 +378,18 @@ TS=
     OR  "health worker$" OR "health professional$" OR "health practitioner$"
     OR "nurse$" OR "doctor$" OR "physician$" OR "surgeon$" OR "midwife*" OR "midwives" OR "gynecologist$"
     OR "Anesthetist$" OR "Audiologist$" OR "Doula$" OR "Emergency Medical Dispatcher$" OR "Health Educator$"
-    OR "Health Facility Administrator$" OR "Infection Control Practitioner$" 
+    OR "Health Facility Administrator$" OR "Infection Control Practitioner$"
     OR "Nutritionist$" OR "Optometrist$" OR "Pharmacist$" OR "Allergist$" OR "Anesthesiologist$"
-    OR "Cardiologist$" OR "Dermatologist$" OR "Endocrinologist$" OR "Gastroenterologist$" 
+    OR "Cardiologist$" OR "Dermatologist$" OR "Endocrinologist$" OR "Gastroenterologist$"
     OR "General Practitioner$" OR "Geriatrician$" OR "Hospitalist$" OR "Nephrologist$" OR "Neurologist$"
-    OR "Oncologist$" OR "Ophthalmologist$" OR "Otolaryngologist$" OR "Pathologist$" 
+    OR "Oncologist$" OR "Ophthalmologist$" OR "Otolaryngologist$" OR "Pathologist$"
     OR "Pediatrician$" OR "Physiatrist$" OR "physiotherapist$" OR "Pulmonologist$" OR "Radiologist$" OR "Rheumatologist$" OR "Urologist$"
 
-    OR	"obstetric$" OR	"childbirth" OR	"childbear*" 
+    OR	"obstetric$" OR	"childbirth" OR	"childbear*"
     OR  "breastfeed*" OR "birthweight"
     OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
     OR	"abortion*" OR "pregnan*"
-    OR 	"reproductive health" OR "sexual health" 
+    OR 	"reproductive health" OR "sexual health"
     OR	"sex education" OR "family planning"
 
     OR	"disability" OR "disabled people*" OR "disabled child*"
@@ -404,7 +404,7 @@ TS=
     OR	"suicid*" OR "self-harm"
     OR 	"anxiety" OR "psychosis"
     OR 	"intimate partner violence"
-    OR	"tombak" 
+    OR	"tombak"
     OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupation*" OR "traffic" OR "car" OR "road$"))
     OR  "accidental poisoning$"
     OR	"alcoholism"
@@ -429,13 +429,13 @@ TS=
     )
   OR
     (
-      (   "health" 
+      (   "health"
       OR  "disease$" OR "mortality"
       OR  "epidemic$" OR "pandemic$"
-      OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$" 
+      OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$"
       OR  "depression"
       OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
-      OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$" 
+      OR  "hazardous chemical$" OR "hazardous material$" OR "hazardous substance$"
       OR  "arsenic" OR "mercury" OR "asbestos" OR "benzene" OR "cadmium" OR "dioxin$" OR "fluoride"
       OR  "lead poison*" OR "lead *toxicity" OR "lead mediated *toxicity" OR "lead induced *toxicity" OR "lead exposure" OR "lead carcinogen*" OR "blood lead"
       OR  "sanitation" OR "drinking water" OR "potable water"
@@ -474,15 +474,14 @@ TS=
 
 ## Global health and migration
 
-Same health terms used as in the above 2 sections. 
+Same health terms used as in the above 2 sections.
 
-How to include `migration`? MANY results when adding it are definately not relevant. Many of these are from surgery, but there is also environmental migration of pollutants (pollutants, radon, PCBs, PM, mercury). Two alternatives - positive inclusion or negative exclusion. I have chosen exclusion of certain phrases (set 2), plus inclusion of certain phrases (set 1) and Web of Science categories (set 3). 
-An alternative would be to exclude Web of Science categories, but I found this to be difficult as there as so many. A starting list includes:
-`WC = ("surgery" OR "oncology" OR "neurosciences" OR "clinical neurology" OR "Biochemistry & Molecular Biology" OR "cell biology" OR "Genetics Heredity" OR "orthopedics" OR "Radiology Nuclear Medicine Medical Imaging" OR "Gastroenterology Hepatology" OR "Urology Nephrology" OR "Endocrinology Metabolism" OR "fisheries" OR "marine freshwater biology" OR "ecology" OR "veterinary sciences" OR "entomology" OR "Biodiversity Conservation" OR "toxicology" OR "limnology" OR "water resources" OR "Food Science Technology" OR "chemistry analytical" OR "chemistry multidisciplinary" OR "chemistry physical" OR "chemistry medicinal" OR "chemistry applied" OR "Spectroscopy" OR "optics" OR "engineering electrical electronic" OR "engineering chemical" OR "Biotechnology Applied Microbiology" OR "engineering biomedical" OR "materials science biomaterials" OR "nanoscience nanotechnology" OR "Medical Laboratory Technology")`
+How to include `migration`? MANY results when adding it are definately not relevant; the problematic ones here are those that also relate to health. Many of these are from surgery, but there is also environmental migration of pollutants (pollutants, radon, PCBs, PM, mercury). Two alternatives - positive inclusion or negative exclusion. I have chosen exclusion of certain phrases (set 2), plus inclusion of certain phrases (set 1) and Web of Science categories (set 3).
+An alternative would be to exclude Web of Science categories, but I found this to be difficult as there as so many. A starting list includes: `WC = ("surgery" OR "oncology" OR "neurosciences" OR "clinical neurology" OR "Biochemistry & Molecular Biology" OR "cell biology" OR "Genetics Heredity" OR "orthopedics" OR "Radiology Nuclear Medicine Medical Imaging" OR "Gastroenterology Hepatology" OR "Urology Nephrology" OR "Endocrinology Metabolism" OR "fisheries" OR "marine freshwater biology" OR "ecology" OR "veterinary sciences" OR "entomology" OR "Biodiversity Conservation" OR "toxicology" OR "limnology" OR "water resources" OR "Food Science Technology" OR "chemistry analytical" OR "chemistry multidisciplinary" OR "chemistry physical" OR "chemistry medicinal" OR "chemistry applied" OR "Spectroscopy" OR "optics" OR "engineering electrical electronic" OR "engineering chemical" OR "Biotechnology Applied Microbiology" OR "engineering biomedical" OR "materials science biomaterials" OR "nanoscience nanotechnology" OR "Medical Laboratory Technology")`
 
 **COMBINE: (Set 1 OR (Set 2 AND Set 3)) AND Set 4**
 
-### Set 1
+### Set 1 - migrants/refugees
 
 ```
 TS=
@@ -490,12 +489,12 @@ TS=
   OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
-  OR "asylum seeker$" OR "people seeking asylum" 
+  OR "asylum seeker$" OR "people seeking asylum"
   OR "cultural integration" OR "language barrier$" OR "multicultural"
   )
 ```
 
-### Set 2
+### Set 2 - migration exclusions
 
 ```
 TS = 	"migration"
@@ -513,7 +512,7 @@ NOT
   )
 ```
 
-### Set 3
+### Set 3 - migration inclusions
 
 The categories "Medicine general internal" OR "tropical medicine" OR "infectious diseases" contain some irrelevant, but I think combined with the above terms there should not be too much noise...
 
@@ -531,7 +530,7 @@ AND
 	)
 ```
 
-### Set 4
+### Set 4 - health terms
 
 Removed some of the environmental pollutant terms from the medical terms, since these can combine with migration in ways that are nothing to do with human migration.
 
@@ -545,13 +544,13 @@ TS=
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
-    OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$" 
+    OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$"
     OR 	"waterborne disease$" OR "water borne disease$"
     OR 	"infection$" OR "illness*" OR "premature mortality" OR "morbidity"
     OR	"trauma"  
-    OR	"cancer$" OR "neoplasm$" 
+    OR	"cancer$" OR "neoplasm$"
     OR 	"diabetes"
-    OR 	"chronic respiratory disease$" 
+    OR 	"chronic respiratory disease$"
     OR 	"cancer$" OR "*sarcoma" OR "sarcoma$" OR "*carcinoma" OR "carcinoma$" OR "*blastoma" OR "blastoma$" OR "myeloma$" OR "lymphoma$" OR "leukaemia" OR "leukemia" OR "mesothelioma$" OR "melanoma$"  
     OR	"asthma" OR "chronic obstructive pulmonary disease$" OR "COPD" OR "chronic obstructive airway disease$" OR "chronic bronchitis" OR "emphysema" OR "pneumonia"
     OR	"diabetes"
@@ -559,10 +558,10 @@ TS=
     OR	"dust exposure"
     OR	"diarrhea*"
     OR  "WASH facilities"
-    
+
     OR "sexually transmitted disease$" OR "sexually transmitted infection$"
     OR "syphilis"
-    
+
     OR "coronavirus"
     OR "covid"
     OR "hepatitis"
@@ -582,7 +581,7 @@ TS=
     OR "polio*"
     OR "yellow fever"
 
-    OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies" 
+    OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies"
 
     OR  "clinic$" OR "hospital$" OR "healthcare" OR "health care" OR "residential care" OR  "patient care"
     OR	"dentist$" OR "dental"
@@ -593,18 +592,18 @@ TS=
     OR  "health worker$" OR "health professional$" OR "health practitioner$"
     OR "nurse$" OR "doctor$" OR "physician$" OR "surgeon$" OR "midwife*" OR "midwives" OR "gynecologist$"
     OR "Anesthetist$" OR "Audiologist$" OR "Doula$" OR "Emergency Medical Dispatcher$" OR "Health Educator$"
-    OR "Health Facility Administrator$" OR "Infection Control Practitioner$" 
+    OR "Health Facility Administrator$" OR "Infection Control Practitioner$"
     OR "Nutritionist$" OR "Optometrist$" OR "Pharmacist$" OR "Allergist$" OR "Anesthesiologist$"
-    OR "Cardiologist$" OR "Dermatologist$" OR "Endocrinologist$" OR "Gastroenterologist$" 
+    OR "Cardiologist$" OR "Dermatologist$" OR "Endocrinologist$" OR "Gastroenterologist$"
     OR "General Practitioner$" OR "Geriatrician$" OR "Hospitalist$" OR "Nephrologist$" OR "Neurologist$"
-    OR "Oncologist$" OR "Ophthalmologist$" OR "Otolaryngologist$" OR "Pathologist$" 
+    OR "Oncologist$" OR "Ophthalmologist$" OR "Otolaryngologist$" OR "Pathologist$"
     OR "Pediatrician$" OR "Physiatrist$" OR "physiotherapist$" OR "Pulmonologist$" OR "Radiologist$" OR "Rheumatologist$" OR "Urologist$"
 
-    OR	"obstetric$" OR	"childbirth" OR	"childbear*" 
+    OR	"obstetric$" OR	"childbirth" OR	"childbear*"
     OR  "breastfeed*" OR "birthweight"
     OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
     OR	"abortion*" OR "pregnan*"
-    OR 	"reproductive health" OR "sexual health" 
+    OR 	"reproductive health" OR "sexual health"
     OR	"sex education" OR "family planning"
 
     OR	"disability" OR "disabled people*" OR "disabled child*"
@@ -619,7 +618,7 @@ TS=
     OR	"suicid*" OR "self-harm"
     OR 	"anxiety" OR "psychosis"
     OR 	"intimate partner violence"
-    OR	"tombak" 
+    OR	"tombak"
     OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupation*" OR "traffic" OR "car" OR "road$"))
     OR  "accidental poisoning$"
     OR	"alcoholism"
@@ -643,12 +642,12 @@ TS=
       )
     OR
       (
-        (   "health" 
+        (   "health"
         OR  "disease$" OR "mortality"
         OR  "epidemic$" OR "pandemic$"
-      	OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$" 
+      	OR  "medicine$" OR "antimalarial$" OR "antiviral$" OR "antibiotic$" OR "antiparasitic$"
       	OR  "depression"
-     	OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
+     	  OR  "nutrition*" OR "malnutrition" OR "malnourish*" OR "vitamin$" OR "micronutrient$"
       	OR  "sanitation" OR "drinking water" OR "potable water"
       	)
       AND
@@ -658,13 +657,32 @@ TS=
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
         OR "patient$" OR "hospital*" OR "health care" OR "healthcare"
         OR "premature death$" OR "premature mortality" OR "covid"
-	OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
-  	OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
-  	OR "returnee$"
-  	OR "asylum seeker$" OR "people seeking asylum" 
-	OR "cultural integration" OR "language barrier$" OR "multicultural"
+	      OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
+  	    OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
+  	    OR "returnee$"
+  	    OR "asylum seeker$" OR "people seeking asylum"
+	      OR "cultural integration" OR "language barrier$" OR "multicultural"
         )
       )
 )
 ```
 
+## Inequality
+
+## Migration
+
+The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/ecological/physical uses of "migration".
+
+``` Ceylon=
+(TS=
+  (  "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
+  OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
+  OR "returnee$"
+  OR "asylum seeker$" OR "people seeking asylum"
+  OR "border regime"
+  OR "cultural integration" OR "multicultural" OR "acculturat*"
+  )
+)
+AND
+(EDN==("WOS.SSCI" OR "WOS.AHCI"))
+```
