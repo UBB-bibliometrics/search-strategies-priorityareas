@@ -4,7 +4,7 @@
 
 #### Global health
 
-``` Ceylon =
+```Ceylon =
 TS=
 ("global health" OR "international health" OR "global mental health"
 )
@@ -15,7 +15,7 @@ TS=
 
 This is tricky as many papers talk about ecological/plant/animal health.
 
-``` Ceylon =
+```Ceylon =
 TS=
 (
   (
@@ -45,7 +45,7 @@ TS=
 )
 ```
 
-``` Ceylon =
+```Ceylon =
 TS = 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
 AND
 WC = 	("Public Environmental Occupational Health" OR "medicine general internal" OR "health care sciences services" OR "health policy services" OR "psychiatry" OR "nursing" OR "emergency medicine" OR "pediatrics" OR "social sciences biomedical" OR "psychology clinical" OR "psychology multidisciplinary" OR "social work" OR "obstetrics gynecology")
@@ -53,7 +53,7 @@ WC = 	("Public Environmental Occupational Health" OR "medicine general internal"
 
 The double NOT removes those talking about animal health which do not also talk about human health.
 
-``` Ceylon =
+```Ceylon =
 (
    TS= 	("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$")
    AND
@@ -80,7 +80,7 @@ Not combined with any countries. Adapted from SDG3 search.
 
 HIV, polio, malaria, TB, waterborne diseases and maternal/infant mortality are included as they are major in LMCs, even though they can also occur elsewhere.
 
-``` Ceylon =
+```Ceylon =
 TS =
 (
     "maternal mortality" OR "child mortality" OR "infant mortality"
@@ -136,7 +136,7 @@ Specific diseases, health care occupations etc. added from SDG3
 
 Countries includes all except high-income countries.
 
-``` Ceylon =
+```Ceylon =
 TS=
 (
   (
@@ -283,7 +283,7 @@ AND
 
 1) Unlimited and 2) Limited by index
 
-``` Ceylon=
+```Ceylon=
 TS=
   ("development assistance" OR "development aid"
   OR "otherness" OR "othering" OR "stereotypes"
@@ -313,7 +313,7 @@ TS=
 
 The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/physical uses of more generic terms.
 
-``` Ceylon=
+```Ceylon=
 (TS=
   ("globalisation" OR "globalization"
   OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
@@ -338,7 +338,7 @@ AND
 
 Note that some groups are not included here, because they are included in their entirety in the phrases above. The groups included below are only included when combined with certain terms.
 
-``` Ceylon=
+```Ceylon=
 (TS=
   (
     ("women" OR "girls" OR "boys" OR "gender" OR "child" OR "children"
@@ -363,7 +363,7 @@ AND
 
 This phrase is the same as above, but only including terms that won't cause confusion when run against the science and medicine indices. Some additional terms are added that, while they could not be run alone against all indicies, can together with the groups. Hindu is taken out as also refers to a region in climate science ("hindu kush").
 
-``` Ceylon=
+```Ceylon=
 TS=
 (
   ("women" OR "girls" OR "boys" OR "gender" OR "child" OR "children"
@@ -390,7 +390,7 @@ TS=
 
 The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/ecological/physical uses of "migration".
 
-``` Ceylon=
+```Ceylon=
 (TS=
   ("immigrant$" OR "immigration" OR "emigration"
   OR "migrant$" OR "migration"
@@ -407,7 +407,7 @@ AND
 
 In phrase 2 the ESCI is included - here migration is NOT included - alhtough the majority of results from there seem to be from social sciences/humanities, some emerging geology/biology/medical journals may seep in.
 
-``` Ceylon=
+```Ceylon=
 (TS=
   ("immigrant$" OR "immigration" OR "emigration"
   OR "migrant$" OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "labor migration"
@@ -433,7 +433,7 @@ AND
 
 #### Health equity
 
-```
+```Ceylon=
 TS=
 (	"health equity" OR "right to health*" OR "health rights"
 	OR "health coverage" OR "health governance"
@@ -451,7 +451,7 @@ Inequality taken directly from Cristin, with minor adaptations. Health terms cop
 
 `LGBTQ` will also find LGBTQ+. `Racial` will find racial disparities etc.
 
-```
+```Ceylon=
 TS=
 (
   ("globalisation" OR "globalization"
@@ -604,7 +604,7 @@ TS=
 
 #### Extra standalone terms for health and inequality
 
-```
+```Ceylon=
 TS=
 (	"femicide"
 	OR "intimate partner violence" OR "domestic violence"
@@ -613,7 +613,7 @@ TS=
 
 #### Right to food and water
 
-```
+```Ceylon=
 TS=
 (	"right to food" OR "right to water" OR "smallhold*"
 	OR "food security" OR "water security"
@@ -632,7 +632,7 @@ An alternative would be to exclude Web of Science categories, but I found this t
 
 ### Set 1 - migrants/refugees
 
-```
+```Ceylon=
 TS=
   ("migrant$" OR "immigrant$" OR "immigration" OR "emigration"
   OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "labor migration"
@@ -646,7 +646,7 @@ TS=
 
 ### Set 2 - migration exclusions
 
-```
+```Ceylon=
 TS = 	"migration"
 NOT
   (
@@ -666,7 +666,7 @@ NOT
 
 The categories "Medicine general internal" OR "tropical medicine" OR "infectious diseases" contain some irrelevant, but I think combined with the above terms there should not be too much noise...
 
-```
+```Ceylon=
 TS = 	"migration"
 AND
   WC = 	("Public Environmental Occupational Health" OR "Health policy services" OR "Health Care Sciences Services" OR "Medical ethics"
@@ -686,7 +686,7 @@ Removed some of the environmental pollutant terms from the medical terms, since 
 
 Some of the groups from Set 1 have been added to the bottom here as "human" terms - this means that a mention of health + refugee is enough to be included. For more general migration terms which can apply to animals, such as immigration, health is only in phrases that are mostly used for humans (e.g. health education, medical, wellbeing)
 
-```
+```Ceylon=
 TS=
 (
     "migrant health" OR "refugee health" OR "immigrant health"
