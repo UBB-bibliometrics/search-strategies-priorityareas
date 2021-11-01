@@ -476,7 +476,7 @@ TS=
 
 Same health terms used as in the above 2 sections. 
 
-How to include `migration`? MANY results when adding it are definately not relevant. Many of these are from surgery, but there is also environmental migration of pollutants (pollutants, radon, PCBs, PM, mercury). Two alternatives - positive inclusion or negative exclusion. I have chosen exclusion of certain phrases (set 2), plus inclusion of certain Web of Science categories (set 3). 
+How to include `migration`? MANY results when adding it are definately not relevant. Many of these are from surgery, but there is also environmental migration of pollutants (pollutants, radon, PCBs, PM, mercury). Two alternatives - positive inclusion or negative exclusion. I have chosen exclusion of certain phrases (set 2), plus inclusion of certain phrases (set 1) and Web of Science categories (set 3). 
 An alternative would be to exclude Web of Science categories, but I found this to be difficult as there as so many. A starting list includes:
 `WC = ("surgery" OR "oncology" OR "neurosciences" OR "clinical neurology" OR "Biochemistry & Molecular Biology" OR "cell biology" OR "Genetics Heredity" OR "orthopedics" OR "Radiology Nuclear Medicine Medical Imaging" OR "Gastroenterology Hepatology" OR "Urology Nephrology" OR "Endocrinology Metabolism" OR "fisheries" OR "marine freshwater biology" OR "ecology" OR "veterinary sciences" OR "entomology" OR "Biodiversity Conservation" OR "toxicology" OR "limnology" OR "water resources" OR "Food Science Technology" OR "chemistry analytical" OR "chemistry multidisciplinary" OR "chemistry physical" OR "chemistry medicinal" OR "chemistry applied" OR "Spectroscopy" OR "optics" OR "engineering electrical electronic" OR "engineering chemical" OR "Biotechnology Applied Microbiology" OR "engineering biomedical" OR "materials science biomaterials" OR "nanoscience nanotechnology" OR "Medical Laboratory Technology")`
 
@@ -487,7 +487,7 @@ An alternative would be to exclude Web of Science categories, but I found this t
 ```
 TS=
   ("migrant$" OR "immigrant$" OR "immigration" OR "emigration"
-  OR "human migration" OR "migration background" OR "migration intention$" OR "worker migration"
+  OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
   OR "asylum seeker$" OR "people seeking asylum" 
