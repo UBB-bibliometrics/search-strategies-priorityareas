@@ -533,7 +533,9 @@ AND
 
 ### Set 4
 
-Removed some of the environmental pollutant terms from the medical terms, since these can combine with migration in ways that are nothing to do with human migration. 
+Removed some of the environmental pollutant terms from the medical terms, since these can combine with migration in ways that are nothing to do with human migration.
+
+Some of the groups from Set 1 have been added to the bottom here as "human" terms - this means that a mention of health + refugee is enough to be included. For more general migration terms which can apply to animals, such as immigration, health is only in phrases that are mostly used for humans (e.g. health education, medical, wellbeing)
 
 ```
 TS=
@@ -656,6 +658,10 @@ TS=
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
         OR "patient$" OR "hospital*" OR "health care" OR "healthcare"
         OR "premature death$" OR "premature mortality" OR "covid"
+	OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "migrant worker$" OR "labor migration"
+  	OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
+  	OR "returnee$"
+  	OR "asylum seeker$" OR "people seeking asylum" 
         )
       )
 )
