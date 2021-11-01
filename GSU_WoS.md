@@ -13,26 +13,61 @@ TS=
 
 #### Climate change/disasters and health
 
-The double `NOT` statement removes papers talking about ecological health provided that they do not also mention human health.
+This is tricky as many papers talk about ecological/plant/animal health.
 
 ```
 TS=
 (
   (
-    ("climate change" OR "global warming" OR "sustainable development" OR "disaster" OR "flood*" OR "drought" OR "tsunami") 
+    ("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$") 
     AND 
-    ("health" OR "wellbeing" OR "well-being" OR "medical" OR "healthcare")
-   ) 
-   NOT 
-    (
-      ("land health" OR "soil health" OR "grassland health" OR "forest health" OR "vegetation health" OR "ocean health" OR "ecosystem health") 
-      NOT 
-      ("human health" OR "public health" OR "mental health" OR "healthcare" OR "health care" OR "medical" OR "wellbeing" OR "well-being")
+    ("wellbeing" OR "well-being" 
+    OR "medical" OR "healthcare" OR "health care" OR "health sector" OR "hospital$" OR "intensive care" OR "essential medic*"
+    OR "human health" OR "public health" OR "health promotion" 
+    OR "mental health" OR "psychosocial health" 
+    OR "workplace health" OR "occupational health" 
+    OR "global health" OR "social determinants of health" OR "health equity" OR "equity and health" OR "health for all" 
+    OR "child health"
     )
-)
+  )
+  OR
+  (
+    ("climate change" OR "global warming" OR "sustainable development" OR "disaster$" OR "flood*" OR "drought$" OR "tsunami$") 
+    AND 
+    (("health") AND ("children" OR "child" OR "human$" OR "equity" OR "justice" OR "patient$" OR "victim$"))
+   )
+) 
+``` 
 
 ```
+TS = 	("climate change" OR "global warming" OR "sustainable development" OR "disaster" OR "flood*" OR "drought" OR "tsunami") 
+AND 
+WC = 	("Public Environmental Occupational Health" OR "medicine general internal" OR "health care sciences services" OR "health policy services" OR "psychiatry" OR "nursing" OR "emergency medicine" OR "pediatrics" OR "social sciences biomedical" OR "psychology clinical" OR "psychology multidisciplinary" OR "social work" OR "obstetrics gynecology"))
+```
 
+The double NOT removes those talking about animal health which do not also talk about human health.
+
+```
+(
+   TS= 	("climate change" OR "global warming" OR "sustainable development" OR "disaster" OR "flood*" OR "drought" OR "tsunami")
+   AND 
+   TI= 	("health")
+)
+NOT 
+(  
+   TS= 	("land health" OR "soil health" OR "grassland health" OR "forest health" OR "woodland health" OR "plant health" OR "vegetation health" OR "ocean health" OR "ecosystem health" OR "animal health" OR "livestock health" OR "fish health") 
+   NOT 
+   TS= 	("wellbeing" OR "well-being" 
+    	OR "medical" OR "healthcare" OR "health care" OR "health sector" OR "hospital$" OR "intensive care" OR "essential medic*"
+    	OR "human health" OR "public health" OR "health promotion" 
+    	OR "mental health" OR "psychosocial health" 
+    	OR "workplace health" OR "occupational health" 
+    	OR "global health" OR "social determinants of health" OR "health equity" OR "equity and health" OR "health for all" 
+    	OR "child health"
+	)
+)
+```
+ 
 #### Diseases/health issues prevalent in LMCs and neglected tropical diseases
 
 Not combined with any countries. Adapted from SDG3 search. 
