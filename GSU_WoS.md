@@ -967,11 +967,10 @@ TS=
     OR "climatic chang"
     OR "changing climate"
     OR "global warming"
-    OR "climate extreme"
-    OR "extreme climate"
-    OR "heat wave"
+    OR "climate extreme$"
+    OR "extreme weather" OR "heat wave$" OR "drought$" OR "flood*"
     OR "natural disaster$"
-    OR "farming" OR "food production" OR "agriculture" OR "crops" OR "aquaculture"
+    OR "farming" OR "food production" OR "agriculture" OR "aquaculture"
     )
     AND
       ("global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
