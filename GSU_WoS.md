@@ -679,16 +679,6 @@ TS=
 )
 ```
 
-#### Right to food and water
-
-```Ceylon =
-TS=
-(	"right to food" OR "right to water" OR "smallhold*"
-	OR "food security" OR "water security"
-	OR "access to food" OR "access to water"
-)
-```
-
 ## Global health and migration
 
 Ca. same health terms used as in the above 2 sections.
@@ -953,9 +943,11 @@ TS=
 ```
 
 
-## Climate change and LMCs
+## Food security and climate change in LMCs
 
 This area overlaps with KE, but was mentioned specifically as part of GSU. We have only included climate change and farming in LMCs. Other references to climate change are included in the above sections (unless unnecssary, e.g. "migrants" alone will find works about migrants and climate change; "food security" the same etc.).
+
+#### CC & farming in LMCs
 
 ```Ceylon =
 TS=
@@ -970,7 +962,7 @@ TS=
     OR "climate extreme$"
     OR "extreme weather" OR "heat wave$" OR "drought$" OR "flood*"
     OR "natural disaster$"
-    OR "farming" OR "food production" OR "agriculture" OR "aquaculture"
+    OR "farming" OR "food production" OR "agriculture" OR "aquaculture" OR "smallhold*"
     )
     AND
       ("global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
@@ -982,6 +974,16 @@ TS=
       OR "albania" OR "argentina" OR "armenia" OR "azerbaijan" OR "belarus" OR "bolivia" OR "bosnia" OR "brazil" OR "bulgaria" OR "china" OR "colombia" OR "costa rica" OR "ecuador" OR "el salvador" OR "guatemala" OR "honduras" OR "india" OR "indonesia" OR "iran" OR "iraq" OR "jordan" OR "kazakhstan" OR "kosovo" OR "kyrgyz" OR "lebanon" OR "malaysia" OR "mexico" OR "micronesia" OR "moldova" OR "mongolia" OR "montenegro" OR "nicaragua" OR "macedonia" OR "pakistan" OR "paraguay" OR "phillipines" OR "peru" OR "romania" OR "russia" OR "serbia" OR "sri lanka" OR "syria" OR "tajikistan" OR "thailand" OR "turkey" OR "turkmenistan" OR "ukraine" OR "venezuela" OR "vietnam" OR "west bank" OR "gaza"
       )
 )
+```
 
+#### Food security
+
+```Ceylon =
+TS=
+(	"right to food" OR "right to water"
+	OR "food security" OR "food insecurity" OR "water security"
+  OR (("food" OR "water") NEAR/5 ("safe" OR "clean" OR "*contaminated") NEAR/5 ("access*"))
+)
+```
 
 ```
