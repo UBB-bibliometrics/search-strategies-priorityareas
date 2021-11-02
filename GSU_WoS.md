@@ -1,10 +1,19 @@
 # GSU
 
+Links for current status:
+
+All Global health (Global health + Health and inequality + Health and migration): https://www.webofscience.com/wos/woscc/summary/f7b36e12-41e4-4727-aabe-1c1dfcf4afd4-109d0b1f/relevance/1
+
+All inequality (inequality + health and inequality + inequality and migration): https://www.webofscience.com/wos/woscc/summary/aa59aed5-55fb-47bc-b81d-7ad468374bbc-109d2630/relevance/1
+
+All migration (migration + health and migration + inequality and migration): https://www.webofscience.com/wos/woscc/summary/d5578a20-f0c5-4892-9789-bc8ddf3eb7bf-109d2913/relevance/1
+
+
 ## Global health
 
 #### Global health
 
-https://www.webofscience.com/wos/woscc/summary/b04a656c-a1eb-4d07-a594-57bcab7f7471-10948ba0/relevance/1
+https://www.webofscience.com/wos/woscc/summary/84ca075e-8623-47f3-bc17-2b4a99260111-109c6bb1/relevance/1
 
 ```Ceylon =
 TS=
@@ -285,7 +294,7 @@ AND
 
 ## Inequality
 
-https://www.webofscience.com/wos/woscc/summary/bb649180-2827-4dbf-9620-5d132da082b9-10987b83/relevance/1
+https://www.webofscience.com/wos/woscc/summary/82b8427c-c729-487a-bca7-72a87621b9fd-109c8a30/relevance/1
 
 #### General terms
 
@@ -431,7 +440,7 @@ TS=
 
 ## Migration
 
-https://www.webofscience.com/wos/woscc/summary/367a50a2-c200-4e1b-b7b2-10532f14ac3d-1090df93/relevance/1
+https://www.webofscience.com/wos/woscc/summary/7bc9251c-624a-4fe8-9cb4-c3483dfe46ff-109c9cf8/relevance/1
 
 The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/ecological/physical uses of "migration".
 
@@ -477,7 +486,7 @@ AND
 
 ## Global health and inequality
 
-https://www.webofscience.com/wos/woscc/summary/12383a43-babe-4afb-9214-61ac2683a8d1-109888bb/relevance/1
+https://www.webofscience.com/wos/woscc/summary/f12bad2b-4010-49c9-aa41-4c4d94d442e1-109caf70/relevance/1
 
 #### Health equity
 
@@ -681,7 +690,7 @@ TS=
 
 ## Global health and migration
 
-https://www.webofscience.com/wos/woscc/summary/9dbf44ed-cc7f-40e2-9c45-7877f167b085-1095e121/relevance/1
+https://www.webofscience.com/wos/woscc/summary/0bee9637-f464-403b-866c-a76b282c1c78-109cc0c4/relevance/1
 
 Ca. same health terms used as in the above 2 sections.
 
@@ -884,7 +893,7 @@ TS=
 
 ## Migration and Inequality
 
-https://www.webofscience.com/wos/woscc/summary/62c1787d-ae30-4692-b200-39c39217e5b0-1098a2ca/relevance/1
+https://www.webofscience.com/wos/woscc/summary/8d4be8f1-c1f8-4151-ada4-fb0637d3aff6-109cd34f/relevance/1
 
 ```Ceylon =
 TS=
