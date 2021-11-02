@@ -475,7 +475,7 @@ AND
 
 ## Global health and inequality
 
-https://www.webofscience.com/wos/woscc/summary/ac54b5f6-93d9-4300-b4f4-f99df9aee687-10946b46/relevance/1
+https://www.webofscience.com/wos/woscc/summary/8b9c8cb9-4a40-40ab-89df-d365dc98e9bf-10964cac/relevance/1
 
 #### Health equity
 
@@ -483,6 +483,7 @@ https://www.webofscience.com/wos/woscc/summary/ac54b5f6-93d9-4300-b4f4-f99df9aee
 TS=
 (	"health equity" OR "right to health*" OR "health rights" OR "health for all"
 	OR "health coverage" OR "health governance" OR "health justice"
+  OR "body politics"
 	OR
 	  (
 	    ("access" OR "barrier$")
@@ -658,7 +659,7 @@ TS=
 ```Ceylon=
 TS=
 (	"femicide"
-	OR "intimate partner violence" OR "domestic violence"
+	OR "intimate partner violence" OR "domestic violence" OR "gender based violence"
 )
 ```
 
@@ -674,7 +675,7 @@ TS=
 
 ## Global health and migration
 
-https://www.webofscience.com/wos/woscc/summary/79ca00c4-04b5-4c04-9a4d-3c8c177f348c-10944dd0/relevance/1
+https://www.webofscience.com/wos/woscc/summary/9dbf44ed-cc7f-40e2-9c45-7877f167b085-1095e121/relevance/1
 
 Ca. same health terms used as in the above 2 sections.
 
@@ -693,7 +694,7 @@ TS=
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
   OR "asylum seek*" OR "people seeking asylum"
-  OR "cultural integration" OR "language barrier$" OR "multicultural"
+  OR "cultural integration" OR "language barrier$" OR "multicultural*"
   )
 ```
 
@@ -888,7 +889,7 @@ TS=
   OR "returnee$"
   OR "asylum seek*" OR "people seeking asylum"
   OR "border regime"
-  OR "cultural integration" OR "multicultural" OR "acculturat*" OR "intercultural"
+  OR "cultural integration" OR "multicultural*" OR "acculturat*" OR "intercultural"
   )
   AND
   ("development assistance" OR "development aid" OR "globalisation" OR "globalization"
@@ -899,7 +900,7 @@ TS=
   OR "justice" OR "injustice" OR "oppressi*"
   OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
   OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
-  OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
+  OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*" OR "welfare chauvinism" OR "welfare state nationalism"
   OR "social justice" OR "social sustainability" OR "social mobility"
   OR "climate justice" OR "environmental justice"
   OR "legislat*" OR "governance" OR "democracy" OR "freedom$" OR "security"
@@ -913,15 +914,16 @@ TS=
   OR "indigenous" OR "autochthonous people$" OR "autochthonous communit*" OR "autochthonous societ*" OR "sami" OR "sapmi" OR "saami"
   OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
   OR "minority group$" OR "minority language$" OR "minority stress" OR "ethnic minorit*" OR "minorities"
-  OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived"))
+  OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived" OR "migrant$" OR "immigrant$"))
+  OR "islamophobia" OR "anti-muslim" OR "anti jewish" OR "far right"
   OR "racism" OR "racial" OR "apartheid"
   OR "colonial" OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
   OR "riot" OR "riots" OR "uprising$" OR "insurrection$" OR "political protest$" OR "political conflict$"
-  OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny"
+  OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny" OR "gender gap$"
   OR "intersectional*"
   OR "ageism"
   OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
-  OR "empower*" OR "power dynamic*" OR "imperial power" OR "colonial power" OR "power and gender" OR "gender and power" OR "gender gap" OR "power roles"
+  OR "empower*" OR "power dynamic*" OR "imperial power" OR "colonial power" OR "power and gender" OR "gender and power" OR "power roles"
   OR "inclusive" OR "inclusion" OR "exclusion" OR "social inclusion" OR "inclusion into society" OR "social inclusion" OR "inclusion into society" OR "inclusion strateg*" OR "inclusion of people with disabilities"
   OR "belonging"
   OR "quota$"
