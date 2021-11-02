@@ -2,18 +2,22 @@
 
 Links for current status:
 
-All Global health (Global health + Health and inequality + Health and migration): https://www.webofscience.com/wos/woscc/summary/f7b36e12-41e4-4727-aabe-1c1dfcf4afd4-109d0b1f/relevance/1
+All Global health (Global health + Health and inequality + Health and migration):
+* UiB, 2016-2021 https://www.webofscience.com/wos/woscc/summary/f7b36e12-41e4-4727-aabe-1c1dfcf4afd4-109d0b1f/relevance/1
+* All, 2016-2021: https://www.webofscience.com/wos/woscc/summary/253dcf33-0bde-491c-b938-650aa8c8e432-109dc05b/relevance/1
 
-All inequality (inequality + health and inequality + inequality and migration): https://www.webofscience.com/wos/woscc/summary/aa59aed5-55fb-47bc-b81d-7ad468374bbc-109d2630/relevance/1
+All inequality (inequality + health and inequality + inequality and migration):
+* UiB, 2016-2021 https://www.webofscience.com/wos/woscc/summary/aa59aed5-55fb-47bc-b81d-7ad468374bbc-109d2630/relevance/1
+* All, 2016-2021: https://www.webofscience.com/wos/woscc/summary/6abadbcc-e030-4a24-9d19-4754960784b2-109dc460/relevance/1
 
-All migration (migration + health and migration + inequality and migration): https://www.webofscience.com/wos/woscc/summary/d5578a20-f0c5-4892-9789-bc8ddf3eb7bf-109d2913/relevance/1
+All migration (migration + health and migration + inequality and migration):
+* UiB, 2016-2021 https://www.webofscience.com/wos/woscc/summary/d5578a20-f0c5-4892-9789-bc8ddf3eb7bf-109d2913/relevance/1
+* All, 2016-2021: https://www.webofscience.com/wos/woscc/summary/e3d8d4f3-a2af-4115-b048-4620ee921fa4-109dc4c4/relevance/1
 
 
 ## Global health
 
 #### Global health
-
-https://www.webofscience.com/wos/woscc/summary/84ca075e-8623-47f3-bc17-2b4a99260111-109c6bb1/relevance/1
 
 ```Ceylon =
 TS=
@@ -294,8 +298,6 @@ AND
 
 ## Inequality
 
-https://www.webofscience.com/wos/woscc/summary/82b8427c-c729-487a-bca7-72a87621b9fd-109c8a30/relevance/1
-
 #### General terms
 
 1) Unlimited and 2) Limited by index
@@ -440,8 +442,6 @@ TS=
 
 ## Migration
 
-https://www.webofscience.com/wos/woscc/summary/7bc9251c-624a-4fe8-9cb4-c3483dfe46ff-109c9cf8/relevance/1
-
 The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/ecological/physical uses of "migration".
 
 ```Ceylon =
@@ -486,7 +486,6 @@ AND
 
 ## Global health and inequality
 
-https://www.webofscience.com/wos/woscc/summary/f12bad2b-4010-49c9-aa41-4c4d94d442e1-109caf70/relevance/1
 
 #### Health equity
 
@@ -508,6 +507,8 @@ TS=
 Inequality taken directly from Cristin, with minor adaptations. Health terms copied from the global health query.
 
 `LGBTQ` will also find LGBTQ+. `Racial` will find racial disparities etc.
+
+Keeping `ethnic OR ethnicity` here is quite broad - it will include works which mention ethnicity in passing (e.g. a clinical trial where all participants were x ethnicity; or, a study where they looked at gender, age, ethnicity etc.).
 
 ```Ceylon =
 TS=
@@ -689,8 +690,6 @@ TS=
 ```
 
 ## Global health and migration
-
-https://www.webofscience.com/wos/woscc/summary/0bee9637-f464-403b-866c-a76b282c1c78-109cc0c4/relevance/1
 
 Ca. same health terms used as in the above 2 sections.
 
@@ -893,8 +892,6 @@ TS=
 
 ## Migration and Inequality
 
-https://www.webofscience.com/wos/woscc/summary/8d4be8f1-c1f8-4151-ada4-fb0637d3aff6-109cd34f/relevance/1
-
 ```Ceylon =
 TS=
 (
@@ -952,5 +949,40 @@ TS=
     OR "climate change" OR "environmental change$" OR "disaster$"
     )
 )
+
+```
+
+
+## Climate change and LMCs
+
+This area overlaps with KE, but was mentioned specifically as part of GSU. We have only included climate change and farming in LMCs. Other references to climate change are included in the above sections (unless unnecssary, e.g. "migrants" alone will find works about migrants and climate change; "food security" the same etc.).
+
+```Ceylon =
+TS=
+(
+    ("climate chang"
+    OR "climate chang"
+    OR "global chang"
+    OR "global chang"
+    OR "climatic chang"
+    OR "changing climate"
+    OR "global warming"
+    OR "climate extreme"
+    OR "extreme climate"
+    OR "heat wave"
+    OR "natural disaster$"
+    OR "farming" OR "food production" OR "agriculture" OR "crops" OR "aquaculture"
+    )
+    AND
+      ("global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
+
+      OR "afghanistan" OR "angola" OR "antigua" OR "bahrain" OR "bangladesh" OR "barbados" OR "belize" OR "benin" OR "bermuda" OR "bhutan" OR "burkina faso" OR "burundi" OR "cabo verde" OR "cambodia" OR "chad" OR "marianas" OR "comoros" OR "congo" OR "cuba" OR "djibouti" OR "dominica" OR "eritrea" OR "ethiopia" OR "micronesia" OR "fiji" OR "french polynesia" OR "gambia" OR "grenada" OR "guadeloupe" OR "guyana" OR "haiti" OR "jamaica" OR "kiribati" OR "laos" OR "lesotho" OR "liberia" OR "madagascar" OR "malawi" OR "maldives" OR "mali" OR "marshall islands" OR "martinique" OR "mauritania" OR "mauritius" OR "montserrat" OR "mozambique" OR "myanmar" OR "nauru" OR "nepal" OR "new caledonia" OR "niger" OR "niue" OR "papua new guinea" OR "rwanda" OR "saint lucia" OR "grenadines" OR "la reunion" OR "samoa" OR "sao tome" OR "senegal" OR "sierra leone" OR "solomon islands" OR "somalia" OR "sudan" OR "suriname" OR "tanzania" OR "timor leste" OR "togo" OR "tonga" OR "tuvalu" OR "uganda" OR "vanuatu" OR "yemen" OR "zambia"
+
+      OR "africa" OR "nigeria" OR "egypt" OR "kenya" OR "algeria" OR "morocco" OR "ghana" OR "ivory coast" OR "cameroon" OR "zimbabwe" OR "tunisia" OR "libya" OR "botswana" OR "gabon" OR "equatorial guinea" OR "eswatini" OR "cape verde" OR "western sahara" OR "mayotte"
+
+      OR "albania" OR "argentina" OR "armenia" OR "azerbaijan" OR "belarus" OR "bolivia" OR "bosnia" OR "brazil" OR "bulgaria" OR "china" OR "colombia" OR "costa rica" OR "ecuador" OR "el salvador" OR "guatemala" OR "honduras" OR "india" OR "indonesia" OR "iran" OR "iraq" OR "jordan" OR "kazakhstan" OR "kosovo" OR "kyrgyz" OR "lebanon" OR "malaysia" OR "mexico" OR "micronesia" OR "moldova" OR "mongolia" OR "montenegro" OR "nicaragua" OR "macedonia" OR "pakistan" OR "paraguay" OR "phillipines" OR "peru" OR "romania" OR "russia" OR "serbia" OR "sri lanka" OR "syria" OR "tajikistan" OR "thailand" OR "turkey" OR "turkmenistan" OR "ukraine" OR "venezuela" OR "vietnam" OR "west bank" OR "gaza"
+      )
+)
+
 
 ```
