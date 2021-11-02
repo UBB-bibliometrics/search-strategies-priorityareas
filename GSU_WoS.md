@@ -4,6 +4,8 @@
 
 #### Global health
 
+https://www.webofscience.com/wos/woscc/summary/030eb98e-7c2c-4a13-aea3-d166072425ac-108f7f4b/relevance/1
+
 ```Ceylon =
 TS=
 ("global health" OR "international health" OR "global mental health"
@@ -279,6 +281,8 @@ AND
 
 ## Inequality
 
+https://www.webofscience.com/wos/woscc/summary/a86d74d0-0e86-4522-b185-f0552e7909c6-1090a01d/relevance/1
+
 #### General terms
 
 1) Unlimited and 2) Limited by index
@@ -297,7 +301,7 @@ TS=
   OR "slaves" OR "slave" OR "slavery"
   OR ("caste" NOT "bee$")
   OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
-  OR "autochthonous" OR "sami" OR "sapmi" OR "saami"
+  OR "sami" OR "sapmi" OR "saami"
   OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
   OR "minority group$" OR "minority language$" OR "minority stress" OR "ethnic minorit*"
   OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived"))
@@ -323,7 +327,7 @@ The phrase below only searches in the arts and humanities and social sciences ci
   OR "low income group$" OR "low income communit*" OR "low income household$" OR "neoliberal*"
   OR "household debt" OR "public debt" OR "debt relief" OR "debt litera*" OR ("debt" NEAR/15 ("stress" OR "health*" OR "psych*" OR "education*" OR "student"))
   OR "disadvantaged"
-  OR "indigenous"
+  OR "indigenous" OR "autochthonous"
   OR "minorities"
   OR "ethnicity" OR "ethnic"
   OR "colonial"
@@ -425,6 +429,8 @@ TS=
 
 ## Migration
 
+https://www.webofscience.com/wos/woscc/summary/367a50a2-c200-4e1b-b7b2-10532f14ac3d-1090df93/relevance/1
+
 The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/ecological/physical uses of "migration".
 
 ```Ceylon=
@@ -442,7 +448,7 @@ AND
 (EDN==("WOS.SSCI" OR "WOS.AHCI"))
 ```
 
-In phrase 2 the ESCI is included - here migration is NOT included - alhtough the majority of results from there seem to be from social sciences/humanities, some emerging geology/biology/medical journals may seep in.
+In phrase 2 the ESCI is included - here migration alone is NOT included - alhtough the majority of results from there seem to be from social sciences/humanities, some emerging geology/biology/medical journals may seep in.
 
 ```Ceylon=
 (TS=
@@ -451,7 +457,7 @@ In phrase 2 the ESCI is included - here migration is NOT included - alhtough the
   OR  ("migration"
       AND   ("asylum" OR "trafficking" OR "displacement"
             OR "rural" OR "urban"
-            OR "law" OR "politic*" OR "biopolitics" OR "citizen*"
+            OR "law" OR "laws" OR "politic*" OR "biopolitics" OR "citizen*"
             OR "minority" OR "minorities"
             )
       )
