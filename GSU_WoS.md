@@ -258,7 +258,7 @@ TS=
       OR  "sanitation" OR "drinking water" OR "potable water"
       )
     AND
-      ( "humans" OR "humanity" OR "human" OR "people" OR "person$"
+      ( "humans" OR "humanity" OR "human health" OR "people" OR "person$"
         OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
@@ -295,7 +295,7 @@ TS=
   OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
   OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
   OR "social justice" OR "social sustainability" OR "social mobility"
-  OR "climate justice" OR "environmental justice"
+  OR "climate justice" OR "environmental justice" OR "global justice"
   OR "poverty" OR "microfinance" OR "microcredit" OR "homeless"
   OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
   OR "slaves" OR "slave" OR "slavery"
@@ -339,7 +339,9 @@ AND
 
 #### Certain groups
 
-1a/b) Limited by index and 2) Unlimited.  Note that some groups are not included here, because they are included in their entirety in the phrases above. The groups included below are only included when combined with certain terms.
+1a/b) Limited by index and 2) Unlimited.  
+
+Note that some groups are not included here, because they are included in their entirety in the phrases above. The groups included below are included only when combined with certain terms.
 
 1a/b - split into two, as the terms "power" and "inclusion" are difficult. First phrase includes the terms that are simple to combine - second phrase uses a double not statement to remove irrelevant works.
 
@@ -354,12 +356,8 @@ AND
         NEAR/15
           ("freedom$"
           OR "security"
-          OR "legislat*" OR "governance" OR "democracy"
-          OR "empower*"
           OR "quota$"
-          OR "debt" OR "economic burden"
-          OR "traditional law$" OR "sharia"
-          OR "inclusive" OR "social inclusion" OR "inclusion into society" OR "language polic*"
+          OR "inclusive"
           OR "climate change" OR "environmental change$" OR "disaster$"
           )
     )
@@ -413,12 +411,12 @@ TS=
   OR "islam" OR "muslim$" OR "christian$" OR "jewish" OR "sikh" OR "buddhis*"
   )
   NEAR/15
-    ("empower*" OR "democracy"
+    ("empower*" OR "democracy" OR "legislat*" OR "governance"
     OR "traditional law$" OR "sharia"
-    OR "climate change" OR "environmental change$"
     OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
     OR "representation" OR "discrimination" OR "criminali*" OR "marginali*"
     OR "justice" OR "injustice" OR "oppressi*"
+    OR "social inclusion" OR "social exclusion" OR "inclusion into society" OR "language polic*"
     OR "low income" OR "economic burden" OR "debt" OR "neoliberal"
     OR "disadvantaged"
     OR "minorities"
@@ -511,8 +509,8 @@ TS=
   OR "justice" OR "injustice" OR "oppression"
   OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
   OR "social justice" OR "social sustainability" OR "social mobility"
-  OR "climate justice" OR "environmental justice"
-  OR "poverty" OR "low income" OR "economic burden" OR "debt" OR "microfinance" OR "homeless*" OR "neoliberal"
+  OR "climate justice" OR "environmental justice" OR "global justice"
+  OR "poverty" OR "low income" OR "economic burden" OR "socioeconomic" OR "debt" OR "microfinance" OR "homeless*" OR "neoliberal"
   OR "disadvantaged" OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
   OR "indigenous" OR "autochthonous" OR "sami" OR "sapmi" OR "saami"
   OR "minority group$" OR "minority language$" OR "minority stress"
@@ -528,7 +526,7 @@ TS=
   )
   AND
   (
-    ("health education" OR "health polic*" OR "health organization$" OR "health service$"
+    ("global health" OR "health behavior$" OR"health education" OR "health polic*" OR "health organization$" OR "health service$"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
     OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$"
@@ -643,7 +641,7 @@ TS=
       OR  "sanitation" OR "drinking water" OR "potable water"
       )
     AND
-      ( "humans" OR "humanity" OR "human" OR "people" OR "person$"
+      ( "humans" OR "humanity" OR "human health" OR "people" OR "person$"
         OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
@@ -744,7 +742,7 @@ Some of the groups from Set 1 have been added to the bottom here as "human" term
 ```Ceylon =
 TS=
 (
-    "migrant health" OR "refugee health" OR "immigrant health"
+    "migrant health" OR "refugee health" OR "immigrant health" OR "global health"
     OR "health behavior$" OR "health education" OR "health polic*" OR "health organization$" OR "health service$"
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
@@ -856,7 +854,7 @@ TS=
       	OR  "sanitation" OR "drinking water" OR "potable water"
       	)
       AND
-      	("humans" OR "humanity" OR "human" OR "people" OR "person$"
+      	("humans" OR "humanity" OR "human health" OR "people" OR "person$"
         OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
@@ -905,11 +903,11 @@ TS=
   OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
   OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*" OR "welfare chauvinism" OR "welfare state nationalism"
   OR "social justice" OR "social sustainability" OR "social mobility"
-  OR "climate justice" OR "environmental justice"
+  OR "climate justice" OR "environmental justice" OR "global justice"
   OR "legislat*" OR "governance" OR "democracy" OR "freedom$" OR "security"
   OR "traditional law$" OR "sharia"
   OR "low income group$" OR "low income communit*" OR "low income household$" OR "neoliberal*" OR "disadvantaged" OR "social class"
-  OR "poverty" OR "debt" OR "economic burden" OR "microfinance" OR "microcredit" OR "homeless"
+  OR "poverty" OR "debt" OR "economic burden" OR "socioeconomic" OR "microfinance" OR "microcredit" OR "homeless"
   OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
   OR "slaves" OR "slave" OR "slavery"
   OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
