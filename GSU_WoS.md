@@ -4,7 +4,7 @@
 
 #### Global health
 
-https://www.webofscience.com/wos/woscc/summary/030eb98e-7c2c-4a13-aea3-d166072425ac-108f7f4b/relevance/1
+https://www.webofscience.com/wos/woscc/summary/b04a656c-a1eb-4d07-a594-57bcab7f7471-10948ba0/relevance/1
 
 ```Ceylon =
 TS=
@@ -207,7 +207,7 @@ TS=
     OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
     OR	"abortion*" OR "pregnan*"
     OR 	"reproductive health" OR "sexual health"
-    OR	"sex education" OR "family planning"
+    OR	"sex education" OR "family planning" OR "contraceptive$" OR "contraception" OR "abortion$"
 
     OR	"disability" OR "disabled people*" OR "disabled child*"
 
@@ -474,6 +474,8 @@ AND
 
 ## Global health and inequality
 
+https://www.webofscience.com/wos/woscc/summary/ac54b5f6-93d9-4300-b4f4-f99df9aee687-10946b46/relevance/1
+
 #### Health equity
 
 ```Ceylon=
@@ -501,7 +503,7 @@ TS=
   OR "development assistance" OR "development aid"
   OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
   OR "equality" OR "inequalit*" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
-  OR "representation" OR "discrimination" OR "criminaliz*" OR "criminalis" OR "marginali*" OR "otherness" OR "othering" OR "stereotypes"
+  OR "criminaliz*" OR "criminalis" OR "marginali*" OR "otherness" OR "othering" OR "stereotypes"
   OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
   OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
   OR "justice" OR "injustice" OR "oppression"
@@ -587,7 +589,7 @@ TS=
     OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
     OR	"abortion*" OR "pregnan*"
     OR 	"reproductive health" OR "sexual health"
-    OR	"sex education" OR "family planning"
+    OR	"sex education" OR "family planning" OR "contraceptive$" OR "contraception" OR "abortion$"
 
     OR	"disability" OR "disabled people*" OR "disabled child*"
 
@@ -671,7 +673,9 @@ TS=
 
 ## Global health and migration
 
-Same health terms used as in the above 2 sections.
+https://www.webofscience.com/wos/woscc/summary/79ca00c4-04b5-4c04-9a4d-3c8c177f348c-10944dd0/relevance/1
+
+Ca. same health terms used as in the above 2 sections.
 
 How to include `migration`? MANY results when adding it are definately not relevant; the problematic ones here are those that also relate to health. Many of these are from surgery, but there is also environmental migration of pollutants (pollutants, radon, PCBs, PM, mercury). Two alternatives - positive inclusion or negative exclusion. I have chosen exclusion of certain phrases (set 2), plus inclusion of certain phrases (set 1) and Web of Science categories (set 3).
 An alternative would be to exclude Web of Science categories, but I found this to be difficult as there as so many. A starting list includes: `WC = ("surgery" OR "oncology" OR "neurosciences" OR "clinical neurology" OR "Biochemistry & Molecular Biology" OR "cell biology" OR "Genetics Heredity" OR "orthopedics" OR "Radiology Nuclear Medicine Medical Imaging" OR "Gastroenterology Hepatology" OR "Urology Nephrology" OR "Endocrinology Metabolism" OR "fisheries" OR "marine freshwater biology" OR "ecology" OR "veterinary sciences" OR "entomology" OR "Biodiversity Conservation" OR "toxicology" OR "limnology" OR "water resources" OR "Food Science Technology" OR "chemistry analytical" OR "chemistry multidisciplinary" OR "chemistry physical" OR "chemistry medicinal" OR "chemistry applied" OR "Spectroscopy" OR "optics" OR "engineering electrical electronic" OR "engineering chemical" OR "Biotechnology Applied Microbiology" OR "engineering biomedical" OR "materials science biomaterials" OR "nanoscience nanotechnology" OR "Medical Laboratory Technology")`
@@ -684,7 +688,7 @@ An alternative would be to exclude Web of Science categories, but I found this t
 TS=
   ("migrant$" OR "immigrant$" OR "immigration" OR "emigration"
   OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "labor migration"
-  OR  ("migration" AND ("asylum"))
+  OR ("migration" AND ("asylum"))
   OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
   OR "returnee$"
   OR "asylum seek*" OR "people seeking asylum"
@@ -695,19 +699,19 @@ TS=
 #### Set 2 - migration exclusions
 
 ```Ceylon=
-TS = 	"migration"
+TS = 	
+("migration"
 NOT
-  (
-  TS = 	("surgical*" OR "surgery" OR "surgeries" OR "arthroplasty" OR "implant*" OR "stent$" OR "shunt" OR "catheter" OR "*prosthesis" OR "intragastric" OR "aberrant migration" OR "device migration" OR "valve migration"
-  	OR "foreign bodies" OR "foreign body" OR "needle" OR "bone migration" OR "stone migration" OR "perforation" OR "obstruction" OR "silicone"
-  	OR "cell" OR "cells" OR "cancer migration" OR "tumor migration" OR "carcinoma" OR "neoplasm$" OR "metastasis" OR "apoptosis" OR "transcription" OR "expression" OR "receptor" OR "clot migration" OR "neuron* migration" "monocyte$" OR "macrophage$" OR "leukocyte$" OR "chondrocyte$" OR "neutrophil$" OR "inhibitory factor" OR "anteriorly" OR "posteriorly" OR "transmembrane" OR "biomarker"
-  	OR "pain migration" OR "periodontitis" OR "hip migration"
+  ("surgical*" OR "surgery" OR "surgeries" OR "arthroplasty" OR "implant*" OR "stent$" OR "shunt" OR "catheter" OR "*prosthesis" OR "intragastric" OR "aberrant migration" OR "device migration" OR "valve migration"
+  OR "foreign bodies" OR "foreign body" OR "needle" OR "bone migration" OR "stone migration" OR "perforation" OR "obstruction" OR "silicone"
+  OR "cell" OR "cells" OR "cancer migration" OR "tumor migration" OR "carcinoma" OR "neoplasm$" OR "metastasis" OR "apoptosis" OR "transcription" OR "expression" OR "receptor" OR "clot migration" OR "neuron* migration" "monocyte$" OR "macrophage$" OR "leukocyte$" OR "chondrocyte$" OR "neutrophil$" OR "inhibitory factor" OR "anteriorly" OR "posteriorly" OR "transmembrane" OR "biomarker"
+  OR "pain migration" OR "periodontitis" OR "hip migration"
 	OR "animal migration$" OR "migratory bird$" OR "biofilm migration" OR "seed migration" OR "larva* migration" OR "deer" OR "bats"
 	OR "population genetics"
 	OR "contaminant migration" OR "lead migration" OR "pb migration"
-  	OR "electrokinetic migration"
-  	)
+  OR "electrokinetic migration"
   )
+)
 ```
 
 #### Set 3 - migration inclusions
@@ -715,10 +719,10 @@ NOT
 The categories "Medicine general internal" OR "tropical medicine" OR "infectious diseases" contain some irrelevant, but I think combined with the above terms there should not be too much noise...
 
 ```Ceylon=
-TS = 	"migration"
+TS = ("migration")
 AND
-  WC = 	("Public Environmental Occupational Health" OR "Health policy services" OR "Health Care Sciences Services" OR "Medical ethics"
-  	OR "Medicine general internal" OR "tropical medicine" OR "infectious diseases"
+  WC = ("Public Environmental Occupational Health" OR "Health policy services" OR "Health Care Sciences Services" OR "Medical ethics"
+  OR "Medicine general internal" OR "tropical medicine" OR "infectious diseases"
 	OR "Environmental sciences"
 	OR "Regional urban planning" OR "Economics" OR "Development studies" OR "urban studies" OR "geography" OR "demography" OR "area studies"
 	OR "Family Studies" OR "Social Work"
@@ -802,7 +806,7 @@ TS=
     OR	"perinatal" OR "postnatal" OR	"antenatal" OR "prenatal"
     OR	"abortion*" OR "pregnan*"
     OR 	"reproductive health" OR "sexual health"
-    OR	"sex education" OR "family planning"
+    OR	"sex education" OR "family planning" OR "contraceptive$" OR "contraception" OR "abortion$"
 
     OR	"disability" OR "disabled people*" OR "disabled child*"
 
