@@ -287,7 +287,7 @@ https://www.webofscience.com/wos/woscc/summary/bb649180-2827-4dbf-9620-5d132da08
 
 1) Unlimited and 2) Limited by index
 
-```Ceylon=
+```Ceylon =
 TS=
   ("development assistance" OR "development aid"
   OR "otherness" OR "othering" OR "stereotypes"
@@ -317,7 +317,7 @@ TS=
 
 The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/physical uses of more generic terms.
 
-```Ceylon=
+```Ceylon =
 (TS=
   ("globalisation" OR "globalization"
   OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
@@ -343,7 +343,7 @@ AND
 
 1a/b - split into two, as the terms "power" and "inclusion" are difficult. First phrase includes the terms that are simple to combine - second phrase uses a double not statement to remove irrelevant works.
 
-```Ceylon=
+```Ceylon =
 
 (TS=
     (
@@ -368,7 +368,7 @@ AND
 (EDN==("WOS.SSCI" OR "WOS.AHCI" OR "WOS.ESCI"))
 ```
 
-```Ceylon=
+```Ceylon =
 (TS=
     (
       (
@@ -404,7 +404,7 @@ AND
 
 2) This phrase is the same as above, but only including terms that won't cause confusion when run against the science and medicine indices. Some additional terms are added that, while they could not be run alone against all indicies, can together with the groups. Hindu is taken out as also refers to a region in climate science ("hindu kush").
 
-```Ceylon=
+```Ceylon =
 TS=
 (
   ("women" OR "girls" OR "boys" OR "gender" OR "child" OR "children"
@@ -433,7 +433,7 @@ https://www.webofscience.com/wos/woscc/summary/367a50a2-c200-4e1b-b7b2-10532f14a
 
 The phrase below only searches in the arts and humanities and social sciences citation indicies in Web of Science, to avoid the medical/biological/ecological/physical uses of "migration".
 
-```Ceylon=
+```Ceylon =
 (TS=
   ("immigrant$" OR "immigration" OR "emigration"
   OR "migrant$" OR "migration"
@@ -450,7 +450,7 @@ AND
 
 In phrase 2 the ESCI is included - here migration alone is NOT included - alhtough the majority of results from there seem to be from social sciences/humanities, some emerging geology/biology/medical journals may seep in.
 
-```Ceylon=
+```Ceylon =
 (TS=
   ("immigrant$" OR "immigration" OR "emigration"
   OR "migrant$" OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "labor migration"
@@ -479,7 +479,7 @@ https://www.webofscience.com/wos/woscc/summary/12383a43-babe-4afb-9214-61ac2683a
 
 #### Health equity
 
-```Ceylon=
+```Ceylon =
 TS=
 (	"health equity" OR "right to health*" OR "health rights" OR "health for all"
 	OR "health coverage" OR "health governance" OR "health justice"
@@ -498,7 +498,7 @@ Inequality taken directly from Cristin, with minor adaptations. Health terms cop
 
 `LGBTQ` will also find LGBTQ+. `Racial` will find racial disparities etc.
 
-```Ceylon=
+```Ceylon =
 TS=
 (
   ("globalisation" OR "globalization"
@@ -657,7 +657,7 @@ TS=
 
 #### Extra standalone terms for health and inequality
 
-```Ceylon=
+```Ceylon =
 TS=
 (	"femicide"
 	OR "intimate partner violence" OR "domestic violence" OR "gender based violence"
@@ -666,7 +666,7 @@ TS=
 
 #### Right to food and water
 
-```Ceylon=
+```Ceylon =
 TS=
 (	"right to food" OR "right to water" OR "smallhold*"
 	OR "food security" OR "water security"
@@ -687,7 +687,7 @@ An alternative would be to exclude Web of Science categories, but I found this t
 
 #### Set 1 - migrants/refugees
 
-```Ceylon=
+```Ceylon =
 TS=
   ("migrant$" OR "immigrant$" OR "immigration" OR "emigration"
   OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "labor migration"
@@ -701,7 +701,7 @@ TS=
 
 #### Set 2 - migration exclusions
 
-```Ceylon=
+```Ceylon =
 TS = 	
 ("migration"
 NOT
@@ -721,7 +721,7 @@ NOT
 
 The categories "Medicine general internal" OR "tropical medicine" OR "infectious diseases" contain some irrelevant, but I think combined with the above terms there should not be too much noise...
 
-```Ceylon=
+```Ceylon =
 TS = ("migration")
 AND
   WC = ("Public Environmental Occupational Health" OR "Health policy services" OR "Health Care Sciences Services" OR "Medical ethics"
@@ -741,7 +741,7 @@ Removed some of the environmental pollutant terms from the medical terms, since 
 
 Some of the groups from Set 1 have been added to the bottom here as "human" terms - this means that a mention of health + refugee is enough to be included. For more general migration terms which can apply to animals, such as immigration, health is only in phrases that are mostly used for humans (e.g. health education, medical, wellbeing)
 
-```Ceylon=
+```Ceylon =
 TS=
 (
     "migrant health" OR "refugee health" OR "immigrant health"
@@ -876,7 +876,7 @@ TS=
 
 https://www.webofscience.com/wos/woscc/summary/62c1787d-ae30-4692-b200-39c39217e5b0-1098a2ca/relevance/1
 
-```Ceylon=
+```Ceylon =
 TS=
 (
   ("immigrant$" OR "immigration" OR "emigration"
