@@ -131,7 +131,7 @@ TS =
 
 For many health terms, some of the results may be about animals or plants; thus some of the search terms are combined with terms for humans. It is otherwise very difficult to remove all results, for example, some about fish or cattle health in LMCs may be included. Can this be considered ok?
 
-`health` and `medical` covers health care, services, education, rights, workers, coverage, sexual/mental/occupational health. However, as "health" can be used in other fields (ecosystem health), specific phrases are included in the first phrase, while "health" generally is combined with human terms. The same applies to `disease`, which covers a number of categories of disease (e.g. communicable disease). Phrases are included in the first part, while it is combined with human terms in the second part.
+`health` and `medical` covers health care, services, education, rights, workers, coverage, sexual/mental/occupational health. However, as "health" can be used in other fields (ecosystem health), specific phrases are included in the first phrase, while "health" generally is combined with human terms. The same applies to `disease`, `mortality` etc. which cover a number of categories of disease (e.g. communicable disease) but can also be used for animals/plants.
 `therapy` covers various types (art, music, medicinal)
 
 Specific diseases, health care occupations etc. added from SDG3
@@ -905,43 +905,43 @@ TS=
   OR "cultural integration" OR "multicultural*" OR "acculturat*" OR "intercultural"
   )
   AND
-  ("development assistance" OR "development aid" OR "globalisation" OR "globalization"
-  OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
-  OR "equality" OR "inequalit*" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
-  OR "criminaliz*" OR "criminalis*" OR "marginali*" OR "otherness" OR "othering" OR "stereotypes"
-  OR "language polic*"
-  OR "justice" OR "injustice" OR "oppressi*"
-  OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
-  OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
-  OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*" OR "welfare chauvinism" OR "welfare state nationalism"
-  OR "social justice" OR "social sustainability" OR "social mobility"
-  OR "climate justice" OR "environmental justice" OR "global justice"
-  OR "legislat*" OR "governance" OR "democracy" OR "freedom$" OR "security"
-  OR "traditional law$" OR "sharia"
-  OR "low income group$" OR "low income communit*" OR "low income household$" OR "neoliberal*" OR "disadvantaged" OR "social class"
-  OR "poverty" OR "debt" OR "economic burden" OR "socioeconomic" OR "microfinance" OR "microcredit" OR "homeless"
-  OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
-  OR "slaves" OR "slave" OR "slavery"
-  OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
-  OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
-  OR "indigenous" OR "autochthonous people$" OR "autochthonous communit*" OR "autochthonous societ*" OR "sami" OR "sapmi" OR "saami"
-  OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
-  OR "minority group$" OR "minority language$" OR "minority stress" OR "ethnic minorit*" OR "minorities"
-  OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived" OR "migrant$" OR "immigrant$"))
-  OR "islamophobia" OR "anti-muslim" OR "anti jewish" OR "far right"
-  OR "racism" OR "racial" OR "apartheid"
-  OR "colonial" OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
-  OR "riot" OR "riots" OR "uprising$" OR "insurrection$" OR "political protest$" OR "political conflict$"
-  OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny" OR "gender gap$"
-  OR "intersectional*"
-  OR "ageism"
-  OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
-  OR "empower*" OR "power dynamic*" OR "imperial power" OR "colonial power" OR "power and gender" OR "gender and power" OR "power roles"
-  OR "inclusive" OR "inclusion" OR "exclusion" OR "social inclusion" OR "inclusion into society" OR "social inclusion" OR "inclusion into society" OR "inclusion strateg*" OR "inclusion of people with disabilities"
-  OR "belonging"
-  OR "quota$"
-  OR "climate change" OR "environmental change$" OR "disaster$"
-  )
+    ("development assistance" OR "development aid" OR "globalisation" OR "globalization"
+    OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
+    OR "equality" OR "inequalit*" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
+    OR "criminaliz*" OR "criminalis*" OR "marginali*" OR "otherness" OR "othering" OR "stereotypes"
+    OR "language polic*"
+    OR "justice" OR "injustice" OR "oppressi*"
+    OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
+    OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
+    OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*" OR "welfare chauvinism" OR "welfare state nationalism"
+    OR "social justice" OR "social sustainability" OR "social mobility"
+    OR "climate justice" OR "environmental justice" OR "global justice"
+    OR "legislat*" OR "governance" OR "democracy" OR "freedom$" OR "security"
+    OR "traditional law$" OR "sharia"
+    OR "low income group$" OR "low income communit*" OR "low income household$" OR "neoliberal*" OR "disadvantaged" OR "social class"
+    OR "poverty" OR "debt" OR "economic burden" OR "socioeconomic" OR "microfinance" OR "microcredit" OR "homeless"
+    OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
+    OR "slaves" OR "slave" OR "slavery"
+    OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
+    OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
+    OR "indigenous" OR "autochthonous people$" OR "autochthonous communit*" OR "autochthonous societ*" OR "sami" OR "sapmi" OR "saami"
+    OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
+    OR "minority group$" OR "minority language$" OR "minority stress" OR "ethnic minorit*" OR "minorities"
+    OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived" OR "migrant$" OR "immigrant$"))
+    OR "islamophobia" OR "anti-muslim" OR "anti jewish" OR "far right"
+    OR "racism" OR "racial" OR "apartheid"
+    OR "colonial" OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
+    OR "riot" OR "riots" OR "uprising$" OR "insurrection$" OR "political protest$" OR "political conflict$"
+    OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny" OR "gender gap$"
+    OR "intersectional*"
+    OR "ageism"
+    OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
+    OR "empower*" OR "power dynamic*" OR "imperial power" OR "colonial power" OR "power and gender" OR "gender and power" OR "power roles"
+    OR "inclusive" OR "inclusion" OR "exclusion" OR "social inclusion" OR "inclusion into society" OR "social inclusion" OR "inclusion into society" OR "inclusion strateg*" OR "inclusion of people with disabilities"
+    OR "belonging"
+    OR "quota$"
+    OR "climate change" OR "environmental change$" OR "disaster$"
+    )
 )
 
 ```
