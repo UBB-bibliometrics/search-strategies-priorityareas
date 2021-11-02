@@ -296,16 +296,16 @@ TS=
   OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
   OR "slaves" OR "slave" OR "slavery"
   OR ("caste" NOT "bee$")
-  OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$" OR "the vulnerable"
-  OR "autochthonous" OR "sami" OR "sapmi"
+  OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
+  OR "autochthonous" OR "sami" OR "sapmi" OR "saami"
   OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
-  OR "minority group$" OR "minority language$" OR "minority stress"
+  OR "minority group$" OR "minority language$" OR "minority stress" OR "ethnic minorit*"
   OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived"))
   OR "racism" OR "racial" OR "apartheid"
   OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
   OR "riot" OR "riots" OR "uprising$" OR "insurrection$" OR "political protest$" OR "political conflict$"
   OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny"
-  OR "intersectional"
+  OR "intersectional*"
   OR "ageism"
   OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
 )
@@ -318,9 +318,10 @@ The phrase below only searches in the arts and humanities and social sciences ci
   ("globalisation" OR "globalization"
   OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
   OR "equality" OR "inequalit*" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
-  OR "criminali*" OR "marginali*"
+  OR "criminaliz*" OR "criminalis*" OR "marginali*"
   OR "justice" OR "injustice" OR "oppressi*"
-  OR "low income" OR "economic burden" OR "debt" OR "neoliberal"
+  OR "low income group$" OR "low income communit*" OR "low income household$" OR "neoliberal*"
+  OR "household debt" OR "public debt" OR "debt relief" OR "debt litera*" OR ("debt" NEAR/15 ("stress" OR "health*" OR "psych*" OR "education*" OR "student"))
   OR "disadvantaged"
   OR "indigenous"
   OR "minorities"
@@ -334,34 +335,70 @@ AND
 
 #### Certain groups
 
-1) Limited by index and 2) Unlimited.  
+1a/b) Limited by index and 2) Unlimited.  Note that some groups are not included here, because they are included in their entirety in the phrases above. The groups included below are only included when combined with certain terms.
 
-Note that some groups are not included here, because they are included in their entirety in the phrases above. The groups included below are only included when combined with certain terms.
+1a/b - split into two, as the terms "power" and "inclusion" are difficult. First phrase includes the terms that are simple to combine - second phrase uses a double not statement to remove irrelevant works.
 
 ```Ceylon=
+
 (TS=
-  (
-    ("women" OR "girls" OR "boys" OR "gender" OR "child" OR "children"
-    OR "elderly" OR "disabilit*" OR "disabled"
-    OR "islam" OR "muslim$" OR "christian$" OR "jewish" OR "hindu*" OR "sikh" OR "buddhis*"
+    (
+        ("women" OR "girls" OR "boys" OR "gender" OR "child" OR "children"
+        OR "elderly" OR "disabilit*" OR "disabled"
+        OR "islam" OR "muslim$" OR "christian$" OR "jewish" OR "hindu*" OR "sikh" OR "buddhis*"
+        )
+        NEAR/15
+          ("freedom$"
+          OR "security"
+          OR "legislat*" OR "governance" OR "democracy"
+          OR "empower*"
+          OR "quota$"
+          OR "debt" OR "economic burden"
+          OR "traditional law$" OR "sharia"
+          OR "inclusive" OR "social inclusion" OR "inclusion into society" OR "language polic*"
+          OR "climate change" OR "environmental change$" OR "disaster$"
+          )
     )
-    NEAR/15
-      ("freedom$"
-      OR "security"
-      OR "legislat*" OR "governance" OR "democracy"
-      OR "power" OR "empower*"
-      OR "quota$"
-      OR "traditional law$" OR "sharia"
-      OR "inclusion" OR "inclusive" OR "language polic*"
-      OR "climate change" OR "environmental change$"
-      )
-  )
 )
 AND
 (EDN==("WOS.SSCI" OR "WOS.AHCI" OR "WOS.ESCI"))
 ```
 
-This phrase is the same as above, but only including terms that won't cause confusion when run against the science and medicine indices. Some additional terms are added that, while they could not be run alone against all indicies, can together with the groups. Hindu is taken out as also refers to a region in climate science ("hindu kush").
+```Ceylon=
+(TS=
+    (
+      (
+        ("women" OR "girls" OR "boys" OR "gender" OR "child" OR "children"
+        OR "elderly" OR "disabilit*" OR "disabled"
+        OR "islam" OR "muslim$" OR "christian$" OR "jewish" OR "hindu*" OR "sikh" OR "buddhis*"
+        )
+        NEAR/15
+          ("power" OR "inclusion")
+      )
+      NOT (
+                  ("statistical power" OR "analysis power" OR "power analysis" OR "predictive power" OR "power of the model" OR "theta power" OR "limbs power" OR "knee power" OR "mean power" OR "total power" OR "detection power" OR "discrimination power"
+                  OR "inclusion criteria" OR "criteria for inclusion" OR "at inclusion" OR "inclusion and exclusion criteria" OR "inclusion in th* study"
+                  )
+                  NOT
+                    ("freedom$"
+                    OR "security"
+                    OR "legislat*" OR "governance" OR "democracy"
+                    OR "empower*"
+                    OR "quota$"
+                    OR "traditional law$" OR "sharia"
+                    OR "inclusive" OR "language polic*"
+                    OR "climate change" OR "environmental change$"
+                    OR "power dynamic*" OR "imperial power" OR "colonial power" OR "power and gender" OR "gender and power" OR "gender gap" OR "power roles"
+                    OR "social inclusion" OR "inclusion into society" OR "inclusion strateg*" OR "inclusion of people with disabilities"
+                    )
+          )           
+    )      
+)
+AND
+(EDN==("WOS.SSCI" OR "WOS.AHCI" OR "WOS.ESCI"))
+```
+
+2) This phrase is the same as above, but only including terms that won't cause confusion when run against the science and medicine indices. Some additional terms are added that, while they could not be run alone against all indicies, can together with the groups. Hindu is taken out as also refers to a region in climate science ("hindu kush").
 
 ```Ceylon=
 TS=
