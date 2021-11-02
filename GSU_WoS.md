@@ -142,8 +142,13 @@ Countries includes all except high-income countries.
 TS=
 (
   (
-    ("health education" OR "health polic*" OR "health organization$" OR "health service$"
+    ("global health"
+    OR "health polic*" OR "health organization$" OR "health service$" OR "health sector" OR "healthcare" OR "health care"
+    OR "health behavior$" OR "health education"
+    OR "public health" OR "health promotion"
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
+    OR "workplace health" OR "occupational health" OR "mental health" OR "psychological health" OR "psychosocial health"
+    OR "human health" OR "child health"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
     OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$"
@@ -185,8 +190,7 @@ TS=
 
     OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies"
 
-    OR  "clinic$" OR "hospital$" OR "healthcare" OR "residential care"
-    OR  "patient care"
+    OR  "clinic$" OR "hospital$" OR "residential care" OR "intensive care" OR "essential medic*" OR "patient care"
     OR	"dentist$" OR "dental"
     OR	"surgery" OR "surgeon$"
     OR  "therapist$" OR "counselling"
@@ -258,7 +262,7 @@ TS=
       OR  "sanitation" OR "drinking water" OR "potable water"
       )
     AND
-      ( "humans" OR "humanity" OR "human health" OR "people" OR "person$"
+      ( "humans" OR "humanity" OR "people" OR "person$"
         OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
@@ -294,7 +298,7 @@ TS=
   OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
   OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
   OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
-  OR "social justice" OR "social sustainability" OR "social mobility"
+  OR "social justice" OR "social sustainability" OR "social mobility" OR "social class"
   OR "climate justice" OR "environmental justice" OR "global justice"
   OR "poverty" OR "microfinance" OR "microcredit" OR "homeless"
   OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
@@ -479,7 +483,7 @@ https://www.webofscience.com/wos/woscc/summary/12383a43-babe-4afb-9214-61ac2683a
 
 ```Ceylon =
 TS=
-(	"health equity" OR "right to health*" OR "health rights" OR "health for all"
+(	"health equity" OR "equity in health" OR "right to health*" OR "health rights" OR "health for all" OR "social determinants of health"
 	OR "health coverage" OR "health governance" OR "health justice"
   OR "body politics"
 	OR
@@ -508,7 +512,7 @@ TS=
   OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
   OR "justice" OR "injustice" OR "oppression"
   OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
-  OR "social justice" OR "social sustainability" OR "social mobility"
+  OR "social justice" OR "social sustainability" OR "social mobility" OR "social class"
   OR "climate justice" OR "environmental justice" OR "global justice"
   OR "poverty" OR "low income" OR "economic burden" OR "socioeconomic" OR "debt" OR "microfinance" OR "homeless*" OR "neoliberal"
   OR "disadvantaged" OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
@@ -526,7 +530,12 @@ TS=
   )
   AND
   (
-    ("global health" OR "health behavior$" OR"health education" OR "health polic*" OR "health organization$" OR "health service$"
+    ("global health"
+    OR "health polic*" OR "health organization$" OR "health service$" OR "health sector" OR "healthcare" OR "health care"
+    OR "health behavior$" OR "health education"
+    OR "public health" OR "health promotion"
+    OR "workplace health" OR "occupational health" OR "mental health" OR "psychological health" OR "psychosocial health"
+    OR "human health" OR "child health"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
     OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$"
@@ -568,8 +577,7 @@ TS=
 
     OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies"
 
-    OR  "clinic$" OR "hospital$" OR "healthcare" OR "residential care"
-    OR  "patient care"
+    OR  "clinic$" OR "hospital$" OR "residential care" OR "intensive care" OR "essential medic*" OR  "patient care"
     OR	"dentist$" OR "dental"
     OR	"surgery" OR "surgeon$"
     OR  "therapist$" OR "counselling"
@@ -600,7 +608,6 @@ TS=
     OR	"developmental disorder$"
     OR  "cognative decline"
     OR	"risk behavi*"
-    OR 	"mental health"
     OR	"suicid*" OR "self-harm"
     OR 	"anxiety" OR "psychosis"
     OR 	"intimate partner violence"
@@ -641,7 +648,7 @@ TS=
       OR  "sanitation" OR "drinking water" OR "potable water"
       )
     AND
-      ( "humans" OR "humanity" OR "human health" OR "people" OR "person$"
+      ( "humans" OR "humanity" OR "people" OR "person$"
         OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
@@ -742,9 +749,14 @@ Some of the groups from Set 1 have been added to the bottom here as "human" term
 ```Ceylon =
 TS=
 (
-    "migrant health" OR "refugee health" OR "immigrant health" OR "global health"
-    OR "health behavior$" OR "health education" OR "health polic*" OR "health organization$" OR "health service$"
+    "migrant health" OR "refugee health" OR "immigrant health"
+    OR "global health"
+    OR "health polic*" OR "health organization$" OR "health service$" OR "health sector" OR "healthcare" OR "health care"
+    OR "health behavior$" OR "health education"
+    OR "public health" OR "health promotion"
     OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
+    OR "workplace health" OR "occupational health" OR "mental health" OR "psychological health" OR "psychosocial health"
+    OR "human health" OR "child health"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
     OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$"
@@ -786,7 +798,7 @@ TS=
 
     OR	"vaccine$" OR "vaccinat*" OR "therapy" OR "therapies"
 
-    OR  "clinic$" OR "hospital$" OR "healthcare" OR "health care" OR "residential care" OR  "patient care"
+    OR  "clinic$" OR "hospital$" OR "residential care" OR "intensive care" OR "essential medic*" OR "patient care"
     OR	"dentist$" OR "dental"
     OR	"surgery" OR "surgeon$"
     OR  "therapist$" OR "counselling"
@@ -854,7 +866,7 @@ TS=
       	OR  "sanitation" OR "drinking water" OR "potable water"
       	)
       AND
-      	("humans" OR "humanity" OR "human health" OR "people" OR "person$"
+      	("humans" OR "humanity" OR "people" OR "person$"
         OR "children" OR "child" OR "infant$" OR "babies" OR "adolescent$"
         OR "adult$" OR "women" OR "men" OR "woman" OR "man" OR "girls" OR "boys"
         OR "rural" OR "urban" OR "city" OR "cities" OR "town$" OR "village$" OR "countr*" OR "nation$" OR "develop* state$"
