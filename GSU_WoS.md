@@ -672,7 +672,7 @@ An alternative would be to exclude Web of Science categories, but I found this t
 
 **COMBINE: (Set 1 OR (Set 2 AND Set 3)) AND Set 4**
 
-### Set 1 - migrants/refugees
+#### Set 1 - migrants/refugees
 
 ```Ceylon=
 TS=
@@ -686,7 +686,7 @@ TS=
   )
 ```
 
-### Set 2 - migration exclusions
+#### Set 2 - migration exclusions
 
 ```Ceylon=
 TS = 	"migration"
@@ -704,7 +704,7 @@ NOT
   )
 ```
 
-### Set 3 - migration inclusions
+#### Set 3 - migration inclusions
 
 The categories "Medicine general internal" OR "tropical medicine" OR "infectious diseases" contain some irrelevant, but I think combined with the above terms there should not be too much noise...
 
@@ -722,7 +722,7 @@ AND
 	)
 ```
 
-### Set 4 - health terms
+#### Set 4 - health terms
 
 Removed some of the environmental pollutant terms from the medical terms, since these can combine with migration in ways that are nothing to do with human migration.
 
