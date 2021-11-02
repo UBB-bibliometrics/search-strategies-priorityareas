@@ -472,12 +472,12 @@ AND
 
 ```Ceylon=
 TS=
-(	"health equity" OR "right to health*" OR "health rights"
-	OR "health coverage" OR "health governance"
+(	"health equity" OR "right to health*" OR "health rights" OR "health for all"
+	OR "health coverage" OR "health governance" OR "health justice"
 	OR
 	  (
 	    ("access" OR "barrier$")
-	    NEAR/5 ("health care" OR "healthcare" OR "health services")
+	    NEAR/5 ("health care" OR "healthcare" OR "health services" OR "medical care")
 	  )
 )
 ```
@@ -493,26 +493,31 @@ TS=
 (
   ("globalisation" OR "globalization"
   OR "development assistance" OR "development aid"
-  OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
-  OR "equality" OR "equity" OR "egalitar*" OR "disparit*"
-  OR "representation" OR "discrimination" OR "criminali*" OR "marginali*" OR "otherness" OR "stereotypes"
-  OR "human rights" OR "justice" OR "injustice"
-  OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"
-  OR "poverty" OR "low income" OR "economic burden" OR "debt" OR "microfinance" OR "homeless*"
+  OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
+  OR "equality" OR "inequalit*" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
+  OR "representation" OR "discrimination" OR "criminaliz*" OR "criminalis" OR "marginali*" OR "otherness" OR "othering" OR "stereotypes"
+  OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
+  OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
+  OR "justice" OR "injustice" OR "oppression"
+  OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
+  OR "social justice" OR "social sustainability" OR "social mobility"
+  OR "climate justice" OR "environmental justice"
+  OR "poverty" OR "low income" OR "economic burden" OR "debt" OR "microfinance" OR "homeless*" OR "neoliberal"
   OR "disadvantaged" OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
-  OR "indigenous" OR "autochthonous" OR "sami" OR "sapmi"
-  OR "minority group$" OR "ethnicity" OR "ethnic"
+  OR "indigenous" OR "autochthonous" OR "sami" OR "sapmi" OR "saami"
+  OR "minority group$" OR "minority language$" OR "minority stress"
+  OR "ethnicity" OR "ethnic"
+  OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived"))
   OR "racism" OR "racial" OR "apartheid"
-  OR "colonial" OR "colonialism"
+  OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
   OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny"
-  OR "intersectional"
+  OR "intersectional*"
   OR "ageism"
   OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
   )
   AND
   (
     ("health education" OR "health polic*" OR "health organization$" OR "health service$"
-    OR "health equity" OR "right to health*" OR "health rights" OR "health coverage" OR "health governance"
     OR "medical" OR "wellbeing" OR "well-being" OR "SDG 3"
 
     OR	"infectious disease$" OR "communicable disease$" OR "contagious disease$" OR "transmissible disease$"
