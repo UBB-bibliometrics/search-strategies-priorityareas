@@ -472,6 +472,7 @@ AND
 (EDN==("WOS.ESCI"))
 ```
 
+
 ## Global health and inequality
 
 https://www.webofscience.com/wos/woscc/summary/ac54b5f6-93d9-4300-b4f4-f99df9aee687-10946b46/relevance/1
@@ -867,4 +868,65 @@ TS=
         )
       )
 )
+```
+
+## Migration and Inequality
+
+```Ceylon=
+TS=
+(
+  ("immigrant$" OR "immigration" OR "emigration"
+  OR "migrant$" OR "human migration" OR "migration background$" OR "migration intention$" OR "worker migration" OR "labor migration"
+  OR  ("migration"
+      AND   ("asylum" OR "trafficking" OR "displacement"
+            OR "rural" OR "urban"
+            OR "law" OR "laws" OR "politic*" OR "biopolitics" OR "citizen*"
+            OR "minority" OR "minorities"
+            )
+      )
+  OR "refugee$" OR "displaced person$" OR "displaced people" OR "stateless person$" OR "stateless people"
+  OR "returnee$"
+  OR "asylum seek*" OR "people seeking asylum"
+  OR "border regime"
+  OR "cultural integration" OR "multicultural" OR "acculturat*" OR "intercultural"
+  )
+  AND
+  ("development assistance" OR "development aid" OR "globalisation" OR "globalization"
+  OR "global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "BRICS" OR "poor countr*"
+  OR "equality" OR "inequalit*" OR "equity" OR "inequity" OR "egalitar*" OR "disparit*"
+  OR "criminaliz*" OR "criminalis*" OR "marginali*" OR "otherness" OR "othering" OR "stereotypes"
+  OR "language polic*"
+  OR "justice" OR "injustice" OR "oppressi*"
+  OR "human rights" OR "political rights" OR "civil right$" OR "voting right$" OR "sexual rights" OR "land rights" OR "land tenure" OR "constitutional right$" OR "social right$" OR "right to religion" OR "religious freedom$"
+  OR (("rights") NEAR/3 ("child" OR "children*" OR "elderly" OR "tribal" OR "worker$" OR "elector*" OR "disabled" OR "disabilit*" OR "religious"))
+  OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
+  OR "social justice" OR "social sustainability" OR "social mobility"
+  OR "climate justice" OR "environmental justice"
+  OR "legislat*" OR "governance" OR "democracy" OR "freedom$" OR "security"
+  OR "traditional law$" OR "sharia"
+  OR "low income group$" OR "low income communit*" OR "low income household$" OR "neoliberal*" OR "disadvantaged" OR "social class"
+  OR "poverty" OR "debt" OR "economic burden" OR "microfinance" OR "microcredit" OR "homeless"
+  OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
+  OR "slaves" OR "slave" OR "slavery"
+  OR ("caste" NOT "bee$")
+  OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
+  OR "indigenous" OR "autochthonous people$" OR "autochthonous communit*" OR "autochthonous societ*" OR "sami" OR "sapmi" OR "saami"
+  OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
+  OR "minority group$" OR "minority language$" OR "minority stress" OR "ethnic minorit*" OR "minorities"
+  OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived"))
+  OR "racism" OR "racial" OR "apartheid"
+  OR "colonial" OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
+  OR "riot" OR "riots" OR "uprising$" OR "insurrection$" OR "political protest$" OR "political conflict$"
+  OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny"
+  OR "intersectional*"
+  OR "ageism"
+  OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
+  OR "empower*" OR "power dynamic*" OR "imperial power" OR "colonial power" OR "power and gender" OR "gender and power" OR "gender gap" OR "power roles"
+  OR "inclusive" OR "inclusion" OR "exclusion" OR "social inclusion" OR "inclusion into society" OR "social inclusion" OR "inclusion into society" OR "inclusion strateg*" OR "inclusion of people with disabilities"
+  OR "belonging"
+  OR "quota$"
+  OR "climate change" OR "environmental change$" OR "disaster$"
+  )
+)
+
 ```
