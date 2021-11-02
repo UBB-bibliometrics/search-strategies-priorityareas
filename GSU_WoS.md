@@ -3,16 +3,19 @@
 Links for current status:
 
 All Global health (Global health + Health and inequality + Health and migration):
-* UiB, 2016-2021 https://www.webofscience.com/wos/woscc/summary/f7b36e12-41e4-4727-aabe-1c1dfcf4afd4-109d0b1f/relevance/1
-* All, 2016-2021: https://www.webofscience.com/wos/woscc/summary/253dcf33-0bde-491c-b938-650aa8c8e432-109dc05b/relevance/1
+* UiB, 2016-2021
+* All, 2016-2021:
 
 All inequality (inequality + health and inequality + inequality and migration):
-* UiB, 2016-2021 https://www.webofscience.com/wos/woscc/summary/aa59aed5-55fb-47bc-b81d-7ad468374bbc-109d2630/relevance/1
-* All, 2016-2021: https://www.webofscience.com/wos/woscc/summary/6abadbcc-e030-4a24-9d19-4754960784b2-109dc460/relevance/1
+* UiB, 2016-2021 
+* All, 2016-2021:
 
 All migration (migration + health and migration + inequality and migration):
-* UiB, 2016-2021 https://www.webofscience.com/wos/woscc/summary/d5578a20-f0c5-4892-9789-bc8ddf3eb7bf-109d2913/relevance/1
-* All, 2016-2021: https://www.webofscience.com/wos/woscc/summary/e3d8d4f3-a2af-4115-b048-4620ee921fa4-109dc4c4/relevance/1
+* UiB, 2016-2021
+* All, 2016-2021:
+
+Climate change and farming in LMCs, and food security:
+* All, no date: https://www.webofscience.com/wos/woscc/summary/bf8ac95d-7104-4d15-ac7b-63dba007ce60-10a17214/relevance/1
 
 
 ## Global health
