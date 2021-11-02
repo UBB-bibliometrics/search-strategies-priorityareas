@@ -281,7 +281,7 @@ AND
 
 ## Inequality
 
-https://www.webofscience.com/wos/woscc/summary/a86d74d0-0e86-4522-b185-f0552e7909c6-1090a01d/relevance/1
+https://www.webofscience.com/wos/woscc/summary/bb649180-2827-4dbf-9620-5d132da082b9-10987b83/relevance/1
 
 #### General terms
 
@@ -299,7 +299,7 @@ TS=
   OR "poverty" OR "microfinance" OR "microcredit" OR "homeless"
   OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
   OR "slaves" OR "slave" OR "slavery"
-  OR ("caste" NOT "bee$")
+  OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
   OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
   OR "sami" OR "sapmi" OR "saami"
   OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
@@ -475,7 +475,7 @@ AND
 
 ## Global health and inequality
 
-https://www.webofscience.com/wos/woscc/summary/8b9c8cb9-4a40-40ab-89df-d365dc98e9bf-10964cac/relevance/1
+https://www.webofscience.com/wos/woscc/summary/12383a43-babe-4afb-9214-61ac2683a8d1-109888bb/relevance/1
 
 #### Health equity
 
@@ -517,6 +517,7 @@ TS=
   OR "indigenous" OR "autochthonous" OR "sami" OR "sapmi" OR "saami"
   OR "minority group$" OR "minority language$" OR "minority stress"
   OR "ethnicity" OR "ethnic"
+  OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
   OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived"))
   OR "racism" OR "racial" OR "apartheid"
   OR "colonialism" OR "postcolonial*" OR "decoloni*" OR "genocide$" OR "epistemicide"
@@ -873,6 +874,8 @@ TS=
 
 ## Migration and Inequality
 
+https://www.webofscience.com/wos/woscc/summary/62c1787d-ae30-4692-b200-39c39217e5b0-1098a2ca/relevance/1
+
 ```Ceylon=
 TS=
 (
@@ -909,7 +912,7 @@ TS=
   OR "poverty" OR "debt" OR "economic burden" OR "microfinance" OR "microcredit" OR "homeless"
   OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
   OR "slaves" OR "slave" OR "slavery"
-  OR ("caste" NOT "bee$")
+  OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
   OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
   OR "indigenous" OR "autochthonous people$" OR "autochthonous communit*" OR "autochthonous societ*" OR "sami" OR "sapmi" OR "saami"
   OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
