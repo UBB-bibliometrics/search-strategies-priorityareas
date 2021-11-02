@@ -7,7 +7,7 @@ All Global health (Global health + Health and inequality + Health and migration)
 * All, 2016-2021:
 
 All inequality (inequality + health and inequality + inequality and migration):
-* UiB, 2016-2021 
+* UiB, 2016-2021
 * All, 2016-2021:
 
 All migration (migration + health and migration + inequality and migration):
@@ -242,7 +242,7 @@ TS=
     OR 	"anxiety" OR "psychosis"
     OR 	"intimate partner violence"
     OR	"tombak"
-    OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupation*" OR "traffic" OR "car" OR "road$"))
+    OR	(("injury" OR "injuries" OR "accident$") NEAR/3 ("workplace" OR "occupational" OR "traffic" OR "car" OR "road$"))
     OR  "accidental poisoning$"
     OR	"alcoholism"
     OR	"binge drink*"
@@ -316,11 +316,11 @@ TS=
   OR "climate justice" OR "environmental justice" OR "global justice"
   OR "poverty" OR "microfinance" OR "microcredit" OR "homeless"
   OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
-  OR "slaves" OR "slave" OR "slavery"
+  OR "slaves" OR "slave labor" OR "slave labour" OR "slavery"
   OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
   OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
   OR "sami" OR "sapmi" OR "saami"
-  OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
+  OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "community based")) OR "local knowledge"
   OR "minority group$" OR "minority language$" OR "minority stress" OR "ethnic minorit*"
   OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived"))
   OR "racism" OR "racial" OR "apartheid"
@@ -329,7 +329,8 @@ TS=
   OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny"
   OR "intersectional*"
   OR "ageism"
-  OR "homophob*" OR "gay" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
+  OR "homophob*" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
+  OR ("gay" NOT "gay berne")
 )
 ```
 
@@ -396,7 +397,7 @@ AND
           ("power" OR "inclusion")
       )
       NOT (
-                  ("statistical power" OR "analysis power" OR "power analysis" OR "predictive power" OR "power of the model" OR "theta power" OR "limbs power" OR "knee power" OR "mean power" OR "total power" OR "detection power" OR "discrimination power"
+                  ("statistical power" OR "analysis power" OR "power analysis" OR "predictive power" OR "power of the model" OR "theta power" OR "limbs power" OR "knee power" OR "mean power" OR "total power" OR "detection power" OR "discriminat* power" OR "power allocation" OR "power output" OR "output power"
                   OR "inclusion criteria" OR "criteria for inclusion" OR "at inclusion" OR "inclusion and exclusion criteria" OR "inclusion in th* study"
                   )
                   NOT
@@ -527,9 +528,9 @@ TS=
   OR "welfare system" OR "social welfare" OR "social security" OR "social sustainability" OR "social polic*"   
   OR "social justice" OR "social sustainability" OR "social mobility" OR "social class"
   OR "climate justice" OR "environmental justice" OR "global justice"
-  OR "poverty" OR "low income" OR "economic burden" OR "socioeconomic" OR "debt" OR "microfinance" OR "homeless*" OR "neoliberal"
+  OR "poverty" OR "low income" OR "socioeconomic" OR "debt" OR "microfinance" OR "homeless*" OR "neoliberal"
   OR "disadvantaged" OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
-  OR "indigenous" OR "autochthonous" OR "sami" OR "sapmi" OR "saami"
+  OR "indigenous" OR "autochthonous people$" OR "autochthonous communit*" OR "autochthonous societ*" OR "sami" OR "sapmi" OR "saami"
   OR "minority group$" OR "minority language$" OR "minority stress"
   OR "ethnicity" OR "ethnic"
   OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
@@ -920,11 +921,11 @@ TS=
     OR "low income group$" OR "low income communit*" OR "low income household$" OR "neoliberal*" OR "disadvantaged" OR "social class"
     OR "poverty" OR "debt" OR "economic burden" OR "socioeconomic" OR "microfinance" OR "microcredit" OR "homeless"
     OR ("intergeneration*" NEAR/5 ("wealth" OR "resource$" OR "mobility"))
-    OR "slaves" OR "slave" OR "slavery"
+    OR "slaves" OR "slavery"
     OR ("caste" NOT ("bee$" OR "termite$" OR "ant" OR "ants" OR "insect$" OR "hymenoptera" OR "queen"))
     OR "vulnerable people" OR "vulnerable person$" OR "vulnerable group$"
     OR "indigenous" OR "autochthonous people$" OR "autochthonous communit*" OR "autochthonous societ*" OR "sami" OR "sapmi" OR "saami"
-    OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "local" OR "community based"))
+    OR (("knowledge") NEAR/3 ("indigenous" OR "traditional" OR "community based")) OR "local knowledge"
     OR "minority group$" OR "minority language$" OR "minority stress" OR "ethnic minorit*" OR "minorities"
     OR (("discrimination") NEAR/15 ("sociocultural" OR "racial" OR "race" OR "ethnic" OR "minorit*" OR "gender" OR "*sexual" OR "disabilit*" OR "disabled" OR "age" OR "appearance" OR "religi*" OR "muslim" OR "legal" OR "policy of" OR "perceived" OR "migrant$" OR "immigrant$"))
     OR "islamophobia" OR "anti-muslim" OR "anti jewish" OR "far right"
