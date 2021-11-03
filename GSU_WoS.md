@@ -2,20 +2,13 @@
 
 Links for current status:
 
-All Global health (Global health + Health and inequality + Health and migration):
-* UiB, 2016-2021
-* All, 2016-2021:
+All Global health (Global health + Health and inequality + Health and migration): https://www.webofscience.com/wos/woscc/summary/0927aaf1-0094-4148-92e9-068b36f07eeb-10ce8a5e/relevance/1
 
-All inequality (inequality + health and inequality + inequality and migration):
-* UiB, 2016-2021
-* All, 2016-2021:
+All inequality (inequality + health and inequality + inequality and migration): https://www.webofscience.com/wos/woscc/summary/4280cbdf-7482-42fa-a1e6-b1967ab644e1-10ce94ca/relevance/1
 
-All migration (migration + health and migration + inequality and migration):
-* UiB, 2016-2021
-* All, 2016-2021:
+All migration (migration + health and migration + inequality and migration): https://www.webofscience.com/wos/woscc/summary/8ef0681b-a42d-4601-9d7c-7fec0a32640f-10ce9ec8/relevance/1
 
-Climate change and farming in LMCs, and food security:
-* All, no date: https://www.webofscience.com/wos/woscc/summary/bf8ac95d-7104-4d15-ac7b-63dba007ce60-10a17214/relevance/1
+Climate change and farming in LMCs, and food security: https://www.webofscience.com/wos/woscc/summary/57729ed5-866e-43d7-a363-1b8e2bfbdf08-10ce7ca5/relevance/1
 
 
 ## Global health
@@ -986,7 +979,7 @@ TS=
 TS=
 (	"right to food" OR "right to water"
 	OR "food security" OR "food insecurity" OR "water security"
-  OR (("food" OR "water") NEAR/5 ("safe" OR "clean" OR "*contaminated") NEAR/5 ("access*"))
+  	OR (("food" OR "water") NEAR/5 ("safe" OR "clean" OR "*contaminated") NEAR/5 ("access*"))
 )
 ```
 
