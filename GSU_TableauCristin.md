@@ -990,7 +990,7 @@ ELSE "non"
 END
 ```
 
-## Health & inequality
+## Health & Inequality
 
 ```Ceylon =
 IF		
