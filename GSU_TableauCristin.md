@@ -1780,4 +1780,7 @@ OR CONTAINS(LOWER([result_title]),	"security"	)
 OR CONTAINS(LOWER([result_title]),	"resilience"	)
 ))		
 THEN "climate"
+
+ELSE "non"
+END
 ```
