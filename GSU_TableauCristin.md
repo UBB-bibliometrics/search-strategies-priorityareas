@@ -322,7 +322,7 @@ END
 
 ## Health & inequality
 
-```SQL=
+```SQL =
 IF		
 CONTAINS(LOWER([journal]),	"equity in health"	)
 OR CONTAINS(LOWER([journal]),	"globalization and health"	)
