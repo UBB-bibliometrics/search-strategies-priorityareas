@@ -2,6 +2,8 @@
 
 String for use in Tableau against FOR_data_sted_total
 
+While the strings are here, the documentation is still in the excel file - should be updated. 
+
 ## Combinations
 
 #### TOTAL GSU
