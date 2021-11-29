@@ -684,6 +684,123 @@ THEN "TILPASSNING"
 ELSE 'no'		
 END
 ```
+## Klimatilpassning og Energiomstilling - i praksis ikke mulig å avgrense i hvilken de skal gå defor valgt å ta de inn i begge - litt støy men realistisk
+```Ceylon=
+IF CONTAINS(LOWER([result_title]),	"green economy"	)
+		
+OR (CONTAINS(LOWER([result_title]),	"grønn" 	)
+AND		
+(CONTAINS(LOWER([result_title]),	"omstilling"	)
+ OR CONTAINS(LOWER([result_title]),	"skifte"	)
+))		
+OR CONTAINS(LOWER([result_title]),	"energitiltak"	)
+OR CONTAINS(LOWER([result_title]),	"sirkulærøkomoni"	)
+OR CONTAINS(LOWER([result_title]),	"circular economy"	)
+THEN "GRENSE"		
+ELSEIF		
+CONTAINS(LOWER([result_title]),	"green climate"	)
+OR CONTAINS(LOWER([result_title]),	"climate city"	)
+OR CONTAINS(LOWER([result_title]),	"green capital"	)
+OR CONTAINS(LOWER([result_title]),	"green cities"	)
+OR CONTAINS(LOWER([result_title]),	"green city"	)
+OR CONTAINS(LOWER([result_title]),	"urban sustainablity"	)
+OR CONTAINS(LOWER([result_title]),	"urban transformation"	)
+//OR CONTAINS(LOWER([result_title]),	"smart city"	)
+//OR CONTAINS(LOWER([result_title]),	"smart cities"	)
+OR CONTAINS(LOWER([result_title]),	"green battery"	)
+OR CONTAINS(LOWER([result_title]),	"green electricity"	)
+OR CONTAINS(LOWER([result_title]),	"green grid"	)
+		
+THEN "GRENSE"		
+		
+		
+ELSEIF		
+		
+		
+ ((		
+CONTAINS(LOWER([result_title]),	"lower"	)
+OR CONTAINS(LOWER([result_title]),	"reduc"	)
+OR CONTAINS(LOWER([result_title]),	"minim"	)
+OR CONTAINS(LOWER([result_title]),	"reduce"	)
+OR CONTAINS(LOWER([result_title]),	"zero"	)
+)		
+AND (CONTAINS(LOWER([result_title]),	"carbon emission"	)
+OR CONTAINS(LOWER([result_title]),	"greenhouse"	)
+OR CONTAINS(LOWER([result_title]),	"co2 "	)
+OR CONTAINS(LOWER([result_title]),	"co2-"	)
+))		
+OR CONTAINS(LOWER([result_title]),	"carbon cut"	)
+		
+		
+		
+OR CONTAINS(LOWER([result_title]),	" ccs "	)
+OR CONTAINS(LOWER([result_title]),	" ccus "	)
+OR CONTAINS(LOWER([result_title]),	"green petroleum "	)
+		
+		
+OR ((		
+CONTAINS(LOWER([result_title]),	"climate"	)
+) AND  (		
+CONTAINS(LOWER([result_title]),	"technology"	)
+		
+	))	
+OR		
+(		
+(CONTAINS(LOWER([result_title]),	"co2"	)
+ OR CONTAINS(LOWER([result_title]),	"co 2"	)
+ OR CONTAINS(LOWER([result_title]),	"greenhouse gas"	)
+ OR CONTAINS(LOWER([result_title]),	"ghg"	)
+ OR CONTAINS(LOWER([result_title]),	"methane"	)
+ OR CONTAINS(LOWER([result_title]),	"n2o"	)
+ OR CONTAINS(LOWER([result_title]),	"nitrous oxide"	)
+ OR CONTAINS(LOWER([result_title]),	"ozone"	)
+ OR CONTAINS(LOWER([result_title]),	"carbon"	))
+AND		
+(CONTAINS(LOWER([result_title]),	"sink"	)
+ OR CONTAINS(LOWER([result_title]),	"capture"	)
+ OR CONTAINS(LOWER([result_title]),	"sequestration"	)
+ OR CONTAINS(LOWER([result_title]),	"storage"	)
+
+ OR CONTAINS(LOWER([result_title]),	"budget"	)
+ OR CONTAINS(LOWER([result_title]),	"trade"	)
+ OR CONTAINS(LOWER([result_title]),	"doubling"	)
+ OR CONTAINS(LOWER([result_title]),	"remov"	)
+ OR CONTAINS(LOWER([result_title]),	"stabile"	)
+ OR CONTAINS(LOWER([result_title]),	"trap"	)
+
+OR (CONTAINS(LOWER([result_title]),	"emission"	)
+ AND CONTAINS(LOWER([result_title]),	"reduc"	))))
+OR		
+(		
+ (CONTAINS(LOWER([result_title]),	"subsidies"	)
+ OR CONTAINS(LOWER([result_title]),	"subsidy"	)
+ OR CONTAINS(LOWER([result_title]),	"subsidier"	)
+)		
+AND		
+ (CONTAINS(LOWER([result_title]),	" reduc"	)
+ OR CONTAINS(LOWER([result_title]),	"phasing out"	)
+ OR CONTAINS(LOWER([result_title]),	"phase out"	)
+ OR CONTAINS(LOWER([result_title]),	"remove"	)
+ OR CONTAINS(LOWER([result_title]),	"reduce"	)
+ OR CONTAINS(LOWER([result_title]),	" end "	)
+)		
+AND		
+ (CONTAINS(LOWER([result_title]),	"oil"	)
+ OR CONTAINS(LOWER([result_title]),	"coal"	)
+ OR CONTAINS(LOWER([result_title]),	"fossil fuel "	)
+)		
+)		
+		
+	
+OR CONTAINS(LOWER([journal]),	"greenhouse gas control"	)		
+		
+		
+THEN "GRENSE"	
+ELSE 'no'	
+END
+```
+
+
 ## Energiomstilling
 #### Energiomstilling - title
 ```
