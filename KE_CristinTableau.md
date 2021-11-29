@@ -1,11 +1,9 @@
 
 # KE
 
-String to use in Tableau against "FOR_data_sted_total" ecxtract from DUCT or live
+String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live
 
-## Combinations
-
-#### any KE
+## any UNDERTOPIC KE
 
 ```Ceylon =
 IF			
@@ -27,8 +25,10 @@ ELSE
 END
 ```
 
-#### Klima(systemer og effekter)
-```
+## Klima(systemer og effekter)
+
+#### Klima(systemer og effekter) - in title 
+```Ceylon =
 IF(CONTAINS(LOWER([result_title]),	"climat"	)
 		
 AND		
@@ -457,8 +457,9 @@ THEN "KLIMA"
 ELSE 'no'
 END
 ```
+## Klimatilpassning 
 
-#### Klimatilpassning
+#### Klimatilpassning  - in title 
 ```
 IF		
 (		
@@ -647,7 +648,7 @@ THEN "TILPASSNING"
 END
 ```
 
-### Tilpassning (journal) 
+#### Tilpassning (journal) 
 ```
 IF 		
 CONTAINS(LOWER([journal]),	"climate and development"	)
@@ -683,7 +684,9 @@ THEN "TILPASSNING"
 ELSE 'no'		
 END
 ```
-### Energiomstilling
+## Energiomstilling
+#### Energiomstilling - title
+```
 IF 	
 CONTAINS(LOWER([result_title]),	"klimaomstilling"	)
 OR CONTAINS(LOWER([result_title]),	"energiomstilling"	)
@@ -888,7 +891,7 @@ ELSE 'no'
 END
 ```
 
-### Energi (journal)
+## Energi (journal)
 
 ```
 IF CONTAINS(LOWER([journal]),	"renewable energy"	)
