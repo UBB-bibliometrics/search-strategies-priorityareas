@@ -460,7 +460,7 @@ END
 ## Klimatilpassning 
 
 #### Klimatilpassning  - in title 
-```
+```Ceylon =
 IF		
 (		
 (		
@@ -649,7 +649,7 @@ END
 ```
 
 #### Tilpassning (journal) 
-```
+```Ceylon =
 IF 		
 CONTAINS(LOWER([journal]),	"climate and development"	)
 OR CONTAINS(LOWER([journal]),	"climate change mitigation"	)
@@ -729,7 +729,6 @@ OR CONTAINS(LOWER([result_title]),	"trade"	)
 ))		
 THEN "ENERGI"		
 ELSEIF		
-		
 		
   ((CONTAINS(LOWER([result_title]),	"renewable"	)
 OR CONTAINS(LOWER([result_title]),	"sustainable"	)
@@ -833,8 +832,6 @@ OR CONTAINS(LOWER([result_title]),	"cell"	)
 OR CONTAINS(LOWER([result_title]),	"green battery"	)
 OR CONTAINS(LOWER([result_title]),	"green electricity"	)
 OR CONTAINS(LOWER([result_title]),	"green grid"	)
-			
-		
 		
 THEN "ENERGI"		
 ELSEIF		
@@ -879,13 +876,9 @@ OR CONTAINS(LOWER([result_title]),	"electric"	)
 OR CONTAINS(LOWER([result_title]),	"green"	)
 OR CONTAINS(LOWER([result_title]),	"hydrogen"	)
 ))		
-		
 	
-		
 THEN "ENERGI"		
-
-		
-		
+	
 ELSE 'no'		
 		
 END
@@ -893,7 +886,7 @@ END
 
 ## Energi (journal)
 
-```
+```Ceylon =
 IF CONTAINS(LOWER([journal]),	"renewable energy"	)
 OR CONTAINS(LOWER([journal]),	"renewable fuel"	)
 OR CONTAINS(LOWER([journal]),	"green energy"	)
