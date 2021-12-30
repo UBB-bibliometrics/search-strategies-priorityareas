@@ -4,6 +4,8 @@ String for use in Tableau against FOR_data_sted_total
 
 Note - a number of terms are included twice in different parts of the string - once for article title, and another time for book title - remember to edit both if making changes.
 
+As we are searching in the titles only, the terms used are broad. 
+
 Search terms will always be searched for in truncated form, unless a space is included at the beginning/end (e.g. "migrant" finds "migrants"), this works also for journal/anthology/book titles ("global health" finds "global health action").
 
 ## Combinations
@@ -403,11 +405,13 @@ END
 
 ## Inequality
 
-It was unclear from consultations if "democracy" itself should be included - in the end I included it as it was related to some terms given in consultations (e.g. voting rights). NPI field "utviklingsstudier" is included in its entirity (after consultation). 
+It was unclear from consultations if "democracy" itself should be included - in the end I included it as it was related to some terms given in consultations (e.g. voting rights). Traditional knowledge included after consultation. NPI field "utviklingsstudier" is included in its entirity after consultation. 
 
-Note terms such as "equality" will also cover "inequality" due to truncation.
+Note terms such as "equality" will also cover "inequality" due to truncation. "minoritet" dekker minoriteter, minoritetsbarn/befolkning/språk/kvinner/politikk osv. In English, "minority" is used in other contexts in a much more general way, and is combined with other terms (vs. included alone in Norwegian). The same is true for "inclusion" and "exclusion" vs. "inkludering" and "utenforskap". 
 
-Several NOT terms had to be included due to widespread use of "inequalities" in mathematics, including exclusion of all publications in NPI fields mathematics and physics.  
+Several NOT terms had to be included due to widespread use of "inequalities" in mathematics, including exclusion of all publications in NPI fields mathematics and physics.
+
+Climate and environmental justice is included, as is climate change with specific groups of people/religions/class/globalisation. 
 
 ```Ceylon =
 IF		
@@ -905,6 +909,12 @@ END
 ```
 
 ## Migration
+
+"migration" is a difficult term as it is used so widely in biology (migrations of other species) and medicine (migration of cells, implants etc.). Thus, when used as a stand alone term, it is limited to NPI fields social sciences, humanities, psychology. 
+
+Multiculturalism and integration is included. 
+
+Mostly we use generic terms, but there were a number of publications specifically about islam/muslims in Europe/Norway, hence the specific search terms for this. 
 
 ```Ceylon =
 IF (		
