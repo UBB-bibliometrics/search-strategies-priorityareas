@@ -320,9 +320,50 @@ TS=
 )
 ```
 
+#### Fishing and aquaculture
 
+Includes limitations of "salmon farm*", "mariculture", "aquaculture", "kelp" and "trawl*", plus some specific organisms from the marine search by combining them with technical terms within fishing and aquaculture.
 
+```Ceylon =
+TS=
+( 
+    ("salmon farm*" OR "mariculture" OR "aquaculture" 
+    OR "kelp farm*" 
+    OR ("trawl*" AND "fish*") 
+    ) 
+    AND 
+        ("technical" OR "supply chain$" 
+        OR "vessel$" OR "collision$" OR "hydrodynamic force$" 
+        OR "fouling" OR "biofouling" 
+        OR "device" OR "size select*" OR "design" OR "operations" OR "fillet quality" 
+        OR "occupational safety" OR "occupational health" 
+        OR "recirculating aquaculture systems" 
+        ) 
+) 
+```
 
+```Ceylon =
+TS=
+( 
+    (
+        ("fishery" OR "fisheries" OR "fishing" 
+        OR "bycatch" OR "by-catch" OR ("trawl*" AND fish*) OR "seafood" 
+        OR "salmon" OR "cod" OR "goby" OR "smolt" OR "haddock" OR "saithe" OR "blue whiting" OR "orange roughy" 
+        OR "pollock" OR "halibut" OR "redfish" OR "ling" OR "hake" OR "charr" OR "wrasse" OR "herring" 
+        OR "mackerel" OR "anchov*" OR "sardine$" OR "sea bream" OR "european eel" 
+        OR "krill" OR "crab$" OR "lobster$" OR "squid$" OR "octopus*" OR "scallop$"
+        ) 
+        AND 
+            ("gear" OR "catch performance" OR "catch efficiency" 
+            OR ("storage" NEAR/10 ("ice" OR "frozen" OR "controlled" OR "freez*" OR "chilled")) 
+            OR "chilling" OR "refridg*" OR ("processing" AND "storage") 
+            OR "robot$" OR "autonomous" OR "machine*" OR "hydraulic$" 
+            OR "occupational safety" OR "occupational health" OR "technolog*"
+            )
+    ) 
+    OR "codend"
+)
+```
 
 
 
