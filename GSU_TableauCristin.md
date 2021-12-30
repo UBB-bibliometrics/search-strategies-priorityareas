@@ -914,7 +914,7 @@ END
 
 Multiculturalism and integration is included. 
 
-Mostly we use generic terms, but there were a number of publications specifically about islam/muslims in Europe/Norway, hence the specific search terms for this. 
+Mostly we use generic terms, but there were a number of publications specifically about islam/muslims in Europe/Norway, hence the specific search terms for this. For the same reason, a focus area in Norway, we include "Sami" as a specific search term. 
 
 ```Ceylon =
 IF (		
@@ -1030,6 +1030,13 @@ END
 ```
 
 ## Health & Inequality
+
+Made of terms from the two main searches in these areas, with some changes (e.g. NPI field "medisin" did not work as effectively here, thus was removed). Plus additional terms:
+
+* Journals relevant to this intersection
+* Terms for partner violence
+* Terms for violence, addictions and disability and certain groups
+* Inequality terms combined with disability
 
 ```Ceylon =
 IF		
@@ -1281,6 +1288,8 @@ END
 
 ## Health & Migration
 
+Terms taken from the main focus areas. 
+
 "Whales", "cancer cells", NPI field biology excluded from health and migration
 
 ```Ceylon =
@@ -1427,6 +1436,8 @@ END
 ```
 
 ## Inequality & Migration
+
+Combined migration terms with inequality words. In addition, terms for research about people traffiking and islamophobia are included. 
 
 ```Ceylon =
 IF		
@@ -1677,9 +1688,9 @@ ELSE "non"
 END
 ```
 
-## CC in LMCs
+## Climate change and food security in LMCs
 
-Climate change in low and middle income countries, and food security
+Climate change in low and middle income countries, and food security (all countries).
 
 ```Ceylon =
 IF ((		
