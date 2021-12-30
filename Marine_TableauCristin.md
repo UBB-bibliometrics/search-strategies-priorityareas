@@ -53,9 +53,9 @@ The general structure of the string is in sections of grouped search terms:
 
 * NPI fagfelt for marine technology (there isn't one for marine generally)
 * Marine journals 
-* Marine geographic areas/seas - Individual seas (worldwide) and currents around Norway used as search terms. Some were dropped if already covered by a term (e.g. "havet" in Norwegian will cover "Atlanterhavet", "ishavet" etc.). Source: most of the list on https://en.wikipedia.org/wiki/List_of_seas
+* Marine geographic areas/seas - Major oceans, plus polar/northern seas and currents used as search terms. Some were dropped if already covered by a term (e.g. "havet" in Norwegian will cover "Atlanterhavet", "ishavet" etc.). Source: https://en.wikipedia.org/wiki/List_of_seas
 * Marine environments/habitats - taken from SDG14
-* Polar terms and areas - Restricted in combination with ice, the sea or oil - i.e. polar research about glaciers, ice caps, icebergs, oil drilling etc.
+* Polar terms, islands and areas - Restricted in combination with ice, the sea or oil - i.e. must be polar research about polar oceans, sea-ice, glaciers, ice caps, oil drilling etc.
 * Marine activities, law and technologies (applied)
 * Marine organisms and species
 * Research from the Sars Centre - included in its entirity after specification from NG/ÅM. The Sars Centre does not have very many publications, but this may nevertheless give a slight unfair advantage when comparing with other institutions. 
