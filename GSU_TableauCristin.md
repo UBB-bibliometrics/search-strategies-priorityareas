@@ -141,8 +141,6 @@ END
 
 ## Global health
 
-#### Health - general
-
 Should health & ethics be included here (regardless of country?) - if so, in what form (e.g. medical ethics?) - We did not get a clear answer on this. Some medical ethics (related to global health, climate change or in LMCs) will be covered anyway as we combine with NPI field "medisin" and terms like "medical".
 
 Journal "global health" covers global health action etc.
