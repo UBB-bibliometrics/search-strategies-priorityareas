@@ -1,5 +1,11 @@
 # GSU
 
+See Tableau/Cristin file for main documentation. This file includes a WoS translation and adpation of that search string, with some additions from SDG3 (as more terms can be searched for vs. in Tableau). 
+
+Due to searching in abstracts, and due to the interdisciplinary database, a number of expressions had to be adapted. This file mainly documents these adaptations. 
+
+**Important** - this string makes use of the ESCI in WoS. If UiB moves to rolling ESCI subscription, make sure years are chosen appropriately to avoid an artificial jump in publications pre-2015 (or whenever). 
+
 ## Global health
 
 #### Global health
@@ -13,7 +19,7 @@ TS=
 
 #### Climate change/disasters and health
 
-This is tricky as many papers talk about ecological/plant/animal health.
+This is tricky as many papers talk about ecological/plant/animal health. Used multiple strategies to try and avoid: a) human terms (for next version, include "people$"), b) Combination with subject fields, c) NOT NOT animal terms. 
 
 ```Ceylon =
 TS=
@@ -132,7 +138,7 @@ For many health terms, some of the results may be about animals or plants; thus 
 `health` and `medical` covers health care, services, education, rights, workers, coverage, sexual/mental/occupational health. However, as "health" can be used in other fields (ecosystem health), specific phrases are included in the first phrase, while "health" generally is combined with human terms. The same applies to `disease`, `mortality` etc. which cover a number of categories of disease (e.g. communicable disease) but can also be used for animals/plants.
 `therapy` covers various types (art, music, medicinal)
 
-Specific diseases, health care occupations etc. added from SDG3
+Specific diseases, health care occupations etc. added from SDG3 - more than in the tableau string.
 
 Countries includes all except high-income countries.
 
@@ -479,7 +485,7 @@ AND
 TS=
 (	"health equity" OR "equity in health" OR "right to health*" OR "health rights" OR "health for all" OR "social determinants of health"
 	OR "health coverage" OR "health governance" OR "health justice"
-  OR "body politics"
+  	OR "body politics"
 	OR
 	  (
 	    ("access" OR "barrier$")
