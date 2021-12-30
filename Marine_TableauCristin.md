@@ -58,11 +58,13 @@ The general structure of the string is in sections of grouped search terms:
 * Polar terms and areas - Restricted in combination with ice, the sea or oil - i.e. polar research about glaciers, ice caps, icebergs, oil drilling etc.
 * Marine activities, law and technologies (applied)
 * Marine organisms and species
-* Research from the Sars Centre - included in its entirity after specification from NG/ÅM. The Sars Centre does not have very many publications, but this may nevertheless give a slight unfair advantage when comparing with other institutions, from a methodological standpoint. 
+* Research from the Sars Centre - included in its entirity after specification from NG/ÅM. The Sars Centre does not have very many publications, but this may nevertheless give a slight unfair advantage when comparing with other institutions. 
 
 **Other notes**
 
-`" ship"` is used due to e.g. leadership. 
+`" ship"` is used due to e.g. leadership. "wave" is combined with so many other terms to try and exclude physics (e.g. sound waves). 
+
+A number of specific species are included, these are mainly fish species where there is a lot of research. Inclusion of species could introduce some bias in worldwide comparisons with other institutions. 
 
 Microplastics are included theoretically (i.e. marine pollution), but in Cristin many results were freshwater. 
 However its exclusion does not mean that the topic is not covered - as the search string is so general, any research mentioning microplastics and oceans/marine/any seas will be included anyway! (even just saying "marine" is enough to be included).
