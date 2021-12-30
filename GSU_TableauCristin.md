@@ -1688,9 +1688,16 @@ ELSE "non"
 END
 ```
 
-## Climate change and food security in LMCs
+## CC in LMCs
 
-Climate change in low and middle income countries, and food security (all countries).
+This section covers:
+* Climate change and low and middle income countries (LMCs).
+* Farming in LMCs
+* Food security (all countries).
+
+Note that climate change as related to the three main focus areas is already included under those sections - anything mentioning health and climate change (global health), specific groups of people/justice and climate change (inequality), or migrants/refugees and climate change (migration) will already be covered there. Other aspects of climate change research is not covered by this search string, but by the KE satsningsområde. 
+
+Note that in the WoS version of this string, I have expanded farming to include more terms ("food production" OR "agriculture" OR "aquaculture" OR "smallhold*").
 
 ```Ceylon =
 IF ((		
