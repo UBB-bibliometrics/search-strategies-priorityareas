@@ -2,9 +2,13 @@
 
 String for use in Tableau against FOR_data_sted_total
 
-While the strings are here, the documentation is still in the excel file - should be updated. 
+Note - a number of terms are included twice in different parts of the string - once for article title, and another time for book title - remember to edit both if making changes.
+
+Search terms will always be searched for in truncated form, unless a space is included at the beginning/end (e.g. "migrant" finds "migrants"), this works also for journal/anthology/book titles ("global health" finds "global health action").
 
 ## Combinations
+
+The three main focus areas under GSU have their own strings, as do their overlap areas (e.g. "health and migration" has it's own string where health terms are combined with migration terms). The publications found by the overlap strings contribute to both main focus areas, when publications are counted in the focus areas.
 
 #### TOTAL GSU
 
@@ -30,6 +34,9 @@ END
 ```
 
 #### HEALTH total
+
+"Peru" changed to prevent picking up gill amoeba species name containing peru*
+"Chad" changed to prevent picking up medical acronym SCHAD
 
 ```Ceylon =
 IF CONTAINS([Health - general], "health")
@@ -65,6 +72,20 @@ END
 ## Global health
 
 #### Health - general
+
+Should health & ethics be included here (regardless of country?) - if so, in what form (e.g. medical ethics?) - We did not get a clear answer on this. Some medical ethics (related to global health, climate change or in LMCs) will be covered anyway as we combine with NPI field "medisin" and terms like "medical".
+
+Journal "global health" covers global health action etc.
+
+For the climate phrase, the Norwegian terms were tested but there were no results. Nothing for flood or drought either. Could be expanded in a later version. Note that combining climate change with "health" does pick up the occasional biology paper (e.g. health of polar bears, ocean health). 
+
+Use of the general terms "health", "medical", "disease" etc. can introduce noise, but add many more relevant results by picking up all sorts of topics (e.g. medical ethics, communicable diseases, health workers, universal health coverage, mental health, respiratory health, health care etc.)
+
+Specific diseases/health issues added with LMCs (low and middle income countries) in focus: i.e. Added if diseases and major issues primarily in LMCs (e.g. malaria, TB, maternal mortality). Neglected tropical diseases added from the SDG3 search string, based on WHOs list. 
+
+The combination of countries with NPI field "medisin" should compensate for missing specific terms. 
+
+Countries are added from a list over LMCs, SIDS and African countries, but reduced due to capacity problems in Tableau. Countries were removed based on size, expected research focus, and if they were high income. Only 151 publications from the whole of Norway over 2011-2020 mention the missing countries, meaning that not including them in this list should have a small effect. ALL LMCs, SIDS and African countries (minus high income) were included in the WoS search. 
 
 ```Ceylon =
 IF		
@@ -381,6 +402,12 @@ END
 ```
 
 ## Inequality
+
+It was unclear from consultations if "democracy" itself should be included - in the end I included it as it was related to some terms given in consultations (e.g. voting rights). NPI field "utviklingsstudier" is included in its entirity (after consultation). 
+
+Note terms such as "equality" will also cover "inequality" due to truncation.
+
+Several NOT terms had to be included due to widespread use of "inequalities" in mathematics, including exclusion of all publications in NPI fields mathematics and physics.  
 
 ```Ceylon =
 IF		
@@ -1243,6 +1270,8 @@ END
 ```
 
 ## Health & Migration
+
+"Whales", "cancer cells", NPI field biology excluded from health and migration
 
 ```Ceylon =
 IF		
