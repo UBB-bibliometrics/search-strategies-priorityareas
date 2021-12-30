@@ -2,11 +2,79 @@
 
 String for use in Tableau against FOR_data_sted_total
 
-Note - a number of terms are included twice in different parts of the string - once for article title, and another time for book title - remember to edit both if making changes.
+*A number of terms are included twice in different parts of the string - once for article title, and another time for book title - remember to edit both if making changes*
 
-As we are searching in the titles only, the terms used are broad. 
+As we are searching in the titles only, the terms used are broad. Search terms will always be searched for in truncated form, unless a space is included at the beginning/end (e.g. "migrant" finds "migrants"), this works also for journal/anthology/book titles ("global health" finds "global health action").
 
-Search terms will always be searched for in truncated form, unless a space is included at the beginning/end (e.g. "migrant" finds "migrants"), this works also for journal/anthology/book titles ("global health" finds "global health action").
+## Description provided in reports
+
+Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Marit Bakke, og direktøren Bente Moen)
+
+#### Global helse
+
+Helse-relatert forskning med fokus på global helse: 
+* helse (ink. psykisk helse og helsefremmende arbeid), sykdommer og helsetjenester i «low and middle income countries» (LMCs). Medisinsk eller helseforskning utenfor disse land (e.g. generell kreftforskning, kreft i Norge) er ikke inkludert, med mindre den faller inn under et annet aspekt for satsningsområdet
+* sykdommer og folkehelseproblemer som er mest vanlig i LMCs (e.g. malaria, neglected tropical diseases, maternal mortality)
+* global health, internasjonal helse
+* klimaendringer eller naturkatastrofe og helse
+
+Helse og Migrasjon:
+* All forskning som gjelder migranter/flyktninger og helse (ink. psykisk helse), sykdommer eller helsetjenester, eller helse og flerkulturelt samfunn. Eksempler kan inkludere tilgang til helsetjenester for flyktninger, eller arbeidsforhold for migrant helsearbeidere. 
+
+Helse og Ulikhet:
+* lik representasjon/prioritering innen helseforskning (etikk, kjønn, etnisitet og juridiske utfordringer) 
+* forskjellsbehandling og helse; helse/helsetjenester sett i lyset av kjønn, etnisitet, funksjonsevne osv. 
+* tilgang til helsetjenester (ink. seksuelle eller psykiske helsetjenester)
+* helse av/vold mot sårbare grupper eller grupper som kan oppleve diskriminering; barnevern
+* helse og fattigdom eller økonomisk ulikhet
+* helse og utviklingsmidler, globalisation
+* body politics
+
+#### Migrasjon 
+All forskning som omhandler migrasjon, flykninger, asyl, eller immigrasjon (ikke avgrenset ytterligere), for eksempel (men ikke begrenset til):
+* Media and samfunnsdebatt om migrasjons/immigranter 
+* Flerkulturelt samfunn og integrering
+* Migration in historic times
+* Migration and resilient cities
+* Migrasjon og klimaendringer 
+
+Helse og Migrasjon (beskrevet over)
+
+Migrasjon og Ulikhet:
+* migranter/flyktninger/asylsøkere og 
+  *	forskjellsbehandling, equity, representasjon og eksklusjon
+  * folkerett, menneskerettighet, juridiske problemstillinger, frihet og sikkerhet
+  *	fattigdom og økonomisk ulikhet
+  *	alder, kjønn, seksualitet, funksjonsevner, sårbare grupper
+  *	matsikkerhet
+  *	kolonialisme
+*	forskjellsbehandling knyttet til religion av migranter (e.g. islamophobia)
+*	smugling og traffiking av personer 
+
+#### Ulikhet
+*	equality og equity
+*	menneskerettigheter, sivilrettigheter, land rights 
+*	fattigdom og økonomisk ulikhet, microfinance, ressursfordeling (i samfunn, på verdensbasis, blant generasjoner), velferdspolitikk
+*	utviklingsmidler, kolonialisme, globalisation, and development
+*	politiske konflikter, genocide
+*	sosial bærekraft
+*	climate justice
+*	likestilling, inkludering, utenforskap
+*	gender perspectives and studies
+*	lokal og tradisjonell kunnskap
+*	minoriteter, kvinner, eldre, personer med nedsatt funksjonsevne, religiøse grupper, urfolk, sårbare grupper, barn, osv. og område som:
+ 	*	Forskjellsbehandling og diskriminering (økonomisk, sosialt, juridisk), fordømming og utenforskap
+ 	*	Makt og empowerment
+ 	*	Representasjon, demokrati og rettigheter
+ 	*	Språkpolitikk
+ 	*	Miljø- og klimaendringer
+
+Migrasjon og Ulikhet (beskrevet over), Helse og Ulikhet (beskrevet over)
+
+#### Øvrige tema
+*	Klimaendringer, ekstremvær, naturkatastrofe og landbruk/akvakultur i low- and middle income countries.
+*	Matsikkerhet, access to food and water
+
 
 ## Combinations
 
@@ -1037,6 +1105,7 @@ Made of terms from the two main searches in these areas, with some changes (e.g.
 * Terms for partner violence
 * Terms for violence, addictions and disability and certain groups
 * Inequality terms combined with disability
+* "body politics" 
 
 ```Ceylon =
 IF		
