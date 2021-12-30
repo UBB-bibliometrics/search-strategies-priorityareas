@@ -129,18 +129,21 @@ TS=
 
 ```Ceylon =
 TS=
-( "shipping" OR "container ship$" OR "rov" OR "auv" 
-  OR ("underwater" NEAR/15 ("vehicle$" OR "robot$")) 
-  OR "surface vessel$" OR "deep water" OR "subsea" OR "submersible" OR "moonpool" 
-  OR "lifeboat$" OR "sailboat$" OR "seaport$" OR "wave energy conver*" 
+( 
+  "shipping" OR "container ship$" 
+  OR "rov" OR "auv" OR ("underwater" NEAR/15 ("vehicle$" OR "robot$")) 
+  OR "surface vessel$" OR "deep water" OR "subsea" OR "submersible" OR "moonpool" OR "lifeboat$" OR "sailboat$" OR "seaport$" 
+  OR "wave energy conver*" 
 ) 
 OR 
 TS=
 ( 
   (
     ("vessel$" OR "hull" OR "ship$" OR "deep water") 
-    AND ("disabled" OR "design" OR "naval" OR "fleet$" OR "harbour$" OR "navigat*" OR "routing" OR "route$" 
-        OR "fouling" OR "biofouling" OR "ice interaction*" OR "collision$" OR "autonomous" OR "safety" OR "technolog*"
+    AND ("disabled" OR "design" OR "naval" OR "fleet$" OR "harbour$" 
+        OR "navigat*" OR "routing" OR "route$" 
+        OR "fouling" OR "biofouling" OR "ice interaction*" OR "collision$" 
+        OR "autonomous" OR "safety" OR "technolog*"
         ) 
   )
   NOT ("research vessel" OR "coronary" OR "cardiac" OR "blood" OR "stroke$" OR "aneurysm$" OR "*vascular" or "xylem") 
@@ -245,8 +248,86 @@ The string for marine should also contain all terms for maritime - don't add to 
 It does however contain some additional terms as *limitations* of more general terms in the marine string. 
 For example, "ocean" must be combined with "technology"; fishing and aquaculture terms must be used in combination with technology or safety terms. 
 
-```Ceylon =
+#### Maritime journals
 
+```Ceylon =
+SO=
+("Sea tech*" OR "Journal of operational ocean*" OR "International journal of naval architecture and ocean*" 
+OR "Applied ocean*" OR "Maritime economics & logistics" OR "Maritime policy & management" 
+OR "Maritime business review" OR "Maritime technology society journal" OR "Ship*" OR "Journal of ship research"
+)
 ```
+
+#### Offshore and shipping
+
+Includes limitations of "ocean" and "marine" from the marine search.
+
+```Ceylon =
+TS= ("ocean engineering" OR "marine engineering") 
+OR 
+TS=
+( 
+    ("maritime" OR "offshore") 
+    AND 
+        ("oil" OR "petroleum" OR "pipe*" OR "drilling"
+        OR "turbine$" OR "offshore wind" 
+        OR "structure$" OR "platform$" OR "installation$" OR "cylinder$" OR "monopile$" OR "anchor*" OR "mooring$" 
+        OR "vessel$" OR "ship$" 
+        OR "technolog*" OR "operations" OR "algorithm$" 
+        OR "occupational safety" OR "occupational health" 
+        ) 
+) 
+```
+
+Includes limitation of "deep water" from the marine search.
+
+```Ceylon =
+TS=
+(
+    "shipping" OR "container ship$" 
+    OR "rov" OR "auv" OR ("underwater" NEAR/15 ("vehicle$" OR "robot$")) 
+    OR "surface vessel$" OR "subsea" OR "submersible" OR "moonpool" OR "lifeboat$" OR "sailboat$" OR "seaport$" 
+    OR "wave energy conver*"
+) 
+OR 
+TS=
+( 
+    (
+        ("vessel$" OR "hull" OR "ship$" OR "deep water") 
+        AND 
+            ("disabled" OR "design" OR "naval" OR "fleet$" OR "harbour$" 
+            OR "navigat*" OR "routing" OR "route$" 
+            OR "fouling" OR "biofouling" OR "ice interaction*" OR "collision$" 
+            OR "autonomous" OR "safety" OR "technolog*"
+            ) 
+    ) 
+    NOT ("research vessel" OR "coronary" OR "cardiac" OR "blood" OR "stroke$" OR "aneurysm$" OR "*vascular" or "xylem") 
+) 
+OR 
+TS=
+( 
+    "floating" NEAR/5 ("storage" OR "bodies" OR "structure$" OR "turbine$" OR "drift")
+) 
+OR 
+TS=
+( 
+    "mooring" NEAR/5 ("line$" OR "system$" OR "safety" OR "force$" OR "point" OR "multipoint" OR "floating" OR "chain$") 
+) 
+OR 
+TS=
+(
+    "deep water" NEAR/5 ("drill*" OR "anchor*" OR "cable$" OR "pipe*" OR "mooring$") 
+)
+```
+
+
+
+
+
+
+
+
+
+
 
 
