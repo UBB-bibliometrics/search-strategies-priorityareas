@@ -1,16 +1,5 @@
 # GSU
 
-Links for current status:
-
-All Global health (Global health + Health and inequality + Health and migration): https://www.webofscience.com/wos/woscc/summary/0927aaf1-0094-4148-92e9-068b36f07eeb-10ce8a5e/relevance/1
-
-All inequality (inequality + health and inequality + inequality and migration): https://www.webofscience.com/wos/woscc/summary/4280cbdf-7482-42fa-a1e6-b1967ab644e1-10ce94ca/relevance/1
-
-All migration (migration + health and migration + inequality and migration): https://www.webofscience.com/wos/woscc/summary/8ef0681b-a42d-4601-9d7c-7fec0a32640f-10ce9ec8/relevance/1
-
-Climate change and farming in LMCs, and food security: https://www.webofscience.com/wos/woscc/summary/57729ed5-866e-43d7-a363-1b8e2bfbdf08-10ce7ca5/relevance/1
-
-
 ## Global health
 
 #### Global health
@@ -949,11 +938,9 @@ This area overlaps with KE, but was mentioned specifically as part of GSU. We ha
 ```Ceylon =
 TS=
 (
-    ("climate chang"
-    OR "climate chang"
-    OR "global chang"
-    OR "global chang"
-    OR "climatic chang"
+    ("climate chang*"
+    OR "global chang*"
+    OR "climatic chang*"
     OR "changing climate"
     OR "global warming"
     OR "climate extreme$"
