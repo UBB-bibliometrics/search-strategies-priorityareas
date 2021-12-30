@@ -7,7 +7,7 @@ Due to searching in abstracts, and due to the interdisciplinary database, a numb
 The string is set up so that one can either get results for **all marine research**, or a subset covering **maritime research**. 
 Unlike the other satsningsområder, these two are not two independent parts - the maritime string finds a SUBSET of the marine string results. 
 Thus to get only the marine research which is not maritime, one must minus the maritime subset and look at what remains. 
-This maritime subset is an *estimate* only - splitting off this research using a string is difficult.
+This maritime subset is an *estimate* only - splitting off this research using a string is difficult. For example, shipping is classed as maritime here, but some papers mentioning shipping may be looking at effects of shipping pollution (marine). 
 
 *NOTE The string for marine should also contain all terms for maritime - don't add to maritime without adding to marine*
 
@@ -279,7 +279,7 @@ TS=
 ) 
 ```
 
-Includes limitation of "deep water" from the marine search.
+Includes limitation of "deep water" from the marine search. Inclusion of ROV here can in some cases add results that are not maritime but use an ROV e.g. to get samples. 
 
 ```Ceylon =
 TS=
@@ -324,6 +324,8 @@ TS=
 
 Includes limitations of "salmon farm*", "mariculture", "aquaculture", "kelp" and "trawl*", plus some specific organisms from the marine search by combining them with technical terms within fishing and aquaculture.
 
+Inclusion of recirculating aquaculture here can in some cases add results that are not maritime but use RAS e.g. to breed fish. 
+
 ```Ceylon =
 TS=
 ( 
@@ -364,11 +366,5 @@ TS=
     OR "codend"
 )
 ```
-
-
-
-
-
-
 
 
