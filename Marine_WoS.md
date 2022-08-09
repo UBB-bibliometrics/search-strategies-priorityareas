@@ -114,7 +114,7 @@ TS=
 (
   "sea ice" OR "ice floe$" OR "pack ice" OR "polynya$" OR "ice stream$" OR "ice shel*" OR "nilas" 
   OR "ice chart$" OR "iceberg$" OR "pancake ice" OR "ice ridge$" 
-  OR "sea level$" OR "sea surface" OR "SST" 
+  OR "sea level$" OR "sea surface"
   OR "air sea"
 ) 
 ```
