@@ -15,9 +15,10 @@ This maritime subset is an *estimate* only - splitting off this research using a
 
 The general structure of the string is in sections of grouped search terms: 
 
-* Marine activities, law and technologies (applied)
+* Marine journals
+* Marine & polar marine areas and habitats
+* Marine activities, law and technologies
 * Marine organisms and species
-* Research from the Sars Centre - included in its entirity after specification from NG/ÅM. The Sars Centre does not have very many publications, but this may nevertheless give a slight unfair advantage when comparing with other institutions. 
 
 #### Marine journals 
 
@@ -392,7 +393,7 @@ TS=
             ("gear" OR "catch performance" OR "catch efficiency" 
             OR ("storage" NEAR/10 ("ice" OR "frozen" OR "controlled" OR "freez*" OR "chilled")) 
             OR "chilling" OR "refridg*" OR ("processing" AND "storage") 
-            OR "robot$" OR "autonomous" OR "machine*" OR "hydraulic$" 
+            OR "robot$" OR "autonomous" OR "machin*" OR "hydraulic$" 
             OR "occupational safety" OR "occupational health" OR "technolog*"
             )
     ) 
