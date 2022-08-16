@@ -939,28 +939,30 @@ TS=
 
 This area overlaps with KE, but was mentioned specifically as part of GSU. We have only included climate change and farming in LMCs. Other references to climate change are included in the above sections (unless unnecssary, e.g. "migrants" alone will find works about migrants and climate change; "food security" the same etc.).
 
+In 2022 this was edited, as we noticed that many results were from climate science that happened to be done in these countries (e.g. Cenezoic climate changes in ...). Thus terms that indicate present day action were added to the climate part. 
+
 #### CC & farming in LMCs
 
 ```Ceylon =
 TS=
 (
-    ("climate chang*"
-    OR "global chang*"
-    OR "climatic chang*"
-    OR "changing climate"
-    OR "global warming"
-    OR "climate extreme$"
-    OR "extreme weather" OR "heat wave$" OR "drought$" OR "flood*"
-    OR "natural disaster$"
+    (
+      (
+      	("climate chang*" OR "global chang*" OR "climatic chang*" OR "changing climate" OR "global warming"
+    	OR "climate extreme$" OR "extreme weather" OR "heat wave$" OR "drought$" OR "flood*" OR "natural disaster$"
+    	)
+	AND 
+	   ("mitigat*" OR "adapt*" OR "vulnerab*" OR "resilien*" OR "climate action" 
+	   OR "perception$" OR "attitude$"
+	   OR "policy" OR "politics" OR "agreement$" OR "governance" OR "climate change education"
+	   )
+      )
     OR "farming" OR "food production" OR "agriculture" OR "aquaculture" OR "smallhold*"
     )
     AND
-      ("global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*"
-
+      ("global south" OR "least-developed countr*" OR "developing countr*" OR "low income countr*" OR "poor countr*" OR "lmic" OR "low and middle income countries"
       OR "afghanistan" OR "angola" OR "antigua" OR "bahrain" OR "bangladesh" OR "barbados" OR "belize" OR "benin" OR "bermuda" OR "bhutan" OR "burkina faso" OR "burundi" OR "cabo verde" OR "cambodia" OR "chad" OR "marianas" OR "comoros" OR "congo" OR "cuba" OR "djibouti" OR "dominica" OR "eritrea" OR "ethiopia" OR "micronesia" OR "fiji" OR "french polynesia" OR "gambia" OR "grenada" OR "guadeloupe" OR "guyana" OR "haiti" OR "jamaica" OR "kiribati" OR "laos" OR "lesotho" OR "liberia" OR "madagascar" OR "malawi" OR "maldives" OR "mali" OR "marshall islands" OR "martinique" OR "mauritania" OR "mauritius" OR "montserrat" OR "mozambique" OR "myanmar" OR "nauru" OR "nepal" OR "new caledonia" OR "niger" OR "niue" OR "papua new guinea" OR "rwanda" OR "saint lucia" OR "grenadines" OR "la reunion" OR "samoa" OR "sao tome" OR "senegal" OR "sierra leone" OR "solomon islands" OR "somalia" OR "sudan" OR "suriname" OR "tanzania" OR "timor leste" OR "togo" OR "tonga" OR "tuvalu" OR "uganda" OR "vanuatu" OR "yemen" OR "zambia"
-
       OR "africa" OR "nigeria" OR "egypt" OR "kenya" OR "algeria" OR "morocco" OR "ghana" OR "ivory coast" OR "cameroon" OR "zimbabwe" OR "tunisia" OR "libya" OR "botswana" OR "gabon" OR "equatorial guinea" OR "eswatini" OR "cape verde" OR "western sahara" OR "mayotte"
-
       OR "albania" OR "argentina" OR "armenia" OR "azerbaijan" OR "belarus" OR "bolivia" OR "bosnia" OR "brazil" OR "bulgaria" OR "china" OR "colombia" OR "costa rica" OR "ecuador" OR "el salvador" OR "guatemala" OR "honduras" OR "india" OR "indonesia" OR "iran" OR "iraq" OR "jordan" OR "kazakhstan" OR "kosovo" OR "kyrgyz" OR "lebanon" OR "malaysia" OR "mexico" OR "micronesia" OR "moldova" OR "mongolia" OR "montenegro" OR "nicaragua" OR "macedonia" OR "pakistan" OR "paraguay" OR "phillipines" OR "peru" OR "romania" OR "russia" OR "serbia" OR "sri lanka" OR "syria" OR "tajikistan" OR "thailand" OR "turkey" OR "turkmenistan" OR "ukraine" OR "venezuela" OR "vietnam" OR "west bank" OR "gaza"
       )
 )
