@@ -72,7 +72,7 @@ Migrasjon og Ulikhet:
 Migrasjon og Ulikhet (beskrevet over), Helse og Ulikhet (beskrevet over)
 
 #### Øvrige tema
-*	Klimaendringer, ekstremvær, naturkatastrofe og landbruk/akvakultur i low- and middle income countries.
+*	Klimaendringer, ekstremvær, naturkatastrofe og landbruk/akvakultur i low- and middle income countries. Den WoS søkestrengen er satt opp for å unngå rene klimavitenskap resultater (e.g. Cenozoic climate changes in landx). Cristin versjonen har ingen avgrensning, siden det er vanskeligere i tittelen. 
 *	Matsikkerhet, access to food and water
 
 
