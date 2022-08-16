@@ -317,7 +317,7 @@ TS=
   OR "gender perspective$" OR "gendered" OR "sexism" OR "misogyny"
   OR "intersectional*"
   OR "ageism"
-  OR "homophob*" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT" OR "LGBTQ"
+  OR "homophob*" OR "lesbian" OR "bisexual" OR "transgender" OR "queer" OR "LGBT*"
   OR ("gay" NOT "gay berne")
 )
 ```
