@@ -105,9 +105,6 @@ END
 
 #### HEALTH total
 
-"Peru" changed to prevent picking up gill amoeba species name containing peru*
-"Chad" changed to prevent picking up medical acronym SCHAD
-
 ```Ceylon =
 IF CONTAINS([Health - general], "health")
 OR CONTAINS([Health & Inequality], "health")
@@ -153,7 +150,7 @@ Specific diseases/health issues added with LMCs (low and middle income countries
 
 The combination of countries with NPI field "medisin" should compensate for missing specific terms. 
 
-Countries are added from a list over LMCs, SIDS and African countries, but reduced due to capacity problems in Tableau. Countries were removed based on size, expected research focus, and if they were high income. Only 151 publications from the whole of Norway over 2011-2020 mention the missing countries, meaning that not including them in this list should have a small effect. ALL LMCs, SIDS and African countries (minus high income) were included in the WoS search. 
+Countries are added from a list over LMCs, SIDS and African countries, but reduced due to capacity problems in Tableau. Countries were removed based on size, expected research focus, and if they were high income. Only 151 publications from the whole of Norway over 2011-2020 mention the missing countries, meaning that not including them in this list should have a small effect. ALL LMCs, SIDS and African countries (minus high income) were included in the WoS search. "Peru" changed to prevent picking up gill amoeba species name containing peru*. "Chad" changed to prevent picking up medical acronym SCHAD.
 
 ```Ceylon =
 IF		
