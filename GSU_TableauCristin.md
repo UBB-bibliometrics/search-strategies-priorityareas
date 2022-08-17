@@ -1764,7 +1764,7 @@ This section covers:
 
 Note that climate change as related to the three main focus areas is already included under those sections - anything mentioning health and climate change (global health), specific groups of people/justice and climate change (inequality), or migrants/refugees and climate change (migration) will already be covered there. Other aspects of climate change research is not covered by this search string, but by the KE satsningsområde. 
 
-Note that in the WoS version of this string, I have expanded farming to include more terms ("food production" OR "agriculture" OR "aquaculture" OR "smallhold*").
+Note that in the WoS version of this string, I have expanded farming to include more terms ("food production" OR "agriculture" OR "aquaculture" OR "smallhold*"). Aquaculture was added here in 2022.
 
 ```Ceylon =
 IF ((		
@@ -1780,6 +1780,10 @@ OR CONTAINS(LOWER([result_title]),	"extreme climate"	)
 OR CONTAINS(LOWER([result_title]),	"heat wave"	)
 OR CONTAINS(LOWER([result_title]),	"disaster"	)
 OR CONTAINS(LOWER([result_title]),	"farming"	)
+OR CONTAINS(LOWER([Result Title]),	"farming"	)
+OR CONTAINS(LOWER([Result Title]),	"landbruk"	)
+OR CONTAINS(LOWER([Result Title]),	"aquacultur"	)
+OR CONTAINS(LOWER([Result Title]),	"akvakultur"	)
 )		
 AND (		
 CONTAINS(LOWER([result_title]),	"developing count" 	)
