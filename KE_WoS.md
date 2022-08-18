@@ -4,7 +4,8 @@ See Tableau/Cristin file for main documentation. The string contains of four blo
 
 ## ANY
 ```Ceylon =
-TS=(			(("climat* NEAR/3 change* ") OR ("climat*"  NEAR/3  "warm*") OR"global warming" )  
+TS=(
+("climat* NEAR/3 change* ") OR ("climat*"  NEAR/3  "warm*") OR "global warming" )  
 )			
 ```
 
@@ -13,69 +14,88 @@ TS=(			(("climat* NEAR/3 change* ") OR ("climat*"  NEAR/3  "warm*") OR"global
 ## Klima 
 
 ```Ceylon =
-TS=(			
-	 ("climat*"   AND 		
-		( 	
-			("coupled*" OR   "coupling" OR "vulnerable" OR   "projection*" OR "dynamic*" OR   "model*"  OR   "carbon" OR   "feedback*" OR   
-      "interact*" OR   "scenario*" OR   "regime*" OR   "shift*" OR    "forcing*" OR    "goal*" OR   "amplificat*" OR   "predict*" OR  
-      "fluctuat*" OR   "simulat*" OR   "variab*" OR   "driver*" OR   "post normal " OR   "anthropo*" OR   "pattern*" OR "tipping point*")  
-		OR 	( "annular mod" OR ( "oscillation*"   AND (  "atmosph*"   OR   "atlantic"  OR "ocean*" OR "southern" OR "pacific" OR "arctic"))  
-    OR   "el nino" OR  "la nina" OR   "ENSO"  or "polar cell" OR "Hedley cell" OR "overturning" )  
-		OR 	 ("palaeo*" OR   "paleo*"  OR   "past" OR   "reconstruct*"  OR   " ice-core" OR   "icecore" OR   "quaternary" OR   
-    "pleistocene" OR   "holocene" OR   "pliocene" ) 
-	  	OR 	( "atmosph*" OR   "cloud*" OR   "rain*" OR   "precipitation*" OR   "snow*" OR   "storm*" OR   "weather" OR   
-      "monsoon*" OR   "cyclon*" OR   "typho*" OR    "temperature*" OR   "meteorolog*" OR "radiat*" OR   "aerosol*"   OR   "black carbon"  
-      OR   "heat wave*"   OR   "heatwave*"  OR   "albedo"  OR   "1.5"  OR   "2 deg*" OR   "2 C"  )  
-			
-		) 	
+TS=(
+	("climat*"  
+	AND 		
+		("coupled*" OR "coupling" OR "vulnerable" OR "projection*" OR "dynamic*" OR "model*" OR "carbon" OR "feedback*" 
+		OR "interact*" OR   "scenario*" OR   "regime*" OR   "shift*" OR    "forcing*" OR    "goal*" OR   "amplificat*" OR "predict*" 
+		OR "fluctuat*" OR   "simulat*" OR   "variab*" OR   "driver*" OR   "post normal " OR   "anthropo*" OR   "pattern*" OR "tipping point*" 
+		OR "annular mod" 
+		OR ("oscillation*" AND ("atmosph*" OR "atlantic"  OR "ocean*" OR "southern" OR "pacific" OR "arctic"))  
+		OR "el nino" OR  "la nina" OR   "ENSO"  or "polar cell" OR "Hedley cell" OR "overturning"
+		OR "palaeo*" OR "paleo*" OR "past" OR "reconstruct*" OR " ice-core" OR "icecore" OR "quaternary" OR "pleistocene" OR   "holocene" OR   "pliocene"
+		OR "atmosph*" OR "cloud*" OR   "rain*" OR   "precipitation*" OR   "snow*" OR   "storm*" OR   "weather" 
+		OR "monsoon*" OR "cyclon*" OR "typho*" OR  "temperature*" OR "meteorolog*" OR "radiat*" OR "aerosol*"  OR "black carbon" 
+		OR   "heat wave*"   OR   "heatwave*"  OR   "albedo"  OR   "1.5"  OR   "2 deg*" OR   "2 C"  
+		)  		
 	) 		
 )			
 OR			
-TS=(	(		
-	("climate" OR "warming" OR "global chang*" )  		
-			
-	AND   	(	
-			
-			 (  "coral*" OR   "reef*" OR   "*water*" OR   "ocean*" OR   "sea*" OR   "Atlantic" OR   "Pacific" OR   "*algaea*"  OR   "*algea*" OR   "plankton*" OR  "fish"  OR   "shelfish*"  OR   "coast*"  OR   "estuary" OR   "lake*" OR "marin*" OR "SST")  
-	  	OR 	 (  "pollution*" OR   "ecosystem*" OR "pollen" OR "flora"  OR "fauna" OR "plant" OR "plants" OR "biolog*" OR "biodiver*" OR   "ecosystem*" OR  "ecology" OR "bushfire*" OR "bush fire*" OR "nitrogen" )  
-		OR 	(  "arid*" OR   "desert*" OR   "flood*" OR   "drought*" OR   "land slide*" OR   "avalanch* " OR  "cryospher*" OR   "wetland*" OR   "dryland*" OR   "canopy" OR   "erosion*" OR  "erodin*" OR   "groundwater*" )  
-	  	OR 	( "tundra" OR   "biota" OR   "taiga" OR   "tree line*" OR   "aerosol*"  OR   "vegetation*" OR   "swamp*" OR   "permafrost"    )   
-		OR 	 ("geolog*" OR "geophys*" OR "dinoflagel*" OR "paleontolo*" OR "mineral*" OR "sediment*")   
-	  	OR 	 (  "arctic*"  OR   " polar "  OR   " north pole " OR   " northpole " OR   " high north " OR   " high-north " OR   "svalbard" OR   "spitsbergen" OR   "bjornoya" OR   "jan mayen"   OR   "greenland" OR   "north alaska"    OR   "north quebec" OR   "axel heiberg"   OR   "north slope"  OR   "prudhoe" OR   "barrow"   OR   "zemlya"  OR   "yermak"    OR   "franz josef"    OR   "northwest territories"   OR   "high latitude" OR   "high-latitude"   OR   " south pole "  OR   "north atlantic" OR   "mid-atlantic"   OR   "north-east atlantic" OR   "atlantic " OR   "barents sea"    OR   "greenland sea" OR   "north sea"    OR   "norwegian sea"  OR   "nordic seas" OR   "skager"     OR   "chukchi sea" OR   "east Siberian sea" OR   "laptev sea"    OR   "kara sea"     OR   "labroador sea" OR   "Greenland sea" OR   "Beaufort sea"  OR   "Sea of Okhotsk" OR   "weddel sea"  OR   "ross sea"    OR   "hudson bay"  OR   "drake passage" OR   "bering strait" OR   "davis strait"     OR   "nares strait"   OR   "jan mayen"     OR   "scotland ridge" OR   "greenland basin"  OR   "gulf stream" )  
-	)	)	
-)			
-OR			
-TS=(			 (((  "sea" OR   "ocean*" )   AND (  "level"    OR   "warming"   OR   "acidification"   OR   "co2"   OR   "co 2"  OR "heat*"))   OR "water mass transformation")
-		OR 	( "glacier*"      OR   "ice cap*"  OR   "ice-field*"    OR   "ice sheet*" OR   "ice shelves"   OR   "ice shelf"  OR   "sea-ice"   OR   "sea ice"    OR   "pack ice"   OR   "polynya*"  OR   "ice variab*" OR   "ice cover*" OR   "ice retreat*"  OR   "ice retract*"    OR   "ice exten*"  OR   "ice thickness" OR   " nilas "   OR   "ice chart*"  OR   "ice-berg*" OR   "ice berg*" OR   "iceberg*" OR   "slush"   OR   "pancake ice" OR   "pack ice"   OR   "ice ridge*"   OR   "grease ice"   OR      "marginal ice zone*"   OR   "multi-year ice" OR   "first-year ice"  OR  "antarctic*" )
-		OR 	("noresm" OR   " echam5"   OR   "cmip" OR   "GCM" OR   "AOGSM"   OR   "UKMO-hadcm" OR   "UKMO-hadgem" OR  "FGOALS" OR   "GFDL-CM" OR   "GISS-EH" OR   "GISS-ER"  OR   "INM-cm" OR   "IPSL-CM" OR   "MIROC3" OR   "GISS-EH"  OR   "BCC-CM"  OR   "BCCR-BCM"     OR   "ccsm3" OR   "cgcm3" OR   "cnrm-cm3" OR   "csiro"  )     
-		OR 	("arctic" AND "future")
-		OR 	(("decadal" OR "seasonal" ) NEAR/3 ("prediction*" OR "variablilit*" OR "change*" OR "oscillation" OR "mode"))
-		OR 	("water mass transformation") OR ("water mass formation")
-)			
-			
-OR			
-TS=(	("climat*'"		
-	AND   		 (  "disaster*"   OR   "collaps*"   OR "catastroph*" OR  "vulnerability"  OR  "extinct*"  OR   "respon*"   "crisis"   OR   "crises"   OR   "hazard*"   OR   "impact*"   OR   "footprint*"  )
-			
-	)		
-)			
-OR			
-TS=(	(		
-	(("climat* NEAR/3 change* ") OR ("climat*"  NEAR/3  "warm*") OR"global warming" OR "global change")  		
-	AND   		 ( "habitat*"  "extinct*"   OR   "speci*"   OR   "population*"   OR   "emission*"   OR   "consequence*"   OR   "impact*"   OR   "footprint*"   OR   "assess"   OR   "risk*"   OR   "econom*"   OR   "quota*"   OR   "war"   OR   "milit* conflict*"   OR   "affect*" OR   "effect*"   OR   "influenc*"   OR   "scenario*"   OR   "infrastructure*"   OR   "ship*"   OR   "forest*"   OR   "resourc*"   OR   "health"   OR   "disease*"   OR   "sick*"   OR   "death*"   OR   "hunger"   OR   "hungry"   OR   "migration*"   OR   "ecosystem*"   OR   "societ*"   OR   "communit*"   OR   "agricultur*"  OR   "farmland*" OR   "forest*" OR   "agricultur*" OR   "land us*"   OR   "land area cover*"   OR   "soil*"   OR   "food" OR  "finance*"   OR   "economy*" OR   "society" OR   "people" OR   "human" OR   "inuit") 
-			
-	)		
-)			
-OR			
-TS=(			(( "anthropo*"   AND (  "heating"    OR   "forcing*"    OR   "chang*" OR   "driv*"   OR   "feedback*" OR "climat*") )  OR  "human footprint*"   OR   "carbon footprint*")
-			
-	OR		  (  "ozone"   OR   "carbon"   OR   "greenhouse"   OR   "co 2"   OR   "co2" )  AND (   "scenario*"  OR   "feedback*" OR "budget")
-			
-			
-	OR		(  "permafrost "    ) AND (   "melt*"   OR   "methan" OR   "feedback"   )
+TS=(	
 	(		
+	   ("climate" OR "warming" OR "global chang*" )  		
+	   AND  
+	      	("coral*" OR "reef*" OR "*water*" OR "ocean*" OR "sea" OR "seas" OR "Atlantic" OR "Pacific" 
+		OR "*algae"  OR "*algea*" OR "plankton*" OR "fish" OR "fishes" OR "shellfish*" OR "coast*" OR "estuary" OR "lake*" OR "marine" OR "SST" 
+	  	OR "pollen" OR "flora"  OR "fauna" OR "plant" OR "plants" OR "biolog*" OR "biodiver*" OR "biota" OR "canopy" 
+		OR "ecology" OR "bushfire*" OR "bush fire*" OR "nitrogen" OR "pollution*" OR "ecosystem*" 
+		OR "flood*" OR "drought*" OR "land slide*" OR "avalanch*" OR "erosion*" OR "erodin*"
+		OR "wetland*" OR "arid*" OR "desert*" OR "dryland*" OR "groundwater*"
+	  	OR "tundra" OR "taiga" OR "cryospher*"  OR "tree line*" OR "aerosol*" OR "vegetation*" OR "swamp*" OR "permafrost"   
+		OR "geolog*" OR "geophys*" OR "dinoflagel*" OR "paleontolo*" OR "mineral*" OR "sediment*"
+	  	OR "arctic*"  OR   "polar"  OR   "north pole" OR   "northpole" OR   "high nort " OR   "high-north" OR "svalbard" OR   "spitsbergen" OR   "bjornoya" OR   "jan mayen"   OR   "greenland" OR   "north alaska"    OR   "north quebec" OR   "axel heiberg"   OR   "north slope"  OR   "prudhoe" OR   "barrow"   OR   "zemlya"  OR   "yermak"    OR   "franz josef"    OR   "northwest territories"   OR   "high latitude" OR   "high-latitude"   OR   " south pole "  OR   "north atlantic" OR   "mid-atlantic"   OR   "north-east atlantic" OR   "atlantic " OR   "barents sea"    OR   "greenland sea" OR   "north sea"    OR   "norwegian sea"  OR   "nordic seas" OR   "skager"     OR   "chukchi sea" OR   "east Siberian sea" OR   "laptev sea"    OR   "kara sea"     OR   "labroador sea" OR   "Greenland sea" OR   "Beaufort sea"  OR   "Sea of Okhotsk" OR   "weddel sea"  OR   "ross sea"    OR   "hudson bay"  OR   "drake passage" OR   "bering strait" OR   "davis strait"     OR   "nares strait"   OR   "jan mayen"     OR   "scotland ridge" OR   "greenland basin"  OR   "gulf stream" 
+		)	
+	)	
+)			
+OR			
+TS=(
+	(("sea" OR "ocean*") AND ("level" OR "warming" OR "acidification" OR "co2" OR "co 2" OR "heat*"))
+	OR "water mass transformation" OR "water mass formation"
+	OR "glacier*" OR "ice cap*"  OR "ice-field*" OR "ice sheet*" OR "ice shelves" OR "ice shelf" OR "sea-ice" OR "sea ice" OR "pack ice" OR "polynya*"  
+	OR   "ice variab*" OR   "ice cover*" OR   "ice retreat*"  OR   "ice retract*"    OR   "ice exten*"  OR   "ice thickness" OR   " nilas "   OR   "ice chart*"  OR   "ice-berg*" OR   "ice berg*" OR   "iceberg*" OR   "slush"   OR   "pancake ice" OR   "pack ice"   OR   "ice ridge*"   OR   "grease ice"   OR      "marginal ice zone*"   OR   "multi-year ice" OR   "first-year ice"  
+	OR  "antarctic*" 
+	OR "noresm" OR   " echam5"   OR   "cmip" OR   "GCM" OR   "AOGSM"   OR   "UKMO-hadcm" OR   "UKMO-hadgem" OR  "FGOALS" OR   "GFDL-CM" OR   "GISS-EH" OR   "GISS-ER"  OR   "INM-cm" OR   "IPSL-CM" OR   "MIROC3" OR   "GISS-EH"  OR   "BCC-CM"  OR   "BCCR-BCM"     OR   "ccsm3" OR   "cgcm3" OR   "cnrm-cm3" OR   "csiro"  
+	OR ("arctic" AND "future")
+	OR (("decadal" OR "seasonal" ) NEAR/3 ("prediction*" OR "variablilit*" OR "change*" OR "oscillation" OR "mode"))
+)						
+OR			
+TS=(	
+	("climat*'"		
+	AND  
+		("disaster*" OR "collaps*" OR "catastroph*" OR "extinct*" OR "respon*" OR "crisis" OR "crises" OR "hazard*" 
+		OR "impact*" OR "vulnerability" OR "footprint*"
+		)			
 	)		
-	OR   		   ("climatology")  
+)			
+OR			
+TS=(	
+	(		
+		(("climat* NEAR/3 change* ") 
+		OR ("climat*" NEAR/3 "warm*") 
+		OR "global warming" OR "global change"
+		)  
+		AND
+			( "habitat*" OR "extinct*" OR "speci*" OR "population*" OR "ecosystem*"  
+			OR "emission*" OR "consequence*" OR "impact*" OR "footprint*" OR "assess" OR "risk*" 
+			OR "quota*" OR "war" OR "wars" OR "milit* conflict*"   
+			OR "affect*" OR "effect*" OR "influenc*" OR "scenario*"   
+			OR "infrastructure*"   OR   "ship*"   
+			OR "forest*"   OR   "resourc*"
+			OR "health" OR "disease*" OR "sick*" OR "death*" OR "hunger" OR "hungry"   
+			OR "migration*"     
+			OR "societ*" OR "communit*"  OR "people" OR "human" OR "inuit"
+			OR "agricultur*" OR "farmland*" OR "agricultur*" OR "land us*" OR "land area cover*" OR "soil*" OR "food" 
+			OR "finance*" OR "economy*" ) 
+			
+	)		
+)			
+OR			
+TS=(
+	("anthropo*" AND ("heating" OR "forcing*" OR "chang*" OR "driv*" OR "feedback*" OR "climat*"))  
+	OR "human footprint*" OR "carbon footprint*"	
+	OR (("ozone" OR "carbon" OR "greenhouse" OR "co 2" OR "co2") AND ("scenario*" OR "feedback*" OR "budget"))
+	OR (("permafrost") AND ("melt*" OR "methane" OR "feedback"))	
+	OR "climatology" 
 )			
 			
 ```
