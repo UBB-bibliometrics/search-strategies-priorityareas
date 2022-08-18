@@ -122,8 +122,7 @@ TS=(
 		OR	"lifestyle$"											
 														
 		OR	"politic*"											
-		OR	"law$"											
-		OR	"regulation$"											
+		OR	"law$" OR "regulation$"										
 		OR	"manag*"											
 		OR	"governance"											
 		OR	"polic*"											
@@ -157,7 +156,7 @@ TS=(
 														
 OR														
 TS=(
-	(	
+	(
 		("extreme*" near/3 ("weather"OR "precipitation"OR "temperature*" OR "rain*"))											AND ("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "plan"OR "planning" OR "plans"OR "governance" OR "polic*")	
 	)																		
 	OR	
