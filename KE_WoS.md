@@ -5,7 +5,9 @@ See Tableau/Cristin file for main documentation. The string contains of four blo
 ## ANY
 ```Ceylon =
 TS=(
-("climat* NEAR/3 change* ") OR ("climat*"  NEAR/3  "warm*") OR "global warming" )  
+("climat* NEAR/3 change* ") 
+OR ("climat*"  NEAR/3  "warm*") 
+OR "global warming" 
 )			
 ```
 
@@ -43,7 +45,8 @@ TS=(
 		OR "wetland*" OR "arid*" OR "desert*" OR "dryland*" OR "groundwater*"
 	  	OR "tundra" OR "taiga" OR "cryospher*"  OR "tree line*" OR "aerosol*" OR "vegetation*" OR "swamp*" OR "permafrost"   
 		OR "geolog*" OR "geophys*" OR "dinoflagel*" OR "paleontolo*" OR "mineral*" OR "sediment*"
-	  	OR "arctic*"  OR   "polar"  OR   "north pole" OR   "northpole" OR   "high nort " OR   "high-north" OR "svalbard" OR   "spitsbergen" OR   "bjornoya" OR   "jan mayen"   OR   "greenland" OR   "north alaska"    OR   "north quebec" OR   "axel heiberg"   OR   "north slope"  OR   "prudhoe" OR   "barrow"   OR   "zemlya"  OR   "yermak"    OR   "franz josef"    OR   "northwest territories"   OR   "high latitude" OR   "high-latitude"   OR   " south pole "  OR   "north atlantic" OR   "mid-atlantic"   OR   "north-east atlantic" OR   "atlantic " OR   "barents sea"    OR   "greenland sea" OR   "north sea"    OR   "norwegian sea"  OR   "nordic seas" OR   "skager"     OR   "chukchi sea" OR   "east Siberian sea" OR   "laptev sea"    OR   "kara sea"     OR   "labroador sea" OR   "Greenland sea" OR   "Beaufort sea"  OR   "Sea of Okhotsk" OR   "weddel sea"  OR   "ross sea"    OR   "hudson bay"  OR   "drake passage" OR   "bering strait" OR   "davis strait"     OR   "nares strait"   OR   "jan mayen"     OR   "scotland ridge" OR   "greenland basin"  OR   "gulf stream" 
+	  	OR "arctic*"  OR   "polar"  OR   "north pole" OR   "northpole" OR   "high nort " OR   "high-north" OR "svalbard" OR   "spitsbergen" OR   "bjornoya"
+		OR   "jan mayen"   OR   "greenland" OR   "north alaska"    OR   "north quebec" OR   "axel heiberg"   OR   "north slope"  OR   "prudhoe" OR   "barrow"   OR   "zemlya"  OR   "yermak"    OR   "franz josef"    OR   "northwest territories"   OR   "high latitude" OR   "high-latitude"   OR   "south pole"  OR   "north atlantic" OR   "mid-atlantic"   OR   "north-east atlantic" OR   "atlantic " OR   "barents sea"    OR   "greenland sea" OR   "north sea"    OR   "norwegian sea"  OR   "nordic seas" OR   "skagerrak"  OR   "chukchi sea" OR   "east Siberian sea" OR   "laptev sea"    OR   "kara sea"     OR   "labroador sea" OR   "Greenland sea" OR   "Beaufort sea"  OR   "Sea of Okhotsk" OR   "weddel sea"  OR   "ross sea"    OR   "hudson bay"  OR   "drake passage" OR   "bering strait" OR   "davis strait"     OR   "nares strait"   OR   "jan mayen"     OR   "scotland ridge" OR   "greenland basin"  OR   "gulf stream" 
 		)	
 	)	
 )			
@@ -100,28 +103,25 @@ TS=(
 			
 ```
 
-## Tilpassning 
+## Tilpasning 
 
 ```Ceylon =
 TS=(														
-	(("climat*" NEAR/3 "change* ") OR ("climat*" NEAR/3 "warm*" ) OR "global warming" OR "global change")	
+	(("climat*" NEAR/3 "change* ") 
+	OR ("climat*" NEAR/3 "warm*" ) 
+	OR "global warming" OR "global change"
+	)	
 	NEAR/5	(	"action*"											
-		OR	"plan*"											
+		OR	"plan" OR "planning OR "plans"											
 		OR	"resilie*"											
-		OR	"adapt*"											
-		OR	"mitiga*"											
-		OR	"preparedness"											
-		OR	"adjust*"											
+		OR	"adapt*" OR "adjust*" OR "mitiga*"											
+		OR	"preparedness" OR "anticipat*"														
 		OR	"transition$"											
-		OR	"prevent*"											
-		OR	"minimis*" OR	minimiz*										
-		OR	"prevent*"											
-		OR	"risk*"											
-		OR	"challeng*"											
+		OR	"prevent*" OR "minimis*" OR minimiz* OR "tackl*" OR "protect*"					
+		OR	"risk*"	OR "challeng*"							
 		OR	"lifestyle$"											
-		OR	"anticipat*"											
 														
-		OR	"politic$"											
+		OR	"politic*"											
 		OR	"law$"											
 		OR	"regulation$"											
 		OR	"manag*"											
@@ -130,104 +130,80 @@ TS=(
 		OR	"penalt*"											
 		OR	"leadership$"											
 		OR	"negotiation$"											
-		OR	"solution$"											
-		OR	"information$"											
+		OR	"solution$"
+											
 		OR	"justice"											
-														
 		OR	"ethic$"											
 		OR	"service$"											
 		OR	"energy"											
-		OR	"litigation"											
-		OR	perception$											
+		OR	"litigation"										
 		OR	"concept$"											
-		OR	"sustainab*"											
-		OR	"engagement"											
-														
+		OR	"sustainab*"
+		
+		OR 	"information$" OR "awareness" OR "consciousness"
+		OR	"engagement" OR "accept*"
+		OR	"perception$" OR "attitude$" OR "judegement$" OR "feeling$" 
 		OR	"initiat*"											
-		OR	"debate$"											
-		OR	"stories"											
-		OR	"story"											
-		OR	"discours*"											
-		OR	"discurs*"											
-		OR	"narrative$"											
-		OR	 ("action*" OR "anticipat*" OR "prevent*" OR "minimi*" OR "planning" OR "plan" OR "plans" OR "resilie*" OR "adapt*" OR "mitiga*" OR "politic*" OR "adjust*" OR "transition*" OR "manag*" OR "governance" OR "tackl*" OR "protect*" OR "polic*" OR "penalty" OR "leadership" OR "negoti*" OR "solution*" OR "information*" OR "justice" OR "regulat*" OR "ethic*" OR "service*" OR "energy" OR "litigation*" OR "perception*" OR "concept*" OR "sustainab*" OR "engag*" OR "initiat*" OR "geoengineer*" OR "energy law" OR   "consum*" OR   "percept*" OR   "angst" OR " attitude*" OR "awareness*" OR "concept$" OR "consciousness" OR "feeling$ " OR "image$" OR "impression$" OR "judgment$" ) 											
-		OR	"accept*"											
+		OR	"stories" OR "story" OR	"narrative$"							
+		OR	"discours*" OR "discurs*" OR "debate$"												
 		OR	"moral"											
-		OR	"obligation$"											
-		OR	"fair share"											
-		OR	"denial$"											
-		OR	"skeptic$"											
-		OR	"harming"											
-														
-		OR	"worries"											
-		OR	"philosoph*"											
-		OR	"belief"											
-		OR	"believes"	)										
+		OR	"obligation$" OR "fair share"									
+		OR	"denial$" OR "skeptic$"											
+		OR	"harming"													
+		OR	"worries" OR "angst" OR "anxiety"											
+		OR	"philosoph*" OR "belief" OR "believes"											
+		)										
 )														
 														
 OR														
-TS=(		(	("extreme*" near/3 ("weather"OR "precipitation"OR "temperature*" OR "rain*"))											
-		AND	("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "plan"OR "planning" OR "plans"OR "governance" OR "polic*")	)										
-														
-	OR	(	("heat wave*" OR "heatwave*" OR "tipping point*" OR "sea level*" OR "bushfire" OR "drought*" OR "flood*" )											
-		NEAR/10	("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "planning" OR "plan" OR "plans"OR "governance" OR "polic*")	)										
-														
-														
-OR	(	("ipcc" OR "kyoto protocol") 												
-	OR ("climate" OR "paris") NEAR/3 ("agreement" OR "treaty")													
-)														
-														
-OR		(	(("lower*" OR "reduc*" OR "minim*" OR "reduc*"OR "zero")											
-			NEAR/3	("carbon" OR "greenhouse gas*" OR "co2" OR "co 2"))										
-			AND "emission$"											
-			)											
-		OR		("carbon cut*")										
-		OR		"zero carbon"										
-														
-OR		("climate target*")												
-OR		("climate law*" OR "climate action*"OR "SDG13" OR "SDG-13"OR "climate fear"OR "climate justice" OR ("law" near/3"environment*"))												
-														
-OR	(	("co2" OR "co 2" OR "greenhouse gas*" OR "ghg* " OR "methane" OR "n2o" OR "nitrous oxide" OR "ozone")												
-	NEAR/10	("sink*" OR"storage" OR "storing"OR "trading" OR "doubling" OR "reduc*" OR "trap*")												
+TS=(
+	(	
+		("extreme*" near/3 ("weather"OR "precipitation"OR "temperature*" OR "rain*"))											AND ("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "plan"OR "planning" OR "plans"OR "governance" OR "polic*")	
+	)																		
+	OR	
+	(
+		("heat wave*" OR "heatwave*" OR "tipping point*" OR "sea level*" OR "bushfire" OR "drought*" OR "flood*")					
+		NEAR/10	("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "planning" OR "plan" OR "plans"OR "governance" OR "polic*")
+	)										
+	OR	("ipcc" OR "kyoto protocol") 
+	OR	(("climate" OR "paris") NEAR/3 ("agreement" OR "treaty"))												OR	
+	(
+		(
+			("lower*" OR "reduc*" OR "minim*" OR "reduc*"OR "zero")											
+			NEAR/3	("carbon" OR "greenhouse gas*" OR "co2" OR "co 2")
+		)										
+		AND "emission$"											
+	)											
+	OR 	"carbon cut*" OR "zero carbon"										
+	OR	"climate target*"
+	OR	"climate law*" OR "climate action*"OR "SDG13" OR "SDG-13"OR "climate fear" OR "climate justice" 
+	OR 	("law" near/3 "environment*")												
+	OR	
+	(	
+		("co2" OR "co 2" OR "greenhouse gas*" OR "ghg* " OR "methane" OR "n2o" OR "nitrous oxide" OR "ozone")								NEAR/10	("sink*" OR"storage" OR "storing"OR "trading" OR "doubling" OR "reduc*" OR "trap*")												
+	)	
+	OR	"carbon capture" OR "carbon sequestrat*"											
+	OR		
+	(	
+		("lower" OR "reduc*" OR "minim*")												
+	 	NEAR/5	("human footprint*" OR "carbon footprint*")												
 	)													
-OR		("carbon cut*")												
-OR		("carbon capture"OR"carbon sequestrat*")												
-OR	(	("lower"OR"reduc*"OR"minim*")												
-	 NEAR/5	("human footprint*" OR "carbon footprint*")												
-	)													
-														
-														
-OR 	("climate"													
-	NEAR/3 													
-	(	"service*"												
-	OR	"negotiation*"												
-	OR	"scepsis*"												
-	OR	"consens*"												
-	OR	"policy"												
-	OR	"policies"												
-	OR	"ethic$"												
-	))													
-	OR	("green economy" OR "circular econom*")												
-	OR 	"green cit*"  OR "climate city" OR "climate cities" OR "green capital*" OR "urban transformation*" OR "smart city" OR "smart cities" 												
-		OR "sustainable transformation"												
+	OR	("climate" NEAR/3 ("service*" OR "negotiation*" OR "skeptic*" OR "consens*" OR "policy" OR "policies" OR "ethic$"))
+	OR	"green economy" OR "circular econom*"											
+	OR 	"green cit*"  OR "climate city" OR "climate cities" OR "green capital*" OR "urban transformation*" OR "smart city" OR "smart cities" 
+	OR 	"sustainable transformation"												
 )														
 														
 OR														
-TS= (	(	("subsidies" OR "subsidy")												
-	NEAR/3	(	"oil"											
-		OR	"coal"											
-		OR	"fossil fuel$"											
-		)												
+TS=(	
+	(	
+		("subsidies" OR "subsidy")												
+		NEAR/3	("oil" OR "coal" OR "fossil fuel$")
 	)													
-	AND 	(	" reduc"											
-		OR	"phasing out"											
-		OR	"phase out"											
-		OR	"remove"											
-		OR	"reduce"											
-		OR	" end "											
-		)												
+	AND (" reduc" OR "phasing out" OR "phase out" OR "remove" OR "reduce" OR "end")											
 )														
 ```
+
 ## Energy
 
 ```Ceylon =
