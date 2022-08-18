@@ -204,29 +204,28 @@ TS=(
 )
 
 OR
-(TS= ("energy transition") NOT SU="PSYCHOLOGY")
-
-OR
-(
-	TS=(
-		("energy management" OR "energy payback time" OR "energy cost$"	
-		OR "energy justice" OR "climate and energy solution" OR "energy poverty" OR "energy future"
-		)
-		OR (("carbon" OR "co2" OR "greenhouse gas*" ) NEAR/3 ("cost" OR "trade" OR "trading" OR "pricing" OR "price$"))
-	)
-NOT (WC=("REHABILITATION" OR "CLINICAL NEUROLOGY" OR "HOSPITALITY LEISURE SPORT TOURISM "NOT "MATHEMATICS" NOT "THERMODYNAMICS"))
+(TS= ("energy transition") 
+NOT SU="PSYCHOLOGY"
 )
 
 OR
-TS=(
+(TS=	("energy management" OR "energy payback time" OR "energy cost$"	
+	OR "energy justice" OR "climate and energy solution" OR "energy poverty" OR "energy future"
+	OR (("carbon" OR "co2" OR "greenhouse gas*" ) NEAR/3 ("cost" OR "trade" OR "trading" OR "pricing" OR "price$"))
+	)
+NOT WC=("REHABILITATION" OR "CLINICAL NEUROLOGY" OR "HOSPITALITY LEISURE SPORT TOURISM "NOT "MATHEMATICS" NOT "THERMODYNAMICS")
+)
+
+OR
+TS=(	"new renewables"
+	OR
 	(
 		( 
 			("renewable" OR "sustainable" OR "green" OR "alternative" OR "clean")
 			NEAR/3 ("power" OR "energy" OR "energies" OR "fuel*" OR "electricity")
 		) 
 	NOT "metabolism"
-	)														
-OR "new renewables"														
+	)							
 )
 
 OR
@@ -240,79 +239,72 @@ NOT ("solar wind" OR "aquacultur*")
 )
 
 OR
-(TS= (("alga$" OR "alge$") near/3  (" energy" OR "fuel*" )) NOT SU=("Biology" OR "Geology" OR "geoscience" OR "Oceanography"))
+(TS= (("alga$" OR "alge$") NEAR/3 ("energy" OR "fuel*")) 
+NOT SU=("Biology" OR "Geology" OR "geoscience" OR "Oceanography")
+)
 
 OR
-(
-TS=("tidal turbine*" OR "stream turbine*" OR "current turbine*" OR "tidal power" OR "tidal electricity" OR "tidal energy" OR "hydropower" OR "hydroelectric power")
+(TS=("tidal turbine*" OR "stream turbine*" OR "current turbine*" OR "tidal power" OR "tidal electricity" OR "tidal energy" OR "hydropower" OR "hydroelectric power")
 NOT WC=("Marine & Freshwater Biology" OR "ECOLOGY" OR "Fisheries")
 )
 
-OR
-TS =( 
-	("geother*" NEAR/3 ("energy" OR "reservoir*")) 
-	OR "geothermal heat pump*"
-)
+OR TS=("geothermal heat pump*" OR ("geother*" NEAR/3 ("energy" OR "reservoir*")))
 
 OR
-(
-TS=("solar power" OR "solar plant" OR "solar panel" OR "PV" OR "solar-panel" OR "solar arra*" OR "solar cell*" OR "photovoltaic*" OR ("solar" AND "kW") OR "solar electricity" OR "solar collector$"														
-)
+(TS=("solar power" OR "solar plant" OR "solar panel" OR "PV" OR "solar-panel" OR "solar arra*" OR "solar cell*" OR "photovoltaic*" OR ("solar" AND "kW") OR "solar electricity" OR "solar collector$")
 NOT WC=( "ASTRONOMY ASTROPHYSICS" OR "MARINE FRESHWATER BIOLOGY" OR "BIOLOGY" OR "METALLURGY METALLURGICAL ENGINEERING")
 )
 
-OR 
-TS=("bio fuel*" OR "bio energy" OR "bio diesel"  OR "bio gas" OR "bio ethanol" OR "biofuel*" OR "bioenergy" OR "biodiesel"  OR "biogas" OR "bioethanol")	
+OR TS=("bio fuel*" OR "bio energy" OR "bio diesel"  OR "bio gas" OR "bio ethanol" OR "biofuel*" OR "bioenergy" OR "biodiesel"  OR "biogas" OR "bioethanol")	
 
-OR
-TS = ("green petroleum"	OR "climate technolog*")
+OR TS = ("green petroleum" OR "climate technolog*")
 
 OR
 TS=(
-	("lignin" 
-	OR (("wood" OR "birch") NEAR/3 ("pellet*" OR "biomass"))
+	("lignin" OR (("wood" OR "birch") NEAR/3 ("pellet*" OR "biomass"))
 	)
-	AND ("power" OR "energy" OR "energies" OR  "fuel*")
+	AND ("power" OR "energy" OR "energies" OR "fuel*")
 )
 
 OR
-(
-TS=("hydrogen" NEAR/3 ("power fuel*" OR "power cell*" OR "energy" OR "efficiency"))
+(TS=("hydrogen" NEAR/3 ("power fuel*" OR "power cell*" OR "energy" OR "efficiency"))
 NOT SO=("PETROLEUM SCIENCE AND TECHNOLOGY" OR "Petroleum Science" OR "PETROLEUM GEOSCIENCE" OR "Petroleum Exploration and Development" OR "PETROLEUM CHEMISTRY" OR "MARINE AND PETROLEUM GEOLOGY" OR "JOURNAL OF THE JAPAN" AND "PETROLEUM INSTITUTE" OR "JOURNAL OF PETROLEUM SCIENCE AND ENGINEERING" OR "JOURNAL OF PETROLEUM GEOLOGY" OR "China Petroleum Processing & Petrochemical Technology")
 )
 
 OR
-SO= 	(	WIND ENERGY												
-	OR	Sustainable Energy Technologies and Assessments												
-	OR	Sustainable Energy Grids & Networks												
-	OR	Sustainable Energy & Fuels												
-	OR	SOLAR ENERGY MATERIALS AND SOLAR CELLS												
-	OR	SOLAR ENERGY												
-	OR	RENEWABLE ENERGY												
-	OR	RENEWABLE & SUSTAINABLE ENERGY REVIEWS												
-	OR	PROGRESS IN PHOTOVOLTAICS												
-	OR	JOURNAL OF SOLAR ENERGY ENGINEERING-TRANSACTIONS OF THE ASME												
-	OR	Journal of Renewable and Sustainable Energy												
-	OR	JOURNAL OF CLEANER PRODUCTION												
-	OR	Journal of Biobased Materials and Bioenergy												
-	OR	International Journal of Precision Engineering and Manufacturing-Green Technology												
-	OR	INTERNATIONAL JOURNAL OF HYDROGEN ENERGY												
-	OR	International Journal of Greenhouse Gas Control												
-	OR	International Journal of Green Energy												
-	OR	IEEE Transactions on Sustainable Energy												
-	OR	IEEE Journal of Photovoltaics												
-	OR	Green Energy & Environment												
-	OR	Global Change Biology Bioenergy												
-	OR	GEOTHERMICS												
-	OR	Geothermal Energy												
-	OR	Environmental Progress & Sustainable Energy												
-	OR	Biotechnology for Biofuels												
-	OR	BioResources												
-	OR	BIORESOURCE TECHNOLOGY												
-	OR	BIOMASS & BIOENERGY												
-	OR	Biofuels-UK												
-	OR	Biofuels Bioproducts & Biorefining-Biofpr												
-	OR	BioEnergy Research												
+SO= 	(	WIND ENERGY
+	OR	Sustainable Energy Technologies and Assessments	
+	OR	Sustainable Energy Grids & Networks
+	OR	Sustainable Energy & Fuels
+	OR	SOLAR ENERGY MATERIALS AND SOLAR CELLS
+	OR	SOLAR ENERGY
+	OR	RENEWABLE ENERGY
+	OR	RENEWABLE & SUSTAINABLE ENERGY REVIEWS	
+	OR	PROGRESS IN PHOTOVOLTAICS
+	OR	JOURNAL OF SOLAR ENERGY ENGINEERING-TRANSACTIONS OF THE ASME
+	
+	OR	Journal of Renewable and Sustainable Energy
+	OR	JOURNAL OF CLEANER PRODUCTION
+	OR	Journal of Biobased Materials and Bioenergy
+	OR	International Journal of Precision Engineering and Manufacturing-Green Technology
+	
+	OR	INTERNATIONAL JOURNAL OF HYDROGEN ENERGY
+	OR	International Journal of Greenhouse Gas Control	
+	OR	International Journal of Green Energy
+	OR	IEEE Transactions on Sustainable Energy
+	OR	IEEE Journal of Photovoltaics
+	OR	Green Energy & Environment
+	OR	Global Change Biology Bioenergy	
+	OR	GEOTHERMICS
+	OR	Geothermal Energy
+	OR	Environmental Progress & Sustainable Energy
+	OR	Biotechnology for Biofuels
+	OR	BioResources
+	OR	BIORESOURCE TECHNOLOGY
+	OR	BIOMASS & BIOENERGY
+	OR	Biofuels-UK
+	OR	Biofuels Bioproducts & Biorefining-Biofpr
+	OR	BioEnergy Research
 	OR	Algal Research-Biomass Biofuels and Bioproducts												
 	)													
 ```
