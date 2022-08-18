@@ -119,8 +119,8 @@ TS=(
 		OR	"prevent*" OR "minimis*" OR minimiz* OR "tackl*" OR "protect*"
 		OR	"risk*"	OR "challeng*"
 		
-		OR	"lifestyle$" OR "service$"
-		OR 	"sustainab*"
+		OR	"lifestyle$" OR "service$" OR "consum*"
+		OR 	"sustainab*" 
 		OR	"energy"
 		OR	"concept$"
 														
@@ -135,7 +135,7 @@ TS=(
 		
 		OR 	"information$" OR "awareness" OR "consciousness"
 		OR	"engagement" OR "initiat*" OR "accept*"
-		OR	"perception$" OR "attitude$" OR "judegement$" OR "feeling$" 
+		OR	"perception$" OR "attitude$" OR "judegement$" OR "feeling$" OR "impressions" OR "image$"
 		OR	"stories" OR "story" OR	"narrative$"
 		OR	"discours*" OR "discurs*" OR "debate$"
 		OR	"moral"	OR "ethic$"
