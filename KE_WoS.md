@@ -5,8 +5,7 @@ See Tableau/Cristin file for main documentation. The string contains of four blo
 ## ANY
 ```Ceylon =
 TS=(
-("climat* NEAR/3 change* ")
-OR ("climat*"  NEAR/3  "warm*") 
+("climat*" NEAR/3 ("chang*" OR "warm*"))
 OR "global warming" 
 )			
 ```
@@ -23,9 +22,9 @@ TS=(
 		OR ("oscillation*" AND ("atmosph*" OR "atlantic"  OR "ocean*" OR "southern" OR "pacific" OR "arctic")) 
 		OR "el nino" OR  "la nina" OR   "ENSO"  or "polar cell" OR "Hedley cell" OR "overturning"
 		OR "palaeo*" OR "paleo*" OR "past" OR "reconstruct*" OR " ice-core" OR "icecore" OR "quaternary" OR "pleistocene" OR   "holocene" OR   "pliocene"
-		OR "atmosph*" OR "cloud*" OR   "rain*" OR   "precipitation*" OR   "snow*" OR   "storm*" OR   "weather"
-		OR "monsoon*" OR "cyclon*" OR "typho*" OR  "temperature*" OR "meteorolog*" OR "heat wave*" OR "heatwave*"
-		OR "radiat*" OR "albedo" OR "aerosol*"  OR "black carbon"
+		OR "atmosph*" OR "cloud*" OR   "rain*" OR "precipitation*" OR "snow*" OR "storm*" OR "weather"
+		OR "monsoon*" OR "cyclon*" OR "typho*" OR "temperature*" OR "meteorolog*" OR "heat wave*" OR "heatwave*"
+		OR "radiat*" OR "albedo" OR "aerosol*" OR "black carbon"
 		OR "1.5" OR "2 deg*" OR "2 C" 
 		)  		
 	) 		
@@ -36,14 +35,14 @@ TS=(
 	  ("climate" OR "warming" OR "global chang*" )  		
 	  AND  
 	  ("coral*" OR "reef*" OR "*water*" OR "ocean*" OR "sea" OR "seas" OR "Atlantic" OR "Pacific"
-		OR "*algae"  OR "*algea*" OR "plankton*" OR "fish" OR "fishes" OR "shellfish*" OR "coast*" OR "estuary" OR "lake*" OR "marine" OR "SST" 
-	  OR "pollen" OR "flora"  OR "fauna" OR "plant" OR "plants" OR "biolog*" OR "biodiver*" OR "biota" OR "canopy"
+		OR "*algae" OR "*algea*" OR "kelp$" OR "plankton*" OR "fish" OR "fishes" OR "shellfish*" OR "coast*" OR "estuary" OR "lake*" OR "marine" OR "SST" 
+		OR "pollen" OR "flora"  OR "fauna" OR "plant" OR "plants" OR "biolog*" OR "biodiver*" OR "biota" OR "canopy"
 		OR "ecology" OR "bushfire*" OR "bush fire*" OR "nitrogen" OR "pollution*" OR "ecosystem*"
 		OR "flood*" OR "drought*" OR "land slide*" OR "avalanch*" OR "erosion*" OR "erodin*"
 		OR "wetland*" OR "arid*" OR "desert*" OR "dryland*" OR "groundwater*"
-	  OR "tundra" OR "taiga" OR "cryospher*"  OR "tree line*" OR "aerosol*" OR "vegetation*" OR "swamp*" OR "permafrost"   
+		OR "tundra" OR "taiga" OR "cryospher*"  OR "tree line*" OR "aerosol*" OR "vegetation*" OR "swamp*" OR "permafrost"
 		OR "geolog*" OR "geophys*" OR "dinoflagel*" OR "paleontolo*" OR "mineral*" OR "sediment*"
-	  OR "arctic*" OR "polar" OR "north pole" OR "northpole" OR "high north" OR "high-north" OR "svalbard" OR "spitsbergen" OR "bjornoya"
+		OR "arctic*" OR "polar" OR "north pole" OR "northpole" OR "high north" OR "high-north" OR "svalbard" OR "spitsbergen" OR "bjornoya"
 		OR "jan mayen" OR "greenland" OR "north alaska" OR "north quebec" OR "axel heiberg" OR "north slope" OR "prudhoe" OR "barrow" OR "zemlya" OR "yermak" OR "franz josef" OR "northwest territories" OR "high latitude" OR "high-latitude" OR "south pole" OR "north atlantic" OR "mid-atlantic" OR "north-east atlantic" OR "atlantic" OR "barents sea" OR "greenland sea" OR "north sea" OR "norwegian sea"  OR "nordic seas" OR "skagerrak" OR "chukchi sea" OR "east Siberian sea" OR "laptev sea" OR "kara sea" OR "labroador sea" OR "Greenland sea" OR "Beaufort sea" OR "Sea of Okhotsk" OR "weddel sea" OR "ross sea" OR "hudson bay" OR "drake passage" OR "bering strait" OR "davis strait" OR "nares strait" OR "jan mayen" OR "scotland ridge" OR "greenland basin" OR "gulf stream" 
 		)
 	)
@@ -71,15 +70,14 @@ TS=(
 OR			
 TS=(
 	(
-		(("climat* NEAR/3 change* ")
-		OR ("climat*" NEAR/3 "warm*") 
-		OR "global warming" OR "global change"
+		(("climat*" NEAR/3 ("change*" OR "warm*"))
+		OR "global warming"
 		)  
 		AND
 			( "habitat*" OR "extinct*" OR "speci*" OR "population*" OR "ecosystem*"  
 			OR "emission*" OR "consequence*" OR "impact*" OR "footprint*" OR "assess" OR "risk*" OR "quota*"
 			OR "war" OR "wars" OR "milit* conflict*"  
-			OR "affect*" OR "effect*" OR "influenc*" OR "scenario*"  
+			OR "affect*" OR "effect*" OR "influenc*" OR "scenario*" OR "impact$"
 			OR "infrastructure*" OR "ship*"  
 			OR "forest*" OR "resourc*"
 			OR "health" OR "disease*" OR "sick*" OR "death*" OR "hunger" OR "hungry"  
