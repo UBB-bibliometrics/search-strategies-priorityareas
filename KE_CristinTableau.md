@@ -898,13 +898,7 @@ OR CONTAINS(LOWER([result_title]),	"bioethanol")
 OR
 (
 	(CONTAINS(LOWER([result_title]),	"lignin"	)
-		OR
-			(CONTAINS(LOWER([result_title]),	"wood"	)
-			AND
-			(CONTAINS(LOWER([result_title]),	"biomass"	)
-			OR CONTAINS(LOWER([result_title]),	"pellets"	))		
-			)
-	)		
+	OR CONTAINS(LOWER([result_title]),	"wood"	))
 	AND		
 	(CONTAINS(LOWER([result_title]),	"fuel"	)
 	OR CONTAINS(LOWER([result_title]),	"power"	)
