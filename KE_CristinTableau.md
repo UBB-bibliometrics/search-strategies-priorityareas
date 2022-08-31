@@ -56,7 +56,7 @@ Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer
 - Klimaendringer og helse
 
 
-## any UNDERTOPIC KE
+## Any undertopic (generic terms)
 
 ```Ceylon =
 IF			
@@ -74,7 +74,7 @@ END
 
 ## Klima(systemer og effekter)
 
-#### Klima(systemer og effekter) - in title
+#### Title search
 
 ```Ceylon =
 IF
@@ -482,7 +482,8 @@ END
 
 ## Klimatilpassning
 
-#### Klimatilpassning  - in title
+#### Title search
+
 ```Ceylon =
 IF		
 (		
@@ -671,7 +672,8 @@ THEN "TILPASNING"
 END
 ```
 
-#### Tilpasning (journal)
+#### Journal search
+
 ```Ceylon =
 IF 		
 CONTAINS(LOWER([journal]),	"climate and development"	)
@@ -707,6 +709,8 @@ ELSE 'no'
 END
 ```
 ## Klimatilpassning og Energiomstilling - i praksis ikke mulig å avgrense i hvilken de skal gå defor valgt å ta de inn i begge - litt støy men realistisk
+
+#### Title search
 
 ```Ceylon=
 IF
@@ -817,6 +821,8 @@ END
 
 
 ## Energiomstilling
+
+#### Title search
 
 ```
 IF 	
@@ -1040,7 +1046,7 @@ ELSE 'no'
 END
 ```
 
-## Energi (journal)
+#### Journal search
 
 ```Ceylon =
 IF CONTAINS(LOWER([journal]),	"renewable energy"	)
