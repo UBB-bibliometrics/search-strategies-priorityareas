@@ -1,15 +1,68 @@
 
 # KE
 
-String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live
+String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live. 
+
+## Description provided in reports
+
+Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Gunn Mangerud og direktørene Kristin Guldbransen Frøysa, Tore Furevik)
+
+Klimasystemer og Effekter
+
+- Klimaendringer i atmosfære og hav (ikke all meteorologi og oseanografi)
+- Klima i polare regioner
+- Havis og isbreer /kryosfære
+- Utvikling av klimamodeller
+- cloud-atmosphere feedback 
+- Klimaekstremer (nedbør, temperatur mm)
+- Havforsuring
+- Klimaendringer og påvirkning på
+	- dyr, dyremangfold og habitat
+	- menneskers habitat, landbruk og matforsyning
+- Klimagasser/greenhouse gasses
+- Endringer i permafrost
+- (Paleoklima) så lenge forskningen er relatert til dagens klimaendringer
+- Ikke miljøvern
+
+Klimatilpasning
+- Tilpasning/politikk/rammeverk/tiltak mot klimaendringene
+- tilpasse seg klimarelaterte farer og naturkatastrofer /klimaekstreme
+- C02 lagring (CSS/CCUS) (overlapp med energiomstilling)
+- Klimakvoteloven/utslippskvoter
+- Klimaavtaler
+- Klimaholdinger livstilendringer, rammeverk, kultur, moral, etikk, debatt
+- Klimarettferdighet, lover, regler og etikk
+- Grønt skifte
+- Sirkulær økonomi
+- Green cities 
+- Green transport
+- lave klimautslipp 
+
+Energiomstilling
+- Energiomstilling, regulering av energisystemer (politisk, økonomisk, juridisk)
+- Fornybare energikilder generelt
+- Vindenergi (havvind og landvind)
+- Energi, kraft, brensel, drivstoff fra algae, lignin, ammoniakk, tidevann og hydrogen
+- Geotermisk energi
+- Fotovoltaik (PV), solenergi
+- Bioenergi
+- CO2 lagring CCS/CCUS (overlapp med klimatilpassing)
+- Green transport 
+- Green processes (industry)
+
+Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer, for eksempel:
+- «Klimaflykninger», klimaendringer og migrasjon
+- Klimaendringer og jordbruk/landbruk, klimaendringer i low and middle income countries
+- Klimaendringer og helse
+
 
 ## any UNDERTOPIC KE
 
 ```Ceylon =
 IF			
 (
-	(CONTAINS(LOWER([result_title]),	"climat")	AND CONTAINS(LOWER([result_title]),	"chang"))			
-	OR (CONTAINS(LOWER([result_title]),	"warm")	AND CONTAINS(LOWER([result_title]),	"global"))
+	(CONTAINS(LOWER([result_title]),"climat")	AND CONTAINS(LOWER([result_title]),	"chang"))			
+	OR (CONTAINS(LOWER([result_title]),"warm")	AND CONTAINS(LOWER([result_title]),	"global"))
 )			
 OR CONTAINS(LOWER([journal]),	"nature climate change")
 OR CONTAINS(LOWER([journal]),	"weather, climate and society")
@@ -764,7 +817,7 @@ END
 
 
 ## Energiomstilling
-#### Energiomstilling - title
+
 ```
 IF 	
 CONTAINS(LOWER([result_title]),	"klimaomstilling"	)
