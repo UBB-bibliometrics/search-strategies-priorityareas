@@ -68,7 +68,7 @@ OR CONTAINS(LOWER([journal]),	"nature climate change")
 OR CONTAINS(LOWER([journal]),	"weather, climate and society")
 OR CONTAINS(LOWER([journal]),	"inter disciplinary reviews: climate change")
 THEN "KE"
-ELSE "no"
+ELSE "non"
 END
 ```
 
