@@ -476,7 +476,7 @@ OR CONTAINS(LOWER([result_title]),	"klimaeffekt"	)
 OR CONTAINS(LOWER([result_title]),	"klimaendr"	)
 OR CONTAINS(LOWER([result_title]),	"klimavirkn"	)
 THEN "SYSEFF"		
-ELSE 'no'
+ELSE 'non'
 END
 ```
 
@@ -668,7 +668,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"ethics"	))
 )			
 THEN "TILPASNING"			
-
+ELSE "non"
 END
 ```
 
@@ -705,7 +705,7 @@ OR
 )
 
 THEN "TILPASNING"		
-ELSE 'no'		
+ELSE 'non'		
 END
 ```
 ## Klimatilpassning og Energiomstilling - i praksis ikke mulig å avgrense i hvilken de skal gå defor valgt å ta de inn i begge - litt støy men realistisk
@@ -725,7 +725,7 @@ OR
 OR CONTAINS(LOWER([result_title]),	"energitiltak"	)
 OR CONTAINS(LOWER([result_title]),	"sirkulærøkomoni"	)
 OR CONTAINS(LOWER([result_title]),	"circular economy"	)
-THEN "GRENSE"		
+THEN "TILPASENERGI"		
 
 ELSEIF		
 CONTAINS(LOWER([result_title]),	"green climate"	)
@@ -740,7 +740,7 @@ OR CONTAINS(LOWER([result_title]),	"urban transformation")
 OR CONTAINS(LOWER([result_title]),	"green batter")
 OR CONTAINS(LOWER([result_title]),	"green electricity")
 OR CONTAINS(LOWER([result_title]),	"green grid")
-THEN "GRENSE"		
+THEN "TILPASENERGI"		
 
 ELSEIF
 (
@@ -814,8 +814,8 @@ OR
 
 OR CONTAINS(LOWER([journal]),	"greenhouse gas control"	)		
 
-THEN "GRENSE"
-ELSE 'no'
+THEN "TILPASENERGI"
+ELSE 'non'
 END
 ```
 
@@ -971,7 +971,7 @@ THEN "ENERGI"
 
 ELSEIF
 (
-	(CONTAINS(LOWER([result_title]),	" hydrogen"	)
+	(CONTAINS(LOWER([result_title]),	" hydrogen"	))
 	AND
 	(CONTAINS(LOWER([result_title]),	"fuel"	)
 	OR CONTAINS(LOWER([result_title]),	"energy"	)
@@ -1042,7 +1042,7 @@ OR
 )		
 
 THEN "ENERGI"		
-ELSE 'no'		
+ELSE 'non'		
 END
 ```
 
@@ -1084,6 +1084,6 @@ OR CONTAINS(LOWER([journal]),	"frontiers in energy research "	)
 OR CONTAINS(LOWER([journal]),	"journal of cleaner production"	)
 
 THEN "ENERGI"
-ELSE 'no'
+ELSE 'non'
 END
 ```
