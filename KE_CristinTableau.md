@@ -175,7 +175,7 @@ IF
 	OR CONTAINS(LOWER([result_title]),	"vegetation"	)
 	OR CONTAINS(LOWER([result_title]),	"swamp"	))
 )		
-THEN "KLIMA"
+THEN "SYSEFF"
 
 ELSEIF (		
 CONTAINS(LOWER([result_title]),	"arctic future"	)
@@ -192,7 +192,7 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"oscillation"	))
 )
 )
-THEN "KLIMA"		
+THEN "SYSEFF"		
 
 ELSEIF		
 (
@@ -261,7 +261,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"polar current"	)
 	OR CONTAINS(LOWER([result_title]),	"south polar"	))
 )		
-THEN "KLIMA"		
+THEN "SYSEFF"		
 
 ELSEIF		
 
@@ -300,7 +300,7 @@ OR CONTAINS(LOWER([result_title]),	"multi-year ice"	)
 OR CONTAINS(LOWER([result_title]),	"first-year ice"	)
 OR (CONTAINS(LOWER([result_title]),	" warm"	) AND CONTAINS(LOWER([result_title]),	"arctic "	))
 OR CONTAINS(LOWER([result_title]),	"arctic amplification"	)
-THEN "KLIMA"		
+THEN "SYSEFF"		
 
 ELSEIF		
 (		
@@ -344,7 +344,7 @@ OR CONTAINS(LOWER([result_title]),	"heat wave"	)
 OR CONTAINS(LOWER([result_title]),	"heatwave"	)
 OR CONTAINS(LOWER([result_title]),	"tipping point"	)
 OR CONTAINS(LOWER([result_title]),	"albedo changes"	)
-THEN "KLIMA"		
+THEN "SYSEFF"		
 
 ELSEIF		
 (		
@@ -381,7 +381,7 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"predict"	)
 	OR CONTAINS(LOWER([result_title]),	"variabil"	))
 )		
-THEN "KLIMA"		
+THEN "SYSEFF"		
 
 ELSEIF		
 (		
@@ -441,7 +441,7 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"soil"	)
 	OR CONTAINS(LOWER([result_title]),	"food"	))
 )		
-THEN "KLIMA"		
+THEN "SYSEFF"		
 
 ELSEIF
 (
@@ -465,7 +465,7 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"production"	)
 	OR CONTAINS(LOWER([result_title]),	"feedback"	))
 )		
-THEN "KLIMA"
+THEN "SYSEFF"
 
 ELSEIF		
 CONTAINS(LOWER([result_title]),	"human footprint"	)
@@ -475,7 +475,7 @@ OR CONTAINS(LOWER([result_title]),	"global footprint"	)
 OR CONTAINS(LOWER([result_title]),	"klimaeffekt"	)
 OR CONTAINS(LOWER([result_title]),	"klimaendr"	)
 OR CONTAINS(LOWER([result_title]),	"klimavirkn"	)
-THEN "KLIMA"		
+THEN "SYSEFF"		
 ELSE 'no'
 END
 ```
