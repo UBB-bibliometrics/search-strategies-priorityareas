@@ -1,6 +1,8 @@
 # Klima og Energiomstilling
 
-See Tableau/Cristin file for main documentation. The string contains of four blocks
+See Tableau/Cristin file for main documentation. The string contains of four blocks. 
+
+Note, in the 2022 version, the number of results for "tilpasning" has been reduced slightly. This is due to a change in truncation of climate + plan*, which to climate + plan/plans/planning - before, it was erroneously finding results about climate change and plant communities (which should be in systems and effects).
 
 ## ANY
 ```Ceylon =
