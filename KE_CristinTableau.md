@@ -3,7 +3,7 @@
 
 String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live. 
 
-**Important note**: Each string must ALSO be run against "result_title_anthology" to catch book results. This is NOT added explicitly here. Strings for result_title can be repeated, and this field changed out.
+**Important note**: Each string must ALSO be run against "result_title_anthology" to catch book results. This is NOT added explicitly here (except in the first, general string). Strings for result_title can be repeated, and this field changed out.
 
 ## Description provided in reports
 
@@ -62,14 +62,14 @@ Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer
 
 ```Ceylon =
 IF			
-(
-	(CONTAINS(LOWER([result_title]),"climat")	AND CONTAINS(LOWER([result_title]),	"chang"))			
-	OR (CONTAINS(LOWER([result_title]),"warm")	AND CONTAINS(LOWER([result_title]),	"global"))
-)			
-OR CONTAINS(LOWER([journal]),	"nature climate change")
-OR CONTAINS(LOWER([journal]),	"weather, climate and society")
-OR CONTAINS(LOWER([journal]),	"inter disciplinary reviews: climate change")
-THEN "KE"
+(CONTAINS(LOWER([Result Title]),"climat")	AND CONTAINS(LOWER([Result Title]),	"chang"))			
+OR (CONTAINS(LOWER([Result Title]),"warm")	AND CONTAINS(LOWER([Result Title]),	"global"))
+OR (CONTAINS(LOWER([Result Title Anthology]),"climat")	AND CONTAINS(LOWER([Result Title]),	"chang"))			
+OR (CONTAINS(LOWER([Result Title Anthology]),"warm")	AND CONTAINS(LOWER([Result Title]),	"global"))			
+OR CONTAINS(LOWER([Journal]),	"nature climate change")
+OR CONTAINS(LOWER([Journal]),	"weather, climate and society")
+OR CONTAINS(LOWER([Journal]),	"inter disciplinary reviews: climate change")
+THEN "general"
 ELSE "non"
 END
 ```
