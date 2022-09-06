@@ -543,7 +543,33 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"challenge"	)
 	OR CONTAINS(LOWER([result_title]),	"believe"	))
 )		
-THEN "TILPASNING"		
+THEN "TILPASNING"
+
+ELSEIF
+(
+	CONTAINS(LOWER([result_title]),	"clima" )
+	AND			
+	(CONTAINS(LOWER([result_title]),	"service"	)
+	OR CONTAINS(LOWER([result_title]),	"negotioation"	)
+	OR CONTAINS(LOWER([result_title]),	"skepsis"	)
+	OR CONTAINS(LOWER([result_title]),	"skeptic"	)
+	OR CONTAINS(LOWER([result_title]),	"consensus"	)
+	OR CONTAINS(LOWER([result_title]),	"policy"	)
+	OR CONTAINS(LOWER([result_title]),	"policies"	)
+	OR CONTAINS(LOWER([result_title]),	"ethics"	))
+)	
+THEN "TILPASNING"
+
+ELSEIF
+	CONTAINS(LOWER([Result Title]),	"climate perspective"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate concern"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate knowledge"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate adapt"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate resilien"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate mitigat"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate action"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate planning"	)
+THEN "TILPASNING"
 
 ELSEIF
 (
@@ -654,20 +680,7 @@ ELSEIF
 )
 OR CONTAINS(LOWER([result_title]),	"greenhouse effect"	)
 THEN "TILPASNING"			
-
-ELSEIF
-(
-	CONTAINS(LOWER([result_title]),	"clima" )
-	AND			
-	(CONTAINS(LOWER([result_title]),	"service"	)
-	OR CONTAINS(LOWER([result_title]),	"negotioation"	)
-	OR CONTAINS(LOWER([result_title]),	"scepsis"	)
-	OR CONTAINS(LOWER([result_title]),	"consensus"	)
-	OR CONTAINS(LOWER([result_title]),	"policy"	)
-	OR CONTAINS(LOWER([result_title]),	"policies"	)
-	OR CONTAINS(LOWER([result_title]),	"ethics"	))
-)			
-THEN "TILPASNING"			
+			
 ELSE "non"
 END
 ```
