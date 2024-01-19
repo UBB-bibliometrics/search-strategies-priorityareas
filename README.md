@@ -1,6 +1,6 @@
 # Satsningsomrader
 
-Search strings used in Tableau (DUCT FOR_data_sted_total) and Web of Science core collection for analysis of UiBs satsningsområder in 2020-2022. 
+Search strings used in Tableau (DUCT FOR_data_sted_total) and Web of Science core collection for analysis of satsningsområder in 2020-2022. 
 
 The Cristin strings contain the main documentation (delimitations of what is covered by each priority area, etc.), while the Web of Science strings contain additional documentation relevant to adapation of the search to the Web of Science interface and search functionality. 
 
