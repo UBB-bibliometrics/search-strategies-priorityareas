@@ -127,9 +127,9 @@ OR CONTAINS(LOWER([Name]), "energy transformation")
 OR CONTAINS(LOWER([Abstract]), "energy mix")
 OR CONTAINS(LOWER([Subject]), "energy mix")
 OR CONTAINS(LOWER([Name]), "energy mix")
-OR CONTAINS(LOWER([Abstract]), "energimix")
-OR CONTAINS(LOWER([Subject]), "energimix")
-OR CONTAINS(LOWER([Name]), "energimix")
+OR CONTAINS(LOWER([Abstract]), "energimiks")
+OR CONTAINS(LOWER([Subject]), "energimiks")
+OR CONTAINS(LOWER([Name]), "energimiks")
 
 OR
 ((
