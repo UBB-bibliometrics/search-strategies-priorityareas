@@ -1,6 +1,6 @@
 # Marine research (Marin forskning)
 
-String for use in Tableau against FOR_data_sted_total
+Identifies scientific articles/books/chapters connected to the ocean priority area. String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live.
 
 The string is set up so that one can either get results for **all marine research**, or a subset covering **maritime research**. 
 Unlike the other satsningsområder, these two are not two independent parts - the maritime string finds a SUBSET of the marine string results. 
