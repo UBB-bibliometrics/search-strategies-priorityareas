@@ -23,7 +23,7 @@ The string covers the following groups:
 - Zero emissions
 
 ## Search string
-Some terms are combined with other terms (e.g. energy, renewable) to avoid noise. Some are not but seem to work ok on this limited dataset - they would likely be problematic in other, larger datasets (e.g. "hydrogen"). 
+Some terms are combined with other terms (e.g. energy, renewable) to avoid noise. Some are not but seem to work ok on this limited dataset - they would likely be problematic in other, larger datasets (e.g. "ammonia"). 
 
 ```py
 IF CONTAINS(LOWER([Abstract]), "ammonia")
@@ -186,9 +186,36 @@ OR CONTAINS(LOWER([Abstract]), "geothermal energy")
 OR CONTAINS(LOWER([Abstract]), "geothermisk energi")
 THEN "Geothermal energy"
 
-ELSEIF CONTAINS(LOWER([Abstract]), "hydrogen")
+ELSEIF ((CONTAINS(LOWER([Name]), "hydrogen")
 OR CONTAINS(LOWER([Subject]), "hydrogen")
-OR CONTAINS(LOWER([Name]), "hydrogen")
+OR CONTAINS(LOWER([Abstract]), "hydrogen"))
+AND
+(CONTAINS(LOWER([Name]), "energ")
+OR CONTAINS(LOWER([Subject]), "energ")
+OR CONTAINS(LOWER([Abstract]), "energy system")
+OR CONTAINS(LOWER([Abstract]), "energy transition")
+OR CONTAINS(LOWER([Abstract]), "energisystem")
+OR CONTAINS(LOWER([Abstract]), "energiomstilling")
+OR CONTAINS(LOWER([Name]), "power")
+OR CONTAINS(LOWER([Subject]), "power")
+OR CONTAINS(LOWER([Abstract]), "power")
+OR CONTAINS(LOWER([Name]), "storage")
+OR CONTAINS(LOWER([Subject]), "storage")
+OR CONTAINS(LOWER([Name]), "lagring")
+OR CONTAINS(LOWER([Subject]), "lagring")
+OR CONTAINS(LOWER([Name]), "fuel")
+OR CONTAINS(LOWER([Subject]), "fuel")
+OR CONTAINS(LOWER([Abstract]), "fuel")
+OR CONTAINS(LOWER([Name]), "drivstoff")
+OR CONTAINS(LOWER([Subject]), "drivstoff")
+OR CONTAINS(LOWER([Abstract]), "drivstoff")
+OR CONTAINS(LOWER([Name]), "renewable")
+OR CONTAINS(LOWER([Subject]), "renewable")
+OR CONTAINS(LOWER([Abstract]), "renewable")
+OR CONTAINS(LOWER([Name]), "fornybar")
+OR CONTAINS(LOWER([Subject]), "fornybar")
+OR CONTAINS(LOWER([Abstract]), "fornybar"))
+) 
 THEN "Hydrogen"
 
 ELSEIF CONTAINS(LOWER([Abstract]), "vannkraft")
