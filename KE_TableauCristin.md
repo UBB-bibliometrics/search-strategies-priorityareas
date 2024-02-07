@@ -1,11 +1,11 @@
 
 # KE
 
-String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live. 
+Identifies scientific articles/books/chapters connected to the climate and energy transition priority area. String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live.
 
 **Important note**: Each string must ALSO be run against "result_title_anthology" to catch book results. This is NOT added explicitly here (except in the first, general string). Strings for result_title can be repeated, and this field changed out.
 
-## Description provided in reports
+## Description provided in reports (Norwegian)
 
 Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Gunn Mangerud og direktørene Kristin Guldbransen Frøysa, Tore Furevik)
 
