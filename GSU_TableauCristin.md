@@ -1,6 +1,6 @@
 # GSU
 
-String for use in Tableau against FOR_data_sted_total
+Identifies scientific articles/books/chapters connected to the global challenges priority area. String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live.
 
 *A number of terms are included twice in different parts of the string - once for article title, and another time for book title - remember to edit both if making changes*
 
