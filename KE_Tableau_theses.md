@@ -25,7 +25,7 @@ The string covers the following groups:
 ## Search string
 Some terms are combined with other terms (e.g. energy, renewable) to avoid noise. Some are not but seem to work ok on this limited dataset - they would likely be problematic in other, larger datasets (e.g. "hydrogen"). 
 
-```
+```py
 IF CONTAINS(LOWER([Abstract]), "ammonia")
 OR CONTAINS(LOWER([Subject]), "ammonia")
 OR CONTAINS(LOWER([Name]), "ammonia")
