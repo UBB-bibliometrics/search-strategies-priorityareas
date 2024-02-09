@@ -8,7 +8,8 @@ The string covers the following groups:
 - Ammonia
 - Bioenergy/biofuels/biogas
 - CCS
-- Energy system/transition/mix/policy
+- Energy systems/transition/mix
+- Energy security/policy/justice
 - Energy efficiency
 - Geothermal
 - Hydrogen
@@ -106,12 +107,6 @@ OR CONTAINS(LOWER([Name]), "energisystem")
 OR CONTAINS(LOWER([Abstract]), "kraftsystem")
 OR CONTAINS(LOWER([Subject]), "kraftsystem")
 OR CONTAINS(LOWER([Name]), "kraftsystem")
-OR CONTAINS(LOWER([Abstract]), "energy polic")
-OR CONTAINS(LOWER([Subject]), "energy polic")
-OR CONTAINS(LOWER([Name]), "energy polic")
-OR CONTAINS(LOWER([Abstract]), "energipoli")
-OR CONTAINS(LOWER([Subject]), "energipoli")
-OR CONTAINS(LOWER([Name]), "energipoli")
 
 OR CONTAINS(LOWER([Abstract]), "local energy")
 OR CONTAINS(LOWER([Subject]), "local energy")
@@ -178,6 +173,62 @@ OR
   OR CONTAINS(LOWER([Abstract]), "renewable")
   ))
 THEN "Energy system/transition/mix"
+
+ELSEIF CONTAINS(LOWER([Abstract]), "energy democracy")
+OR CONTAINS(LOWER([Subject]), "energy democracy")
+OR CONTAINS(LOWER([Name]), "energy democracy")
+OR CONTAINS(LOWER([Abstract]), "energy justice")
+OR CONTAINS(LOWER([Subject]), "energy justice")
+OR CONTAINS(LOWER([Name]), "energy justice")
+OR CONTAINS(LOWER([Abstract]), "energy law")
+OR CONTAINS(LOWER([Subject]), "energy law")
+OR CONTAINS(LOWER([Name]), "energy law")
+OR CONTAINS(LOWER([Abstract]), "energy polic")
+OR CONTAINS(LOWER([Subject]), "energy polic")
+OR CONTAINS(LOWER([Name]), "energy polic")
+OR CONTAINS(LOWER([Abstract]), "energipoli")
+OR CONTAINS(LOWER([Subject]), "energipoli")
+OR CONTAINS(LOWER([Name]), "energipoli")
+OR CONTAINS(LOWER([Abstract]), "energy inequit")
+OR CONTAINS(LOWER([Subject]), "energy inequit")
+OR CONTAINS(LOWER([Name]), "energy inequit")
+OR CONTAINS(LOWER([Abstract]), "energy law")
+OR CONTAINS(LOWER([Subject]), "energy law")
+OR CONTAINS(LOWER([Name]), "energy law")
+OR CONTAINS(LOWER([Abstract]), "energy poverty")
+OR CONTAINS(LOWER([Subject]), "energy poverty")
+OR CONTAINS(LOWER([Name]), "energy poverty")
+OR CONTAINS(LOWER([Abstract]), "fuel poverty")
+OR CONTAINS(LOWER([Subject]), "fuel poverty")
+OR CONTAINS(LOWER([Name]), "fuel poverty")
+OR CONTAINS(LOWER([Abstract]), "energy vulnerab")
+OR CONTAINS(LOWER([Subject]), "energy vulnerab")
+OR CONTAINS(LOWER([Name]), "energy vulnerab")
+OR CONTAINS(LOWER([Abstract]), "energy security")
+OR CONTAINS(LOWER([Subject]), "energy security")
+OR CONTAINS(LOWER([Name]), "energy security")
+OR CONTAINS(LOWER([Abstract]), "energy insecurity")
+OR CONTAINS(LOWER([Subject]), "energy insecurity")
+OR CONTAINS(LOWER([Name]), "energy insecurity")
+OR
+  ((CONTAINS(LOWER([Subject]), "energ")
+  OR CONTAINS(LOWER([Name]), "energ"))
+  AND
+  (CONTAINS(LOWER([Subject]), "rettigheter")
+  OR CONTAINS(LOWER([Name]), "rettigheter")
+  OR CONTAINS(LOWER([Subject]), "rights")
+  OR CONTAINS(LOWER([Name]), "rights")
+  OR CONTAINS(LOWER([Subject]), "land use")
+  OR CONTAINS(LOWER([Name]), "land use")
+  OR CONTAINS(LOWER([Abstract]), "land use")
+  OR CONTAINS(LOWER([Subject]), "arealbruk")
+  OR CONTAINS(LOWER([Name]), "arealbruk")
+  OR CONTAINS(LOWER([Abstract]), "arealbruk")
+  OR CONTAINS(LOWER([Subject]), "urfolk")
+  OR CONTAINS(LOWER([Name]), "urfolk")
+  OR CONTAINS(LOWER([Abstract]), "urfolk"))
+  )
+THEN "Energy security/policy/justice"
 
 ELSEIF CONTAINS(LOWER([Abstract]), "energy efficien")
 OR CONTAINS(LOWER([Subject]), "energy efficien")
