@@ -367,6 +367,9 @@ OR CONTAINS(LOWER([Name]), "nuclear reactor")
 OR CONTAINS(LOWER([Abstract]), "kjernekraft")
 OR CONTAINS(LOWER([Subject]), "kjernekraft")
 OR CONTAINS(LOWER([Name]), "kjernekraft")
+OR CONTAINS(LOWER([Abstract]), "nuclear fusion")
+OR CONTAINS(LOWER([Subject]), "nuclear fusion")
+OR CONTAINS(LOWER([Name]), "nuclear fusion")
 THEN "Nuclear"
 
 ELSEIF CONTAINS(LOWER([Abstract]), "ocean energy")
