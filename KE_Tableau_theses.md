@@ -26,9 +26,20 @@ The string covers the following groups:
 Some terms are combined with other terms (e.g. energy, renewable) to avoid noise. Some are not but seem to work ok on this limited dataset - they would likely be problematic in other, larger datasets (e.g. "ammonia"). 
 
 ```py
-IF CONTAINS(LOWER([Abstract]), "ammonia")
+IF
+(CONTAINS(LOWER([Abstract]), "ammonia")
 OR CONTAINS(LOWER([Subject]), "ammonia")
-OR CONTAINS(LOWER([Name]), "ammonia")
+OR CONTAINS(LOWER([Name]), "ammonia"))
+AND NOT
+(CONTAINS(LOWER([Abstract]), "aquaculture")
+OR CONTAINS(LOWER([Subject]), "aquaculture")
+OR CONTAINS(LOWER([Name]), "aquaculture")
+OR CONTAINS(LOWER([Abstract]), "akvakult")
+OR CONTAINS(LOWER([Subject]), "akvakult")
+OR CONTAINS(LOWER([Name]), "akvakult")
+OR REGEXP_MATCH(LOWER([Abstract]), "\bfish")
+OR REGEXP_MATCH(LOWER([Subject]), "\bfish")
+OR REGEXP_MATCH(LOWER([Name]), "\bfish"))
 THEN "Ammonia"
 
 ELSEIF
