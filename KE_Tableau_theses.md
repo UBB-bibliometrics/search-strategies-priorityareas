@@ -272,6 +272,9 @@ ELSEIF
 CONTAINS(LOWER([Name]), "hydrogenprosjekt")
 OR CONTAINS(LOWER([Subject]), "hydrogenprosjekt")
 OR CONTAINS(LOWER([Abstract]), "hydrogenprosjekt")
+OR CONTAINS(LOWER([Name]), "liquid hydrogen")
+OR CONTAINS(LOWER([Subject]), "liquid hydrogen")
+OR CONTAINS(LOWER([Abstract]), "liquid hydrogen")
 OR
   ((CONTAINS(LOWER([Name]), "hydrogen")
   OR CONTAINS(LOWER([Subject]), "hydrogen")
