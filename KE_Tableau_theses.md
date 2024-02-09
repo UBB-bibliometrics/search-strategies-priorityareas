@@ -331,7 +331,10 @@ OR
   OR CONTAINS(LOWER([Abstract]), "igniti")
   OR CONTAINS(LOWER([Name]), "forbrenn")
   OR CONTAINS(LOWER([Subject]), "forbrenn")
-  OR CONTAINS(LOWER([Abstract]), "forbrenn"))
+  OR CONTAINS(LOWER([Abstract]), "forbrenn")
+  OR CONTAINS(LOWER([Name]), "fuel cell")
+  OR CONTAINS(LOWER([Subject]), "fuel cell")
+  OR CONTAINS(LOWER([Abstract]), "fuel cell"))
   )
 THEN "Hydrogen"
 
