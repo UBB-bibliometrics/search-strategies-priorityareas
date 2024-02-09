@@ -18,8 +18,8 @@ The string covers the following groups:
 - Power grid/batteries
 - Renewable energy
 - Solar
-- Wind (all)
-- Offshore wind
+- Wind power (all)
+- Offshore wind (subset of "wind power (all)")
 - Zero emissions
 
 ## Search string
@@ -179,6 +179,18 @@ OR CONTAINS(LOWER([Name]), "energy efficien")
 OR CONTAINS(LOWER([Abstract]), "energieffektiv")
 OR CONTAINS(LOWER([Subject]), "energieffektiv")
 OR CONTAINS(LOWER([Name]), "energieffektiv")
+OR CONTAINS(LOWER([Abstract]), "energy saving")
+OR CONTAINS(LOWER([Subject]), "energy saving")
+OR CONTAINS(LOWER([Name]), "energy saving")
+OR CONTAINS(LOWER([Abstract]), "energisparing")
+OR CONTAINS(LOWER([Subject]), "energisparing")
+OR CONTAINS(LOWER([Name]), "energisparing")
+OR CONTAINS(LOWER([Abstract]), "energy consumption")
+OR CONTAINS(LOWER([Subject]), "energy consumption")
+OR CONTAINS(LOWER([Name]), "energy consumption")
+OR CONTAINS(LOWER([Abstract]), "energiforbruk")
+OR CONTAINS(LOWER([Subject]), "energiforbruk")
+OR CONTAINS(LOWER([Name]), "energiforbruk")
 OR CONTAINS(LOWER([Abstract]), "energy suffici")
 OR CONTAINS(LOWER([Subject]), "energy suffici")
 OR CONTAINS(LOWER([Name]), "energy suffici")
