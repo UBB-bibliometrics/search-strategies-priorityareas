@@ -15,11 +15,11 @@ The string covers the following groups:
 - Hydropower
 - Nuclear
 - Ocean/wave energy
-- Offshore wind
 - Power grid/batteries
 - Renewable energy
 - Solar
-- Wind
+- Wind (all)
+- Offshore wind
 - Zero emissions
 
 ## Search string
@@ -176,14 +176,18 @@ OR CONTAINS(LOWER([Subject]), "energy suffici")
 OR CONTAINS(LOWER([Name]), "energy suffici")
 THEN "Energy efficiency"
 
-ELSEIF((CONTAINS(LOWER([Subject]), "geotherm")
-OR CONTAINS(LOWER([Name]), "geotherm"))
-AND 
-(CONTAINS(LOWER([Name]), "energ")
-OR CONTAINS(LOWER([Subject]), "energ"))
-)
+ELSEIF
+CONTAINS(LOWER([Name]), "geotermi")
+OR CONTAINS(LOWER([Name]), "geothermal reservoir")
 OR CONTAINS(LOWER([Abstract]), "geothermal energy")
-OR CONTAINS(LOWER([Abstract]), "geothermisk energi")
+OR CONTAINS(LOWER([Abstract]), "geotermisk energi")
+OR
+  ((CONTAINS(LOWER([Subject]), "geotherm")
+  OR CONTAINS(LOWER([Name]), "geotherm"))
+  AND 
+  (CONTAINS(LOWER([Name]), "energ")
+  OR CONTAINS(LOWER([Subject]), "energ"))
+  )
 THEN "Geothermal energy"
 
 ELSEIF ((CONTAINS(LOWER([Name]), "hydrogen")
@@ -263,14 +267,6 @@ AND (CONTAINS(LOWER([Name]), "power")
 OR CONTAINS(LOWER([Subject]), "power")
 OR CONTAINS(LOWER([Abstract]), "power")))
 THEN "Ocean/wave energy"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "offshore wind")
-OR CONTAINS(LOWER([Subject]), "offshore wind")
-OR CONTAINS(LOWER([Name]), "offshore wind")
-OR CONTAINS([Abstract], "havvind")
-OR CONTAINS(LOWER([Subject]), "havvind")
-OR CONTAINS(LOWER([Name]), "havvind")
-THEN "Offshore wind"
 
 ELSEIF CONTAINS(LOWER([Abstract]), "power grid")
 OR CONTAINS(LOWER([Subject]), "power grid")
@@ -365,7 +361,15 @@ OR CONTAINS(LOWER([Name]), "vindturbin")
 OR CONTAINS(LOWER([Abstract]), "wind farm")
 OR CONTAINS(LOWER([Subject]), "wind farm")
 OR CONTAINS(LOWER([Name]), "wind farm")
-THEN "Wind energy"
+THEN "Wind energy (all)"
+
+ELSEIF CONTAINS(LOWER([Abstract]), "offshore wind")
+OR CONTAINS(LOWER([Subject]), "offshore wind")
+OR CONTAINS(LOWER([Name]), "offshore wind")
+OR CONTAINS([Abstract], "havvind")
+OR CONTAINS(LOWER([Subject]), "havvind")
+OR CONTAINS(LOWER([Name]), "havvind")
+THEN "Offshore wind"
 
 ELSEIF CONTAINS(LOWER([Abstract]), "zero emission")
 OR CONTAINS(LOWER([Subject]), "zero emission")
