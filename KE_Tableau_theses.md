@@ -316,6 +316,9 @@ OR CONTAINS(LOWER([Name]), "batterier")
 OR CONTAINS(LOWER([Abstract]), "batteries")
 OR CONTAINS(LOWER([Subject]), "batteries")
 OR CONTAINS(LOWER([Name]), "batteries")
+OR CONTAINS(LOWER([Abstract]), "fuel cell")
+OR CONTAINS(LOWER([Subject]), "fuel cell")
+OR CONTAINS(LOWER([Name]), "fuel cell")
 THEN "Power grid/batteries"
 
 ELSEIF
