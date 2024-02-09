@@ -19,6 +19,7 @@ The string covers the following groups:
 - Power grid/batteries
 - Renewable energy
 - Solar
+- Transport (decarbonised, green, electric)
 - Wind power (all)
 - Offshore wind (subset of "wind power (all)")
 - Zero emissions
@@ -427,8 +428,41 @@ OR CONTAINS(LOWER([Name]), "solar cell")
 OR CONTAINS(LOWER([Subject]), "solar cell")
 THEN "Solar"
 
-ELSEIF
-CONTAINS(LOWER([Abstract]), "wind energy")
+ELSEIF CONTAINS(LOWER([Abstract]), "electric car")
+OR CONTAINS(LOWER([Subject]), "electric car")
+OR CONTAINS(LOWER([Name]), "electric car")
+OR REGEXP_MATCH(LOWER([Abstract]), "\belbil")
+OR REGEXP_MATCH(LOWER([Subject]), "\belbil")
+OR REGEXP_MATCH(LOWER([Name]), "\belbil")
+OR REGEXP_MATCH(LOWER([Abstract]), "\bel-bil")
+OR REGEXP_MATCH(LOWER([Subject]), "\bel-bil")
+OR REGEXP_MATCH(LOWER([Name]), "\bel-bil")
+OR CONTAINS(LOWER([Abstract]), "electric vehicle")
+OR CONTAINS(LOWER([Subject]), "electric vehicle")
+OR CONTAINS(LOWER([Name]), "electric vehicle")
+OR CONTAINS(LOWER([Abstract]), "electric bus")
+OR CONTAINS(LOWER([Subject]), "electric bus")
+OR CONTAINS(LOWER([Name]), "electric bus")
+OR CONTAINS(LOWER([Abstract]), "green shipping")
+OR CONTAINS(LOWER([Subject]), "green shipping")
+OR CONTAINS(LOWER([Name]), "green shipping")
+OR CONTAINS(LOWER([Abstract]), "green transport")
+OR CONTAINS(LOWER([Subject]), "green transport")
+OR CONTAINS(LOWER([Name]), "green transport")
+OR CONTAINS(LOWER([Abstract]), "grønne transport")
+OR CONTAINS(LOWER([Subject]), "grønne transport")
+OR CONTAINS(LOWER([Name]), "grønne transport")
+OR
+  ((CONTAINS(LOWER([Abstract]), "transport")
+  OR CONTAINS(LOWER([Subject]), "transport")
+  OR CONTAINS(LOWER([Name]), "transport"))
+  AND
+  (CONTAINS(LOWER([Abstract]), "decarbon")
+  OR CONTAINS(LOWER([Subject]), "decarbon")
+  OR CONTAINS(LOWER([Name]), "decarbon")))
+THEN "Transport"
+
+ELSEIF CONTAINS(LOWER([Abstract]), "wind energy")
 OR CONTAINS(LOWER([Subject]), "wind energy")
 OR CONTAINS(LOWER([Name]), "wind energy")
 OR CONTAINS(LOWER([Abstract]), "wind power")
