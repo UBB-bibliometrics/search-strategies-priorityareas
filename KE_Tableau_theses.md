@@ -455,7 +455,10 @@ OR CONTAINS(LOWER([Name]), "grønne transport")
 OR
   ((CONTAINS(LOWER([Abstract]), "transport")
   OR CONTAINS(LOWER([Subject]), "transport")
-  OR CONTAINS(LOWER([Name]), "transport"))
+  OR CONTAINS(LOWER([Name]), "transport")
+  OR REGEXP_MATCH(LOWER([Abstract]), "\bship")
+  OR REGEXP_MATCH(LOWER([Subject]), "\bship")
+  OR REGEXP_MATCH(LOWER([Name]), "\bship"))
   AND
   (CONTAINS(LOWER([Abstract]), "decarbon")
   OR CONTAINS(LOWER([Subject]), "decarbon")
