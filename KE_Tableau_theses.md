@@ -27,6 +27,7 @@ The string covers the following groups:
 ## Search string
 Some terms are combined with other terms (e.g. energy, renewable) to avoid noise. Some are not but seem to work ok on this limited dataset - they would likely be problematic in other, larger datasets (e.g. "ammonia"). 
 
+### Ammonia
 ```py
 IF
   (CONTAINS(LOWER([Abstract]), "ammonia")
@@ -43,7 +44,10 @@ IF
   OR REGEXP_MATCH(LOWER([Subject]), "\bfish")
   OR REGEXP_MATCH(LOWER([Name]), "\bfish"))
 THEN "Ammonia"
-
+END
+```
+### Bioenergy/fuel/gas
+```py
 ELSEIF
 CONTAINS(LOWER([Abstract]), "bioenergy")
 OR CONTAINS(LOWER([Subject]), "bioenergy")
@@ -73,7 +77,10 @@ OR CONTAINS(LOWER([Abstract]), "biogas")
 OR CONTAINS(LOWER([Subject]), "biogas")
 OR CONTAINS(LOWER([Name]), "biogas")
 THEN "Bioenergy/fuel/gas"
-
+END
+```
+### CCS
+```py
 IF
   ((REGEXP_MATCH(([Subject]), "\bCCS\b")
   OR REGEXP_MATCH(([Name]), "\bCCS\b"))
@@ -101,7 +108,10 @@ OR CONTAINS(LOWER([Abstract]), "co2-lagring")
 OR CONTAINS(LOWER([Subject]), "co2-lagring")
 OR CONTAINS(LOWER([Name]), "co2-lagring")
 THEN "Carbon capture and storage"
-
+END
+```
+### Energy system/transformation/mix
+```py
 ELSEIF
 CONTAINS(LOWER([Abstract]), "energy system")
 OR CONTAINS(LOWER([Subject]), "energy system")
@@ -178,8 +188,11 @@ OR
   OR CONTAINS(LOWER([Abstract]), "renewable")
   ))
 THEN "Energy system/transition/mix"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "energy democracy")
+END
+```
+### Energy security/policy/justice
+```py
+IF CONTAINS(LOWER([Abstract]), "energy democracy")
 OR CONTAINS(LOWER([Subject]), "energy democracy")
 OR CONTAINS(LOWER([Name]), "energy democracy")
 OR CONTAINS(LOWER([Abstract]), "energy justice")
@@ -240,7 +253,10 @@ OR
   OR CONTAINS(LOWER([Abstract]), "urfolk")
   ))
 THEN "Energy security/policy/justice"
-
+END
+```
+### Energy efficiency
+```py
 ELSEIF CONTAINS(LOWER([Abstract]), "energy efficien")
 OR CONTAINS(LOWER([Subject]), "energy efficien")
 OR CONTAINS(LOWER([Name]), "energy efficien")
@@ -263,8 +279,11 @@ OR CONTAINS(LOWER([Abstract]), "energy suffici")
 OR CONTAINS(LOWER([Subject]), "energy suffici")
 OR CONTAINS(LOWER([Name]), "energy suffici")
 THEN "Energy efficiency"
-
-ELSEIF
+END
+```
+### Geothermal energy
+```py
+IF
 CONTAINS(LOWER([Name]), "geotermi")
 OR CONTAINS(LOWER([Name]), "geothermal reservoir")
 OR CONTAINS(LOWER([Abstract]), "geothermal energy")
@@ -277,9 +296,11 @@ OR
   OR CONTAINS(LOWER([Subject]), "energ"))
   )
 THEN "Geothermal energy"
-
-IF
-CONTAINS(LOWER([Name]), "hydrogenprosjekt")
+END
+```
+### Hydrogen
+```py
+IF CONTAINS(LOWER([Name]), "hydrogenprosjekt")
 OR CONTAINS(LOWER([Subject]), "hydrogenprosjekt")
 OR CONTAINS(LOWER([Abstract]), "hydrogenprosjekt")
 OR CONTAINS(LOWER([Name]), "liquid hydrogen")
@@ -362,8 +383,11 @@ OR
   )
 )
 THEN "Hydrogen"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "vannkraft")
+END
+```
+### Hydropower
+```py
+IF CONTAINS(LOWER([Abstract]), "vannkraft")
 OR CONTAINS(LOWER([Subject]), "vannkraft")
 OR CONTAINS(LOWER([Name]), "vannkraft")
 OR CONTAINS(LOWER([Abstract]), "vasskraft")
@@ -379,8 +403,11 @@ OR CONTAINS(LOWER([Abstract]), "hydroelectric")
 OR CONTAINS(LOWER([Subject]), "hydroelectric")
 OR CONTAINS(LOWER([Name]), "hydroelectric")
 THEN "Hydropower"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "nuclear power")
+END
+```
+### Nuclear power
+```py
+IF CONTAINS(LOWER([Abstract]), "nuclear power")
 OR CONTAINS(LOWER([Subject]), "nuclear power")
 OR CONTAINS(LOWER([Name]), "nuclear power")
 OR CONTAINS(LOWER([Abstract]), "nuclear reactor")
@@ -393,8 +420,11 @@ OR CONTAINS(LOWER([Abstract]), "nuclear fusion")
 OR CONTAINS(LOWER([Subject]), "nuclear fusion")
 OR CONTAINS(LOWER([Name]), "nuclear fusion")
 THEN "Nuclear"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "ocean energy")
+END
+```
+### Ocean/wave energy
+```py
+IF CONTAINS(LOWER([Abstract]), "ocean energy")
 OR CONTAINS(LOWER([Subject]), "ocean energy")
 OR CONTAINS(LOWER([Name]), "ocean energy")
 OR CONTAINS(LOWER([Abstract]), "havenergi")
@@ -411,8 +441,11 @@ OR
   OR CONTAINS(LOWER([Subject]), "power")
   OR CONTAINS(LOWER([Abstract]), "power")))
 THEN "Ocean/wave energy"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "power grid")
+END
+```
+### Power grid/energy storage
+```py
+IF CONTAINS(LOWER([Abstract]), "power grid")
 OR CONTAINS(LOWER([Subject]), "power grid")
 OR CONTAINS(LOWER([Name]), "power grid")
 OR CONTAINS(LOWER([Abstract]), "kraftlinj")
@@ -443,8 +476,11 @@ OR CONTAINS(LOWER([Abstract]), "fuel cell")
 OR CONTAINS(LOWER([Subject]), "fuel cell")
 OR CONTAINS(LOWER([Name]), "fuel cell")
 THEN "Power grid/batteries"
-
-ELSEIF
+END
+```
+### Renewable energy
+```py
+IF
   ((CONTAINS(LOWER([Subject]), "renewable")
   OR CONTAINS(LOWER([Name]), "renewable")
   OR CONTAINS(LOWER([Subject]), "fornybar")
@@ -465,8 +501,11 @@ OR CONTAINS(LOWER([Subject]), "grønn energi")
 OR CONTAINS(LOWER([Name]), "grønn energi")
 OR CONTAINS(LOWER([Abstract]), "grønn energi")
 THEN "Renewable energy"
-
-ELSEIF
+END
+```
+### Solar power
+```py
+IF
   ((CONTAINS(LOWER([Subject]), "solar")
   OR CONTAINS(LOWER([Name]), "solar"))
   AND 
@@ -492,8 +531,11 @@ OR CONTAINS(LOWER([Abstract]), "solar cell")
 OR CONTAINS(LOWER([Name]), "solar cell")
 OR CONTAINS(LOWER([Subject]), "solar cell")
 THEN "Solar"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "electric car")
+END
+```
+### Transport
+```py
+IF CONTAINS(LOWER([Abstract]), "electric car")
 OR CONTAINS(LOWER([Subject]), "electric car")
 OR CONTAINS(LOWER([Name]), "electric car")
 OR REGEXP_MATCH(LOWER([Abstract]), "\belbil")
@@ -529,8 +571,11 @@ OR
   OR CONTAINS(LOWER([Subject]), "decarbon")
   OR CONTAINS(LOWER([Name]), "decarbon")))
 THEN "Transport"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "wind energy")
+END
+```
+### Wind energy (all)
+```py
+IF CONTAINS(LOWER([Abstract]), "wind energy")
 OR CONTAINS(LOWER([Subject]), "wind energy")
 OR CONTAINS(LOWER([Name]), "wind energy")
 OR CONTAINS(LOWER([Abstract]), "wind power")
@@ -555,8 +600,11 @@ OR CONTAINS([Abstract], "havvind")
 OR CONTAINS(LOWER([Subject]), "havvind")
 OR CONTAINS(LOWER([Name]), "havvind")
 THEN "Wind energy (all)"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "offshore wind")
+END
+```
+### Offshore wind
+```py
+IF CONTAINS(LOWER([Abstract]), "offshore wind")
 OR CONTAINS(LOWER([Subject]), "offshore wind")
 OR CONTAINS(LOWER([Name]), "offshore wind")
 OR CONTAINS([Abstract], "havvind")
@@ -594,8 +642,11 @@ OR
   OR CONTAINS(LOWER([Name]), "wind farm"))
   )
 THEN "Offshore wind"
-
-ELSEIF CONTAINS(LOWER([Abstract]), "zero emission")
+END
+```
+### Zero emission
+```py
+IF CONTAINS(LOWER([Abstract]), "zero emission")
 OR CONTAINS(LOWER([Subject]), "zero emission")
 OR CONTAINS(LOWER([Name]), "zero emission")
 OR CONTAINS(LOWER([Abstract]), "zero-emission")
@@ -608,7 +659,5 @@ OR CONTAINS(LOWER([Abstract]), "nullutslipp")
 OR CONTAINS(LOWER([Subject]), "nullutslipp")
 OR CONTAINS(LOWER([Name]), "nullutslipp")
 THEN "Zero emission"
-
-Else "non"
 END
 ```
