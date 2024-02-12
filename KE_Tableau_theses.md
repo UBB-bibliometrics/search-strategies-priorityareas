@@ -48,8 +48,7 @@ END
 ```
 ### Bioenergy/fuel/gas
 ```py
-ELSEIF
-CONTAINS(LOWER([Abstract]), "bioenergy")
+IF CONTAINS(LOWER([Abstract]), "bioenergy")
 OR CONTAINS(LOWER([Subject]), "bioenergy")
 OR CONTAINS(LOWER([Name]), "bioenergy")
 OR CONTAINS(LOWER([Abstract]), "bioenergi")
@@ -112,8 +111,7 @@ END
 ```
 ### Energy system/transformation/mix
 ```py
-ELSEIF
-CONTAINS(LOWER([Abstract]), "energy system")
+IF CONTAINS(LOWER([Abstract]), "energy system")
 OR CONTAINS(LOWER([Subject]), "energy system")
 OR CONTAINS(LOWER([Name]), "energy system")
 OR CONTAINS(LOWER([Abstract]), "energisystem")
@@ -257,7 +255,7 @@ END
 ```
 ### Energy efficiency
 ```py
-ELSEIF CONTAINS(LOWER([Abstract]), "energy efficien")
+IF CONTAINS(LOWER([Abstract]), "energy efficien")
 OR CONTAINS(LOWER([Subject]), "energy efficien")
 OR CONTAINS(LOWER([Name]), "energy efficien")
 OR CONTAINS(LOWER([Abstract]), "energieffektiv")
@@ -283,8 +281,7 @@ END
 ```
 ### Geothermal energy
 ```py
-IF
-CONTAINS(LOWER([Name]), "geotermi")
+IF CONTAINS(LOWER([Name]), "geotermi")
 OR CONTAINS(LOWER([Name]), "geothermal reservoir")
 OR CONTAINS(LOWER([Abstract]), "geothermal energy")
 OR CONTAINS(LOWER([Abstract]), "geotermisk energi")
