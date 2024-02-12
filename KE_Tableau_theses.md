@@ -268,7 +268,7 @@ OR
   )
 THEN "Geothermal energy"
 
-ELSEIF
+IF
 CONTAINS(LOWER([Name]), "hydrogenprosjekt")
 OR CONTAINS(LOWER([Subject]), "hydrogenprosjekt")
 OR CONTAINS(LOWER([Abstract]), "hydrogenprosjekt")
@@ -289,6 +289,9 @@ OR
   OR CONTAINS(LOWER([Name]), "power")
   OR CONTAINS(LOWER([Subject]), "power")
   OR CONTAINS(LOWER([Abstract]), "power")
+  OR CONTAINS(LOWER([Name]), "nuclear fusion")
+  OR CONTAINS(LOWER([Subject]), "nuclear fusion")
+  OR CONTAINS(LOWER([Abstract]), "nuclear fusion")
   OR CONTAINS(LOWER([Name]), "carbon")
   OR CONTAINS(LOWER([Subject]), "carbon")
   OR CONTAINS(LOWER([Abstract]), "carbon")
@@ -299,9 +302,6 @@ OR
   OR CONTAINS(LOWER([Name]), "production")
   OR CONTAINS(LOWER([Subject]), "production")
   OR CONTAINS(LOWER([Abstract]), "production")
-  OR CONTAINS(LOWER([Name]), "produksjon")
-  OR CONTAINS(LOWER([Subject]), "produksjon")
-  OR CONTAINS(LOWER([Abstract]), "produksjon")
   OR CONTAINS(LOWER([Name]), "fuel")
   OR CONTAINS(LOWER([Subject]), "fuel")
   OR CONTAINS(LOWER([Abstract]), "fuel")
@@ -311,6 +311,9 @@ OR
   OR REGEXP_MATCH(LOWER([Name]), "\bship")
   OR REGEXP_MATCH(LOWER([Subject]), "\bship")
   OR REGEXP_MATCH(LOWER([Abstract]), "\bship")
+  OR CONTAINS(LOWER([Name]), "maritim")
+  OR CONTAINS(LOWER([Subject]), "maritim")
+  OR CONTAINS(LOWER([Abstract]), "maritim")
   OR CONTAINS(LOWER([Name]), "renewable")
   OR CONTAINS(LOWER([Subject]), "renewable")
   OR CONTAINS(LOWER([Abstract]), "renewable")
@@ -335,10 +338,19 @@ OR
   OR CONTAINS(LOWER([Name]), "forbrenn")
   OR CONTAINS(LOWER([Subject]), "forbrenn")
   OR CONTAINS(LOWER([Abstract]), "forbrenn")
+  OR CONTAINS(LOWER([Name]), "safety stud")
+  OR CONTAINS(LOWER([Subject]), "safety stud")
+  OR CONTAINS(LOWER([Abstract]), "safety stud")
   OR CONTAINS(LOWER([Name]), "fuel cell")
   OR CONTAINS(LOWER([Subject]), "fuel cell")
   OR CONTAINS(LOWER([Abstract]), "fuel cell"))
+  AND NOT 
+  (CONTAINS(LOWER([Abstract]), "hydrate")
+  OR CONTAINS(LOWER([Name]), "hydrate")
+  OR CONTAINS(LOWER([Abstract]), "hydrogen peroxide")
+  OR CONTAINS(LOWER([Name]), "hydrogen peroxide")
   )
+)
 THEN "Hydrogen"
 
 ELSEIF CONTAINS(LOWER([Abstract]), "vannkraft")
