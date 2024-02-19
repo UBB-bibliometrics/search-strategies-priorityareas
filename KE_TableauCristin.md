@@ -60,27 +60,31 @@ Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer
 
 ## Any undertopic (generic terms)
 
+Title and journal search. These are terms that are so generic it is hard to pin them to a sub-topic, but we want to make sure that they are caught.
+
 ```Ceylon =
 IF			
-(CONTAINS(LOWER([Result Title]),"climat")	AND CONTAINS(LOWER([Result Title]),	"chang"))			
-OR (CONTAINS(LOWER([Result Title]),"warm")	AND CONTAINS(LOWER([Result Title]),	"global"))
-OR (CONTAINS(LOWER([Result Title Anthology]),"climat")	AND CONTAINS(LOWER([Result Title]),	"chang"))			
-OR (CONTAINS(LOWER([Result Title Anthology]),"warm")	AND CONTAINS(LOWER([Result Title]),	"global"))
-OR (CONTAINS(LOWER([Result Title]),"climat")	AND CONTAINS(LOWER([Result Title]),	"warm"))			
-OR (CONTAINS(LOWER([Result Title]),"ocean")	AND CONTAINS(LOWER([Result Title]),	"warm"))
-OR (CONTAINS(LOWER([Result Title Anthology]),"climat")	AND CONTAINS(LOWER([Result Title]),	"warm"))			
-OR (CONTAINS(LOWER([Result Title Anthology]),"ocean")	AND CONTAINS(LOWER([Result Title]),	"warm"))			
-OR CONTAINS(LOWER([Journal]),	"nature climate change")
-OR CONTAINS(LOWER([Journal]),	"weather, climate and society")
-OR CONTAINS(LOWER([Journal]),	"inter disciplinary reviews: climate change")
+(CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "chang"))			
+OR (CONTAINS(LOWER([Result Title]),"warm") AND CONTAINS(LOWER([Result Title]), "global"))
+OR (CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))			
+OR (CONTAINS(LOWER([Result Title]),"ocean") AND CONTAINS(LOWER([Result Title]),	"warm"))
+
+OR (CONTAINS(LOWER([Result Title Anthology]),"climat") AND CONTAINS(LOWER([Result Title]), "chang"))			
+OR (CONTAINS(LOWER([Result Title Anthology]),"warm") AND CONTAINS(LOWER([Result Title]), "global"))
+OR (CONTAINS(LOWER([Result Title Anthology]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))			
+OR (CONTAINS(LOWER([Result Title Anthology]),"ocean") AND CONTAINS(LOWER([Result Title]), "warm"))
+		
+OR CONTAINS(LOWER([Journal]), "nature climate change")
+OR CONTAINS(LOWER([Journal]), "weather, climate and society")
+OR CONTAINS(LOWER([Journal]), "inter disciplinary reviews: climate change")
 THEN "general"
 ELSE "non"
 END
 ```
 
-## Klima(systemer og effekter)
+## Climate systems and effects (Klimasystemer og effekter)
 
-#### Title search
+### Title search
 
 ```Ceylon =
 IF
@@ -488,7 +492,7 @@ END
 
 ## Klimatilpassning
 
-#### Title search
+### Title search
 
 ```Ceylon =
 IF		
@@ -691,7 +695,7 @@ ELSE "non"
 END
 ```
 
-#### Journal search
+### Journal search
 
 ```Ceylon =
 IF 		
@@ -729,7 +733,7 @@ END
 ```
 ## Klimatilpassning og Energiomstilling - i praksis ikke mulig å avgrense i hvilken de skal gå defor valgt å ta de inn i begge - litt støy men realistisk
 
-#### Title search
+### Title search
 
 ```Ceylon=
 IF
@@ -841,7 +845,7 @@ END
 
 ## Energiomstilling
 
-#### Title search
+### Title search
 
 ```
 IF 	
@@ -1065,7 +1069,7 @@ ELSE 'non'
 END
 ```
 
-#### Journal search
+### Journal search
 
 ```Ceylon =
 IF CONTAINS(LOWER([journal]),	"renewable energy"	)
