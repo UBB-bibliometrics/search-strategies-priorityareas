@@ -486,7 +486,7 @@ ELSE 'non'
 END
 ```
 
-## Climate adaptation
+## Climate adaptation (klimatilpasning)
 
 ### Title search
 
@@ -577,6 +577,7 @@ ELSEIF
 	OR CONTAINS(LOWER([Result Title]),	"climate financ")
 	OR CONTAINS(LOWER([Result Title]),	"climate fund")
 	OR CONTAINS(LOWER([Result Title]),	"climate law")
+	OR CONTAINS(LOWER([Result Title]),	"climate polic")
 	OR CONTAINS(LOWER([Result Title]),	"climate justice")
 	OR CONTAINS(LOWER([Result Title]),	"climate crisis")
 THEN "TILPASNING"
@@ -725,15 +726,16 @@ ELSE 'non'
 END
 ```
 
-## Climate adapatation AND energy transitions
+## Climate adapatation AND energy transitions (klimatipasning og energiomstilling)
 
 In practice it is not possible to completely/reliably separate these two sub-topics, so the strings under count for both.  
 
 ### Title search
 
-```py=
+```py =
 IF
-CONTAINS(LOWER([result_title]),	"green economy"	)
+CONTAINS(LOWER([result_title]),	"klimaomstilling")
+OR CONTAINS(LOWER([result_title]),	"green economy")
 OR
 (
 	CONTAINS(LOWER([result_title]),	"grønn" 	)
@@ -754,11 +756,10 @@ OR CONTAINS(LOWER([result_title]),	"green cities")
 OR CONTAINS(LOWER([result_title]),	"green city")
 OR CONTAINS(LOWER([result_title]),	"urban sustainablity")
 OR CONTAINS(LOWER([result_title]),	"urban transformation")
-//OR CONTAINS(LOWER([result_title]),	"smart city")
-//OR CONTAINS(LOWER([result_title]),	"smart cities")
-OR CONTAINS(LOWER([result_title]),	"green batter")
-OR CONTAINS(LOWER([result_title]),	"green electricity")
-OR CONTAINS(LOWER([result_title]),	"green grid")
+OR CONTAINS(LOWER([result_title]),	"smart city")
+OR CONTAINS(LOWER([result_title]),	"smart cities")
+OR CONTAINS(LOWER([result_title]),	"climate-smart")
+OR CONTAINS(LOWER([result_title]),	"climate smart")
 THEN "TILPASENERGI"		
 
 ELSEIF
@@ -772,21 +773,17 @@ ELSEIF
 	(CONTAINS(LOWER([result_title]),	"carbon emission"	)
 	OR CONTAINS(LOWER([result_title]),	"greenhouse")
 	OR CONTAINS(LOWER([result_title]),	"carbon dioxide emission")
-	OR CONTAINS(LOWER([result_title]),	"co2 ")
-	OR CONTAINS(LOWER([result_title]),	"co2-"))
+	OR CONTAINS(LOWER([result_title]),	"co2")
+	OR CONTAINS(LOWER([result_title]),	"co2"))
 )		
 OR CONTAINS(LOWER([result_title]),	"carbon cut"	)
-OR CONTAINS(LOWER([result_title]),	" ccs "	)
+OR REGEXP_MATCH([result_title],	"\bCCS\b"	)
 OR CONTAINS(LOWER([result_title]),	"carbon capture"	)
-OR CONTAINS(LOWER([result_title]),	" ccus "	)
+OR CONTAINS(([result_title]),	"CCUS"	)
 OR CONTAINS(LOWER([result_title]),	"green petroleum"	)
+OR CONTAINS(LOWER([result_title]),	"zero emission"	)
 
-OR
-(
-	(CONTAINS(LOWER([result_title]),	"climate"	))
-	AND
-	(CONTAINS(LOWER([result_title]),	"technology"	))
-)
+OR (CONTAINS(LOWER([result_title]),	"climate"	) AND CONTAINS(LOWER([result_title]),	"technology"	))
 OR		
 (		
 	(CONTAINS(LOWER([result_title]),	"co2"	)
@@ -810,25 +807,6 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"trade"	)
 	OR CONTAINS(LOWER([result_title]),	"doubling"	)
 	OR (CONTAINS(LOWER([result_title]),	"emission") AND CONTAINS(LOWER([result_title]),	"reduc"	)))
-)
-
-OR		
-(		
-	(CONTAINS(LOWER([result_title]),	"subsidies"	)
-	OR CONTAINS(LOWER([result_title]),	"subsidy"	)
-	OR CONTAINS(LOWER([result_title]),	"subsidier"	))		
-	AND		
-	(CONTAINS(LOWER([result_title]),	" reduc"	)
-	OR CONTAINS(LOWER([result_title]),	"phasing out"	)
-	OR CONTAINS(LOWER([result_title]),	"phase out"	)
-	OR CONTAINS(LOWER([result_title]),	"remove"	)
-	OR CONTAINS(LOWER([result_title]),	"reduce"	)
-	OR CONTAINS(LOWER([result_title]),	" end "	))		
-	AND		
-	(CONTAINS(LOWER([result_title]),	"oil"	)
-	OR CONTAINS(LOWER([result_title]),	"coal"	)
-	OR CONTAINS(LOWER([result_title]),	"fossil fuel"	)
-	OR CONTAINS(LOWER([result_title]),	"natural gas"	))
 )		
 
 OR CONTAINS(LOWER([journal]),	"greenhouse gas control"	)		
@@ -839,18 +817,18 @@ END
 ```
 
 
-## Energiomstilling
+## Energy transitions (Energiomstilling)
 
 ### Title search
 
-```
+```py =
 IF 	
-CONTAINS(LOWER([result_title]),	"klimaomstilling"	)
-OR CONTAINS(LOWER([result_title]),	"energiomstilling"	)
+CONTAINS(LOWER([result_title]),	"energiomstilling"	)
+OR CONTAINS(LOWER([result_title]),	"energy transition")
 OR
 (
-	(CONTAINS(LOWER([result_title]),	"energy sector "	)
-	OR CONTAINS(LOWER([result_title]),	"energy system "	))
+	(CONTAINS(LOWER([result_title]),	"energy sector"	)
+	OR CONTAINS(LOWER([result_title]),	"energy system"	))
 	AND		
  	(CONTAINS(LOWER([result_title]),	"transformation"	)
 	OR CONTAINS(LOWER([result_title]),	"future"	)
@@ -861,12 +839,10 @@ OR
 OR CONTAINS(LOWER([result_title]),	"energy mix"	)
 OR CONTAINS(LOWER([result_title]),	"energy ratio"	)
 OR CONTAINS(LOWER([result_title]),	"energy justice"	)
+OR CONTAINS(LOWER([result_title]),	"energy policy"	)
 OR CONTAINS(LOWER([result_title]),	"energy poverty"	)
 OR CONTAINS(LOWER([result_title]),	"energy infrastructure"	)
 OR CONTAINS(LOWER([result_title]),	"energy future"	)
-OR
-	(CONTAINS(LOWER([result_title]),	"energy transition"	)
-	AND NOT CONTAINS(LOWER([scientific_field_npi]),	"psykologi"	))
 OR CONTAINS(LOWER([result_title]),	"energy management"	)
 OR CONTAINS(LOWER([result_title]),	"energy payback time"	)
 OR CONTAINS(LOWER([result_title]),	"energy cost"	)
@@ -949,6 +925,7 @@ OR
 )
 
 OR CONTAINS(LOWER([result_title]),	"photovoltaic"	)
+OR CONTAINS(LOWER([result_title]),	"solar PV"	)
 OR
 (
 	(CONTAINS(LOWER([result_title]),	"PV"	)
@@ -1007,14 +984,20 @@ ELSEIF
 	(CONTAINS(LOWER([result_title]),	"phasing out"	)
 	OR CONTAINS(LOWER([result_title]),	"phase out"	)
 	OR CONTAINS(LOWER([result_title]),	"phased out"	)
+	OR CONTAINS(LOWER([result_title]),	"subsidies"	)
+	OR CONTAINS(LOWER([result_title]),	"subsidy"	)
+	OR CONTAINS(LOWER([result_title]),	"subsidier"	)
 	)		
 	AND		
 	(CONTAINS(LOWER([result_title]),	"oil"	)
 	OR CONTAINS(LOWER([result_title]),	"coal"	)
 	OR CONTAINS(LOWER([result_title]),	"fossil fuel"	)
-	OR CONTAINS(LOWER([result_title]),	"natural gas"	))
+	OR CONTAINS(LOWER([result_title]),	"natural gas"	)
+	OR CONTAINS(LOWER([result_title]),	"olje"	)
+	OR CONTAINS(LOWER([result_title]),	"fossilt bren"	)
+	OR CONTAINS(LOWER([result_title]),	"fossil energi"	))
 )
-THEN "ENERGI"				
+THEN "ENERGI"		
 
 ELSEIF		
 (		
@@ -1067,7 +1050,7 @@ END
 
 ### Journal search
 
-```Ceylon =
+```py =
 IF CONTAINS(LOWER([journal]),	"renewable energy"	)
 OR CONTAINS(LOWER([journal]),	"renewable fuel"	)
 OR CONTAINS(LOWER([journal]),	"green energy"	)
