@@ -486,7 +486,7 @@ ELSE 'non'
 END
 ```
 
-## Klimatilpassning
+## Climate adaptation
 
 ### Title search
 
@@ -494,11 +494,8 @@ END
 IF		
 (		
 	(		
-		(CONTAINS(LOWER([result_title]),	"climat"	)
-		AND CONTAINS(LOWER([result_title]),	"chang"	))		
-		OR		
-		(CONTAINS(LOWER([result_title]),	"warm"	)
-		AND CONTAINS(LOWER([result_title]),	"global"	))
+		(CONTAINS(LOWER([result_title]), "climat") AND CONTAINS(LOWER([result_title]), "chang"))		
+		OR	(CONTAINS(LOWER([result_title]), "warm") AND CONTAINS(LOWER([result_title]), "global"))
 	)		
 AND		
 	(CONTAINS(LOWER([result_title]),	"action"	)
@@ -545,6 +542,7 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"risk"	)
 	OR CONTAINS(LOWER([result_title]),	"acceptance"	)
 	OR CONTAINS(LOWER([result_title]),	"worries"	)
+	OR CONTAINS(LOWER([result_title]),	"fear"	)
 	OR CONTAINS(LOWER([result_title]),	"belief"	)
 	OR CONTAINS(LOWER([result_title]),	"challenge"	)
 	OR CONTAINS(LOWER([result_title]),	"believe"	))
@@ -553,7 +551,7 @@ THEN "TILPASNING"
 
 ELSEIF
 (
-	CONTAINS(LOWER([result_title]),	"clima" )
+	CONTAINS(LOWER([result_title]),	"climat" )
 	AND			
 	(CONTAINS(LOWER([result_title]),	"service"	)
 	OR CONTAINS(LOWER([result_title]),	"negotioation"	)
@@ -568,6 +566,7 @@ THEN "TILPASNING"
 
 ELSEIF
 	CONTAINS(LOWER([Result Title]),	"climate perspective"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate perception"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate concern"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate knowledge"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate adapt"	)
@@ -575,6 +574,11 @@ ELSEIF
 	OR CONTAINS(LOWER([Result Title]),	"climate mitigat"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate action"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate planning"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate financ")
+	OR CONTAINS(LOWER([Result Title]),	"climate fund")
+	OR CONTAINS(LOWER([Result Title]),	"climate law")
+	OR CONTAINS(LOWER([Result Title]),	"climate justice")
+	OR CONTAINS(LOWER([Result Title]),	"climate crisis")
 THEN "TILPASNING"
 
 ELSEIF
@@ -615,8 +619,9 @@ ELSEIF
 THEN "TILPASNING"
 
 ELSEIF					
-CONTAINS(LOWER([result_title]),	"ipcc"	)
-OR CONTAINS(LOWER([result_title]),	"kyoto protocol"	)
+CONTAINS(LOWER([result_title]),	"ipcc")
+OR CONTAINS(LOWER([result_title]),	"kyoto protocol")
+OR CONTAINS(LOWER([result_title]),	"cop2")
 OR
 (
 	(CONTAINS(LOWER([result_title]),	"climat"	)
@@ -625,14 +630,6 @@ OR
 	(CONTAINS(LOWER([result_title]),	"agreement"	)
 	OR CONTAINS(LOWER([result_title]),	"target"	)
 	OR CONTAINS(LOWER([result_title]),	"treaty"	))
-)			
-OR
-(
-	CONTAINS(LOWER([result_title]),	"climat"	)
-	AND 			
-	(CONTAINS(LOWER([result_title]),	"law"	)
-	OR CONTAINS(LOWER([result_title]),	"justice"	)
-	OR CONTAINS(LOWER([result_title]),	"fear" 	))
 )			
 THEN "TILPASNING"
 
@@ -693,7 +690,7 @@ END
 
 ### Journal search
 
-```Ceylon =
+```py =
 IF 		
 CONTAINS(LOWER([journal]),	"climate and development"	)
 OR CONTAINS(LOWER([journal]),	"climate change mitigation"	)
@@ -706,7 +703,7 @@ OR CONTAINS(LOWER([journal]),	"carbon and climate law review"	)
 OR CONTAINS(LOWER([journal]),	"climate policy"	)
 OR CONTAINS(LOWER([journal]),	"weather, climate and society climate policy"	)
 OR CONTAINS(LOWER([journal]),	"climate services"	)
-OR CONTAINS(LOWER([journal]),	" international journal of climate change strategies and management"	)
+OR CONTAINS(LOWER([journal]),	"international journal of climate change strategies and management"	)
 OR CONTAINS(LOWER([journal]),	"urban studies"	)
 OR CONTAINS(LOWER([journal]),	"urban climate"	)
 
@@ -727,11 +724,14 @@ THEN "TILPASNING"
 ELSE 'non'		
 END
 ```
-## Klimatilpassning og Energiomstilling - i praksis ikke mulig å avgrense i hvilken de skal gå defor valgt å ta de inn i begge - litt støy men realistisk
+
+## Climate adapatation AND energy transitions
+
+In practice it is not possible to completely/reliably separate these two sub-topics, so the strings under count for both.  
 
 ### Title search
 
-```Ceylon=
+```py=
 IF
 CONTAINS(LOWER([result_title]),	"green economy"	)
 OR
