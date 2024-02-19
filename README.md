@@ -3,9 +3,9 @@
 Search strings used to find scientific works connected to strategic priority areas (2020-2022) and thematic priority areas (2023-??).
 
 Covers (https://www.uib.no/en/priority-areas):
-* Ocean - interpreted as marine/ocean research ("Hav")
-* Climate and energy transitions ("Klima og energiomstilling", KE)
-* Global challenges, with a focus on global health, migration and inequality ("Globale samfunnsutfordringer", GSU)
+* Ocean - interpreted as ocean research ("Hav", **marine**)
+* Climate and energy transitions ("Klima og energiomstilling", **KE**)
+* Global challenges, with a focus on global health, migration and inequality ("Globale samfunnsutfordringer", **GSU**)
 
 There are several files for each area:
 
