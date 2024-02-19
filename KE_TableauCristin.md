@@ -62,11 +62,11 @@ Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer
 
 Title and journal search. These are terms that are so generic it is hard to pin them to a sub-topic, but we want to make sure that they are caught.
 
-```Ceylon =
+```py =
 IF			
-(CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "chang"))			
+(CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "chang"))
 OR (CONTAINS(LOWER([Result Title]),"warm") AND CONTAINS(LOWER([Result Title]), "global"))
-OR (CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))			
+OR (CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))
 OR (CONTAINS(LOWER([Result Title]),"ocean") AND CONTAINS(LOWER([Result Title]),	"warm"))
 
 OR (CONTAINS(LOWER([Result Title Anthology]),"climat") AND CONTAINS(LOWER([Result Title]), "chang"))			
@@ -86,7 +86,7 @@ END
 
 ### Title search
 
-```Ceylon =
+```py =
 IF
 (
 	CONTAINS(LOWER([result_title]),	"climat"	)
@@ -208,9 +208,9 @@ ELSEIF
 (
 	CONTAINS(LOWER([result_title]),	"climat"	)
 	AND		
-	(CONTAINS(LOWER([result_title]),	" arctic"	)
-	OR CONTAINS(LOWER([result_title]),	" arktisk"	)
-	OR CONTAINS(LOWER([result_title]),	" antarktisk"	)
+	(REGEXP_MATCH([result_title],	"\barctic"	)
+	OR REGEXP_MATCH([result_title],	"\barktisk"	)
+	OR REGEXP_MATCH([result_title],	"\bantarktisk"	)
 	OR CONTAINS(LOWER([result_title]),	"polar"	)
 	OR CONTAINS(LOWER([result_title]),	"northpole"	)
 	OR CONTAINS(LOWER([result_title]),	"north pole"	)
@@ -265,17 +265,13 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"greenland basin"	)
 	OR CONTAINS(LOWER([result_title]),	"international water"	)
 	OR CONTAINS(LOWER([result_title]),	"gulfstream"	)
-	OR CONTAINS(LOWER([result_title]),	"arctic water"	)
 	OR CONTAINS(LOWER([result_title]),	"polar water"	)
-	OR CONTAINS(LOWER([result_title]),	"arctic current"	)
 	OR CONTAINS(LOWER([result_title]),	"polar current"	)
 	OR CONTAINS(LOWER([result_title]),	"south polar"	))
 )		
 THEN "SYSEFF"		
 
 ELSEIF		
-
-//OR CONTAINS(LOWER([Artikel/kapiteltittel]),	"glacial"	)
 CONTAINS(LOWER([result_title]),	"glacier"	)
 OR CONTAINS(LOWER([result_title]),	"isbre"	)
 OR CONTAINS(LOWER([result_title]),	"breen"	)
@@ -308,7 +304,7 @@ OR CONTAINS(LOWER([result_title]),	"havis"	)
 OR CONTAINS(LOWER([result_title]),	"marginal ice zone"	)
 OR CONTAINS(LOWER([result_title]),	"multi-year ice"	)
 OR CONTAINS(LOWER([result_title]),	"first-year ice"	)
-OR (CONTAINS(LOWER([result_title]),	" warm"	) AND CONTAINS(LOWER([result_title]),	"arctic "	))
+OR (REGEXP_MATCH([result_title], "\bwarm") AND REGEXP_MATCH([result_title], "\barctic" ))
 OR CONTAINS(LOWER([result_title]),	"arctic amplification"	)
 THEN "SYSEFF"		
 
@@ -353,7 +349,7 @@ OR CONTAINS(LOWER([result_title]),	"black carbon"	)
 OR CONTAINS(LOWER([result_title]),	"heat wave"	)
 OR CONTAINS(LOWER([result_title]),	"heatwave"	)
 OR CONTAINS(LOWER([result_title]),	"tipping point"	)
-OR CONTAINS(LOWER([result_title]),	"albedo changes"	)
+OR CONTAINS(LOWER([result_title]),	"albedo change")
 THEN "SYSEFF"		
 
 ELSEIF		
@@ -378,14 +374,13 @@ ELSEIF
 )		
 OR
 (		
-	(CONTAINS(LOWER([result_title]),	" sea "	)
+	(REGEXP_MATCH([result_title], "\bsea\b" )
 	OR CONTAINS(LOWER([result_title]),	"ocean"	))		
 	AND		
 	(CONTAINS(LOWER([result_title]),	"level"	)
 	OR CONTAINS(LOWER([result_title]),	"warm"	)
 	OR CONTAINS(LOWER([result_title]),	"heat"	)
 	OR CONTAINS(LOWER([result_title]),	"acidification"	)
-	OR CONTAINS(LOWER([result_title]),	"co2"	)
 	OR CONTAINS(LOWER([result_title]),	"co2"	)
 	OR CONTAINS(LOWER([result_title]),	"carbon"	)
 	OR CONTAINS(LOWER([result_title]),	"predict"	)
@@ -396,8 +391,10 @@ THEN "SYSEFF"
 ELSEIF		
 (		
 	(
-		(CONTAINS(LOWER([result_title]),	"climat"	) AND CONTAINS(LOWER([result_title]),	"chang"	))		
-		OR (CONTAINS(LOWER([result_title]),	"warm"	) AND CONTAINS(LOWER([result_title]),	"global"	))
+	(CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "chang"))
+	OR (CONTAINS(LOWER([Result Title]),"warm") AND CONTAINS(LOWER([Result Title]), "global"))
+	OR (CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))
+	OR (CONTAINS(LOWER([Result Title]),"ocean") AND CONTAINS(LOWER([Result Title]),	"warm"))
 	)		
 AND		
 	(CONTAINS(LOWER([result_title]),	"disaster"	)
@@ -459,7 +456,6 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"carbon"	)
 	OR CONTAINS(LOWER([result_title]),	"greenhouse"	)
 	OR CONTAINS(LOWER([result_title]),	"co2"	)
-	OR CONTAINS(LOWER([result_title]),	"co2"	)
 	)
 	AND
 	(CONTAINS(LOWER([result_title]),	"scenario"	)
@@ -494,7 +490,7 @@ END
 
 ### Title search
 
-```Ceylon =
+```py =
 IF		
 (		
 	(		
