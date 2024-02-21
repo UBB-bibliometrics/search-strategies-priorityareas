@@ -273,41 +273,5 @@ NOT SO=("PETROLEUM SCIENCE AND TECHNOLOGY" OR "Petroleum Science" OR "PETROLEUM 
 )
 
 OR TS=(("phase* out") NEAR/15 ("oil" OR "coal" OR "natural gas" OR "petroleum" OR "fossil fuel$"))
-
-OR
-SO=(WIND ENERGY
-	OR	Sustainable Energy Technologies and Assessments
-	OR	Sustainable Energy Grids & Networks
-	OR	Sustainable Energy & Fuels
-	OR	SOLAR ENERGY MATERIALS AND SOLAR CELLS
-	OR	SOLAR ENERGY
-	OR	RENEWABLE ENERGY
-	OR	RENEWABLE & SUSTAINABLE ENERGY REVIEWS
-	OR	PROGRESS IN PHOTOVOLTAICS
-	OR	JOURNAL OF SOLAR ENERGY ENGINEERING-TRANSACTIONS OF THE ASME
-
-	OR	Journal of Renewable and Sustainable Energy
-	OR	JOURNAL OF CLEANER PRODUCTION
-	OR	Journal of Biobased Materials and Bioenergy
-	OR	International Journal of Precision Engineering and Manufacturing-Green Technology
-
-	OR	INTERNATIONAL JOURNAL OF HYDROGEN ENERGY
-	OR	International Journal of Greenhouse Gas Control
-	OR	International Journal of Green Energy
-	OR	IEEE Transactions on Sustainable Energy
-	OR	IEEE Journal of Photovoltaics
-	OR	Green Energy & Environment
-	OR	Global Change Biology Bioenergy
-	OR	GEOTHERMICS
-	OR	Geothermal Energy
-	OR	Environmental Progress & Sustainable Energy
-	OR	Biotechnology for Biofuels
-	OR	BioResources
-	OR	BIORESOURCE TECHNOLOGY
-	OR	BIOMASS & BIOENERGY
-	OR	Biofuels-UK
-	OR	Biofuels Bioproducts & Biorefining-Biofpr
-	OR	BioEnergy Research
-	OR	Algal Research-Biomass Biofuels and Bioproducts												
-	)													
+												
 ```
