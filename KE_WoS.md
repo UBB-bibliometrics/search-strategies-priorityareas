@@ -1,11 +1,9 @@
-# Klima og Energiomstilling
+# Climate and energy transition (Klima og energiomstilling)
 
-See Tableau/Cristin file for main documentation. The string contains of four blocks. 
-
-Note, in the 2022 version, the number of results for "tilpasning" has been reduced slightly. This is due to a change in truncation of climate + plan*, which to climate + plan/plans/planning - before, it was erroneously finding results about climate change and plant communities (which should be in systems and effects).
+See Tableau/Cristin file for main documentation.
 
 ## ANY
-```Ceylon =
+```py =
 TS=(
 	("climat*" NEAR/3 ("chang*" OR "warm*"))
 	OR ("ocean*" NEAR/3 ("warming" OR "warmer"))
@@ -13,7 +11,9 @@ TS=(
 )		
 ```
 
-## Klima
+## Climate systems and effects
+
+Klimasystemer og effekter.
 
 ```Ceylon =
 TS=(
@@ -102,7 +102,11 @@ TS=(
 
 ```
 
-## Tilpasning
+## Climate adaptation 
+
+Klimatilpasning.
+
+Note, in the 2022 version, the number of results for "tilpasning" has been reduced slightly. This is due to a change in truncation of climate + plan*, which to climate + plan/plans/planning - before, it was erroneously finding results about climate change and plant communities (which should be in systems and effects).
 
 ```Ceylon =
 TS=(
@@ -199,7 +203,9 @@ TS=(
 )														
 ```
 
-## Energy
+## Energy transitions
+
+Energiomstilling og fornybar energi.
 
 ```Ceylon =
 TS=(

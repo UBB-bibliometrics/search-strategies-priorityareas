@@ -1,13 +1,13 @@
 
-# KE
+# Climate and energy transition (Klima og energiomstilling)
 
 Identifies scientific articles/books/chapters connected to the climate and energy transition priority area. String to use in Tableau against "FOR_data_sted_total"-extract from DUCT or live.
 
-**Important note**: Each string must ALSO be run against "result_title_anthology" to catch book results. This is NOT added explicitly here (except in the first, general string). Strings for result_title can be repeated, and this field changed out.
+The searches are run in mainly 2 fields, result title (title of the work) and journal name. **Important note**: Each string must ALSO be run against "result_title_anthology" to catch book results (where book titles are in a different field, and chapter titles count as result titles). This is NOT added explicitly here (except in the first, general string). Strings for result_title can be repeated, and this field changed out.
 
 ## Description provided in reports (Norwegian)
 
-Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Gunn Mangerud og direktørene Kristin Guldbransen Frøysa, Tore Furevik)
+Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Gunn Mangerud og direktørene Kristin Guldbransen Frøysa, Tore Furevik). Videre forslag om søkebegrep fra KGF i vår 2024. 
 
 Klimasystemer og Effekter
 
@@ -60,7 +60,7 @@ Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer
 
 ## Any undertopic (generic terms)
 
-Title and journal search. These are terms that are so generic it is hard to pin them to a sub-topic, but we want to make sure that they are caught.
+Title and journal search. These are generic terms, so it is hard to pin them to a sub-topic, but we want to make sure that they are caught.
 
 ```py =
 IF			
@@ -76,7 +76,7 @@ OR (CONTAINS(LOWER([Result Title Anthology]),"ocean") AND CONTAINS(LOWER([Result
 		
 OR CONTAINS(LOWER([Journal]), "nature climate change")
 OR CONTAINS(LOWER([Journal]), "weather, climate and society")
-OR CONTAINS(LOWER([Journal]), "inter disciplinary reviews: climate change")
+OR CONTAINS(LOWER([Journal]), "disciplinary reviews: climate change")
 THEN "general"
 ELSE "non"
 END
@@ -158,11 +158,6 @@ IF
 	OR CONTAINS(LOWER([result_title]),	"geologic"	)
 	OR CONTAINS(LOWER([result_title]),	"history"	)
 
-	OR CONTAINS(LOWER([result_title]),	"coral"	)
-	OR CONTAINS(LOWER([result_title]),	"reef"	)
-	OR CONTAINS(LOWER([result_title]),	"ocean"	)
-	OR CONTAINS(LOWER([result_title]),	"sea"	)
-
 	OR CONTAINS(LOWER([result_title]),	"arid"	)
 	OR CONTAINS(LOWER([result_title]),	"desert"	)
 	OR CONTAINS(LOWER([result_title]),	"flood"	)
@@ -174,16 +169,21 @@ IF
 	OR CONTAINS(LOWER([result_title]),	"groundwater"	)
 
 	OR CONTAINS(LOWER([result_title]),	"tundra"	)
-	OR CONTAINS(LOWER([result_title]),	"biota"	)
+	OR CONTAINS(LOWER([result_title]),	"ecosystem"	)
+	OR CONTAINS(LOWER([result_title]),	"forest"	)
 	OR CONTAINS(LOWER([result_title]),	"taiga"	)
 	OR CONTAINS(LOWER([result_title]),	"treeline"	)
-	OR CONTAINS(LOWER([result_title]),	"biota"	)
-	OR CONTAINS(LOWER([result_title]),	"alga"	)
+	OR CONTAINS(LOWER([result_title]),	"forest"	)
 	OR CONTAINS(LOWER([result_title]),	"diversity"	)
-	OR CONTAINS(LOWER([result_title]),	"plankton"	)
 	OR CONTAINS(LOWER([result_title]),	"pollen"	)
 	OR CONTAINS(LOWER([result_title]),	"vegetation"	)
-	OR CONTAINS(LOWER([result_title]),	"swamp"	))
+	OR CONTAINS(LOWER([result_title]),	"swamp"	)
+	OR CONTAINS(LOWER([result_title]),	"coral"	)
+	OR CONTAINS(LOWER([result_title]),	"plankton"	)
+	OR CONTAINS(LOWER([result_title]),	"alga"	)
+	OR CONTAINS(LOWER([result_title]),	"reef"	)
+	OR CONTAINS(LOWER([result_title]),	"ocean"	)
+	OR CONTAINS(LOWER([result_title]),	"sea"	))
 )		
 THEN "SYSEFF"
 
@@ -486,6 +486,17 @@ ELSE 'non'
 END
 ```
 
+### Journal search
+
+```py =
+IF CONTAINS(LOWER([journal]),	"climate change ecology"	)
+OR CONTAINS(LOWER([journal]),	"climate system"	)
+THEN "SYSEFF"
+ELSE 'non'
+END
+```
+
+
 ## Climate adaptation (klimatilpasning)
 
 ### Title search
@@ -695,24 +706,24 @@ END
 IF 		
 CONTAINS(LOWER([journal]),	"climate and development"	)
 OR CONTAINS(LOWER([journal]),	"climate change mitigation"	)
+OR CONTAINS(LOWER([journal]),	"climate change adaptation"	)
 OR CONTAINS(LOWER([journal]),	"climate change economics"	)
+OR CONTAINS(LOWER([journal]),	"economics of disasters and climate change"	)
+OR CONTAINS(LOWER([journal]),	"economics of climate change"	)
 OR CONTAINS(LOWER([journal]),	"climate change management"	)
-OR CONTAINS(LOWER([journal]),	"journal of water and climate change"	)
-
-OR CONTAINS(LOWER([journal]),	"carbon and climate law review"	)
-
 OR CONTAINS(LOWER([journal]),	"climate policy"	)
 OR CONTAINS(LOWER([journal]),	"weather, climate and society climate policy"	)
 OR CONTAINS(LOWER([journal]),	"climate services"	)
-OR CONTAINS(LOWER([journal]),	"international journal of climate change strategies and management"	)
+OR CONTAINS(LOWER([journal]),	"journal of climate change strategies"	)
 OR CONTAINS(LOWER([journal]),	"urban studies"	)
 OR CONTAINS(LOWER([journal]),	"urban climate"	)
-
 OR CONTAINS(LOWER([journal]),	"global transition"	)
 OR CONTAINS(LOWER([journal]),	"journal of water and climate change"	)
 OR CONTAINS(LOWER([journal]),	"sustainability"	)
 OR CONTAINS(LOWER([journal]),	"current climate change reports"	)
 OR CONTAINS(LOWER([journal]),	"greenhouse gas control"	)
+
+OR CONTAINS(LOWER([journal]),	"carbon and climate law review"	)
 OR
 (
 	(CONTAINS(LOWER([journal]),	"carbon"	)
@@ -1080,6 +1091,7 @@ OR CONTAINS(LOWER([journal]),	"hydropower"	)
 OR CONTAINS(LOWER([journal]),	"energy research & social sciences"	)
 
 OR CONTAINS(LOWER([journal]),	"journal of greenhouse gas control"	)
+OR CONTAINS(LOWER([journal]),	"carbon capture"	)
 
 OR CONTAINS(LOWER([journal]),	"Sustainable Energy Technologies and Assessments"	)
 OR CONTAINS(LOWER([journal]),	"journal of cleaner production"	)
