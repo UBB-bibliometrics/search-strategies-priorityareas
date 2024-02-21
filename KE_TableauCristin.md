@@ -183,7 +183,7 @@ IF
 	OR CONTAINS(LOWER([result_title]),	"alga"	)
 	OR CONTAINS(LOWER([result_title]),	"reef"	)
 	OR CONTAINS(LOWER([result_title]),	"ocean"	)
-	OR CONTAINS(LOWER([result_title]),	"sea"	))
+	OR REGEXP_MATCH([result_title],	"\bsea"	))
 )		
 THEN "SYSEFF"
 
@@ -206,9 +206,10 @@ THEN "SYSEFF"
 
 ELSEIF		
 (
-	CONTAINS(LOWER([result_title]),	"climat"	)
+	(CONTAINS(LOWER([result_title]),	"climat"	)
+	OR CONTAINS(LOWER([result_title]),	"klima"	))
 	AND		
-	(REGEXP_MATCH([result_title],	"\barctic"	)
+	(CONTAINS(LOWER([result_title]),	"arctic"	)
 	OR REGEXP_MATCH([result_title],	"\barktisk"	)
 	OR REGEXP_MATCH([result_title],	"\bantarktisk"	)
 	OR CONTAINS(LOWER([result_title]),	"polar"	)
@@ -234,9 +235,6 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"high latitude"	)
 	OR CONTAINS(LOWER([result_title]),	"high-latitude"	)
 	OR CONTAINS(LOWER([result_title]),	"southpole"	)
-	OR CONTAINS(LOWER([result_title]),	"northatlantic"	)
-	OR CONTAINS(LOWER([result_title]),	"mid-atlantic"	)
-	OR CONTAINS(LOWER([result_title]),	"north-east atlantic"	)
 	OR CONTAINS(LOWER([result_title]),	"atlantic"	)
 	OR CONTAINS(LOWER([result_title]),	"barents sea"	)
 	OR CONTAINS(LOWER([result_title]),	"greenland sea"	)
@@ -304,7 +302,7 @@ OR CONTAINS(LOWER([result_title]),	"havis"	)
 OR CONTAINS(LOWER([result_title]),	"marginal ice zone"	)
 OR CONTAINS(LOWER([result_title]),	"multi-year ice"	)
 OR CONTAINS(LOWER([result_title]),	"first-year ice"	)
-OR (REGEXP_MATCH([result_title], "\bwarm") AND REGEXP_MATCH([result_title], "\barctic" ))
+OR (REGEXP_MATCH([result_title], "\bwarm") AND CONTAINS(LOWER([result_title]), "arctic" ))
 OR CONTAINS(LOWER([result_title]),	"arctic amplification"	)
 THEN "SYSEFF"		
 
@@ -313,6 +311,7 @@ ELSEIF
 	CONTAINS(LOWER([result_title]),	"anthropo"	)
 	AND		
 	(CONTAINS(LOWER([result_title]),	"heating"	)
+	OR CONTAINS(LOWER([result_title]),	"warming"	)
 	OR CONTAINS(LOWER([result_title]),	"forcing"	)
 	OR CONTAINS(LOWER([result_title]),	"change"	)
 	OR CONTAINS(LOWER([result_title]),	"driv"	)
@@ -326,8 +325,7 @@ OR CONTAINS(LOWER([result_title]),	"echam5"	)
 OR CONTAINS(LOWER([result_title]),	"cmip"	)
 OR CONTAINS(LOWER([result_title]),	"gcm"	)
 OR CONTAINS(LOWER([result_title]),	"aogsm"	)
-OR CONTAINS(LOWER([result_title]),	"ukmo-hadcm"	)
-OR CONTAINS(LOWER([result_title]),	"ukmo-hadgem"	)
+OR CONTAINS(LOWER([result_title]),	"ukmo-had"	)
 OR CONTAINS(LOWER([result_title]),	"gfdl-cm"	)
 OR CONTAINS(LOWER([result_title]),	"giss-eh"	)
 OR CONTAINS(LOWER([result_title]),	"giss-er"	)
@@ -346,13 +344,14 @@ OR CONTAINS(LOWER([result_title]),	"cloud forcing"	)
 OR CONTAINS(LOWER([result_title]),	"cloud interaction"	)
 OR CONTAINS(LOWER([result_title]),	"aerosol effect"	)
 OR CONTAINS(LOWER([result_title]),	"black carbon"	)
-OR CONTAINS(LOWER([result_title]),	"heat wave"	)
-OR CONTAINS(LOWER([result_title]),	"heatwave"	)
-OR CONTAINS(LOWER([result_title]),	"tipping point"	)
 OR CONTAINS(LOWER([result_title]),	"albedo change")
 THEN "SYSEFF"		
 
-ELSEIF		
+ELSEIF	
+CONTAINS(LOWER([result_title]),	"tipping point"	)
+OR CONTAINS(LOWER([result_title]),	"heat wave"	)
+OR CONTAINS(LOWER([result_title]),	"heatwave"	)
+OR	
 (		
 	(CONTAINS(LOWER([result_title]),	"extreme"	)
 	OR CONTAINS(LOWER([result_title]),	"chang"	)
@@ -372,6 +371,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"flood"	)
 	OR CONTAINS(LOWER([result_title]),	"weather"	))
 )		
+OR CONTAINS(LOWER([result_title]),	"havforsur"	)	
 OR
 (		
 	(REGEXP_MATCH([result_title], "\bsea\b" )
@@ -385,16 +385,16 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"carbon"	)
 	OR CONTAINS(LOWER([result_title]),	"predict"	)
 	OR CONTAINS(LOWER([result_title]),	"variabil"	))
-)		
+)	
 THEN "SYSEFF"		
 
 ELSEIF		
 (		
 	(
 	(CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "chang"))
-	OR (CONTAINS(LOWER([Result Title]),"warm") AND CONTAINS(LOWER([Result Title]), "global"))
 	OR (CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))
 	OR (CONTAINS(LOWER([Result Title]),"ocean") AND CONTAINS(LOWER([Result Title]),	"warm"))
+	OR CONTAINS(LOWER([result_title]),	"global warming"	)
 	)		
 AND		
 	(CONTAINS(LOWER([result_title]),	"disaster"	)
@@ -417,14 +417,14 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"risk"	)
 	OR CONTAINS(LOWER([result_title]),	"econom"	)
 	OR CONTAINS(LOWER([result_title]),	"quota"	)
-	OR CONTAINS(LOWER([result_title]),	"war"	)
+	OR REGEXP_MATCH([result_title],	"\bwar"	)
 	OR CONTAINS(LOWER([result_title]),	"conflict"	)
 	OR CONTAINS(LOWER([result_title]),	"affect"	)
 	OR CONTAINS(LOWER([result_title]),	"effect"	)
 	OR CONTAINS(LOWER([result_title]),	"influence"	)
 	OR CONTAINS(LOWER([result_title]),	"scenario"	)
 	OR CONTAINS(LOWER([result_title]),	"infrastructure"	)
-	OR CONTAINS(LOWER([result_title]),	"ship"	)
+	OR REGEXP_MATCH([result_title],	"\bship"	)
 
 	OR CONTAINS(LOWER([result_title]),	"forest"	)
 	OR CONTAINS(LOWER([result_title]),	"resources"	)
@@ -438,10 +438,10 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"migrat"	)
 	OR CONTAINS(LOWER([result_title]),	"migrant"	)
 	OR CONTAINS(LOWER([result_title]),	"refugee"	)
-	OR CONTAINS(LOWER([result_title]),	"ecosystem"	)
 	OR CONTAINS(LOWER([result_title]),	"societ"	)
 	OR CONTAINS(LOWER([result_title]),	"communit"	)
 	OR CONTAINS(LOWER([result_title]),	"agricultur"	)
+	OR CONTAINS(LOWER([result_title]),	"aquacultur"	)
 	OR CONTAINS(LOWER([result_title]),	"landuse"	)
 	OR CONTAINS(LOWER([result_title]),	"land use"	)
 	OR CONTAINS(LOWER([result_title]),	"land area cover"	)
