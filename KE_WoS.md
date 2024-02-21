@@ -7,9 +7,10 @@ Note, in the 2022 version, the number of results for "tilpasning" has been reduc
 ## ANY
 ```Ceylon =
 TS=(
-("climat*" NEAR/3 ("chang*" OR "warm*"))
-OR "global warming" 
-)			
+	("climat*" NEAR/3 ("chang*" OR "warm*"))
+	OR ("ocean*" NEAR/3 ("warming" OR "warmer"))
+	OR "global warming" 
+)		
 ```
 
 ## Klima
