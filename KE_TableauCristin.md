@@ -794,7 +794,9 @@ OR
 (
 	(CONTAINS(LOWER([result_title]),	"green")
 	OR CONTAINS(LOWER([result_title]),	"grønn")
-	OR REGEXP_MATCH([result_title], "\bcarbon\b")
+	OR CONTAINS(LOWER([result_title]),	"decarbon")
+	OR REGEXP_MATCH([result_title], "low carbon\b")
+	OR REGEXP_MATCH([result_title], "low-carbon\b")
 	OR REGEXP_MATCH([result_title], "\bkarbon\b")
 	OR REGEXP_MATCH([result_title], "lavkarbon\b")
 	OR CONTAINS(LOWER([result_title]),	"emission")
@@ -1039,8 +1041,8 @@ OR
 	(CONTAINS(LOWER([result_title]),	"PV"	)
 	OR CONTAINS(LOWER([result_title]),	"solar"	))
 	AND		
-	(CONTAINS(LOWER([result_title]),	"kW"	)
-	OR CONTAINS(LOWER([result_title]),	"MW"	)
+	(CONTAINS(([result_title]),	"kW"	)
+	OR CONTAINS(([result_title]),	"MW"	)
 	OR CONTAINS(LOWER([result_title]),	"power"	)
 	OR CONTAINS(LOWER([result_title]),	"panel"	)
 	OR CONTAINS(LOWER([result_title]),	"array"	)
