@@ -89,7 +89,7 @@ IF
 CONTAINS(LOWER([result_title]),	"klimasystem"	)
 OR CONTAINS(LOWER([result_title]),	"klimadynamikk"	)
 OR CONTAINS(LOWER([result_title]),	"klimaeffekt"	)
-OR CONTAINS(LOWER([result_title]),	"klimavirkn"	)
+OR CONTAINS(LOWER([result_title]),	"klimavirkni"	)
 OR
 (
 	CONTAINS(LOWER([result_title]),	"climat"	)
@@ -818,42 +818,29 @@ OR
 THEN "TILPASENERGI"		
 
 ELSEIF			
-(			
-	(CONTAINS(LOWER([result_title]),	"carbon"	)
-	OR CONTAINS(LOWER([result_title]),	"greenhouse"	)
-	OR CONTAINS(LOWER([result_title]),	"co 2"	)
-	OR CONTAINS(LOWER([result_title]),	"co2"	))
-	AND
-	(CONTAINS(LOWER([result_title]),	"emission"	)
-	OR CONTAINS(LOWER([result_title]),	"footprint"	))
-)
-OR CONTAINS(LOWER([result_title]),	"klimautslipp"	)
-
-OR CONTAINS(LOWER([result_title]),	"carbon cut"	)
-OR CONTAINS(LOWER([result_title]),	"zero emission"	)
-OR CONTAINS(LOWER([result_title]),	"null utslipp"	)
-OR CONTAINS(LOWER([result_title]),	"nullutslipp"	)
-
-OR (CONTAINS(LOWER([result_title]), "climate") AND CONTAINS(LOWER([result_title]), "technology"))
-
-OR REGEXP_MATCH([result_title],	"\bCCS\b"	)
-OR CONTAINS(([result_title]),	"CCUS"	)
+CONTAINS(LOWER([result_title]),	"klimautslipp"	)
+OR CONTAINS(LOWER([result_title]),	"klimagass"	)
 OR CONTAINS(LOWER([result_title]), "karbonfangst")
 OR CONTAINS(LOWER([result_title]), "co2-fangst")
 OR CONTAINS(LOWER([result_title]), "co2-lagring")
+
+OR REGEXP_MATCH([result_title],	"\bCCS\b"	)
+OR CONTAINS(([result_title]),	"CCUS"	)
 OR		
 (		
 	(CONTAINS(LOWER([result_title]),	"co2"	)
 	OR CONTAINS(LOWER([result_title]),	"co 2"	)
 	OR CONTAINS(LOWER([result_title]),	"greenhouse gas"	)
-	OR CONTAINS(LOWER([result_title]),	"ghg"	)
+	OR CONTAINS([result_title],	"GHG"	)
 	OR CONTAINS(LOWER([result_title]),	"methane"	)
 	OR CONTAINS(LOWER([result_title]),	"n2o"	)
 	OR CONTAINS(LOWER([result_title]),	"nitrous oxide"	)
 	OR CONTAINS(LOWER([result_title]),	"ozone"	)
 	OR CONTAINS(LOWER([result_title]),	"carbon"	))
 	AND		
-	(CONTAINS(LOWER([result_title]),	"sink"	)
+	(CONTAINS(LOWER([result_title]),	"emission")
+	OR CONTAINS(LOWER([result_title]),	"footprint"	)
+	OR CONTAINS(LOWER([result_title]),	"sink"	)
 	OR CONTAINS(LOWER([result_title]),	"capture"	)
 	OR CONTAINS(LOWER([result_title]),	"sequestration"	)
 	OR CONTAINS(LOWER([result_title]),	"storage"	)
@@ -862,13 +849,13 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"trap"	)
 	OR CONTAINS(LOWER([result_title]),	"budget"	)
 	OR CONTAINS(LOWER([result_title]),	"trade"	)
-	OR CONTAINS(LOWER([result_title]),	"doubling"	)
-	OR CONTAINS(LOWER([result_title]),	"emission"))
+	OR CONTAINS(LOWER([result_title]),	"doubling"	))
 )		
 OR
 (
 	(CONTAINS(LOWER([result_title]),	"carbon"	)
 	OR CONTAINS(LOWER([result_title]),	"greenhouse gas"	)
+	OR CONTAINS([result_title],	"GHG"	)
 	OR CONTAINS(LOWER([result_title]),	"co2 "	))
 	AND		
 	(CONTAINS(LOWER([result_title]),	"pric"	)
@@ -876,6 +863,13 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"trading"	)
 	OR CONTAINS(LOWER([result_title]),	"trade"	))
 )	
+
+OR CONTAINS(LOWER([result_title]),	"carbon cut"	)
+OR CONTAINS(LOWER([result_title]),	"zero emission"	)
+OR CONTAINS(LOWER([result_title]),	"null utslipp"	)
+OR CONTAINS(LOWER([result_title]),	"nullutslipp"	)
+OR (CONTAINS(LOWER([result_title]), "climate") AND CONTAINS(LOWER([result_title]), "technology"))
+
 THEN "TILPASENERGI"
 ELSE 'non'
 END
