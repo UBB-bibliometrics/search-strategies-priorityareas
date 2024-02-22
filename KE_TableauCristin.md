@@ -7,7 +7,7 @@ The searches are run in mainly 2 fields, result title (title of the work) and jo
 
 ## Description provided in reports (Norwegian)
 
-Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Gunn Mangerud og direktørene Kristin Guldbransen Frøysa, Tore Furevik). Videre forslag om søkebegrep fra KGF i vår 2024. 
+Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Gunn Mangerud og direktørene Kristin Guldbransen Frøysa, Tore Furevik). Redigert etter forslag om søkebegrep fra KGF i vår 2024. 
 
 Klimasystemer og Effekter
 
@@ -29,28 +29,29 @@ Klimasystemer og Effekter
 Klimatilpasning
 - Tilpasning/politikk/rammeverk/tiltak mot klimaendringene
 - tilpasse seg klimarelaterte farer og naturkatastrofer /klimaekstreme
-- C02 lagring (CSS/CCUS) (overlapp med energiomstilling)
-- Klimakvoteloven/utslippskvoter
 - Klimaavtaler
 - Klimaholdinger livstilendringer, rammeverk, kultur, moral, etikk, debatt
 - Klimarettferdighet, lover, regler og etikk
+
+Klimatilpasning og Energiomstilling (overlapp)
+- C02 lagring (CSS/CCUS) 
+- Klimakvoteloven/utslippskvoter
 - Grønt skifte
 - Sirkulær økonomi
 - Green cities 
 - Green transport
-- lave klimautslipp 
+- Green processes (industry)
+- Lave klimautslipp 
 
 Energiomstilling
 - Energiomstilling, regulering av energisystemer (politisk, økonomisk, juridisk)
+- Energieffektiv
 - Fornybare energikilder generelt
 - Vindenergi (havvind og landvind)
 - Energi, kraft, brensel, drivstoff fra algae, lignin, ammoniakk, tidevann og hydrogen
 - Geotermisk energi
 - Fotovoltaik (PV), solenergi
 - Bioenergi
-- CO2 lagring CCS/CCUS (overlapp med klimatilpassing)
-- Green transport 
-- Green processes (industry)
 
 Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer, for eksempel:
 - «Klimaflykninger», klimaendringer og migrasjon
@@ -69,10 +70,7 @@ OR (CONTAINS(LOWER([Result Title]),"warm") AND CONTAINS(LOWER([Result Title]), "
 OR (CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))
 OR (CONTAINS(LOWER([Result Title]),"ocean") AND CONTAINS(LOWER([Result Title]),	"warm"))
 
-OR (CONTAINS(LOWER([Result Title Anthology]),"climat") AND CONTAINS(LOWER([Result Title]), "chang"))			
-OR (CONTAINS(LOWER([Result Title Anthology]),"warm") AND CONTAINS(LOWER([Result Title]), "global"))
-OR (CONTAINS(LOWER([Result Title Anthology]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))			
-OR (CONTAINS(LOWER([Result Title Anthology]),"ocean") AND CONTAINS(LOWER([Result Title]), "warm"))
+OR CONTAINS(LOWER([Result Title]),"klimaendring") 
 		
 OR CONTAINS(LOWER([Journal]), "nature climate change")
 OR CONTAINS(LOWER([Journal]), "weather, climate and society")
@@ -88,6 +86,11 @@ END
 
 ```py =
 IF
+CONTAINS(LOWER([result_title]),	"klimasystem"	)
+OR CONTAINS(LOWER([result_title]),	"klimadynamikk"	)
+OR CONTAINS(LOWER([result_title]),	"klimaeffekt"	)
+OR CONTAINS(LOWER([result_title]),	"klimavirkn"	)
+OR
 (
 	CONTAINS(LOWER([result_title]),	"climat"	)
 	AND	(		
@@ -184,7 +187,7 @@ IF
 	OR CONTAINS(LOWER([result_title]),	"reef"	)
 	OR CONTAINS(LOWER([result_title]),	"ocean"	)
 	OR REGEXP_MATCH([result_title],	"\bsea"	))
-)		
+)	
 THEN "SYSEFF"
 
 ELSEIF (		
@@ -318,7 +321,6 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"feedback"	))
 )		
 OR CONTAINS(LOWER([result_title]),	"climatology"	)
-OR CONTAINS(LOWER([result_title]),	"global warming"	)
 OR CONTAINS(LOWER([result_title]),	"earth system"	)
 OR CONTAINS(LOWER([result_title]),	"noresm"	)
 OR CONTAINS(LOWER([result_title]),	"echam5"	)
@@ -371,6 +373,20 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"flood"	)
 	OR CONTAINS(LOWER([result_title]),	"weather"	))
 )		
+OR CONTAINS(LOWER([result_title]),	"varmebølg"	)
+OR CONTAINS(LOWER([result_title]),	"hetebølg"	)
+OR	
+(		
+	(CONTAINS(LOWER([result_title]),	"ekstrem"	)
+	OR CONTAINS(LOWER([result_title]),	"klimaendr"	)
+	)		
+	AND
+	(CONTAINS(LOWER([result_title]),	"vær"	)
+	OR CONTAINS(LOWER([result_title]),	"regn"	)
+	OR CONTAINS(LOWER([result_title]),	"nedbør"	)
+	OR CONTAINS(LOWER([result_title]),	"temperatur"	)
+	OR REGEXP_MATCH([result_title],	"\bflom"	))
+)	
 OR CONTAINS(LOWER([result_title]),	"havforsur"	)	
 OR
 (		
@@ -378,7 +394,6 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"ocean"	))		
 	AND		
 	(CONTAINS(LOWER([result_title]),	"level"	)
-	OR CONTAINS(LOWER([result_title]),	"warm"	)
 	OR CONTAINS(LOWER([result_title]),	"heat"	)
 	OR CONTAINS(LOWER([result_title]),	"acidification"	)
 	OR CONTAINS(LOWER([result_title]),	"co2"	)
@@ -475,12 +490,9 @@ THEN "SYSEFF"
 
 ELSEIF		
 CONTAINS(LOWER([result_title]),	"human footprint"	)
-OR CONTAINS(LOWER([result_title]),	"carbon footprint"	)
 OR CONTAINS(LOWER([result_title]),	"climate footprint"	)
 OR CONTAINS(LOWER([result_title]),	"global footprint"	)
-OR CONTAINS(LOWER([result_title]),	"klimaeffekt"	)
-OR CONTAINS(LOWER([result_title]),	"klimaendr"	)
-OR CONTAINS(LOWER([result_title]),	"klimavirkn"	)
+OR CONTAINS(LOWER([result_title]),	"greenhouse effect"	)
 THEN "SYSEFF"		
 ELSE 'non'
 END
@@ -542,7 +554,7 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"concept"	)
 	OR CONTAINS(LOWER([result_title]),	"sustainability"	)
 	OR CONTAINS(LOWER([result_title]),	"engagement"	)
-	OR CONTAINS(LOWER([result_title]),	"law"	)
+	OR REGEXP_MATCH([result_title],	"\blaw"	)
 	OR CONTAINS(LOWER([result_title]),	"mitigation"	)
 	OR CONTAINS(LOWER([result_title]),	"initiat"	)
 	OR CONTAINS(LOWER([result_title]),	"debate"	)
@@ -554,9 +566,8 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"acceptance"	)
 	OR CONTAINS(LOWER([result_title]),	"worries"	)
 	OR CONTAINS(LOWER([result_title]),	"fear"	)
-	OR CONTAINS(LOWER([result_title]),	"belief"	)
 	OR CONTAINS(LOWER([result_title]),	"challenge"	)
-	OR CONTAINS(LOWER([result_title]),	"believe"	))
+	OR REGEXP_MATCH([result_title],	"\bbelie"	))
 )		
 THEN "TILPASNING"
 
@@ -593,23 +604,6 @@ ELSEIF
 	OR CONTAINS(LOWER([Result Title]),	"climate crisis")
 THEN "TILPASNING"
 
-ELSEIF
-(
-	(CONTAINS(LOWER([result_title]),	"extreme"	))
-	AND			
-	(CONTAINS(LOWER([result_title]),	"weather"	)
-	OR CONTAINS(LOWER([result_title]),	"precipitation"	))
-	AND			
-	(CONTAINS(LOWER([result_title]),	"adapt"	)
-	OR CONTAINS(LOWER([result_title]),	"mitiga"	)
-	OR CONTAINS(LOWER([result_title]),	"prevent"	)
-	OR CONTAINS(LOWER([result_title]),	"resilie"	)
-	OR CONTAINS(LOWER([result_title]),	"plan"	)
-	OR CONTAINS(LOWER([result_title]),	"governance"	)
-	OR CONTAINS(LOWER([result_title]),	"polic"	))
-)
-THEN "TILPASNING"
-
 ELSEIF			
 (			
 	(CONTAINS(LOWER([result_title]),	"heat wave"	)
@@ -618,6 +612,8 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"temperature"	)
 	OR CONTAINS(LOWER([result_title]),	"drought"	)
 	OR CONTAINS(LOWER([result_title]),	"flood"	)
+	OR CONTAINS(LOWER([result_title]),	"extreme weather"	)
+	OR CONTAINS(LOWER([result_title]),	"extreme precipita"	)
 	)			
 	AND			
 	(CONTAINS(LOWER([result_title]),	"adapt"	)
@@ -652,16 +648,20 @@ ELSEIF
 	(CONTAINS(LOWER([result_title]),	"holdning"	)
 	OR CONTAINS(LOWER([result_title]),	"omstilling"	)
 	OR CONTAINS(LOWER([result_title]),	"tilpasning"	)
-	OR CONTAINS(LOWER([result_title]),	"tilpassing"	)
+	OR CONTAINS(LOWER([result_title]),	"tilpass"	)
+	OR CONTAINS(LOWER([result_title]),	"tiltak"	)
 	OR CONTAINS(LOWER([result_title]),	"avtaler"	)
 	OR CONTAINS(LOWER([result_title]),	"rammeverk"	)
+	OR CONTAINS(LOWER([result_title]),	"midler"	)
 	OR CONTAINS(LOWER([result_title]),	"livstil"	)
 	OR CONTAINS(LOWER([result_title]),	"opprør"	)
 	OR CONTAINS(LOWER([result_title]),	"politik"	)
-	OR CONTAINS(LOWER([result_title]),	"paradoks"	)
+	OR CONTAINS(LOWER([result_title]),	"lovverk"	)
+	OR REGEXP_MATCH([result_title],	"\brett"	)
 	OR CONTAINS(LOWER([result_title]),	"følel"	)
 	OR CONTAINS(LOWER([result_title]),	"spørsmål"	)
 	OR CONTAINS(LOWER([result_title]),	"skepsis"	)
+	OR CONTAINS(LOWER([result_title]),	"paradoks"	)
 	OR CONTAINS(LOWER([result_title]),	"perspektiv"	)
 	OR CONTAINS(LOWER([result_title]),	"bistand"	)
 	OR CONTAINS(LOWER([result_title]),	"kultur"	)
@@ -681,20 +681,8 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"fortelling"	)
 	OR CONTAINS(LOWER([result_title]),	"aksjon"	))
 )			
-THEN "TILPASNING"
-
-ELSEIF			
-(			
-	(CONTAINS(LOWER([result_title]),	"carbon"	)
-	OR CONTAINS(LOWER([result_title]),	"greenhouse"	)
-	OR CONTAINS(LOWER([result_title]),	"co 2"	)
-	OR CONTAINS(LOWER([result_title]),	"co2"	))
-	AND
-	(CONTAINS(LOWER([result_title]),	"emission"	)
-	OR CONTAINS(LOWER([result_title]),	"footprint"	))
-)
-OR CONTAINS(LOWER([result_title]),	"greenhouse effect"	)
-THEN "TILPASNING"			
+OR CONTAINS(LOWER([result_title]),	"klimalov"	)
+THEN "TILPASNING"		
 			
 ELSE "non"
 END
@@ -721,7 +709,6 @@ OR CONTAINS(LOWER([journal]),	"global transition"	)
 OR CONTAINS(LOWER([journal]),	"journal of water and climate change"	)
 OR CONTAINS(LOWER([journal]),	"sustainability"	)
 OR CONTAINS(LOWER([journal]),	"current climate change reports"	)
-OR CONTAINS(LOWER([journal]),	"greenhouse gas control"	)
 
 OR CONTAINS(LOWER([journal]),	"carbon and climate law review"	)
 OR
@@ -747,14 +734,9 @@ In practice it is not possible to completely/reliably separate these two sub-top
 IF
 CONTAINS(LOWER([result_title]),	"klimaomstilling")
 OR CONTAINS(LOWER([result_title]),	"green economy")
-OR
-(
-	CONTAINS(LOWER([result_title]),	"grønn" 	)
-	AND		
-	(CONTAINS(LOWER([result_title]),	"omstilling"	)
-	OR CONTAINS(LOWER([result_title]),	"skifte"	))
-)
-OR CONTAINS(LOWER([result_title]),	"energitiltak"	)
+OR CONTAINS(LOWER([result_title]),	"grønt skifte")
+OR CONTAINS(LOWER([result_title]),	"grønne skift")
+OR CONTAINS(LOWER([result_title]),	"grønn omstilling")
 OR CONTAINS(LOWER([result_title]),	"sirkulærøkomoni"	)
 OR CONTAINS(LOWER([result_title]),	"circular economy"	)
 THEN "TILPASENERGI"		
@@ -763,38 +745,100 @@ ELSEIF
 CONTAINS(LOWER([result_title]),	"green climate"	)
 OR CONTAINS(LOWER([result_title]),	"climate city")
 OR CONTAINS(LOWER([result_title]),	"green capital")
-OR CONTAINS(LOWER([result_title]),	"green cities")
-OR CONTAINS(LOWER([result_title]),	"green city")
-OR CONTAINS(LOWER([result_title]),	"urban sustainablity")
-OR CONTAINS(LOWER([result_title]),	"urban transformation")
 OR CONTAINS(LOWER([result_title]),	"smart city")
 OR CONTAINS(LOWER([result_title]),	"smart cities")
+OR CONTAINS(LOWER([result_title]),	"sustainable city")
+OR CONTAINS(LOWER([result_title]),	"sustainable cities")
+OR CONTAINS(LOWER([result_title]),	"urban sustainablity")
+OR CONTAINS(LOWER([result_title]),	"urban transformation")
 OR CONTAINS(LOWER([result_title]),	"climate-smart")
 OR CONTAINS(LOWER([result_title]),	"climate smart")
+OR
+(
+	(CONTAINS(LOWER([result_title]),	"green")
+	OR CONTAINS(LOWER([result_title]),	"grønn")
+	OR REGEXP_MATCH([result_title], "\bcarbon\b")
+	OR REGEXP_MATCH([result_title], "\bkarbon\b")
+	OR REGEXP_MATCH([result_title], "lavkarbon\b")
+	OR CONTAINS(LOWER([result_title]),	"emission")
+	OR CONTAINS(LOWER([result_title]),	"utslipp")
+	OR CONTAINS(LOWER([result_title]),	"electric")
+	OR CONTAINS(LOWER([result_title]),	"elektrisk")
+	OR CONTAINS(LOWER([result_title]),	"hybrid")
+	OR CONTAINS(LOWER([result_title]),	"clean")
+	OR CONTAINS(LOWER([result_title]),	"renewable")
+	OR CONTAINS(LOWER([result_title]),	"fornybar"))
+	AND
+	(REGEXP_MATCH([result_title], "\bcity")
+	OR CONTAINS(LOWER([result_title]), "cities")
+	OR CONTAINS(LOWER([result_title]), "byer")
+
+	OR CONTAINS(LOWER([result_title]), "shipping")
+	OR CONTAINS(LOWER([result_title]), "skipsfart")
+	OR CONTAINS(LOWER([result_title]), "ferries")
+	OR CONTAINS(LOWER([result_title]), "transport")
+	OR CONTAINS(LOWER([result_title]), "vehicle")
+	OR CONTAINS(LOWER([result_title]), "aviation")
+
+	OR CONTAINS(LOWER([result_title]),	"infrastructure"	)
+	OR CONTAINS(LOWER([result_title]),	"supply"	)
+	OR CONTAINS(LOWER([result_title]),	"investment"	)
+	OR CONTAINS(LOWER([result_title]),	"incentive"	)
+	OR CONTAINS(LOWER([result_title]),	"certificate"	)
+	)
+)
+OR CONTAINS(LOWER([result_title]),	"electric car")
+OR REGEXP_MATCH([result_title], "\bel-bil")
+OR REGEXP_MATCH([result_title], "\belbil")
+OR
+(
+	(CONTAINS(LOWER([result_title]),	"green")
+	OR CONTAINS(LOWER([result_title]),	"grønn")
+	OR REGEXP_MATCH([result_title], "\bcarbon\b")
+	OR REGEXP_MATCH([result_title], "\bkarbon\b")
+	OR REGEXP_MATCH([result_title], "lavkarbon\b")
+	OR CONTAINS(LOWER([result_title]),	"emission")
+	OR CONTAINS(LOWER([result_title]),	"utslipp")
+	OR CONTAINS(LOWER([result_title]),	"clean")
+	OR CONTAINS(LOWER([result_title]),	"renewable")
+	OR CONTAINS(LOWER([result_title]),	"fornybar"))
+	AND
+	(CONTAINS(LOWER([result_title]),	"design"	)
+	OR CONTAINS(LOWER([result_title]),	"process"	)
+	OR CONTAINS(LOWER([result_title]),	"production"	)
+	OR CONTAINS(LOWER([result_title]),	"manufactur"	)
+	OR CONTAINS(LOWER([result_title]),	"waste"	)
+	OR CONTAINS(LOWER([result_title]),	"disposal"	)
+	OR CONTAINS(LOWER([result_title]),	"area use"	)
+	OR CONTAINS(LOWER([result_title]),	"technolog"	)
+	)
+)
 THEN "TILPASENERGI"		
 
-ELSEIF
-(
-	(CONTAINS(LOWER([result_title]),	"lower"	)
-	OR CONTAINS(LOWER([result_title]),	"reduc"	)
-	OR CONTAINS(LOWER([result_title]),	"minim"	)
-	OR CONTAINS(LOWER([result_title]),	"reduce"	)
-	OR CONTAINS(LOWER([result_title]),	"zero"	))		
+ELSEIF			
+(			
+	(CONTAINS(LOWER([result_title]),	"carbon"	)
+	OR CONTAINS(LOWER([result_title]),	"greenhouse"	)
+	OR CONTAINS(LOWER([result_title]),	"co 2"	)
+	OR CONTAINS(LOWER([result_title]),	"co2"	))
 	AND
-	(CONTAINS(LOWER([result_title]),	"carbon emission"	)
-	OR CONTAINS(LOWER([result_title]),	"greenhouse")
-	OR CONTAINS(LOWER([result_title]),	"carbon dioxide emission")
-	OR CONTAINS(LOWER([result_title]),	"co2")
-	OR CONTAINS(LOWER([result_title]),	"co2"))
-)		
-OR CONTAINS(LOWER([result_title]),	"carbon cut"	)
-OR REGEXP_MATCH([result_title],	"\bCCS\b"	)
-OR CONTAINS(LOWER([result_title]),	"carbon capture"	)
-OR CONTAINS(([result_title]),	"CCUS"	)
-OR CONTAINS(LOWER([result_title]),	"green petroleum"	)
-OR CONTAINS(LOWER([result_title]),	"zero emission"	)
+	(CONTAINS(LOWER([result_title]),	"emission"	)
+	OR CONTAINS(LOWER([result_title]),	"footprint"	))
+)
+OR CONTAINS(LOWER([result_title]),	"klimautslipp"	)
 
-OR (CONTAINS(LOWER([result_title]),	"climate"	) AND CONTAINS(LOWER([result_title]),	"technology"	))
+OR CONTAINS(LOWER([result_title]),	"carbon cut"	)
+OR CONTAINS(LOWER([result_title]),	"zero emission"	)
+OR CONTAINS(LOWER([result_title]),	"null utslipp"	)
+OR CONTAINS(LOWER([result_title]),	"nullutslipp"	)
+
+OR (CONTAINS(LOWER([result_title]), "climate") AND CONTAINS(LOWER([result_title]), "technology"))
+
+OR REGEXP_MATCH([result_title],	"\bCCS\b"	)
+OR CONTAINS(([result_title]),	"CCUS"	)
+OR CONTAINS(LOWER([result_title]), "karbonfangst")
+OR CONTAINS(LOWER([result_title]), "co2-fangst")
+OR CONTAINS(LOWER([result_title]), "co2-lagring")
 OR		
 (		
 	(CONTAINS(LOWER([result_title]),	"co2"	)
@@ -817,16 +861,36 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"budget"	)
 	OR CONTAINS(LOWER([result_title]),	"trade"	)
 	OR CONTAINS(LOWER([result_title]),	"doubling"	)
-	OR (CONTAINS(LOWER([result_title]),	"emission") AND CONTAINS(LOWER([result_title]),	"reduc"	)))
+	OR CONTAINS(LOWER([result_title]),	"emission"))
 )		
+OR
+(
+	(CONTAINS(LOWER([result_title]),	"carbon"	)
+	OR CONTAINS(LOWER([result_title]),	"greenhouse gas"	)
+	OR CONTAINS(LOWER([result_title]),	"co2 "	))
+	AND		
+	(CONTAINS(LOWER([result_title]),	"pric"	)
+	OR CONTAINS(LOWER([result_title]),	"cost"	)
+	OR CONTAINS(LOWER([result_title]),	"trading"	)
+	OR CONTAINS(LOWER([result_title]),	"trade"	))
+)	
+THEN "TILPASENERGI"
+ELSE 'non'
+END
+```	
 
-OR CONTAINS(LOWER([journal]),	"greenhouse gas control"	)		
+### Journal search
 
+```py =
+IF CONTAINS(LOWER([journal]),	"greenhouse gas control"	)		
+OR CONTAINS(LOWER([journal]),	"carbon capture"	)
+OR CONTAINS(LOWER([journal]),	"Sustainable Energy Technologies and Assessments"	)
+OR CONTAINS(LOWER([journal]),	"journal of cleaner production"	)
+OR CONTAINS(LOWER([journal]),	"sustainable chemistry and engineering"	)
 THEN "TILPASENERGI"
 ELSE 'non'
 END
 ```
-
 
 ## Energy transitions (Energiomstilling)
 
@@ -849,32 +913,58 @@ OR
 )		
 OR CONTAINS(LOWER([result_title]),	"energy mix"	)
 OR CONTAINS(LOWER([result_title]),	"energy ratio"	)
-OR CONTAINS(LOWER([result_title]),	"energy justice"	)
-OR CONTAINS(LOWER([result_title]),	"energy policy"	)
-OR CONTAINS(LOWER([result_title]),	"energy poverty"	)
-OR CONTAINS(LOWER([result_title]),	"energy infrastructure"	)
-OR CONTAINS(LOWER([result_title]),	"energy future"	)
 OR CONTAINS(LOWER([result_title]),	"energy management"	)
+OR CONTAINS(LOWER([result_title]),	"energy market"	)
+OR CONTAINS(LOWER([result_title]),	"electricity market"	)
 OR CONTAINS(LOWER([result_title]),	"energy payback time"	)
 OR CONTAINS(LOWER([result_title]),	"energy cost"	)
 OR CONTAINS(LOWER([result_title]),	"climate and energy solution"	)
 
-OR CONTAINS(LOWER([result_title]),	"energirett"	)
-OR CONTAINS(LOWER([result_title]),	"fornybar energi"	)
-OR CONTAINS(LOWER([result_title]),	"energirett"	)
-
+OR CONTAINS(LOWER([result_title]),	"energy infrastructure"	)
+OR CONTAINS(LOWER([result_title]),	"local energy"	)
+OR CONTAINS(LOWER([result_title]),	"community energy"	)
+OR CONTAINS(LOWER([result_title]),	"energy coop"	)
+OR CONTAINS(LOWER([result_title]),	"energy coop"	)
+OR CONTAINS(LOWER([result_title]),	"microgrid"	)
 OR
 (
-	(CONTAINS(LOWER([result_title]),	"carbon"	)
-	OR CONTAINS(LOWER([result_title]),	"greenhouse gas"	)
-	OR CONTAINS(LOWER([result_title]),	"co2 "	))
+	(CONTAINS(LOWER([result_title]),	"sustainable"	)
+	OR CONTAINS(LOWER([result_title]),	"renewable"	)
+	OR CONTAINS(LOWER([result_title]),	"green"	))
 	AND		
-	(CONTAINS(LOWER([result_title]),	"pric"	)
-	OR CONTAINS(LOWER([result_title]),	"cost"	)
-	OR CONTAINS(LOWER([result_title]),	"trading"	)
-	OR CONTAINS(LOWER([result_title]),	"trade"	))
-)		
+ 	(CONTAINS(LOWER([result_title]),	"battery"	)
+	OR CONTAINS(LOWER([result_title]),	"batteries"	)
+	OR CONTAINS(LOWER([result_title]),	"grid"	)
+	OR CONTAINS(LOWER([result_title]),	"electricity"	)
+	OR CONTAINS(LOWER([result_title]),	"fuel cell"	))
+)	
+
+OR CONTAINS(LOWER([result_title]),	"energisystem"	)
+OR CONTAINS(LOWER([result_title]),	"energitiltak"	)
+OR CONTAINS(LOWER([result_title]),	"energirett"	)
+
+OR CONTAINS(LOWER([result_title]),	"energy policy"	)
+OR CONTAINS(LOWER([result_title]),	"energy law"	)
+OR CONTAINS(LOWER([result_title]),	"energy poverty"	)
+OR CONTAINS(LOWER([result_title]),	"fuel poverty"	)
+OR CONTAINS(LOWER([result_title]),	"energy justice"	)
+OR CONTAINS(LOWER([result_title]),	"energy security"	)
+OR CONTAINS(LOWER([result_title]),	"energy vulnerab"	)
+OR CONTAINS(LOWER([result_title]),	"energy future"	)
+
+OR CONTAINS(LOWER([result_title]),	"energipoli"	)
+OR CONTAINS(LOWER([result_title]),	"energirett"	)
 THEN "ENERGI"
+
+ELSEIF
+CONTAINS(LOWER([result_title]), "energy efficien")
+OR CONTAINS(LOWER([result_title]), "energieffektiv")
+OR CONTAINS(LOWER([result_title]), "energy saving")
+OR CONTAINS(LOWER([result_title]), "energisparing")
+OR CONTAINS(LOWER([result_title]), "energy consumption")
+OR CONTAINS(LOWER([result_title]), "energiforbruk")
+OR CONTAINS(LOWER([result_title]), "energy suffici")
+THEN "ENERGI"	
 
 ELSEIF
 (
@@ -889,15 +979,14 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"energy"	)
 	OR CONTAINS(LOWER([result_title]),	"fuel"	))
 )		
-
 OR CONTAINS(LOWER([result_title]),	"new renewables")
+OR CONTAINS(LOWER([result_title]),	"fornybar energi"	)
 
 OR
 (
 	(CONTAINS(LOWER([result_title]),	"wind farm"	)
-	OR CONTAINS(LOWER([result_title]),	"offshore wind "	)
+	OR CONTAINS(LOWER([result_title]),	"offshore wind"	)
 	OR CONTAINS(LOWER([result_title]),	"wind energy"	)
-	OR CONTAINS(LOWER([result_title]),	"onshore wind "	)
 	OR CONTAINS(LOWER([result_title]),	"landvind"	)
 	OR CONTAINS(LOWER([result_title]),	"wind power"	)
 	OR CONTAINS(LOWER([result_title]),	"wind turbine"	)
@@ -922,12 +1011,15 @@ OR CONTAINS(LOWER([result_title]),	"tidal energy "	)
 OR CONTAINS(LOWER([result_title]),	"tidal electricity"	)
 OR CONTAINS(LOWER([result_title]),	"tidal power"	)
 OR CONTAINS(LOWER([result_title]),	"stream turbine "	)
-OR CONTAINS(LOWER([result_title]),	"tidal turbine "	)
-OR CONTAINS(LOWER([result_title]),	"current turbine "	)
+OR CONTAINS(LOWER([result_title]),	"tidal turbine"	)
+OR CONTAINS(LOWER([result_title]),	"current turbine"	)
 OR CONTAINS(LOWER([result_title]),	"hydropower"	)
-OR CONTAINS(LOWER([result_title]),	"hydroelectric  power"	)
-OR CONTAINS(LOWER([result_title]),	"hydro  power"	)
-OR CONTAINS(LOWER([result_title]),	"water power"	)
+OR CONTAINS(LOWER([result_title]),	"hydro-power"	)
+OR CONTAINS(LOWER([result_title]),	"hydroelectric"	)
+OR CONTAINS(LOWER([result_title]), "vannkraft")
+OR CONTAINS(LOWER([result_title]), "vasskraft")
+OR CONTAINS(LOWER([result_title]), "havenergi")
+OR CONTAINS(LOWER([result_title]), "bølgekraft")
 OR
 (
 	(CONTAINS(LOWER([result_title]),	"geothermal"	)
@@ -950,16 +1042,18 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"cell"	))
 )		
 
-OR CONTAINS(LOWER([result_title]),	"bio fuel"	)
-OR CONTAINS(LOWER([result_title]),	"bio energy"	)
-OR CONTAINS(LOWER([result_title]),	"bio diesel"	)
-OR CONTAINS(LOWER([result_title]),	"bio gas"	)
-OR CONTAINS(LOWER([result_title]),	"bio ethanol"	)
+OR CONTAINS(LOWER([result_title]),	"bio-fuel"	)
+OR CONTAINS(LOWER([result_title]),	"bio-energy"	)
+OR CONTAINS(LOWER([result_title]),	"bio-diesel"	)
+OR CONTAINS(LOWER([result_title]),	"bio-gas"	)
+OR CONTAINS(LOWER([result_title]),	"bio-ethanol"	)
 OR CONTAINS(LOWER([result_title]),	"biofuel"	)
 OR CONTAINS(LOWER([result_title]),	"bioenergy"	)
 OR CONTAINS(LOWER([result_title]),	"biodiesel"	)
 OR CONTAINS(LOWER([result_title]),	"biogas"	)
 OR CONTAINS(LOWER([result_title]),	"bioethanol")
+OR CONTAINS(LOWER([result_title]),	"biodrivstoff")
+OR CONTAINS(LOWER([result_title]),	"green petrol"	)
 
 OR
 (
@@ -971,23 +1065,21 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"energy"	))
 )		
 OR CONTAINS(LOWER([result_title]),	"ammonia energy"	)
-OR CONTAINS(LOWER([result_title]),	"grønn ammoniakk"	)
 OR CONTAINS(LOWER([result_title]),	"ammoniakk energi"	)
+OR CONTAINS(LOWER([result_title]),	"green ammonia"	)
+OR CONTAINS(LOWER([result_title]),	"grønn ammoniakk"	)
 OR CONTAINS(LOWER([result_title]),	"ammoniakk drivstoff"	)
 THEN "ENERGI"		
 
 ELSEIF
 (
-	(CONTAINS(LOWER([result_title]),	" hydrogen"	))
+	REGEXP_MATCH([result_title], "\bhydrogen"	)
 	AND
 	(CONTAINS(LOWER([result_title]),	"fuel"	)
 	OR CONTAINS(LOWER([result_title]),	"energy"	)
 	OR CONTAINS(LOWER([result_title]),	"cell"	)
 	OR CONTAINS(LOWER([result_title]),	"green"	))
 )
-OR CONTAINS(LOWER([result_title]),	"green battery"	)
-OR CONTAINS(LOWER([result_title]),	"green electricity"	)
-OR CONTAINS(LOWER([result_title]),	"green grid"	)
 THEN "ENERGI"		
 
 ELSEIF		
@@ -1009,52 +1101,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"fossil energi"	))
 )
 THEN "ENERGI"		
-
-ELSEIF		
-(		
-	(CONTAINS(LOWER([result_title]),	"transport"	)
-	OR CONTAINS(LOWER([result_title]),	"design"	)
-	OR CONTAINS(LOWER([result_title]),	"process"	)
-	OR CONTAINS(LOWER([result_title]),	"vehicle"	)
-	OR CONTAINS(LOWER([result_title]),	"production"	)
-	OR CONTAINS(LOWER([result_title]),	"manufactur"	)
-	OR CONTAINS(LOWER([result_title]),	"infrastructure"	)
-	OR CONTAINS(LOWER([result_title]),	"supply"	)
-	OR CONTAINS(LOWER([result_title]),	"electricity"	)
-	OR CONTAINS(LOWER([result_title]),	"waste"	)
-	OR CONTAINS(LOWER([result_title]),	"disposal"	)
-	OR CONTAINS(LOWER([result_title]),	"investment"	)
-	OR CONTAINS(LOWER([result_title]),	"area use"	)
-	OR CONTAINS(LOWER([result_title]),	"incentive"	)
-	OR CONTAINS(LOWER([result_title]),	"certificate"	)
-	OR CONTAINS(LOWER([result_title]),	"technolog"	)
-	)		
-	AND		
-	(CONTAINS(LOWER([result_title]),	"green"	)
-	OR CONTAINS(LOWER([result_title]),	"sustainab"	)
-	OR CONTAINS(LOWER([result_title]),	"clean"	)
-	OR CONTAINS(LOWER([result_title]),	"decarbon"	)
-	OR CONTAINS(LOWER([result_title]),	"low-carbon"	)
-	OR CONTAINS(LOWER([result_title]),	"renewable"	))
-)		
-OR
-(		
-	(CONTAINS(LOWER([result_title]),	"vehicle"	)
-	OR CONTAINS(LOWER([result_title]),	"car "	)
-	OR CONTAINS(LOWER([result_title]),	"cars "	)
-	OR CONTAINS(LOWER([result_title]),	" ferry"	)
-	OR CONTAINS(LOWER([result_title]),	" ferries"	)
-	OR CONTAINS(LOWER([result_title]),	" ship"	))
-	AND  		
-	(CONTAINS(LOWER([result_title]),	"hybrid"	)
-	OR CONTAINS(LOWER([result_title]),	"fuel cell"	)
-	OR CONTAINS(LOWER([result_title]),	"batter"	)
-	OR CONTAINS(LOWER([result_title]),	"electric"	)
-	OR CONTAINS(LOWER([result_title]),	"green"	)
-	OR CONTAINS(LOWER([result_title]),	"hydrogen"	))
-)		
-
-THEN "ENERGI"		
+	
 ELSE 'non'		
 END
 ```
@@ -1090,12 +1137,6 @@ OR CONTAINS(LOWER([journal]),	"hydropower"	)
 
 OR CONTAINS(LOWER([journal]),	"energy research & social sciences"	)
 
-OR CONTAINS(LOWER([journal]),	"journal of greenhouse gas control"	)
-OR CONTAINS(LOWER([journal]),	"carbon capture"	)
-
-OR CONTAINS(LOWER([journal]),	"Sustainable Energy Technologies and Assessments"	)
-OR CONTAINS(LOWER([journal]),	"journal of cleaner production"	)
-OR CONTAINS(LOWER([journal]),	"sustainable chemistry and engineering"	)
 OR CONTAINS(LOWER([journal]),	"green technology"	)
 OR CONTAINS(LOWER([journal]),	"green battery"	)
 
