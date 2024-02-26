@@ -28,14 +28,13 @@ Klimasystemer og Effekter
 
 Klimatilpasning
 - Tilpasning/politikk/rammeverk/tiltak mot klimaendringene
-- tilpasse seg klimarelaterte farer og naturkatastrofer /klimaekstreme
-- Klimaavtaler
+- Tilpasse seg klimarelaterte farer og naturkatastrofer /klimaekstreme
 - Klimaholdinger livstilendringer, rammeverk, kultur, moral, etikk, debatt
 - Klimarettferdighet, lover, regler og etikk
 
 Klimatilpasning og Energiomstilling (overlapp)
 - C02 lagring (CSS/CCUS) 
-- Klimakvoteloven/utslippskvoter
+- Klimakvoteloven/utslippskvoter/avtaler (Paris, COP osv.)
 - Grønt skifte
 - Sirkulær økonomi
 - Green cities 
@@ -517,56 +516,57 @@ END
 IF		
 (		
 	(		
-		(CONTAINS(LOWER([result_title]), "climat") AND CONTAINS(LOWER([result_title]), "chang"))		
-		OR	(CONTAINS(LOWER([result_title]), "warm") AND CONTAINS(LOWER([result_title]), "global"))
+		(CONTAINS(LOWER([result_title]), "climat") AND CONTAINS(LOWER([result_title]), "chang"))
+		OR(CONTAINS(LOWER([result_title]), "climat") AND CONTAINS(LOWER([result_title]), "warm")		
+		OR (CONTAINS(LOWER([result_title]), "global") AND CONTAINS(LOWER([result_title]), "warm"))
 	)		
 AND		
 	(CONTAINS(LOWER([result_title]),	"action"	)
-	OR CONTAINS(LOWER([result_title]),	"anticipate"	)
-	OR CONTAINS(LOWER([result_title]),	"prevent"	)
-	OR CONTAINS(LOWER([result_title]),	"lifestyle"	)
+	OR CONTAINS(LOWER([result_title]),	"preparedness"	)
+	OR CONTAINS(LOWER([result_title]),	"anticipat"	)
+	OR CONTAINS(LOWER([result_title]),	"prevent"	)	
 	OR CONTAINS(LOWER([result_title]),	"minimise"	)
 	OR CONTAINS(LOWER([result_title]),	"plan"	)
 	OR CONTAINS(LOWER([result_title]),	"resilie"	)
 	OR CONTAINS(LOWER([result_title]),	"adapt"	)
 	OR CONTAINS(LOWER([result_title]),	"mitiga"	)
-	OR CONTAINS(LOWER([result_title]),	"preparedness"	)
-	OR CONTAINS(LOWER([result_title]),	"politic"	)
-	OR CONTAINS(LOWER([result_title]),	"adjust"	)
-	OR CONTAINS(LOWER([result_title]),	"transition"	)
 	OR CONTAINS(LOWER([result_title]),	"manage"	)
 	OR CONTAINS(LOWER([result_title]),	"governance"	)
-	OR CONTAINS(LOWER([result_title]),	"polic"	)
-	OR CONTAINS(LOWER([result_title]),	"penalty"	)
 	OR CONTAINS(LOWER([result_title]),	"leadership"	)
+	OR CONTAINS(LOWER([result_title]),	"politic"	)
+	OR CONTAINS(LOWER([result_title]),	"polic"	)
+	OR CONTAINS(LOWER([result_title]),	"regulation"	)
+	OR REGEXP_MATCH([result_title],	"\blaw"	)
+	OR CONTAINS(LOWER([result_title]),	"penalty"	)
+	OR CONTAINS(LOWER([result_title]),	"litigation"	)
+	OR CONTAINS(LOWER([result_title]),	"justice"	)
+	OR CONTAINS(LOWER([result_title]),	"risk"	)
+	OR CONTAINS(LOWER([result_title]),	"challenge"	)
 	OR CONTAINS(LOWER([result_title]),	"negotiation"	)
 	OR CONTAINS(LOWER([result_title]),	"solution"	)
-	OR CONTAINS(LOWER([result_title]),	"information"	)
-	OR CONTAINS(LOWER([result_title]),	"justice"	)
-	OR CONTAINS(LOWER([result_title]),	"regulation"	)
-	OR CONTAINS(LOWER([result_title]),	"ethic"	)
+
+	OR CONTAINS(LOWER([result_title]),	"lifestyle"	)
+	OR CONTAINS(LOWER([result_title]),	"adjust"	)
+	OR CONTAINS(LOWER([result_title]),	"transition"	)
+	OR CONTAINS(LOWER([result_title]),	"sustainability"	)
 	OR CONTAINS(LOWER([result_title]),	"service"	)
-	OR CONTAINS(LOWER([result_title]),	"energy"	)
-	OR CONTAINS(LOWER([result_title]),	"litigation"	)
+	OR CONTAINS(LOWER([result_title]),	"consumer"	)
+	OR CONTAINS(LOWER([result_title]),	"concept"	)
 	OR CONTAINS(LOWER([result_title]),	"post normal"	)
 	OR CONTAINS(LOWER([result_title]),	"post-normal"	)
+	OR CONTAINS(LOWER([result_title]),	"information"	)
+	OR CONTAINS(LOWER([result_title]),	"ethic"	)
 	OR CONTAINS(LOWER([result_title]),	"perception"	)
-	OR CONTAINS(LOWER([result_title]),	"concept"	)
-	OR CONTAINS(LOWER([result_title]),	"sustainability"	)
 	OR CONTAINS(LOWER([result_title]),	"engagement"	)
-	OR REGEXP_MATCH([result_title],	"\blaw"	)
-	OR CONTAINS(LOWER([result_title]),	"mitigation"	)
 	OR CONTAINS(LOWER([result_title]),	"initiat"	)
 	OR CONTAINS(LOWER([result_title]),	"debate"	)
 	OR CONTAINS(LOWER([result_title]),	"stories"	)
 	OR CONTAINS(LOWER([result_title]),	"discours"	)
 	OR CONTAINS(LOWER([result_title]),	"discurs"	)
 	OR CONTAINS(LOWER([result_title]),	"narrative"	)
-	OR CONTAINS(LOWER([result_title]),	"risk"	)
 	OR CONTAINS(LOWER([result_title]),	"acceptance"	)
 	OR CONTAINS(LOWER([result_title]),	"worries"	)
 	OR CONTAINS(LOWER([result_title]),	"fear"	)
-	OR CONTAINS(LOWER([result_title]),	"challenge"	)
 	OR REGEXP_MATCH([result_title],	"\bbelie"	))
 )		
 THEN "TILPASNING"
@@ -626,21 +626,6 @@ ELSEIF
 )			
 THEN "TILPASNING"
 
-ELSEIF					
-CONTAINS(LOWER([result_title]),	"ipcc")
-OR CONTAINS(LOWER([result_title]),	"kyoto protocol")
-OR CONTAINS(LOWER([result_title]),	"cop2")
-OR
-(
-	(CONTAINS(LOWER([result_title]),	"climat"	)
-	OR CONTAINS(LOWER([result_title]),	"paris"	))
-	AND 			
-	(CONTAINS(LOWER([result_title]),	"agreement"	)
-	OR CONTAINS(LOWER([result_title]),	"target"	)
-	OR CONTAINS(LOWER([result_title]),	"treaty"	))
-)			
-THEN "TILPASNING"
-
 ELSEIF			
 (
 	CONTAINS(LOWER([result_title]),	"klima"	)
@@ -683,6 +668,11 @@ ELSEIF
 )			
 OR CONTAINS(LOWER([result_title]),	"klimalov"	)
 THEN "TILPASNING"		
+
+ELSEIF
+	CONTAINS([Result Title],	"SDG13"	)
+	OR CONTAINS([Result Title],	"SDG 13"	)
+THEN "TILPASNING"
 			
 ELSE "non"
 END
@@ -816,6 +806,21 @@ OR
 	)
 )
 THEN "TILPASENERGI"		
+
+ELSEIF					
+CONTAINS([result_title], "IPCC")
+OR CONTAINS(LOWER([result_title]),	"kyoto protocol")
+OR CONTAINS(LOWER([result_title]),	"cop2")
+OR
+(
+	(CONTAINS(LOWER([result_title]),	"climat"	)
+	OR CONTAINS(LOWER([result_title]),	"paris"	))
+	AND 			
+	(CONTAINS(LOWER([result_title]),	"agreement"	)
+	OR CONTAINS(LOWER([result_title]),	"target"	)
+	OR CONTAINS(LOWER([result_title]),	"treaty"	))
+)			
+THEN "TILPASENERGI"
 
 ELSEIF			
 CONTAINS(LOWER([result_title]),	"klimautslipp"	)
@@ -1110,6 +1115,11 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"fossil energi"	))
 )
 THEN "ENERGI"		
+
+ELSEIF
+	CONTAINS([Result Title],	"SDG7"	)
+	OR CONTAINS([Result Title],	"SDG 7"	)
+THEN "ENERGI"
 	
 ELSE 'non'		
 END
