@@ -106,7 +106,7 @@ TS=(
 	)
 )
 OR			
-TS= ("human footprint*" OR "carbon footprint*"
+TS= ("human footprint*"
 	OR (("ozone" OR "carbon" OR "greenhouse" OR "co 2" OR "co2") AND ("scenario*" OR "feedback*" OR "budget"))
 	OR (("permafrost") AND ("melt*" OR "methane" OR "feedback"))
 )			
@@ -154,11 +154,12 @@ OR
 TS=(
 	"climate action" OR "climate mitigation" OR "climate adaptation" OR "climate resilience" OR "climate planning"
 	OR "climate justice" OR "climate law$" OR "climate polic*" OR "climate ethic*"
-	OR "climate education" OR "climate concern" OR "climate knowledge" OR "climate sceptic*" 
+	OR "climate education" OR "climate concern"
 	OR "climate negotiation$" OR "climate fund*"
 	OR "climate crisis"
 	OR "SDG13" OR "SDG-13" 
-)										
+	OR("climate" NEAR/3 ("service*" OR "negotiation*" OR "skeptic*" OR "consens*" OR "policy" OR "policies" OR "ethic$" OR "knowledge"))		
+)				
 OR														
 TS=(
 	(
@@ -173,121 +174,170 @@ TS=(
 )												
 ```
 ## Climate adaptation and Energy transitions (common)
-Under development.
+
 ```py =
-	OR	("ipcc" OR "kyoto protocol")
-	OR	(("climate" OR "paris") NEAR/3 ("agreement" OR "treaty"))
+TS=(
+	"green economy" OR "circular econom*"
+	OR 	"green cit*"  OR "climate city" OR "climate cities" OR "green capital*" OR "urban transformation*" OR "urban sustainability" OR "smart city" OR "smart cities" OR "sustainable cit*"
+	OR 	"sustainable transformation" OR "climate smart"
+	OR 
+	(
+		("green" OR "carbon" OR "emission" OR "electric" OR "hybrid" OR "clean" OR "renewable")
+		NEAR/5 
+			("cities" OR "city" OR "shipping" OR "ferries" OR "ferry" OR "transport" OR "vehicle$" OR "aviation"
+			OR "infrastructur*" OR "supply" OR "investment$" OR "incentive$" OR "certificate$"
+			)
+	)
+	OR "electric car$" 
+	OR 
+	(
+		("green" OR "low carbon" OR "decarbon*" OR "de carbon*" OR "emission" OR "clean" OR "renewable")
+		NEAR/5 ("design" OR "process*" OR "industr*" OR "manufactur*" OR "waste" OR "disposal" OR "area use" OR "land use" OR "technolog*")
+	)
+	OR "climate technolog*"
+)
+OR
+TS=(
+	"carbon capture" OR "carbon sequestrat*"
+	OR
+	(
+		("co2" OR "co 2" OR "carbon" OR "greenhouse gas*" OR "ghg*" OR "methane" OR "n2o" OR "nitrous oxide" OR "ozone")
+		NEAR/10	
+			("emission$" OR "footprint" OR "sink$" OR "storage" OR "storing" OR "capture" OR "sequestration" OR "trap*"
+			OR "trading" OR "trade" OR "pric*" OR "cost" OR "doubling")
+	)
+)
+OR
+TS=(
+	"ipcc" OR "kyoto protocol" OR "climate target*"
+	OR (("climate" OR "paris") NEAR/3 ("agreement" OR "treaty"))
 	OR
 	(
 		(
-			("lower*" OR "reduc*" OR "minim*" OR "reduc*"OR "zero")
+			("lower*" OR "reduc*" OR "minim*" OR "reduc*" OR "zero")
 			NEAR/3	("carbon" OR "greenhouse gas*" OR "co2" OR "co 2")
 		)
 		AND "emission$"
 	)
-	OR 	"carbon cut*" OR "zero carbon"
-	OR	"climate target*"
-	OR
-	(
-		("co2" OR "co 2" OR "greenhouse gas*" OR "ghg* " OR "methane" OR "n2o" OR "nitrous oxide" OR "ozone")
-		NEAR/10	("sink*" OR "storage" OR "storing" OR "trading" OR "doubling" OR "reduc*" OR "trap*")
-	)
-	OR	"carbon capture" OR "carbon sequestrat*"
-	OR
-	(
-		("lower" OR "reduc*" OR "minim*")
-		NEAR/5	("human footprint*" OR "carbon footprint*")
-	)
-	OR	("climate" NEAR/3 ("service*" OR "negotiation*" OR "skeptic*" OR "consens*" OR "policy" OR "policies" OR "ethic$"))
-	OR	"green economy" OR "circular econom*"
-	OR 	"green cit*"  OR "climate city" OR "climate cities" OR "green capital*" OR "urban transformation*" OR "smart city" OR "smart cities"
-	OR 	"sustainable transformation"
 )
-OR
-TS=(
-	(
-		("subsidies" OR "subsidy")
-		NEAR/3	("oil" OR "coal" OR "fossil fuel$")
-	)
-	AND ("reduc*" OR "phas* out" OR "remove" OR "end")
-)		
+OR TS= ("carbon cut*" OR "zero carbon" OR "zero emission$")
 ```
 
 ## Energy transitions
 
 Energiomstilling og fornybar energi.
 
-```Ceylon =
+`(TS= (("micro-alga*" OR "microalga*") NEAR/15 ("energy" OR "fuel*")) NOT SU=("Biology" OR "Geology" OR "geoscience" OR "Oceanography"))` is taken out, as the relevant works seem to refer to "biofuels" OR "biodiesel" etc. which are included in the search anyway. 
+
+```py =
+TS= ("energy transition$")
+OR
 TS=(
-	("energy sector$" OR "*national energy" OR "energy market$" OR "energy infrastructure$")
-	NEAR/3  ("future" OR "transform*" OR "transition$" OR "green" OR "modern" OR "sustainable")		
+	("energy sector$" OR "energy system$" OR "*national energy" OR "energy market$" OR "energy infrastructure$" OR "fuel$")
+	NEAR/5 ("future" OR "transform*" OR "transition$" OR "green" OR "modern" OR "sustainable" OR "alternative$")		
 )
-
-OR TS= ("energy transition$")
-
 OR
-(TS=
-	("energy management" OR "energy payback time" OR "energy cost$"
-	OR "energy justice" OR "climate and energy solution" OR "energy poverty" OR "energy future"
-	OR (("carbon" OR "co2" OR "greenhouse gas*" ) NEAR/3 ("cost" OR "trade" OR "trading" OR "pricing" OR "price$"))
+TS=
+	("energy mix" OR "energy ratio" OR "energy management" OR "energy planning" OR "energy strateg*" OR "energy market$" OR "electricity market$"
+	OR "energy payback time" OR "energy cost$"
+	OR "climate and energy solution" 
+
+	OR "energy polic*" OR "energy law$" OR "energy poverty" OR "fuel poverty" OR "energy justice" 
+	OR "energy security" OR "energy insecurity" OR "energy vulnerab*" OR "energy future"
+
+	OR "energy infrastructure$" OR "national energy" OR "local energy" OR "community energy" OR "energy coop*" OR "energy co-op*" OR "microgrid$"
 	)
-NOT WC=("REHABILITATION" OR "CLINICAL NEUROLOGY" OR "HOSPITALITY LEISURE SPORT TOURISM "NOT "MATHEMATICS" NOT "THERMODYNAMICS")
+OR
+TS=(
+	("battery" OR "batteries" OR "grid$" OR "electricity" OR "fuel cell$")
+	NEAR/15 ("sustainab*" OR "green" OR "renewable$")
 )
-
 OR
-TS=("new renewables"
+TS=("energy sufficien*")
 OR
+TS=
+(
+    (
+      ("energy efficien*" OR "energy utili$ation efficiency" OR "energy saving" OR "energy loss" OR "energy conservation")
+      NEAR/15
+          ("housing" OR "houses" OR "homes" OR "household" OR "domestic" OR "residential" OR "building$" OR "cities"
+          OR "service sector" OR "office$" OR "retail" OR "food services" OR "restaurants" OR "hotels" OR "warehouses"
+          OR "lighting" OR "lamps" OR "cooking" OR "appliances" OR "white goods"
+          OR "plug-in device$" OR "smart"
+          OR "space cooler$" OR "air condition*" OR "space heat*" OR "room heating" OR "district heating" OR "heat pump$" OR "HVAC"
+          OR "industry" OR "industrial" OR "manufacturing" OR "technolog*"
+          OR "transport" OR "transportation" OR "vehicles" OR "cars" OR "train$" OR "airplane$" OR "aeroplane$" OR "ship$" OR "shipping" OR "freight"
+          OR "telecomm*" OR "data centre$" OR "data center$" OR "data network$" OR "server" OR "servers" OR "wireless")
+    )
+    OR
+      (("energy efficiency" OR "energy conservation")
+      NEAR/5
+            ("policy" OR "policies" OR "framework$" OR "legislation" OR "management" OR "planning" OR "plan" OR "plans"
+            OR "initiative$" OR "intervention$" OR "incentive$" OR "investment$" OR "investing" OR "invest")
+      )
+    OR
+      (("energy efficiency" OR "energy consumption")
+      NEAR/15
+            ("green bond$" OR "climate bond$"
+            OR ("certificat*" NEAR/2 ("energy" OR "green"))
+            OR "energy sustainability"
+            OR "minimum energy performance" OR "energy labelling" OR "energy standard$" OR "energy efficiency standard$"
+            OR "sustainable development")
+      )
+)
+OR 
+TS=("new renewables" 
+	OR
 	(
-		(
-			("renewable" OR "sustainable" OR "green" OR "alternative" OR "clean")
-			NEAR/3 ("power" OR "energy" OR "energies" OR "fuel*" OR "electricity")
-		)
-	NOT "metabolism"
+		("renewable" OR "sustainable" OR "green" OR "alternative" OR "clean")
+		NEAR/3 ("power" OR "energy" OR "energies" OR "fuel*" OR "electricity")
 	)							
 )
-
 OR
 TS=(
-	("wind farm*" OR "windfarm*" OR "offshore wind*" OR "wind energy" OR "windenergy" OR "wind power"
+	("wind farm*" OR "windfarm*" OR "offshore wind*" OR "wind energy" OR "wind power*"
 	OR "wind profile$" OR "wind turbine*" OR "wind electricity*"
-	OR ("wind" NEAR/3 ("operation*" OR "maint*"))
 	OR "wind resource$"
 	)
-NOT ("solar wind" OR "aquacultur*")														
+NOT ("solar wind")
 )
-
-OR
-(TS= (("alga$" OR "alge$") NEAR/3 ("energy" OR "fuel*"))
-NOT SU=("Biology" OR "Geology" OR "geoscience" OR "Oceanography")
-)
-
 OR
 (TS=("tidal turbine*" OR "stream turbine*" OR "current turbine*" OR "tidal power" OR "tidal electricity" OR "tidal energy" OR "hydropower" OR "hydroelectric power")
 NOT WC=("Marine & Freshwater Biology" OR "ECOLOGY" OR "Fisheries")
 )
-
 OR TS=("geothermal heat pump*" OR ("geother*" NEAR/3 ("energy" OR "reservoir*")))
-
 OR
-(TS=("solar power" OR "solar plant" OR "solar panel" OR "PV" OR "solar-panel" OR "solar arra*" OR "solar cell*" OR "photovoltaic*" OR ("solar" AND "kW") OR "solar electricity" OR "solar collector$")
-NOT WC=( "ASTRONOMY ASTROPHYSICS" OR "MARINE FRESHWATER BIOLOGY" OR "BIOLOGY" OR "METALLURGY METALLURGICAL ENGINEERING")
-)
-
-OR TS=("bio fuel*" OR "bio energy" OR "bio diesel"  OR "bio gas" OR "bio ethanol" OR "biofuel*" OR "bioenergy" OR "biodiesel" OR "biogas" OR "bioethanol")
-
-OR TS = ("green petroleum" OR "climate technolog*")
-
+TS=
+	("solar power" OR "solar plant" OR "solar panel" OR "PV" OR "solar-panel" OR "solar arra*" OR "solar cell*" OR "photovoltaic*" 
+	OR ("solar" AND "kW") OR "solar electricity" OR "solar collector$"
+	)
+OR 
+TS=
+	("bio fuel*" OR "bio energy" OR "bio diesel" OR "bio gas" OR "bio ethanol" 
+	OR "biofuel*" OR "bioenergy" OR "biodiesel" OR "biogas" OR "bioethanol"
+	)
+OR TS = ("green petroleum")
 OR
 TS=(
 	("lignin" OR (("wood" OR "birch") NEAR/3 ("pellet*" OR "biomass")))
-	AND ("power" OR "energy" OR "energies" OR "fuel*")
+	NEAR/15 ("power" OR "energy" OR "energies" OR "fuel*")
 )
-
 OR
-(TS=("hydrogen" NEAR/3 ("power fuel*" OR "power cell*" OR "energy" OR "efficiency" OR "green"))
-NOT SO=("PETROLEUM SCIENCE AND TECHNOLOGY" OR "Petroleum Science" OR "PETROLEUM GEOSCIENCE" OR "Petroleum Exploration and Development" OR "PETROLEUM CHEMISTRY" OR "MARINE AND PETROLEUM GEOLOGY" OR "JOURNAL OF THE JAPAN" AND "PETROLEUM INSTITUTE" OR "JOURNAL OF PETROLEUM SCIENCE AND ENGINEERING" OR "JOURNAL OF PETROLEUM GEOLOGY" OR "China Petroleum Processing & Petrochemical Technology")
+TS=(
+	"clean hydrogen" OR "green hydrogen" OR "green ammonia"
+	OR (("hydrogen" OR "ammonia") NEAR/3 ("power fuel*" OR "power cell*" OR "energy" OR "efficiency" OR "green"))
 )
-
-OR TS=(("phase* out") NEAR/15 ("oil" OR "coal" OR "natural gas" OR "petroleum" OR "fossil fuel$"))
-												
+OR 
+TS=(
+	("phase* out" OR "transition" OR "substitut*" OR "relian*" OR "consumption"
+    OR "policy" OR "policies" OR "legislation" OR "incentiv*" OR "subsidy" OR "subsidies" 
+    OR
+	(
+        ("reduc*" OR "decreas*" OR "improv*" OR "support" OR "encourag*" OR "intervention$")
+        NEAR/5 ("use" OR "usage")
+    )
+    )
+	NEAR/15 ("crude oil" OR "conventional energy" OR "coal" OR "natural gas" OR "petroleum" OR "fossil fuel$")
+)
+											
 ```

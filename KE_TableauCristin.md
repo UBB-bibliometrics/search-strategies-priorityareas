@@ -798,6 +798,7 @@ OR
 	(CONTAINS(LOWER([result_title]),	"design"	)
 	OR CONTAINS(LOWER([result_title]),	"process"	)
 	OR CONTAINS(LOWER([result_title]),	"production"	)
+	OR CONTAINS(LOWER([result_title]),	"industri"	)
 	OR CONTAINS(LOWER([result_title]),	"manufactur"	)
 	OR CONTAINS(LOWER([result_title]),	"waste"	)
 	OR CONTAINS(LOWER([result_title]),	"disposal"	)
@@ -933,10 +934,11 @@ OR CONTAINS(LOWER([result_title]),	"energy vulnerab"	)
 OR CONTAINS(LOWER([result_title]),	"energy future"	)
 
 OR CONTAINS(LOWER([result_title]),	"energy infrastructure"	)
+OR CONTAINS(LOWER([result_title]),	"national energy"	)
 OR CONTAINS(LOWER([result_title]),	"local energy"	)
 OR CONTAINS(LOWER([result_title]),	"community energy"	)
 OR CONTAINS(LOWER([result_title]),	"energy coop"	)
-OR CONTAINS(LOWER([result_title]),	"energy coop"	)
+OR CONTAINS(LOWER([result_title]),	"energy co-op"	)
 OR CONTAINS(LOWER([result_title]),	"microgrid"	)
 OR
 (
