@@ -138,12 +138,12 @@ TS=(
 		OR "transition$" OR "lifestyle$" OR "service$" OR "consum*"
 		OR "sustainab*"
 		OR "concept$" OR "post normal" 
-		OR "information$" OR "awareness" OR "consciousness" OR "education"
+		OR "information$" OR "awareness" OR "consciousness" OR "education" OR "knowledge" 
 		OR "engagement" OR "initiat*" OR "accept*"
 		OR "perception$" OR "attitude$" OR "judegement$" OR "feeling$" OR "impressions" OR "image$"
 		OR "stories" OR "story" OR	"narrative$"
 		OR "discours*" OR "discurs*" OR "debate$"
-		OR "moral" OR "ethic$"
+		OR "moral" OR "ethic*"
 		OR "obligation$" OR "fair share"
 		OR "denial$" OR "skeptic$"
 		OR "harming" OR "worries" OR "angst" OR "anxiety"
@@ -153,18 +153,19 @@ TS=(
 OR
 TS=(
 	"climate action" OR "climate mitigation" OR "climate adaptation" OR "climate resilience" OR "climate planning"
-	OR "climate justice" OR "climate law$" OR "climate polic*" OR "climate ethic*"
-	OR "climate education" OR "climate concern"
+	OR "climate justice" OR "climate law$" OR "climate polic*" OR "climate ethic*" OR "climate target$" OR "climate goal$"
+	OR "climate education" OR "climate concern" OR "climate knowledge"
 	OR "climate negotiation$" OR "climate fund*"
 	OR "climate crisis"
+	OR "climate service$"
 	OR "SDG13" OR "SDG-13" 
-	OR("climate" NEAR/3 ("service*" OR "negotiation*" OR "skeptic*" OR "consens*" OR "policy" OR "policies" OR "ethic$" OR "knowledge" OR "goal$" OR "target$"))		
+	OR ("climate" NEAR/3 ("negotiation*" OR "skeptic*" OR "consens*" OR "policy" OR "policies" OR "goal$" OR "target$"))		
 )				
 OR														
 TS=(
 	(
 		("extreme*" NEAR/3 ("weather" OR "precipitation" OR "temperature*" OR "rain*"))
-		AND ("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "plan"OR "planning" OR "plans" OR "governance" OR "polic*")
+		AND ("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "plan" OR "planning" OR "plans" OR "governance" OR "polic*")
 	)
 	OR
 	(
@@ -220,7 +221,7 @@ TS=(
 		AND "emission$"
 	)
 )
-OR TS= ("carbon cut*" OR "zero carbon" OR "zero emission$")
+OR TS= ("carbon cut*" OR "zero carbon" OR "zero emission$" OR "climate and energy poli*")
 ```
 
 ## Energy transitions

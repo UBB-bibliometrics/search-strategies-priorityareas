@@ -582,6 +582,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"consensus"	)
 	OR CONTAINS(LOWER([result_title]),	"policy"	)
 	OR CONTAINS(LOWER([result_title]),	"target"	)
+	OR CONTAINS(LOWER([result_title]),	"goal"	)
 	OR CONTAINS(LOWER([result_title]),	"policies"	)
 	OR CONTAINS(LOWER([result_title]),	"ethics"	))
 )	
