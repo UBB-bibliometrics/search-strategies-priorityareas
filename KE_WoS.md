@@ -38,7 +38,7 @@ TS=(
 OR			
 TS=(
 	("global warming" OR ("climat*" NEAR/3 ("change*" OR "warm*")))  
-	NEAR/5 ("response" OR "forcing" OR "sensitiv*" OR "records" OR "trend*" OR "legacy" OR "target$" OR "trigger$")
+	NEAR/5 ("response" OR "forcing" OR "sensitiv*" OR "records" OR "trend*" OR "legacy" OR "trigger$")
 )
 OR			
 TS=(		
@@ -132,7 +132,7 @@ TS=(
 		OR "plan" OR "planning" OR "plans"
 		OR "resilie*" OR "adapt*" OR "adjust*" OR "mitiga*" 
 		OR "manag*" OR "governance" OR "leadership$"
-		OR "politic*" OR "regulation$" OR "polic*"
+		OR "politic*" OR "regulation$" OR "polic*" OR "target$"
 		OR "law$" OR "litigation" OR "penalt*" OR "justice"
 		OR "risk*" OR "challeng*" OR "negotiation$" OR "solution$"	
 		OR "transition$" OR "lifestyle$" OR "service$" OR "consum*"
@@ -158,7 +158,7 @@ TS=(
 	OR "climate negotiation$" OR "climate fund*"
 	OR "climate crisis"
 	OR "SDG13" OR "SDG-13" 
-	OR("climate" NEAR/3 ("service*" OR "negotiation*" OR "skeptic*" OR "consens*" OR "policy" OR "policies" OR "ethic$" OR "knowledge"))		
+	OR("climate" NEAR/3 ("service*" OR "negotiation*" OR "skeptic*" OR "consens*" OR "policy" OR "policies" OR "ethic$" OR "knowledge" OR "goal$" OR "target$"))		
 )				
 OR														
 TS=(

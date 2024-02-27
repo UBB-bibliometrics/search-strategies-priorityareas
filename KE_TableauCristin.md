@@ -87,6 +87,7 @@ END
 IF
 CONTAINS(LOWER([result_title]),	"klimasystem"	)
 OR CONTAINS(LOWER([result_title]),	"klimadynamikk"	)
+OR CONTAINS(LOWER([result_title]),	"klimamodell"	)
 OR CONTAINS(LOWER([result_title]),	"klimaeffekt"	)
 OR CONTAINS(LOWER([result_title]),	"klimavirkni"	)
 OR
@@ -123,7 +124,6 @@ OR
 	OR CONTAINS(LOWER([result_title]),	"driver"	)
 	OR CONTAINS(LOWER([result_title]),	"trend"	)
 	OR CONTAINS(LOWER([result_title]),	"legacy"	)
-	OR CONTAINS(LOWER([result_title]),	"target"	)
 	OR CONTAINS(LOWER([result_title]),	"anthropo"	)
 	OR CONTAINS(LOWER([result_title]),	"trigger"	)
 
@@ -525,7 +525,7 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"preparedness"	)
 	OR CONTAINS(LOWER([result_title]),	"anticipat"	)
 	OR CONTAINS(LOWER([result_title]),	"prevent"	)	
-	OR CONTAINS(LOWER([result_title]),	"minimise"	)
+	OR CONTAINS(LOWER([result_title]),	"minimi"	)
 	OR CONTAINS(LOWER([result_title]),	"plan"	)
 	OR CONTAINS(LOWER([result_title]),	"resilie"	)
 	OR CONTAINS(LOWER([result_title]),	"adapt"	)
@@ -581,6 +581,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"skeptic"	)
 	OR CONTAINS(LOWER([result_title]),	"consensus"	)
 	OR CONTAINS(LOWER([result_title]),	"policy"	)
+	OR CONTAINS(LOWER([result_title]),	"target"	)
 	OR CONTAINS(LOWER([result_title]),	"policies"	)
 	OR CONTAINS(LOWER([result_title]),	"ethics"	))
 )	
@@ -667,6 +668,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"aksjon"	))
 )			
 OR CONTAINS(LOWER([result_title]),	"klimalov"	)
+OR CONTAINS(LOWER([result_title]),	"klimamål"	)
 THEN "TILPASNING"		
 
 ELSEIF
