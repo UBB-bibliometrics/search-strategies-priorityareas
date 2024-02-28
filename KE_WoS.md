@@ -3,6 +3,9 @@
 See Tableau/Cristin file for main documentation.
 
 ## ANY
+
+Note IPCC not included as it can be used in many other abbreviations - only included in title search in Cristin. 
+
 ```py =
 TS=(
 	("climat*" NEAR/3 ("chang*" OR "warm*"))
@@ -47,7 +50,7 @@ TS=(
 		("coral*" OR "reef*" OR "*water*" OR "ocean*" OR "sea" OR "seas" OR "Atlantic" OR "Pacific"
 		OR "*algae" OR "*algea*" OR "kelp$" OR "plankton*" OR "fish" OR "fishes" OR "shellfish*" OR "coast*" OR "estuary" OR "lake*" OR "marine" OR "SST" 
 		OR "pollen" OR "flora"  OR "fauna" OR "plant" OR "plants" OR "biolog*" OR "biodiver*" OR "biota" OR "canopy"
-		OR "tundra" OR "taiga" OR "tree line*" OR "aerosol*" OR "vegetation*" OR "swamp*" 
+		OR "tundra" OR "taiga" OR "tree line*" OR "aerosol*" OR "vegetation*" OR "swamp*"
 		OR "ecology" OR "bushfire*" OR "bush fire*" OR "nitrogen" OR "pollution*" OR "ecosystem*"
 		OR "wetland*" OR "arid*" OR "desert*" OR "dryland*" OR "groundwater"
 		OR "geolog*" OR "geophys*" OR "dinoflagel*" OR "paleontolo*" OR "mineral*" OR "sediment*"
@@ -63,7 +66,7 @@ TS=(
 	OR "glacier*" OR "ice cap*" OR "ice-field*" OR "ice sheet*" OR "ice shelves" OR "ice shelf" OR "sea-ice" OR "sea ice" OR "pack ice" OR "polynya*" 
 	OR "ice variab*" OR "ice cover*" OR "ice retreat*" OR "ice retract*" OR "ice exten*" OR "ice thickness" OR "nilas" OR "ice chart*" OR "ice-berg*" OR "ice berg*" OR "iceberg*" OR "slush" OR "pancake ice" OR "pack ice" OR "ice ridge*" OR "grease ice" OR "marginal ice zone*" OR "multi-year ice" OR "first-year ice" 
 	OR ("anthropo*" NEAR/5 ("heating" OR "forcing*" OR "chang*" OR "driv*" OR "feedback*" OR "climat*"))	
-	OR "climatology" 
+	OR "climatology" OR "climate scien*"
 	OR "noresm" OR "echam5" OR "cmip" OR "cmip5" OR "GCM" OR "AOGSM" OR "UKMO-hadcm" OR "UKMO-hadgem" 
 	OR "FGOALS" OR "GFDL-CM" OR "GISS-EH" OR "GISS-ER" OR "INM-cm" OR "IPSL-CM" OR "MIROC3" OR "GISS-EH" OR "BCC-CM" OR "BCCR-BCM" 
 	OR "ccsm3" OR "cgcm3" OR "cnrm-cm3" OR "csiro"  
@@ -210,8 +213,7 @@ TS=(
 )
 OR
 TS=(
-	"ipcc" OR "kyoto protocol" OR "climate target*"
-	OR (("climate" OR "paris") NEAR/3 ("agreement" OR "treaty"))
+	"kyoto protocol" 	OR (("climate" OR "paris") NEAR/3 ("agreement" OR "treaty"))
 	OR
 	(
 		(

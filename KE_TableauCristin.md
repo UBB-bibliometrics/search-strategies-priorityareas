@@ -68,6 +68,7 @@ IF
 OR (CONTAINS(LOWER([Result Title]),"warm") AND CONTAINS(LOWER([Result Title]), "global"))
 OR (CONTAINS(LOWER([Result Title]),"climat") AND CONTAINS(LOWER([Result Title]), "warm"))
 OR (CONTAINS(LOWER([Result Title]),"ocean") AND CONTAINS(LOWER([Result Title]),	"warm"))
+OR CONTAINS([Result Title],"IPCC") 
 
 OR CONTAINS(LOWER([Result Title]),"klimaendring") 
 		
@@ -90,6 +91,7 @@ OR CONTAINS(LOWER([result_title]),	"klimadynamikk"	)
 OR CONTAINS(LOWER([result_title]),	"klimamodell"	)
 OR CONTAINS(LOWER([result_title]),	"klimaeffekt"	)
 OR CONTAINS(LOWER([result_title]),	"klimavirkni"	)
+OR CONTAINS(LOWER([result_title]),	"klimavit"	)
 OR
 (
 	CONTAINS(LOWER([result_title]),	"climat"	)
@@ -320,6 +322,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"feedback"	))
 )		
 OR CONTAINS(LOWER([result_title]),	"climatology"	)
+OR CONTAINS(LOWER([result_title]),	"climate scien"	)
 OR CONTAINS(LOWER([result_title]),	"earth system"	)
 OR CONTAINS(LOWER([result_title]),	"noresm"	)
 OR CONTAINS(LOWER([result_title]),	"echam5"	)
@@ -437,6 +440,7 @@ AND
 	OR CONTAINS(LOWER([result_title]),	"effect"	)
 	OR CONTAINS(LOWER([result_title]),	"influence"	)
 	OR CONTAINS(LOWER([result_title]),	"scenario"	)
+	OR REGEXP_MATCH([result_title],	"\bscien"	)
 	OR CONTAINS(LOWER([result_title]),	"infrastructure"	)
 	OR REGEXP_MATCH([result_title],	"\bship"	)
 
@@ -812,8 +816,7 @@ OR
 THEN "TILPASENERGI"		
 
 ELSEIF					
-CONTAINS([result_title], "IPCC")
-OR CONTAINS(LOWER([result_title]),	"kyoto protocol")
+CONTAINS(LOWER([result_title]),	"kyoto protocol")
 OR CONTAINS(LOWER([result_title]),	"cop2")
 OR
 (
