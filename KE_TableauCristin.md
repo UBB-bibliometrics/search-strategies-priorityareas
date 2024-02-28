@@ -1128,7 +1128,7 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"fossil fuel"	)
 	OR CONTAINS(LOWER([result_title]),	"natural gas"	)
 	OR CONTAINS(LOWER([result_title]),	"petroleum"	)
-	REGEXP_MATCH([result_title], "\bolje"	)
+	OR REGEXP_MATCH([result_title], "\bolje"	)
 	OR CONTAINS(LOWER([result_title]),	"fossilt bren"	)
 	OR CONTAINS(LOWER([result_title]),	"fossil energi"	))
 )
