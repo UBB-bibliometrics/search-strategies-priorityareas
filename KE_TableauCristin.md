@@ -520,7 +520,7 @@ IF
 (		
 	(		
 		(CONTAINS(LOWER([result_title]), "climat") AND CONTAINS(LOWER([result_title]), "chang"))
-		OR(CONTAINS(LOWER([result_title]), "climat") AND CONTAINS(LOWER([result_title]), "warm")		
+		OR(CONTAINS(LOWER([result_title]), "climat") AND CONTAINS(LOWER([result_title]), "warm"))	
 		OR (CONTAINS(LOWER([result_title]), "global") AND CONTAINS(LOWER([result_title]), "warm"))
 	)		
 AND		
@@ -686,8 +686,8 @@ OR CONTAINS(LOWER([result_title]),	"klimamål"	)
 THEN "TILPASNING"		
 
 ELSEIF
-	CONTAINS([Result Title],	"SDG13"	)
-	OR CONTAINS([Result Title],	"SDG 13"	)
+	CONTAINS([result_title],	"SDG13"	)
+	OR CONTAINS([result_title],	"SDG 13"	)
 THEN "TILPASNING"
 			
 ELSE "non"
