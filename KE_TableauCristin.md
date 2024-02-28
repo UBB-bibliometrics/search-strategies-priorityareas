@@ -26,15 +26,15 @@ Klimasystemer og Effekter
 - (Paleoklima) så lenge forskningen er relatert til dagens klimaendringer
 - Ikke miljøvern
 
-Klimatilpasning
+Klimatilpasning (& mitigation?)
 - Tilpasning/politikk/rammeverk/tiltak mot klimaendringene
 - Tilpasse seg klimarelaterte farer og naturkatastrofer /klimaekstreme
 - Klimaholdinger livstilendringer, rammeverk, kultur, moral, etikk, debatt
 - Klimarettferdighet, lover, regler og etikk
+- Lave klimautslipp, ink. klimakvoteloven/utslippskvoter/avtaler (Paris, COP osv.)
+- C02 lagring (CSS/CCUS) 
 
 Klimatilpasning og Energiomstilling (overlapp)
-- C02 lagring (CSS/CCUS) 
-- Lave klimautslipp, ink. klimakvoteloven/utslippskvoter/avtaler (Paris, COP osv.)
 - Grønt skifte
 - Sirkulær økonomi
 - Green cities 
@@ -49,6 +49,7 @@ Energiomstilling
 - Bioenergi, kraft, brensel, drivstoff fra algae, lignin, ammoniakk, og hydrogen
 - Geotermisk energi, hav energi, fotovoltaik (PV), solenergi
 - Kjernekraft
+- Utfasing fossilt brensel
 
 Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer, for eksempel:
 - «Klimaflykninger», klimaendringer og migrasjon
