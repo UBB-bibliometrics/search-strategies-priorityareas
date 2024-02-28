@@ -172,7 +172,7 @@ TS=(
 	)
 	OR
 	(
-		("heat wave*" OR "heatwave*" OR "tipping point*" OR "sea level*" OR "bushfire" OR "drought*" OR "flood*")
+		("heat wave*" OR "heatwave*" OR "tipping point*" OR "sea level*" OR "bushfire*" OR "wildfire*" OR "drought*" OR "flood*")
 		NEAR/15	("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "planning" OR "plan" OR "plans" OR "governance" OR "polic*")
 	)
 )												
