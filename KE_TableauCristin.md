@@ -613,12 +613,19 @@ THEN "TILPASNING"
 
 ELSEIF			
 (			
-	(CONTAINS(LOWER([result_title]),	"heat wave"	)
+	(CONTAINS(LOWER([result_title]),	"climate disaster")
+	OR CONTAINS(LOWER([result_title]),	"climate-related disaster")
+	OR CONTAINS(LOWER([result_title]),	"climate hazard")
+	OR CONTAINS(LOWER([result_title]),	"heat wave"	)
+	OR CONTAINS(LOWER([result_title]),	"heatwave"	)
 	OR CONTAINS(LOWER([result_title]),	"tipping point"	)
 	OR CONTAINS(LOWER([result_title]),	"sea level"	)
 	OR CONTAINS(LOWER([result_title]),	"temperature"	)
 	OR CONTAINS(LOWER([result_title]),	"drought"	)
 	OR CONTAINS(LOWER([result_title]),	"flood"	)
+	OR CONTAINS(LOWER([result_title]),	"wildfire"	)
+	OR CONTAINS(LOWER([result_title]),	"bushfire"	)
+	OR CONTAINS(LOWER([result_title]),	"forest fire"	)
 	OR CONTAINS(LOWER([result_title]),	"extreme weather"	)
 	OR CONTAINS(LOWER([result_title]),	"extreme precipita"	)
 	)			
@@ -629,7 +636,8 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"resilie"	)
 	OR CONTAINS(LOWER([result_title]),	"plan"	)
 	OR CONTAINS(LOWER([result_title]),	"governance"	)
-	OR CONTAINS(LOWER([result_title]),	"polic"	))
+	OR CONTAINS(LOWER([result_title]),	"polic"	)
+	OR CONTAINS(LOWER([result_title]),	"cities"))
 )			
 THEN "TILPASNING"
 
