@@ -213,7 +213,7 @@ TS=(
 )
 OR
 TS=(
-	"kyoto protocol" 	OR (("climate" OR "paris") NEAR/3 ("agreement" OR "treaty"))
+	"kyoto protocol" OR (("climate" OR "paris") NEAR/3 ("agreement" OR "treaty"))
 	OR
 	(
 		(

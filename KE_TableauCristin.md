@@ -7,7 +7,7 @@ The searches are run in mainly 2 fields, result title (title of the work) and jo
 
 ## Description provided in reports (Norwegian)
 
-Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Gunn Mangerud og direktørene Kristin Guldbransen Frøysa, Tore Furevik). Redigert etter forslag om søkebegrep fra KGF i vår 2024. 
+Tematiske områder som er inkludert i den bibliometriske kartleggingen 2020 (Bibliometrigruppen, Universitetsbiblioteket i samråd med forskningsdekan Gunn Mangerud og direktørene Kristin Guldbransen Frøysa, Tore Furevik). Redigert etter forslag fra KGF i vår 2024. 
 
 Klimasystemer og Effekter
 
@@ -23,31 +23,30 @@ Klimasystemer og Effekter
 	- menneskers habitat, landbruk og matforsyning
 - Klimagasser/greenhouse gasses
 - Endringer i permafrost
-- (Paleoklima) så lenge forskningen er relatert til dagens klimaendringer
+- Paleoklima
 - Ikke miljøvern
 
-Klimatilpasning (& mitigation?)
+Klimatilpasning (& mitigation)
 - Tilpasning/politikk/rammeverk/tiltak mot klimaendringene
 - Tilpasse seg klimarelaterte farer og naturkatastrofer /klimaekstreme
-- Klimaholdinger livstilendringer, rammeverk, kultur, moral, etikk, debatt
+- Klimaholdinger, livstilendringer, rammeverk, kultur, moral, etikk, debatt
 - Klimarettferdighet, lover, regler og etikk
-- Lave klimautslipp, ink. klimakvoteloven/utslippskvoter/avtaler (Paris, COP osv.)
-- C02 lagring (CSS/CCUS) 
 
-Klimatilpasning og Energiomstilling (overlapp)
+Klimatilpasning (& mitigation) og Energiomstilling (overlapp)
 - Grønt skifte
 - Sirkulær økonomi
 - Green cities 
 - Green transport
 - Green processes (industry)
+- Lave klimautslipp, ink. klimakvoteloven/utslippskvoter/avtaler (Paris, COP osv.)
+- C02 lagring (CSS/CCUS) 
 
 Energiomstilling
-- Energiomstilling, regulering av energisystemer (politisk, økonomisk, juridisk)
-- Energieffektiv
-- Fornybare energikilder generelt
-- Vindenergi (havvind og landvind)
-- Bioenergi, kraft, brensel, drivstoff fra algae, lignin, ammoniakk, og hydrogen
-- Geotermisk energi, hav energi, fotovoltaik (PV), solenergi
+- Energiomstilling
+- Energisystem - infrastruktur, politikk, økonomi, juridisk
+- Grid og batterier
+- Energieffektivitet
+- Fornybare energikilder, ink. vindenergi (havvind og landvind), bioenergi (kraft, brensel, drivstoff fra alger, lignin, ammoniakk, og hydrogen), geotermisk energi, hav energi, solceller (PV), solenergi
 - Kjernekraft
 - Utfasing fossilt brensel
 
@@ -476,7 +475,8 @@ ELSEIF
 	)
 	AND
 	(CONTAINS(LOWER([result_title]),	"scenario"	)
-	OR CONTAINS(LOWER([result_title]),	"emission"	)
+	OR (CONTAINS(LOWER([result_title]),	"feedback"	)
+	OR (CONTAINS(LOWER([result_title]),	"budget"	)
 	OR CONTAINS(LOWER([result_title]),	"effect"	))
 )
 OR		
@@ -1044,6 +1044,7 @@ OR
 
 OR CONTAINS(LOWER([result_title]),	"photovoltaic"	)
 OR CONTAINS(LOWER([result_title]),	"solar PV"	)
+OR CONTAINS(LOWER([result_title]),	"solcell"	)
 OR
 (
 	(CONTAINS(LOWER([result_title]),	"PV"	)
