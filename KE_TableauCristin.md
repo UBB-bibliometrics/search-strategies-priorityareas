@@ -48,7 +48,7 @@ Energiomstilling
 - Vindenergi (havvind og landvind)
 - Bioenergi, kraft, brensel, drivstoff fra algae, lignin, ammoniakk, og hydrogen
 - Geotermisk energi, hav energi, fotovoltaik (PV), solenergi
-- Nuclear energi
+- Kjernekraft
 
 Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer, for eksempel:
 - «Klimaflykninger», klimaendringer og migrasjon
