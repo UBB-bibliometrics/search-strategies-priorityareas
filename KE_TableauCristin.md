@@ -766,7 +766,7 @@ OR
 	OR REGEXP_MATCH([result_title], "\bcarbon\b")
 	OR REGEXP_MATCH([result_title], "\bkarbon\b")
 	OR REGEXP_MATCH([result_title], "lavkarbon\b")
-	OR CONTAINS(LOWER([result_title]),	"emission")
+	OR REGEXP_MATCH([result_title], "\bemission")
 	OR CONTAINS(LOWER([result_title]),	"utslipp")
 	OR CONTAINS(LOWER([result_title]),	"electric")
 	OR CONTAINS(LOWER([result_title]),	"elektrisk")
@@ -805,7 +805,7 @@ OR
 	OR REGEXP_MATCH([result_title], "low-carbon\b")
 	OR REGEXP_MATCH([result_title], "\bkarbon\b")
 	OR REGEXP_MATCH([result_title], "lavkarbon\b")
-	OR CONTAINS(LOWER([result_title]),	"emission")
+	OR REGEXP_MATCH([result_title], "\bemission")
 	OR CONTAINS(LOWER([result_title]),	"utslipp")
 	OR CONTAINS(LOWER([result_title]),	"clean")
 	OR CONTAINS(LOWER([result_title]),	"renewable")
@@ -830,7 +830,7 @@ OR CONTAINS(LOWER([result_title]),	"cop2")
 OR
 (
 	(CONTAINS(LOWER([result_title]),	"climat"	)
-	OR CONTAINS(LOWER([result_title]),	"paris"	))
+	OR REGEXP_MATCH([result_title], "\bparis"))
 	AND 			
 	(CONTAINS(LOWER([result_title]),	"agreement"	)
 	OR CONTAINS(LOWER([result_title]),	"target"	)
