@@ -167,12 +167,14 @@ TS=(
 OR														
 TS=(
 	(
-		("extreme*" NEAR/3 ("weather" OR "precipitation" OR "temperature*" OR "rain*"))
+		(("extreme*" NEAR/3 ("weather" OR "precipitation" OR "temperature*" OR "rain*"))
+		OR ("climat*" NEAR/3 ("disaster$" OR "hazard$" OR "risk$"))
+		)
 		AND ("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "plan" OR "planning" OR "plans" OR "governance" OR "polic*")
 	)
 	OR
 	(
-		("heat wave*" OR "heatwave*" OR "tipping point*" OR "sea level*" OR "bushfire*" OR "wildfire*" OR "drought*" OR "flood*")
+		("heat wave*" OR "heatwave*" OR "tipping point*" OR "sea level*" OR "bushfire*" OR "wildfire*" OR "forest fire$" OR "drought*" OR "flood*")
 		NEAR/15	("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "planning" OR "plan" OR "plans" OR "governance" OR "polic*")
 	)
 )												
