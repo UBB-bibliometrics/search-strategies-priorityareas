@@ -475,8 +475,8 @@ ELSEIF
 	)
 	AND
 	(CONTAINS(LOWER([result_title]),	"scenario"	)
-	OR (CONTAINS(LOWER([result_title]),	"feedback"	)
-	OR (CONTAINS(LOWER([result_title]),	"budget"	)
+	OR CONTAINS(LOWER([result_title]),	"feedback"	)
+	OR CONTAINS(LOWER([result_title]),	"budget"	)
 	OR CONTAINS(LOWER([result_title]),	"effect"	))
 )
 OR		
