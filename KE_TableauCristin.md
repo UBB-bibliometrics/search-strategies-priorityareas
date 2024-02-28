@@ -598,6 +598,8 @@ ELSEIF
 	OR CONTAINS(LOWER([Result Title]),	"climate knowledge"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate adapt"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate resilien"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate risk"	)
+	OR CONTAINS(LOWER([Result Title]),	"climate prepared"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate mitigat"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate action"	)
 	OR CONTAINS(LOWER([Result Title]),	"climate planning"	)

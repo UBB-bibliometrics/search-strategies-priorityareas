@@ -155,7 +155,7 @@ TS=(
 )				
 OR
 TS=(
-	"climate action" OR "climate mitigation" OR "climate adaptation" OR "climate resilience" OR "climate planning"
+	"climate action" OR "climate mitigation" OR "climate adaptation" OR "climate resilien*" OR "climate planning"
 	OR "climate justice" OR "climate law$" OR "climate polic*" OR "climate ethic*" OR "climate target$" OR "climate goal$"
 	OR "climate education" OR "climate concern" OR "climate knowledge"
 	OR "climate negotiation$" OR "climate fund*"
