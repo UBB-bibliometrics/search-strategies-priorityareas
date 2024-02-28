@@ -34,23 +34,21 @@ Klimatilpasning
 
 Klimatilpasning og Energiomstilling (overlapp)
 - C02 lagring (CSS/CCUS) 
-- Klimakvoteloven/utslippskvoter/avtaler (Paris, COP osv.)
+- Lave klimautslipp, ink. klimakvoteloven/utslippskvoter/avtaler (Paris, COP osv.)
 - Grønt skifte
 - Sirkulær økonomi
 - Green cities 
 - Green transport
 - Green processes (industry)
-- Lave klimautslipp 
 
 Energiomstilling
 - Energiomstilling, regulering av energisystemer (politisk, økonomisk, juridisk)
 - Energieffektiv
 - Fornybare energikilder generelt
 - Vindenergi (havvind og landvind)
-- Energi, kraft, brensel, drivstoff fra algae, lignin, ammoniakk, tidevann og hydrogen
-- Geotermisk energi
-- Fotovoltaik (PV), solenergi
-- Bioenergi
+- Bioenergi, kraft, brensel, drivstoff fra algae, lignin, ammoniakk, og hydrogen
+- Geotermisk energi, hav energi, fotovoltaik (PV), solenergi
+- Nuclear energi
 
 Merk an noen områder overlapper med satsningen for Globale Samfunnsutfordringer, for eksempel:
 - «Klimaflykninger», klimaendringer og migrasjon
@@ -1122,7 +1120,17 @@ ELSEIF
 	OR CONTAINS(LOWER([result_title]),	"fossilt bren"	)
 	OR CONTAINS(LOWER([result_title]),	"fossil energi"	))
 )
-THEN "ENERGI"		
+THEN "ENERGI"	
+
+ELSEIF
+CONTAINS(LOWER([result_title]),	"nuclear energy"	)
+OR CONTAINS(LOWER([result_title]),	"nuclear power"	)
+OR CONTAINS(LOWER([result_title]),	"fusion power"	)
+OR CONTAINS(LOWER([result_title]),	"fusion energy"	)
+OR CONTAINS(LOWER([result_title]),	"kjerneenergi"	)
+OR CONTAINS(LOWER([result_title]),	"kjernekraft"	)
+OR CONTAINS(LOWER([result_title]),	"atomenergi"	)
+THEN "ENERGI"	
 
 ELSEIF
 	CONTAINS([Result Title],	"SDG7"	)

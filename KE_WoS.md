@@ -342,5 +342,6 @@ TS=(
     )
 	NEAR/15 ("crude oil" OR "conventional energy" OR "coal" OR "natural gas" OR "petroleum" OR "fossil fuel$")
 )
+OR TS=("Nuclear energy" OR "fusion power*" OR "nuclear power*")
 											
 ```
