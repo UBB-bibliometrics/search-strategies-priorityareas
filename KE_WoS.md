@@ -168,7 +168,7 @@ OR
 TS=(
 	(
 		(("extreme*" NEAR/3 ("weather" OR "precipitation" OR "temperature*" OR "rain*"))
-		OR ("climat*" NEAR/15 ("disaster$" OR "hazard$" OR "risk$"))
+		OR ("climat*" NEAR/3 ("disaster$" OR "hazard$" OR "risk$"))
 		)
 		AND ("adapt*" OR "mitiga*" OR "prevent*" OR "resilie*" OR "plan" OR "planning" OR "plans" OR "governance" OR "polic*")
 	)
