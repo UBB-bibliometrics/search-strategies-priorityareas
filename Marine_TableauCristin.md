@@ -691,7 +691,8 @@ OR CONTAINS(LOWER([result_title_anthology]),	"porifera"	)
 THEN "marin"		
 
 ELSEIF 
-([institution_id] == 184 AND [unit_id_level_3] == 92)
+([Institution Id] == 184 AND [Unit Id Level 2]==19 AND [Unit Id Level 3] == 92)
+OR ([Institution Id] == 184 AND [Unit Id Level 2]==12 AND [Unit Id Level 3] == 70)
 THEN "marin"
 
 ELSE "non"
